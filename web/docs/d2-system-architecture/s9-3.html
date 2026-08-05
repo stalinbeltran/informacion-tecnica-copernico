@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9.3 Performance Optimization · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s9.html">9</a><i>›</i><span>9.3 · Performance Optimization</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 9.3</span>
+  <h1>Performance Optimization</h1>
+  <p class="lede">Balanceo de carga, estrategias de caché, procesamiento optimizado en paralelo y asignación cuidadosa de recursos.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>81–82</b></span></div>
+</div>
+<section class="prose"><p>Performance optimization is a key focus for the CopernicusLAC platform, ensuring that it operates across all components:</p>
+<ul><li>Load Balancing: The platform employs load balancers to distribute incoming traffic evenly across multiple servers or containers. This prevents any single component</li></ul>
+<p>from becoming a bottleneck and helps maintain optimal performance during peak usage times.</p>
+<ul><li>Caching Strategies: The platform uses caching mechanisms to store frequently accessed data in memory, reducing the need for repeated database queries or data retrieval operations. This significantly improves response times and reduces the load on backend services.</li><li>Optimised Data Processing: The platform optimises data processing workflows by using parallel processing and efficient algorithms, particularly in components like Argo Workflows. This ensures that large datasets can be processed quickly and effectively, minimising delays and improving overall performance.</li><li>Resource Allocation: By carefully managing resource allocation using tools like Kubernetes and Crossplane, the platform ensures that each service has the necessary resources to operate, without over-provisioning or under-utilising resources.</li></ul></section>
+<nav class="pager"><a class="prev" href="s9-2.html"><i>←</i><span>9.2 · Scalability Strategies</span></a><a class="next" href="s9-4.html"><span>9.4 · Load Testing and Benchmarking</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

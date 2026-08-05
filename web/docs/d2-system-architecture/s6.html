@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6 Application Packaging · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><span>6 · Application Packaging</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 6</span>
+  <h1>Application Packaging</h1>
+  <p class="lede">Empaquetado de aplicaciones EO: visión general del proceso, CWL con ejemplos, contenedores, escenarios de despliegue, control de versiones, control de acceso, beneficios y los estándares de obligado cumplimiento.</p>
+  <div class="tags"><span class="tag">CWL</span><span class="tag">Docker</span><span class="tag">GitLab</span><span class="tag">Harbor</span><span class="tag">OGC</span></div>
+  <div class="metrics"><span title="Apartados"><b>8</b> apartados</span><span title="Páginas del PDF">pp. <b>59–71</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+</div>
+<section class="prose"><p>The purpose of this section is to outline the application packaging process within the CopernicusLAC platform. Application packaging is essential for ensuring that EO data processing applications are properly structured, versioned, and ready for deployment. This process supports consistency, scalability, and reliability across various processing tasks, allowing applications to be easily deployed and managed within the platform’s infrastructure.</p></section>
+<h2 class="secttl">En este capítulo</h2>
+<div class="grid">
+<a class="card leaf" href="s6-1.html">
+  <span class="eyebrow">6.1</span>
+  <h3>Overview</h3>
+  <p class="sum">El proceso encapsula código, dependencias, configuración, metadatos y entorno de ejecución siguiendo las buenas prácticas OGC de EO Application Packaging y EOEPCA; cuatro pasos: definir workflows, crear el paquete, publicarlo en Harbor y versionarlo.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>59–60</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-2.html">
+  <span class="eyebrow">6.2</span>
+  <h3>Common Workflow Language (CWL)</h3>
+  <p class="sum">CWL en profundidad: las clases CommandLineTool y Workflow, sus componentes (inputs, outputs, baseCommand, steps, requirements) y dos ejemplos completos de cálculo de NDVI.</p>
+  <div class="tags"><span class="tag">Código</span><span class="tag">NDVI</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>60–62</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-3.html">
+  <span class="eyebrow">6.3</span>
+  <h3>Containers</h3>
+  <p class="sum">Por qué la contenerización garantiza ejecución reproducible en entornos heterogéneos y cómo se combina con CWL para la gestión de dependencias.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>62–63</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card" href="s6-4.html">
+  <span class="eyebrow">6.4</span>
+  <h3>Deployment</h3>
+  <p class="sum">Despliegue mediante charts de Helm sobre Kubernetes, con monitorización y escalado; el paquete soporta tres escenarios de ejecución distintos.</p>
+  
+  <div class="metrics"><span title="Apartados"><b>3</b> apartados</span><span title="Páginas del PDF">pp. <b>63–65</b></span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-5.html">
+  <span class="eyebrow">6.5</span>
+  <h3>Version Control and Update Mechanisms</h3>
+  <p class="sum">GitLab como eje del versionado: repositorios, ramas y merges, tags y releases, y pipelines de CI; ejemplo del ciclo commit → CI → pruebas → despliegue → rollback.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>65–66</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-6.html">
+  <span class="eyebrow">6.6</span>
+  <h3>Access Control</h3>
+  <p class="sum">Keycloak como sistema central de identidad integrado con GitLab (ramas protegidas) y Harbor (escaneo de vulnerabilidades), con SSO, RBAC, identidad federada, tokens y MFA.</p>
+  <div class="tags"><span class="tag">Diagrama</span><span class="tag">Keycloak</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>66–68</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-7.html">
+  <span class="eyebrow">6.7</span>
+  <h3>Benefits</h3>
+  <p class="sum">Beneficios del empaquetado: consistencia entre entornos, portabilidad y escalado con contenedores, fiabilidad por CI/CD y seguridad unificada con Keycloak.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>68–69</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card" href="s6-8.html">
+  <span class="eyebrow">6.8</span>
+  <h3>Compliance with Platform Standards</h3>
+  <p class="sum">Nueve estándares que los desarrolladores deben cumplir al empaquetar sus algoritmos EO, expresados con MUST y SHOULD.</p>
+  
+  <div class="metrics"><span title="Apartados"><b>9</b> apartados</span><span title="Páginas del PDF">pp. <b>69–71</b></span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+</div>
+<nav class="pager"><a class="prev" href="s5-5.html"><i>←</i><span>5.5 · Visualisation Integration</span></a><a class="next" href="s6-1.html"><span>6.1 · Overview</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

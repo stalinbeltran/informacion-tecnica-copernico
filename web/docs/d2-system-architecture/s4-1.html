@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.1 Technologies Used · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s4.html">4</a><i>›</i><span>4.1 · Technologies Used</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 4.1</span>
+  <h1>Technologies Used</h1>
+  <p class="lede">CWL define los workflows, Argo Workflows los orquesta y STAC estandariza el catálogo; los tres se adaptan a cada nivel de ingesta.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>39–40</b></span></div>
+</div>
+<section class="prose"><p>The data ingestion process in the CopernicusLAC platform relies on several key technologies that enable flexible and efficient workflows, accommodating different levels of ingestion, metadata registration, dataset copying, and dataset calibration. These technologies ensure that the platform can adapt dynamically to the specific requirements of each dataset and operational scenario:</p>
+<ul><li>Common Workflow Language (CWL): CWL is used to define the workflows that automate data ingestion tasks. This includes specifying how data is retrieved, validated, and processed based on the ingestion level:<ul><li>For metadata registration, CWL workflows focus on retrieving and validating metadata for cataloging.</li><li>For dataset copying, CWL workflows include tasks for downloading, integrity checks, and storing the datasets locally.</li><li>For calibration workflows, additional steps for processing and transformation, such as format conversion or quality enhancements, are included.</li></ul></li><li>Argo Workflows: Argo orchestrates the ingestion pipelines, ensuring that each step in the process is executed in the correct order and that dependencies are managed effectively. Its Kubernetes-native design provides the scalability required to handle the dynamic demands of different ingestion levels. For example:<ul><li>Metadata-only ingestion workflows are lightweight and emphasize speed and compliance.</li><li>Full dataset ingestion workflows manage larger data volumes and include validation for data integrity and completeness.</li><li>Calibration workflows leverage Argo’s flexibility to include custom processing tasks tailored to specific analytical needs.</li></ul></li><li>STAC (SpatioTemporal Asset Catalog): STAC is used to organise and catalog all ingested data, regardless of its ingestion level. Metadata from all ingestion workflows is standardized and indexed to ensure discoverability and accessibility through the platform. For metadata registration, STAC entries point to external data sources, while for dataset copying and calibration, the entries include details about locally stored datasets or pre-processed outputs..</li></ul></section>
+<nav class="pager"><a class="prev" href="s4.html"><i>←</i><span>4 · Data Ingestion Process</span></a><a class="next" href="s4-2.html"><span>4.2 · Ingestion Workflow</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

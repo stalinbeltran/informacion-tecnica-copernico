@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.3.2 Filtering using CQL2-TEXT (GET) · D3</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D3</a><i>›</i><a href="s4.html">4</a><i>›</i><a href="s4-3.html">4.3</a><i>›</i><span>4.3.2 · Filtering using CQL2-TEXT (GET)</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D3 · Interface Control Document · Capítulo 4.3.2</span>
+  <h1>Filtering using CQL2-TEXT (GET)</h1>
+  <p class="lede">Los mismos cuatro casos expresados como query string CQL2-TEXT para peticiones GET.</p>
+  <div class="tags"><span class="tag">GET</span><span class="tag">Ejemplos</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>22</b></span></div>
+</div>
+<section class="prose"><p>This method provides a serialised form of querying similar to CQL2-JSON. The following are equivalent query strings for the examples above:</p>
+<ul><li>Filter by date/time:<ul><li>filter-lang=cql2-text&amp;collections=sentinel-s2-l1c-cogs&amp;fi lter=datetime%3E=%272023-11-22T00:00:00Z%27%20and%20datet ime%3C%272023-11-23T00:00:00Z%27</li></ul></li><li>Filter by geographic area:<ul><li>filter-lang=cql2-text&amp;collections=sentinel-s2-l1c-cogs&amp;fi lter=S_INTERSECTS(geometry,%20POLYGON((7.8%2045.2,9.0%204 5.2,9.0%2045.8,7.8%2045.8,7.8%2045.2)))</li></ul></li><li>Filter by cloud cover percentage:<ul><li>filter-lang=cql2-text&amp;collections=sentinel-s2-l1c-cogs&amp;fi lter=eo:cloud_cover%3C10</li></ul></li><li>Filter by a combination of criteria (date/time and cloud cover percentage):<ul><li>filter-lang=cql2-text&amp;collections=sentinel-s2-l1c-cogs&amp;fi lter=datetime%3E=%272023-11-22T00:00:00Z%27%20and%20datet ime%3C%272023-11-23T00:00:00Z%27%20and%20eo:cloud_cover%3 C10</li></ul></li></ul></section>
+<nav class="pager"><a class="prev" href="s4-3-1.html"><i>←</i><span>4.3.1 · Filtering using CQL2-JSON (POST)</span></a><a class="next" href="s4-4.html"><span>4.4 · STAC Items</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

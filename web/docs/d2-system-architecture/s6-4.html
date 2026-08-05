@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.4 Deployment · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s6.html">6</a><i>›</i><span>6.4 · Deployment</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 6.4</span>
+  <h1>Deployment</h1>
+  <p class="lede">Despliegue mediante charts de Helm sobre Kubernetes, con monitorización y escalado; el paquete soporta tres escenarios de ejecución distintos.</p>
+  
+  <div class="metrics"><span title="Apartados"><b>3</b> apartados</span><span title="Páginas del PDF">pp. <b>63–65</b></span></div>
+</div>
+<section class="prose"><p>Once the application package is stored in Harbor, it can be deployed within the CopernicusLAC platform. The deployment process involves:</p>
+<ul><li>Preparing Deployment Configurations: Managed through Helm charts, these configurations define how the application should be deployed in Kubernetes, including resource allocation, environment variables, and network settings.</li><li>Deploying to Kubernetes: The application is deployed as Kubernetes pods, with each pod running a containerized version of the application.</li><li>Monitoring and Scaling: Kubernetes monitors the application to ensure it operates correctly and can scale resources up or down based on demand.</li></ul>
+<p>Nevertheless the Application Package is designed to support a wide range of deployment scenarios, ensuring that EO applications can be executed across various environments. This flexibility is crucial for adapting to different computational needs, from local development to large-scale cloud deployments. The platform leverages the standardised packaging process, primarily based on CWL, to ensure that applications are portable and can be deployed consistently across these environments.</p></section>
+<h2 class="secttl">Apartados</h2>
+<div class="grid">
+<a class="card leaf" href="s6-4-1.html">
+  <span class="eyebrow">6.4.1</span>
+  <h3>Local Computer Execution</h3>
+  <p class="sum">Ejecución local: usada en desarrollo y pruebas, con ciclos de feedback rápidos y depuración sencilla.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>64</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-4-2.html">
+  <span class="eyebrow">6.4.2</span>
+  <h3>Kubernetes Cluster Execution</h3>
+  <p class="sum">Ejecución en clúster Kubernetes: escalado automático, balanceo de carga y tolerancia a fallos para aplicaciones distribuidas.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>64</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-4-3.html">
+  <span class="eyebrow">6.4.3</span>
+  <h3>Execution as a Service</h3>
+  <p class="sum">Ejecución como servicio: la aplicación se expone vía OGC API Processes, permitiendo su integración con otros servicios geoespaciales.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>64–65</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+</div>
+<nav class="pager"><a class="prev" href="s6-3.html"><i>←</i><span>6.3 · Containers</span></a><a class="next" href="s6-4-1.html"><span>6.4.1 · Local Computer Execution</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

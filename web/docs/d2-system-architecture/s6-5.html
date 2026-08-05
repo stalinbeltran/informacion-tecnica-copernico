@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.5 Version Control and Update Mechanisms · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s6.html">6</a><i>›</i><span>6.5 · Version Control and Update Mechanisms</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 6.5</span>
+  <h1>Version Control and Update Mechanisms</h1>
+  <p class="lede">GitLab como eje del versionado: repositorios, ramas y merges, tags y releases, y pipelines de CI; ejemplo del ciclo commit → CI → pruebas → despliegue → rollback.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>65–66</b></span></div>
+</div>
+<section class="prose"><p>Version control is a key aspect of the application packaging process, ensuring that EO applications are maintained consistently and can be reliably reproduced. In the platform, GitLab serves as the central tool for managing version control and automating the update process.</p>
+<p>The key components are:</p>
+<ul><li>GitLab Repositories: All application code, workflows, and Dockerfiles are stored in GitLab repositories. Each repository serves as a centralised space where developers can manage their application’s source code, configuration files, and documentation. This setup ensures that all aspects of the application are versioned and can be tracked over time.</li><li>Branching and Merging: GitLab supports branching and merging workflows, enabling multiple developers to work simultaneously on different features or fixes. Changes can be isolated in branches, tested independently, and then merged back into the main branch when ready. This workflow minimises the risk of conflicts and ensures that the main codebase remains stable.</li><li>Tagging and Releases: GitLab’s tagging feature is used to mark specific points in the application’s history, such as version 1.0 or a particular release candidate. These tags allow for easy retrieval and deployment of specific versions of the application, providing a clear history of changes and ensuring that older versions can be redeployed if necessary.</li><li>Continuous Integration (CI): GitLab’s CI/CD pipelines automate the process of integrating code changes, running tests, and deploying updated packages. When a developer pushes changes to a GitLab repository, the CI pipeline is triggered, executing a series of predefined tasks to ensure that the application is built correctly, tested for regressions, and packaged into a Docker image.</li></ul>
+<p>An example of the version control and update mechanism is:</p>
+<ol><li>Code Commit: A developer commits changes to the repository, which might include updates to the application code or configuration files.</li><li>CI Pipeline Execution: GitLab’s CI pipeline is automatically triggered. It begins by pulling the latest code, running a series of unit and integration tests, and then building a new Docker image if all tests pass.</li><li>Testing and Validation: The new Docker image undergoes testing to ensure that it functions as expected. This includes running the application in a staging environment to simulate real-world conditions.</li><li>Deployment: If the image passes all tests, it is automatically pushed to Harbor and tagged with a new version number. The Helm charts are updated to reflect the new image version, and Kubernetes handles the deployment.</li><li>Rollback Mechanism: In the event of a failure or issue with the new version, the platform’s version control system allows for quick rollbacks to a previous stable version, minimising downtime and disruption</li></ol>
+<p>Reproducibility is one of the most significant advantages offered by the CopernicusLAC platform&#x27;s approach to application packaging and deployment. By maintaining strict version control through GitLab, the platform ensures that applications can be reliably reproduced across different environments and over time.</p>
+<p>Collaboration is greatly enhanced by GitLab’s set of tools for branching, merging, and project management. These tools allow multiple developers to work on the same project simultaneously, without the risk of conflicts or code overwrites. Developers can create branches to experiment with new features or fixes, merge changes back into the main codebase once they are tested and approved, and collaborate across distributed teams.</p>
+<p>Automation plays a role in the efficiency and reliability of the CopernicusLAC platform. The use of Continuous Integration and Continuous Deployment (CI/CD) pipelines automates the processes of building, testing, and deploying EO applications. This automation minimises the risk of human error, as tasks that were once manual and prone to mistakes are now consistently executed by automated scripts. Furthermore, automation speeds up the development cycle, allowing developers to quickly push updates, run tests, and deploy new versions of applications with minimal downtime. This leads to a more agile development process, where new features and improvements can be rolled out rapidly.</p></section>
+<nav class="pager"><a class="prev" href="s6-4-3.html"><i>←</i><span>6.4.3 · Execution as a Service</span></a><a class="next" href="s6-6.html"><span>6.6 · Access Control</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.2.3 Obtain Filter Criteria · D3</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D3</a><i>›</i><a href="s4.html">4</a><i>›</i><a href="s4-2.html">4.2</a><i>›</i><span>4.2.3 · Obtain Filter Criteria</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D3 · Interface Control Document · Capítulo 4.2.3</span>
+  <h1>Obtain Filter Criteria</h1>
+  <p class="lede">GET .../queryables devuelve los campos por los que se puede filtrar (datetime, geometry, eo:cloud_cover…), con ejemplo de respuesta.</p>
+  <div class="tags"><span class="tag">Endpoint</span><span class="tag">JSON</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>19</b></span></div>
+</div>
+<section class="prose"><p>The STAC API provides mechanisms to obtain and utilise filter criteria, known as &quot;queryables.&quot; These criteria allow users to refine their searches based on specific metadata fields such as date/time, geographic coverage, and cloud cover percentage. The filter criteria can be retrieved using the following method:</p>
+<ul><li>GET /collections/&lt;collection-id&gt;/queryables: Returns a JSON document with information about applicable filter criteria.</li></ul>
+<p>Example of a filter criteria response: { ... &quot;properties&quot;: { ... &quot;datetime&quot;: { &quot;type&quot;: &quot;string&quot;, &quot;title&quot;: &quot;Acquired&quot;, &quot;format&quot;: &quot;date-time&quot;, &quot;pattern&quot;: &quot;(\\+00:00|Z)$&quot;, &quot;description&quot;: &quot;Datetime&quot; }, &quot;geometry&quot;: { &quot;$ref&quot;: &quot;<a href="https://geojson.org/schema/Feature.json&quot;," target="_blank" rel="noopener">https://geojson.org/schema/Feature.json&quot;,</a> &quot;title&quot;: &quot;Item Geometry&quot;, &quot;description&quot;: &quot;Item Geometry&quot; }, &quot;eo:cloud_cover&quot;: { &quot;$ref&quot;: &quot;<a href="https://stac-extensions.github.io/eo/v1.0.0/schema.json#/definitions/fieldsproperties/eo:clou" target="_blank" rel="noopener">https://stac-extensions.github.io/eo/v1.0.0/schema.json#/definitions/fieldsproperties/eo:clou</a> d_cover&quot; } } }</p>
+<p>This response provides the necessary information to construct search queries using the identified criteria.</p></section>
+<nav class="pager"><a class="prev" href="s4-2-2.html"><i>←</i><span>4.2.2 · Direct Metadata Access</span></a><a class="next" href="s4-3.html"><span>4.3 · Filtering</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

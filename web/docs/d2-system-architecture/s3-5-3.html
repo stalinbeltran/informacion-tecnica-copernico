@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.5.3 Integration Points · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-5.html">3.5</a><i>›</i><span>3.5.3 · Integration Points</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.5.3</span>
+  <h1>Integration Points</h1>
+  <p class="lede">Se apoya en el espacio de trabajo, descubrimiento y acceso, procesamiento, registro de aplicaciones, servicios de seguridad y gestión de recursos.</p>
+  <div class="tags"><span class="tag">Diagrama</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>29–30</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+</div>
+<section class="prose"><p>The Front-end Services integrate with multiple other components within the CopernicusLAC platform to provide a cohesive user experience:</p>
+<ul><li>User Workspace: The front-end services interact with the User Workspace to access data, execute processing tasks, and retrieve results. This integration allows users to manage their data and tasks through the front-end interfaces.</li><li>Data Discovery and Access Component: Enables users to search and retrieve EO data. The front-end services provide interfaces for users to explore and visualise this data. Visualisation clients within the front-end services access the Titiler backend here for dynamic map tile generation.</li><li>Data Processing Component: Allows users to submit processing jobs and monitor their progress. The front-end services provide interfaces for defining processing tasks and viewing results.</li><li>Application Registry: Facilitates the deployment and execution of application packages. The front-end services provide interfaces for users to select and manage applications from the registry.</li><li>Security Services: Integrates with authentication and authorization services to ensure secure access to the platform’s resources.</li><li>Resource Management: Coordinates with the resource management component to ensure that front-end services are properly instantiated, configured, and maintained.</li></ul>
+<figure class="fig"><a href="img/fig-0167.png" target="_blank" rel="noopener"><img src="img/fig-0167.png" alt="FIgure 7 - Front-end Services integration points" loading="lazy"></a><figcaption>FIgure 7 - Front-end Services integration points</figcaption><span class="pg">p. 30</span></figure></section>
+<nav class="pager"><a class="prev" href="s3-5-2.html"><i>←</i><span>3.5.2 · Implementation</span></a><a class="next" href="s3-5-4.html"><span>3.5.4 · Software Stack</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

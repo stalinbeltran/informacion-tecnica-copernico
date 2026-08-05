@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.3 Filtering · D3</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D3</a><i>›</i><a href="s4.html">4</a><i>›</i><span>4.3 · Filtering</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D3 · Interface Control Document · Capítulo 4.3</span>
+  <h1>Filtering</h1>
+  <p class="lede">Dos vías de filtrado en /search: GET con CQL2-TEXT en la query string y POST con CQL2-JSON en el cuerpo, que admite consultas más complejas.</p>
+  
+  <div class="metrics"><span title="Apartados"><b>2</b> apartados</span><span title="Páginas del PDF">pp. <b>19–22</b></span></div>
+</div>
+<section class="prose"><p>The STAC search endpoint supports two methods of filtering, allowing users to search for items that match specific criteria:</p>
+<ul><li>GET /search: Uses URL query strings with filtering parameters (CQL2-TEXT).</li><li>POST /search: Uses a request body containing filtering criteria formatted as a CQL2-JSON object.</li></ul>
+<p>Both methods achieve similar results, though HTTP POST allows for more complex queries. Below are examples of filtering using these methods.</p></section>
+<h2 class="secttl">Apartados</h2>
+<div class="grid">
+<a class="card leaf" href="s4-3-1.html">
+  <span class="eyebrow">4.3.1</span>
+  <h3>Filtering using CQL2-JSON (POST)</h3>
+  <p class="sum">Cuatro ejemplos completos de cuerpo CQL2-JSON: por fecha (T_INTERSECTS), por área (S_INTERSECTS), por cobertura de nubes y combinando criterios.</p>
+  <div class="tags"><span class="tag">POST</span><span class="tag">Ejemplos</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>20–22</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s4-3-2.html">
+  <span class="eyebrow">4.3.2</span>
+  <h3>Filtering using CQL2-TEXT (GET)</h3>
+  <p class="sum">Los mismos cuatro casos expresados como query string CQL2-TEXT para peticiones GET.</p>
+  <div class="tags"><span class="tag">GET</span><span class="tag">Ejemplos</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>22</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+</div>
+<nav class="pager"><a class="prev" href="s4-2-3.html"><i>←</i><span>4.2.3 · Obtain Filter Criteria</span></a><a class="next" href="s4-3-1.html"><span>4.3.1 · Filtering using CQL2-JSON (POST)</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

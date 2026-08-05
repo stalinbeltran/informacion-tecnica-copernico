@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.2.2 Implementation · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-2.html">3.2</a><i>›</i><span>3.2.2 · Implementation</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.2.2</span>
+  <h1>Implementation</h1>
+  <p class="lede">Indexación en PostgreSQL, API STAC implementada con FastAPI sobre PgSTAC, herramientas de visualización vía WMTS/Titiler y servicio de URLs firmadas para descarga desde S3.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>20–21</b></span></div>
+</div>
+<section class="prose"><p>The implementation of the Data Discovery and Access component involves several key elements designed to facilitate effective data search and retrieval:</p>
+<ul><li>Indexing and Search: PostgreSQL, provided as a service by the cloud provider, is used to index and store the metadata catalogued during the ingestion process. PostgreSQL&#x27;s querying capabilities enable fast search operations. Users can perform queries based on various criteria such as time, location, and data type.</li><li>API Access: The platform provides APIs that allow users to programmatically search and retrieve data. These APIs adhere to industry standards, ensuring broad compatibility and ease of use. The STAC API implementation with FastAPI, using PgSTAC for backend storage, ensures data querying and retrieval.</li><li>Visualisation Tools: Integrated visualisation tools enable users to preview and interact with the data directly within the platform. This includes map-based interfaces and other graphical tools that help users understand and analyse the data. The Web</li></ul>
+<p>Map Tile Service (WMTS) API, powered by a Titiler backend, ensures accurate and responsive data visualisation.</p>
+<ul><li>Signed URL Service: For data stored in S3-compatible object storage, the platform uses a signed URL service to securely provide access to the data. This service generates temporary URLs that allow users to download data directly from storage.</li></ul></section>
+<nav class="pager"><a class="prev" href="s3-2-1.html"><i>←</i><span>3.2.1 · Purpose</span></a><a class="next" href="s3-2-3.html"><span>3.2.3 · Integration Points</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

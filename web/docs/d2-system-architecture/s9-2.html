@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9.2 Scalability Strategies · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s9.html">9</a><i>›</i><span>9.2 · Scalability Strategies</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 9.2</span>
+  <h1>Scalability Strategies</h1>
+  <p class="lede">Cuatro estrategias: contenerización con Kubernetes, arquitectura de microservicios, tecnologías cloud-native con Crossplane y gestión distribuida de datos.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>81</b></span></div>
+</div>
+<section class="prose"><p>The CopernicusLAC platform employs several strategies to ensure it can scale effectively to meet increasing demands:</p>
+<ul><li>Containerization with Kubernetes: The platform uses Kubernetes to manage containerized applications, enabling dynamic scaling based on workload demands. Kubernetes automatically adjusts the number of running containers, scaling up to handle high loads and scaling down during periods of lower demand, ensuring efficient use of resources.</li><li>Microservices Architecture: By adopting a microservices architecture, the platform can scale individual services independently. This approach allows for targeted scaling, where only the services experiencing high demand are scaled, reducing overhead and improving performance.</li><li>Cloud-Native Technologies: The platform leverages cloud-native technologies like Crossplane to provision and manage cloud resources dynamically. Crossplane enables the platform to scale infrastructure components such as databases, storage, and compute resources in response to increasing demands, ensuring that the platform remains responsive and performant.</li><li>Distributed Data Management: The use of distributed databases like PostgreSQL and data storage solutions ensures that data can be accessed and processed, even as the volume of data grows. This approach helps in maintaining high availability and quick response times as the platform scales.</li></ul></section>
+<nav class="pager"><a class="prev" href="s9-1.html"><i>←</i><span>9.1 · Purpose</span></a><a class="next" href="s9-3.html"><span>9.3 · Performance Optimization</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

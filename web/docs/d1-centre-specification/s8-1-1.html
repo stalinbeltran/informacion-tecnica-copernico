@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8.1.1 Compute &amp; Orchestration Environment · D1</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D1</a><i>›</i><a href="s8.html">8</a><i>›</i><a href="s8-1.html">8.1</a><i>›</i><span>8.1.1 · Compute &amp; Orchestration Environment</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D1 · CopernicusLAC Centre Specification and Performance Requirements · Capítulo 8.1.1</span>
+  <h1>Compute &amp; Orchestration Environment</h1>
+  <p class="lede">Entorno de cómputo: KaaS y DBaaS obligatorios, clúster Kubernetes en HA escalable a 1000 nodos, y VMs de 4 vCPU/16 GB hasta 32 vCPU/128 GB.</p>
+  <div class="tags"><span class="tag">1000 nodos</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>38</b></span></div>
+</div>
+<section class="prose"><ul><li>Cloud-Native Design: The platform must be deployed on infrastructure supporting Kubernetes as a Service (KaaS) and Databases as a Service (DBaaS) to allow dynamic workload orchestration and seamless database provisioning.</li><li>Kubernetes Cluster: A High Availability (HA) managed Kubernetes service capable of scaling to 1000 nodes, supporting:<ul><li>Automated scheduling, auto-scaling, self-healing, and service discovery.</li><li>Execution of containerized EO workflows (e.g. using CWL/Argo Workflows).</li></ul></li><li>Virtual Machines (VMs): Multiple VM classes are required to support both core platform services and high-performance data processing:</li><li>From 4 vCPU/16 GB to 32 vCPU/128 GB instances.</li><li>Optimized for parallel, data-intensive EO tasks.</li></ul></section>
+<nav class="pager"><a class="prev" href="s8-1.html"><i>←</i><span>8.1 · Annex A - Infrastructure Requirements for the CopernicusLAC Centre Platform</span></a><a class="next" href="s8-1-2.html"><span>8.1.2 · Storage Architecture</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

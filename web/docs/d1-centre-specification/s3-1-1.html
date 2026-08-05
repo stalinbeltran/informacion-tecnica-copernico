@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.1.1 Data Hosting Requirements · D1</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D1</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-1.html">3.1</a><i>›</i><span>3.1.1 · Data Hosting Requirements</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D1 · CopernicusLAC Centre Specification and Performance Requirements · Capítulo 3.1.1</span>
+  <h1>Data Hosting Requirements</h1>
+  <p class="lede">Volúmenes de almacenamiento con cifras: 15,1 PB archivados sobre LAC a junio de 2024 y ~2 PB anuales de crecimiento desde 2025, con tabla por misión y gráficas de volumen anual y acumulado 2014-2027.</p>
+  <div class="tags"><span class="tag">Tabla</span><span class="tag">Gráficas</span><span class="tag">15,1 PB</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>13–15</b></span><span title="Figuras"><b>2</b> fig.</span><span title="Tablas"><b>1</b> tabl.</span></div>
+</div>
+<section class="prose"><p>Data hosting is a component of the Platform, requiring storage solutions that can accommodate large volumes of EO data and ensure their access and management.</p>
+<ul><li>Data Storage Capacity:<ul><li>The system must support scalable storage solutions capable of handling large volumes of Copernicus Sentinel data, including Sentinel-1, Sentinel-2, Sentinel-3, and Sentinel-5p mission data.</li><li>Initial capacity must be sufficient to support the full archive over the LAC region. As of June 2024, the total volume of archived data over the Latin America and Caribbean (LAC) region has reached approximately 15.1 petabytes (PB). This includes data from 2014 to June 2024.</li><li>From 2025 onwards, the system should be capable of accommodating an annual data increase of approximately 2 PB per year.</li><li>Storage solutions must provide provisions for future expansion to accommodate this yearly increase.</li></ul></li><li>Data Management:<ul><li>Implement efficient data management practices to ensure data integrity, redundancy, and backup.</li><li>Storage solutions should incorporate distributed storage technologies to enhance data availability and resilience.</li></ul></li><li>Data Access:<ul><li>Provide access to stored data for authorised users through a web-based portal and APIs.</li><li>The system should support secure data access protocols and user authentication mechanisms.</li></ul></li><li>Data Ingestion:<ul><li>Ensure continuous ingestion of data with the Copernicus Data Space Ecosystem (CDSE) and other relevant data hubs to maintain data consistency and availability.</li></ul></li></ul>
+<p>The following table reports the current and expected data volumes (from 2014 to 2027) for the Sentinel missions part of the baseline offer of the CopernicusLAC</p>
+<p>Platform. These data volumes have determined the sizing of the platform’s storage capacity anticipated in the Data Storage Capacity bullet above.</p>
+<div class="tablewrap"><table><caption>Table 1 - Sentinel missions data volumes from 2014 to 2027</caption><thead><tr><th>Satellites in operations</th><th>Year</th><th>Sentinel-1</th><th>Sentinel-2</th><th>Sentinel-3</th><th>Sentinel-5P</th><th>Total</th><th>Cum. Tot.</th></tr></thead><tbody><tr><td>S1A</td><td>2014</td><td>19.9 TB</td><td>0.0 GB</td><td>0.0 GB</td><td>0.0 GB</td><td>19.9 TB</td><td>19.9 TB</td></tr><tr><td>S1A, S2A</td><td>2015</td><td>116.4 TB</td><td>68.5 TB</td><td>0.0 GB</td><td>0.0 GB</td><td>184.9 TB</td><td>204.8 TB</td></tr><tr><td>S1A, S1B, S2A, S3A</td><td>2016</td><td>192.8 TB</td><td>379.7 TB</td><td>33.5 TB</td><td>0.0 GB</td><td>605.9 TB</td><td>810.7 TB</td></tr><tr><td>S1A, S1B, S2A, S2B, S3A, S5P</td><td>2017</td><td>441.5 TB</td><td>619.5 TB</td><td>64.8 TB</td><td>0.0 GB</td><td>1.1 PB</td><td>1.9 PB</td></tr><tr><td>S1A, S1B, S2A, S2B, S3A, S3B, S5P</td><td>2018</td><td>484.1 TB</td><td>1.3 PB</td><td>106.9 TB</td><td>37.1 TB</td><td>2.0 PB</td><td>3.9 PB</td></tr><tr><td>S1A, S1B, S2A, S2B, S3A, S3B, S5P</td><td>2019</td><td>546.8 TB</td><td>1.5 PB</td><td>198.2 TB</td><td>63.0 TB</td><td>2.3 PB</td><td>6.2 PB</td></tr><tr><td>S1A, S1B, S2A, S2B, S3A, S3B, S5P</td><td>2020</td><td>576.4 TB</td><td>1.3 PB</td><td>179.2 TB</td><td>64.8 TB</td><td>2.1 PB</td><td>8.3 PB</td></tr><tr><td>S1A, S1B, S2A, S2B, S3A, S3B, S5P</td><td>2021</td><td>583.3 TB</td><td>1.5 PB</td><td>195.4 TB</td><td>68.0 TB</td><td>2.3 PB</td><td>10.6 PB</td></tr><tr><td>S1A, S2A, S2B, S3A, S3B, S5P</td><td>2022</td><td>349.2 TB</td><td>1.0 PB</td><td>301.1 TB</td><td>57.7 TB</td><td>1.8 PB</td><td>12.4 PB</td></tr><tr><td>S1A, S2A, S2B, S3A, S3B, S5P</td><td>2023</td><td>359.7 TB</td><td>1.0 PB</td><td>339.6 TB</td><td>29.9 TB</td><td>1.8 PB</td><td>14.2 PB</td></tr><tr><td>S1A, S2A, S2B, S3A, S3B, S5P</td><td>2024</td><td>360.4 TB</td><td>1.0 PB</td><td>322.1 TB</td><td>75.2 TB</td><td>1.8 PB</td><td>16.0 PB</td></tr><tr><td>S1A, S1C, S2B, S2C, S3A, S3B, S5P</td><td>2025</td><td>583.3 TB</td><td>1.0 PB</td><td>322.1 TB</td><td>75.2 TB</td><td>2.0 PB</td><td>18.0 PB</td></tr><tr><td>S1A, S1C, S2B, S2C, S3A, S3B, S5P</td><td>2026</td><td>583.3 TB</td><td>1.0 PB</td><td>322.1 TB</td><td>75.2 TB</td><td>2.0 PB</td><td>20.0 PB</td></tr><tr><td>S1A, S1C, S2B, S2C, S3A, S3B, S5P</td><td>2027</td><td>583.3 TB</td><td>1.0 PB</td><td>322.1 TB</td><td>75.2 TB</td><td>2.0 PB</td><td>22.0 PB</td></tr><tr><td></td><td></td><td>5.8 PB</td><td>12.9 PB</td><td>2.7 PB</td><td>621.3 TB</td><td>22.0 PB</td><td></td></tr></tbody></table></div>
+<p>The following two graphs illustrate respectively the yearly and cumulative data volume trends for each satellite during the 2014 - 2027 period:</p>
+<figure class="fig"><a href="img/fig-0093.png" target="_blank" rel="noopener"><img src="img/fig-0093.png" alt="Figure 6 - Yearly data volume by satellite" loading="lazy"></a><figcaption>Figure 6 - Yearly data volume by satellite</figcaption><span class="pg">p. 15</span></figure>
+<figure class="fig"><a href="img/fig-0094.png" target="_blank" rel="noopener"><img src="img/fig-0094.png" alt="Figure 7 - Cumulative data volume by satellite" loading="lazy"></a><figcaption>Figure 7 - Cumulative data volume by satellite</figcaption><span class="pg">p. 15</span></figure></section>
+<nav class="pager"><a class="prev" href="s3-1.html"><i>←</i><span>3.1 · Functional Specifications</span></a><a class="next" href="s3-1-2.html"><span>3.1.2 · Data Processing Requirements</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

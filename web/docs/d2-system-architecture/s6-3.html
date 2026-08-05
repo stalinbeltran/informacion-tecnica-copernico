@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.3 Containers · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s6.html">6</a><i>›</i><span>6.3 · Containers</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 6.3</span>
+  <h1>Containers</h1>
+  <p class="lede">Por qué la contenerización garantiza ejecución reproducible en entornos heterogéneos y cómo se combina con CWL para la gestión de dependencias.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>62–63</b></span></div>
+</div>
+<section class="prose"><p>Containerization has emerged as an approach in modern software development, transforming the way applications are packaged, deployed, and executed. In the realm of</p>
+<p>EO, where data processing precision and reproducibility are paramount, containerization offers a powerful solution to address the challenges of varying computing environments. By encapsulating applications, dependencies, libraries, and configurations into self-contained units called containers, developers ensure consistent and predictable execution across diverse platforms.</p>
+<p>For instance, consider an EO Application Package aimed at analysing forest cover using satellite imagery. The package involves multiple processing steps, such as data preprocessing, feature extraction, and classification. By containerizing each processing step, the researcher creates isolated and standardised environments. These containers not only house the necessary algorithms but also encompass the specific libraries and tools required for accurate analysis. When the EO Application Package is shared or deployed on different systems, the containerization approach guarantees that the analysis remains reliable and unaffected by variations in the underlying computing environment.</p>
+<p>The integration of containerization with the CWL further amplifies the benefits for EO Application Packaging. CWL provides a standardised syntax to describe workflows, enabling the creation of executable workflows that are independent of the execution platform. By referencing container images within CWL workflow definitions, developers ensure that the same execution environment is consistently maintained, regardless of where the workflow is executed.</p>
+<p>A pivotal facet of containerization lies in effective dependency management, ensuring that the application operates harmoniously within its encapsulated environment. Dependency management tackles the challenge of varying software libraries and configurations across different computing systems. Containers encapsulate not only the application itself but also its dependencies, liberating developers from compatibility struggles.</p>
+<p>Consider an EO Application Package that detects land cover changes using a combination of spectral indices from satellite data. Such an application necessitates specialised libraries for data manipulation, image processing, and spectral analysis. By incorporating these dependencies into the container image, developers can ensure that the application functions across diverse execution environments. Dependency management within containers safeguards against version conflicts, system-specific adjustments, and other potential pitfalls that might compromise the accuracy of EO data processing.</p></section>
+<nav class="pager"><a class="prev" href="s6-2.html"><i>←</i><span>6.2 · Common Workflow Language (CWL)</span></a><a class="next" href="s6-4.html"><span>6.4 · Deployment</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

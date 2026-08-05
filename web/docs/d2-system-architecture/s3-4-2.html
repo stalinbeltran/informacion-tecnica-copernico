@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.4.2 Implementation · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-4.html">3.4</a><i>›</i><span>3.4.2 · Implementation</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.4.2</span>
+  <h1>Implementation</h1>
+  <p class="lede">GitLab guarda los paquetes como artefactos de CI con control de versiones y metadatos; Harbor actúa como registro de contenedores; ambos aplican control de acceso.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>26</b></span></div>
+</div>
+<section class="prose"><p>The implementation of the Application Registry involves several key elements designed to facilitate the management and retrieval of EO application packages:</p>
+<ul><li>GitLab for Application Packages: GitLab is used to store the application packages as Continuous Integration pipeline artifacts, including the CWL descriptions, code, and configuration files. This ensures that all components required for the execution of EO applications are version-controlled and easily accessible.</li><li>Harbor as a container registry: Harbor serves as the cloud-native container registry to store and manage the container images associated with the application packages. This ensures that the application containers are easily accessible and deployable.</li><li>Metadata Management: Comprehensive metadata for each EO application package is stored within GitLab, including details such as version, dependencies, configuration parameters, and usage instructions.</li><li>Version Control: GitLab provides version control for application packages, allowing users to track changes, revert to previous versions, and ensure compatibility with different processing environments.</li><li>Access Control: Both GitLab and Harbor implement access control mechanisms to ensure that only authorised users can add, update, or retrieve application packages and container images. This ensures the security and integrity of the stored applications.</li><li>Search and Retrieval: GitLab&#x27;s integrated search functionality allows users to quickly locate and access the application packages they need for deployment and execution. This may evolve towards a dedicated document oriented database.</li></ul></section>
+<nav class="pager"><a class="prev" href="s3-4-1.html"><i>←</i><span>3.4.1 · Purpose</span></a><a class="next" href="s3-4-3.html"><span>3.4.3 · Integration Points</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

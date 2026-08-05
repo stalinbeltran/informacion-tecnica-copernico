@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3 System Components · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><span>3 · System Components</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3</span>
+  <h1>System Components</h1>
+  <p class="lede">Descripción detallada de los ocho componentes del sistema. Cada uno se documenta con la misma plantilla: propósito, implementación, puntos de integración y pila de software.</p>
+  <div class="tags"><span class="tag">Componentes</span><span class="tag">Integración</span><span class="tag">Software stack</span></div>
+  <div class="metrics"><span title="Apartados"><b>8</b> apartados</span><span title="Páginas del PDF">pp. <b>17–38</b></span><span title="Figuras"><b>9</b> fig.</span></div>
+</div>
+<section class="prose"><p>This section provides a detailed description of each system component within the CopernicusLAC platform. For each component, we outline its purpose, the implementation strategy, integration points with other components, and the software stack utilised. This approach ensures a comprehensive understanding of the individual parts and their contributions to the overall system architecture.</p>
+<p>Each component plays a role in achieving the system&#x27;s objectives, from data ingestion and processing to storage and user interaction. The detailed breakdown includes:</p>
+<ul><li>Purpose: Explains the primary function and goals of the component within the system.</li><li>Implementation: Describes how the component is realised, including the technologies and methodologies employed.</li><li>Integration Points: Identifies how the component interacts with other parts of the system, ensuring data flow and functionality.</li><li>Software Stack: Lists the specific software tools, frameworks, and platforms used in the implementation of the component.</li></ul>
+<p>By breaking down the system into these detailed components, we aim to provide a clear and thorough understanding of the CopernicusLAC platform&#x27;s architecture, facilitating effective development, deployment, and maintenance.</p></section>
+<h2 class="secttl">En este capítulo</h2>
+<div class="grid">
+<a class="card" href="s3-1.html">
+  <span class="eyebrow">3.1</span>
+  <h3>Data Ingestion</h3>
+  <p class="sum">Componente de ingesta: gestiona la entrada de datos desde fuentes externas en tres niveles (solo metadatos, con copia del dataset y con calibración), validando y catalogando antes de almacenar.</p>
+  <div class="tags"><span class="tag">Kafka</span><span class="tag">Argo</span><span class="tag">CWL</span><span class="tag">STAC</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>17–20</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s3-2.html">
+  <span class="eyebrow">3.2</span>
+  <h3>Data Discovery and Access</h3>
+  <p class="sum">Componente de descubrimiento y acceso: indexa los metadatos, expone la API STAC, sirve teselas de mapa y genera URLs firmadas para la descarga segura.</p>
+  <div class="tags"><span class="tag">STAC API</span><span class="tag">PgSTAC</span><span class="tag">Titiler</span><span class="tag">PostgreSQL</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>20–22</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s3-3.html">
+  <span class="eyebrow">3.3</span>
+  <h3>Data Processing</h3>
+  <p class="sum">Componente de procesamiento: transforma datos EO crudos en información mediante un bus de eventos, un motor de workflows y un motor de ejecución de aplicaciones expuesto como OGC API Processes.</p>
+  <div class="tags"><span class="tag">Argo</span><span class="tag">Calrissian</span><span class="tag">OGC API Processes</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>22–26</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s3-4.html">
+  <span class="eyebrow">3.4</span>
+  <h3>Application Registry</h3>
+  <p class="sum">Registro de aplicaciones: repositorio centralizado de los paquetes de aplicaciones EO (descripciones CWL, código, configuración) y de sus imágenes de contenedor.</p>
+  <div class="tags"><span class="tag">GitLab</span><span class="tag">Harbor</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>26–28</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s3-5.html">
+  <span class="eyebrow">3.5</span>
+  <h3>Front-end Services</h3>
+  <p class="sum">Servicios de front-end: el Portal CopernicusLAC, aplicaciones gráficas interactivas (QGIS, Panoply), notebooks Jupyter, IDE VSCode y las aplicaciones web de servicio co-diseñadas con los stakeholders.</p>
+  <div class="tags"><span class="tag">Portal</span><span class="tag">JupyterHub</span><span class="tag">React</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>28–31</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s3-6.html">
+  <span class="eyebrow">3.6</span>
+  <h3>User Workspace</h3>
+  <p class="sum">Espacio de trabajo del usuario: entorno personal con namespace propio en Kubernetes, repositorio GitLab y registro Harbor dedicados, aprovisionado por Crossplane.</p>
+  <div class="tags"><span class="tag">Crossplane</span><span class="tag">ArgoCD</span><span class="tag">ESO</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>31–33</b></span><span title="Figuras"><b>2</b> fig.</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s3-7.html">
+  <span class="eyebrow">3.7</span>
+  <h3>Authentication and Authorization</h3>
+  <p class="sum">Autenticación y autorización: gestión de identidades y control de acceso basado en Keycloak, con SSO, RBAC, MFA y registro de auditoría.</p>
+  <div class="tags"><span class="tag">Keycloak</span><span class="tag">OAuth</span><span class="tag">RBAC</span><span class="tag">MFA</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>34–36</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s3-8.html">
+  <span class="eyebrow">3.8</span>
+  <h3>Resource Management</h3>
+  <p class="sum">Gestión de recursos: aprovisionamiento, configuración y escalado automático de la infraestructura mediante Crossplane sobre APIs nativas de Kubernetes.</p>
+  <div class="tags"><span class="tag">Crossplane</span><span class="tag">Helm</span><span class="tag">Prometheus</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>36–38</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+</div>
+<nav class="pager"><a class="prev" href="s2-6-6.html"><i>←</i><span>2.6.6 · User Support</span></a><a class="next" href="s3-1.html"><span>3.1 · Data Ingestion</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

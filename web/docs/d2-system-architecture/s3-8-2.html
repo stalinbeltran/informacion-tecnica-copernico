@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.8.2 Implementation · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-8.html">3.8</a><i>›</i><span>3.8.2 · Implementation</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.8.2</span>
+  <h1>Implementation</h1>
+  <p class="lede">Crossplane aprovisiona y configura recursos, escala dinámicamente, monitoriza el uso, gestiona secretos con ESO y aplica políticas.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>36</b></span></div>
+</div>
+<section class="prose"><p>The implementation of the Resource Management component involves several key elements designed to provide automated management of resources, utilising Crossplane:</p>
+<ul><li>Infrastructure Provisioning: Crossplane automates the provisioning of cloud infrastructure resources such as virtual machines, storage buckets, databases, and networking components.</li><li>Resource Configuration: Crossplane manages the configuration of infrastructure resources, ensuring they are set up according to best practices and platform requirements.</li><li>Dynamic Scaling: Crossplane supports dynamic scaling of resources based on predefined policies and real-time demand, ensuring the platform can handle varying workloads.</li><li>Resource Monitoring: Continuous monitoring of resource utilisation and performance to ensure optimal operation and to proactively address any issues.</li><li>Secret Management: The External Secrets Operator (ESO) is used to securely manage and inject secrets (e.g., API keys, passwords) into the resource configurations, ensuring sensitive information is handled securely.</li><li>Policy Enforcement: Ensuring that all resource provisioning and management actions comply with defined policies and standards, enhancing security and compliance.</li></ul></section>
+<nav class="pager"><a class="prev" href="s3-8-1.html"><i>←</i><span>3.8.1 · Purpose</span></a><a class="next" href="s3-8-3.html"><span>3.8.3 · Integration Points</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5.5 Visualisation Integration · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s5.html">5</a><i>›</i><span>5.5 · Visualisation Integration</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 5.5</span>
+  <h1>Visualisation Integration</h1>
+  <p class="lede">Titiler como servidor de teselado dinámico sin estado, optimizado para COG en almacenamiento S3, integrable con Leaflet, OpenLayers o Mapbox GL JS.</p>
+  <div class="tags"><span class="tag">Diagrama</span><span class="tag">Titiler</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>57–58</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+</div>
+<section class="prose"><p>The visualisation of the data is also a crucial component, bridging the gap between raw data and actionable insights. To enhance this capability, Titiler is integrated to harness the flexibility of modern geospatial practices, particularly the Cloud-Optimised Geotiffs (CoG) format, to convert geospatial raster data into web-friendly map tiles, which are then used to display maps on web applications.</p>
+<p>Titiler is a dynamic stateless tiling server designed for web mapping applications that allows on-the-fly generation of map tiles is particularly useful for handling various types of geospatial data, including satellite imagery and elevation models. One of the significant</p>
+<p>features of Titiler is its compatibility with multiple raster data formats. This flexibility makes it a versatile tool for different geospatial data applications.</p>
+<figure class="fig"><a href="img/fig-0246.png" target="_blank" rel="noopener"><img src="img/fig-0246.png" alt="Figure 17 - Titiler-powered interface displaying a true colour composite and histogram" loading="lazy"></a><figcaption>Figure 17 - Titiler-powered interface displaying a true colour composite and histogram</figcaption><span class="pg">p. 58</span></figure>
+<p>Titiler is optimised for cloud environments, especially cloud storage solutions like S3, which is a boon for managing large datasets common in geospatial analyses, and integrates with web map libraries such as Leaflet, OpenLayers, or Mapbox GL JS.</p>
+<p>With Titiler, platforms can effortlessly generate tiles from large geospatial raster datasets directly from cloud storage, without the need to download or process the entire file. This server-based approach ensures high-speed visualisation even for massive datasets. Titiler capitalises on the innate advantages of CoG, where partial data reads can be performed, meaning that only the necessary portions of the data relevant to a user&#x27;s viewport or area of interest are processed and displayed.</p>
+<p>The integration of Titiler enables the creation of interactive and engaging web maps. While Titiler offers customization options for the tiles, including tile size and format, it manages to maintain a focus on simplicity and efficiency and, as an open-source project, Titiler benefits from community-driven development and improvements. This open-source nature not only makes it accessible for a wide range of users but also encourages continuous enhancements and adaptations to the evolving needs of web mapping.</p></section>
+<nav class="pager"><a class="prev" href="s5-4.html"><i>←</i><span>5.4 · Graphical User Interface</span></a><a class="next" href="s6.html"><span>6 · Application Packaging</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

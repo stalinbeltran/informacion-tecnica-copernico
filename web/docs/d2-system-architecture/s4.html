@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4 Data Ingestion Process · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><span>4 · Data Ingestion Process</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 4</span>
+  <h1>Data Ingestion Process</h1>
+  <p class="lede">Proceso completo de ingesta de datos EO: tecnologías empleadas, workflow paso a paso, selección del paquete de aplicación ETL, validación de contenido, perfil mínimo de metadatos STAC y enriquecimiento para visualización.</p>
+  <div class="tags"><span class="tag">Ingesta</span><span class="tag">ETL</span><span class="tag">STAC</span><span class="tag">COG</span></div>
+  <div class="metrics"><span title="Apartados"><b>6</b> apartados</span><span title="Páginas del PDF">pp. <b>39–47</b></span><span title="Figuras"><b>1</b> fig.</span><span title="Tablas"><b>1</b> tabl.</span></div>
+</div>
+<section class="prose"><p>The purpose of this section is to describe the process by which EO data is integrated into the CopernicusLAC platform. This process is essential for ensuring that data is accurately brought into the system, validated, and made available for subsequent discovery and processing activities.</p>
+<p>Data ingestion is the process of collecting, validating, and storing EO data. This process ensures that data is properly formatted, compliant with metadata standards, and securely stored for further use. The ingestion process might also involve pre-processing steps such as data or format transformation to ensure compatibility with the platform’s storage and processing systems.</p>
+<p>The section outlines the technologies, workflows, and standards involved in data ingestion, ensuring consistency and reliability across the platform.</p></section>
+<h2 class="secttl">En este capítulo</h2>
+<div class="grid">
+<a class="card leaf" href="s4-1.html">
+  <span class="eyebrow">4.1</span>
+  <h3>Technologies Used</h3>
+  <p class="sum">CWL define los workflows, Argo Workflows los orquesta y STAC estandariza el catálogo; los tres se adaptan a cada nivel de ingesta.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>39–40</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s4-2.html">
+  <span class="eyebrow">4.2</span>
+  <h3>Ingestion Workflow</h3>
+  <p class="sum">Siete etapas del workflow —aserción de formato, selección del paquete, validación y preprocesado, extracción de metadatos, enriquecimiento, registro en catálogo y carga en S3— más el tratamiento de errores por nivel de ingesta.</p>
+  <div class="tags"><span class="tag">Diagrama</span><span class="tag">7 etapas</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>40–42</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s4-3.html">
+  <span class="eyebrow">4.3</span>
+  <h3>Application Package Selection</h3>
+  <p class="sum">Cómo se elige el paquete ETL adecuado a partir de las propiedades del STAC Item; si faltan, se aplica un ETL genérico con funcionalidad reducida de descubrimiento y visualización.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>42</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s4-4.html">
+  <span class="eyebrow">4.4</span>
+  <h3>Data Validation and Content Validation</h3>
+  <p class="sum">Validaciones específicas por nivel: presencia y conformidad del STAC Item, presencia de assets, verificación de checksums, validación de formato y comprobaciones de calibración y transformación.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>43–44</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s4-5.html">
+  <span class="eyebrow">4.5</span>
+  <h3>Metadata Profile</h3>
+  <p class="sum">Perfil mínimo de metadatos basado en STAC: tabla con los campos obligatorios (id, geometry, bbox, datetime, assets…) que debe llevar todo activo geoespacial.</p>
+  <div class="tags"><span class="tag">Tabla</span><span class="tag">STAC</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>44</b></span><span title="Tablas"><b>1</b> tabl.</span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s4-6.html">
+  <span class="eyebrow">4.6</span>
+  <h3>Metadata Enrichment for Visualization</h3>
+  <p class="sum">Uso de las extensiones STAC Rendering y Web Map Links para generar composiciones (color verdadero, infrarrojo) y enlaces a servicios WMTS/XYZ, con ejemplos JSON.</p>
+  <div class="tags"><span class="tag">Rendering</span><span class="tag">Web Map Links</span><span class="tag">JSON</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>45–47</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+</div>
+<nav class="pager"><a class="prev" href="s3-8-4.html"><i>←</i><span>3.8.4 · Software Stack</span></a><a class="next" href="s4-1.html"><span>4.1 · Technologies Used</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

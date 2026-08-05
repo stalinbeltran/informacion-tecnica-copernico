@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.1.1 Purpose · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-1.html">3.1</a><i>›</i><span>3.1.1 · Purpose</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.1.1</span>
+  <h1>Purpose</h1>
+  <p class="lede">Soporta tres niveles de ingesta según el papel del dataset: registro de metadatos, registro con copia local y registro con calibración.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>17</b></span></div>
+</div>
+<section class="prose"><p>The Data Ingestion component is crucial for the CopernicusLAC platform as it manages the initial intake of data from external sources. Its primary purpose is to support a flexible data ingestion strategy that accommodates multiple levels of ingestion, tailored to the dataset’s role, user requirements, and operational scenarios. These levels include:</p>
+<ol><li>Metadata Registration: Ensuring that datasets hosted externally are discoverable by registering their metadata and access points without duplicating the original data.</li><li>Metadata Registration with Dataset Copying: Facilitating local storage of datasets when frequent access or integration with platform workflows is required.</li><li>Metadata Registration with Dataset Calibration: Supporting pre-processing or transformation of datasets during ingestion to align with specific analytical or quality requirements.</li></ol>
+<p>This component ensures that incoming data, whether stored locally or accessed externally, is validated, indexed, and made accessible for subsequent processing and analysis.</p></section>
+<nav class="pager"><a class="prev" href="s3-1.html"><i>←</i><span>3.1 · Data Ingestion</span></a><a class="next" href="s3-1-2.html"><span>3.1.2 · Implementation</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

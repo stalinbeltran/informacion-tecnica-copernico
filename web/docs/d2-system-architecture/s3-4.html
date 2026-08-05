@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.4 Application Registry · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><span>3.4 · Application Registry</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.4</span>
+  <h1>Application Registry</h1>
+  <p class="lede">Registro de aplicaciones: repositorio centralizado de los paquetes de aplicaciones EO (descripciones CWL, código, configuración) y de sus imágenes de contenedor.</p>
+  <div class="tags"><span class="tag">GitLab</span><span class="tag">Harbor</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>26–28</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+</div>
+<h2 class="secttl">Apartados</h2>
+<div class="grid">
+<a class="card leaf" href="s3-4-1.html">
+  <span class="eyebrow">3.4.1</span>
+  <h3>Purpose</h3>
+  <p class="sum">Almacenar, organizar y recuperar de forma segura los paquetes de aplicaciones EO para su despliegue y ejecución, con consistencia y reproducibilidad.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>26</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s3-4-2.html">
+  <span class="eyebrow">3.4.2</span>
+  <h3>Implementation</h3>
+  <p class="sum">GitLab guarda los paquetes como artefactos de CI con control de versiones y metadatos; Harbor actúa como registro de contenedores; ambos aplican control de acceso.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>26</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s3-4-3.html">
+  <span class="eyebrow">3.4.3</span>
+  <h3>Integration Points</h3>
+  <p class="sum">Sirve al motor de ejecución, al motor de workflows, al espacio de trabajo del usuario y, de forma indirecta, a los componentes de procesamiento e ingesta.</p>
+  <div class="tags"><span class="tag">Diagrama</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>27</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s3-4-4.html">
+  <span class="eyebrow">3.4.4</span>
+  <h3>Software Stack</h3>
+  <p class="sum">GitLab, Harbor, PostgreSQL gestionado para metadatos y control de acceso mediante IAM.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>28</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+</div>
+<nav class="pager"><a class="prev" href="s3-3-4.html"><i>←</i><span>3.3.4 · Software Stack</span></a><a class="next" href="s3-4-1.html"><span>3.4.1 · Purpose</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

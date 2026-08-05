@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8.4 Access Controls · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s8.html">8</a><i>›</i><span>8.4 · Access Controls</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 8.4</span>
+  <h1>Access Controls</h1>
+  <p class="lede">RBAC con principio de mínimo privilegio, MFA y registro de auditoría; beneficios de centralizar la gestión de accesos en Keycloak.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>78–79</b></span></div>
+</div>
+<section class="prose"><p>Access control is a core component of the platform’s security strategy, ensuring that only authorised individuals can access sensitive data and systems. It includes:</p>
+<ul><li>Role-Based Access Control (RBAC): The platform employs RBAC to manage user access based on roles and responsibilities. This system restricts access to data and functionalities based on the principle of least privilege, ensuring that users only have access to the information and tools necessary for their roles.</li><li>Multi-Factor Authentication (MFA): MFA is implemented to add an additional layer of security by requiring users to provide multiple forms of verification before gaining access.</li><li>Audit Logging: All access attempts and actions taken by users are logged and monitored to detect and respond to unauthorised access attempts. These logs are regularly reviewed as part of the platform’s ongoing security monitoring efforts.</li></ul>
+<p>The use of Keycloak in the CopernicusLAC platform brings several significant benefits, foremost of which is the unification of access management. By centralising identity and access management through Keycloak, the platform simplifies the administration of user roles and permissions across multiple integrated services. This unification streamlines the process of managing access controls, reducing complexity for administrators and ensuring that permissions are consistently applied throughout the platform. This centralised approach not only enhances operational efficiency but also helps maintain a coherent security posture across different components of the platform.</p>
+<p>Keycloak also significantly enhances the security of the CopernicusLAC platform. Its authentication and authorization mechanisms ensure that only authorised users can access sensitive resources. The integration of multi-factor authentication (MFA) adds an additional</p>
+<p>layer of security, further reducing the risk of unauthorised access. By requiring multiple forms of verification, MFA ensures that even if user credentials are compromised, unauthorised access is still unlikely. This comprehensive security framework helps safeguard the integrity of application packages and other resources, providing confidence in the platform&#x27;s overall security.</p>
+<p>Additionally, Keycloak provides scalability and flexibility, allowing the CopernicusLAC platform to grow securely as the number of users and services increases. Keycloak’s support for federated identity and role-based access control ensures that the platform can accommodate a growing user base while maintaining stringent security standards. This flexibility is particularly important in environments where users may need access from various identity providers, or where roles and permissions need to be dynamically managed. Keycloak’s capabilities ensure that as the platform expands, it can continue to enforce consistent and secure access controls, adapting to evolving security needs without compromising performance or usability.</p></section>
+<nav class="pager"><a class="prev" href="s8-3.html"><i>←</i><span>8.3 · Data Protection and Privacy</span></a><a class="next" href="s8-5.html"><span>8.5 · Monitoring and Auditing</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

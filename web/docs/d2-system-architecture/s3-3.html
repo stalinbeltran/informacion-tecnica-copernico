@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.3 Data Processing · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><span>3.3 · Data Processing</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.3</span>
+  <h1>Data Processing</h1>
+  <p class="lede">Componente de procesamiento: transforma datos EO crudos en información mediante un bus de eventos, un motor de workflows y un motor de ejecución de aplicaciones expuesto como OGC API Processes.</p>
+  <div class="tags"><span class="tag">Argo</span><span class="tag">Calrissian</span><span class="tag">OGC API Processes</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>22–26</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+</div>
+<h2 class="secttl">Apartados</h2>
+<div class="grid">
+<a class="card leaf" href="s3-3-1.html">
+  <span class="eyebrow">3.3.1</span>
+  <h3>Purpose</h3>
+  <p class="sum">Infraestructura escalable para procesamiento sistemático y bajo demanda: limpieza, transformación, análisis y visualización de datos EO.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>22</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s3-3-2.html">
+  <span class="eyebrow">3.3.2</span>
+  <h3>Implementation</h3>
+  <p class="sum">Tres piezas: bus de eventos (Argo Events sobre Kafka), motor de workflows (Argo Workflows con CWL) y motor de ejecución de aplicaciones con las funciones de despliegue (OGC API Processes Parte 2) y ejecución (Parte 1).</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>22–24</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s3-3-3.html">
+  <span class="eyebrow">3.3.3</span>
+  <h3>Integration Points</h3>
+  <p class="sum">Se integra con descubrimiento y acceso, espacio de trabajo, front-end, visualización y el repositorio de aplicaciones.</p>
+  <div class="tags"><span class="tag">Diagrama</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>24–25</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s3-3-4.html">
+  <span class="eyebrow">3.3.4</span>
+  <h3>Software Stack</h3>
+  <p class="sum">Calrissian, Argo Workflows y Events, Docker/podman, Kubernetes, Python y GDAL, almacenamiento S3 y ZOO Project como implementación de OGC API Processes.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>25–26</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+</div>
+<nav class="pager"><a class="prev" href="s3-2-4.html"><i>←</i><span>3.2.4 · Software Stack</span></a><a class="next" href="s3-3-1.html"><span>3.3.1 · Purpose</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.3.3 Network Security · D1</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D1</a><i>›</i><a href="s4.html">4</a><i>›</i><a href="s4-3.html">4.3</a><i>›</i><span>4.3.3 · Network Security</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D1 · CopernicusLAC Centre Specification and Performance Requirements · Capítulo 4.3.3</span>
+  <h1>Network Security</h1>
+  <p class="lede">Cortafuegos en capa de red y de aplicación, IDS/IPS y auditorías periódicas; diagrama de la arquitectura de red con el filtrado del tráfico de Internet y las conexiones internas protegidas.</p>
+  <div class="tags"><span class="tag">Diagrama</span><span class="tag">Firewall</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>25–26</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+</div>
+<section class="prose"><p>To safeguard the Platform&#x27;s network infrastructure against cyber threats, a comprehensive security approach is implemented. This approach includes the use of firewalls at both network and application layers, as well as intrusion detection and prevention systems (IDS/IPS). These systems control and monitor incoming and outgoing network traffic based on predetermined security rules, providing protection against unauthorised access and potential cyber threats.</p>
+<p>Regular network audits and security assessments are conducted to identify and mitigate vulnerabilities, ensuring that the network remains resilient against evolving threats. The infrastructure provider is responsible for maintaining firewalls, VPNs, and conducting these security assessments. Meanwhile, the Platform operations team is tasked with configuring security settings to meet specific needs, monitoring network security, and implementing additional security measures as necessary.</p>
+<figure class="fig"><a href="img/fig-0116.png" target="_blank" rel="noopener"><img src="img/fig-0116.png" alt="Figure 8 - Network Security Architecture for CopernicusLAC Platform" loading="lazy"></a><figcaption>Figure 8 - Network Security Architecture for CopernicusLAC Platform</figcaption><span class="pg">p. 25</span></figure>
+<p>The network architecture, as depicted above, illustrates the key components of the network security setup. Traffic from the Internet is first filtered through a firewall before reaching the</p>
+<p>CentrePlatform. Internal communications between the CentrePlatform, Observations, and DataDistribution components are carried out over high-speed internal connections, further secured by the infrastructure provider.</p>
+<ul><li>External Connection: 3 Gbps or higher external connection, secured by the firewall, ensures that traffic from the Internet is controlled and monitored before it reaches the internal systems.</li><li>Internal Network: The internal network operates at 10 Gbps or higher, facilitating fast and secure communication between the CentrePlatform, Observations, and DataDistribution components, all of which are protected by the BELLA (Building Europe Link to Latin America) network infrastructure.</li></ul>
+<p>This layered security approach, supported by regular assessments and updates, ensures that the platform&#x27;s network remains secure, efficient, and capable of supporting its operations.</p></section>
+<nav class="pager"><a class="prev" href="s4-3-2.html"><i>←</i><span>4.3.2 · External Connectivity</span></a><a class="next" href="s4-4.html"><span>4.4 · Specifications Summary</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

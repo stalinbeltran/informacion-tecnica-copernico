@@ -1,0 +1,2296 @@
+{
+ "doc_id": "d3-interface-control",
+ "source_pdf": "T2-ESA-COPLACI-ID-24-030 D3 Interface Control Document v1.3.pdf",
+ "title": "T2-ESA-COPLACI-ID-24-030 D3 Interface Control Document v1.3",
+ "pages": 35,
+ "sections": [
+  {
+   "level": 0,
+   "num": "0",
+   "title": "Portada, control del documento e índice",
+   "page": 1,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "CopernicusLAC",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "para",
+     "text": "Infrastructure Support",
+     "page": 1,
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "Interface Control Document",
+     "page": 1,
+     "indent": 4
+    },
+    {
+     "type": "figure",
+     "src": "fig-0008.png",
+     "w": 1404,
+     "h": 354,
+     "page": 1
+    },
+    {
+     "type": "figure",
+     "src": "fig-0012.png",
+     "w": 299,
+     "h": 168,
+     "page": 1
+    },
+    {
+     "type": "figure",
+     "src": "fig-0011.png",
+     "w": 311,
+     "h": 162,
+     "page": 1
+    },
+    {
+     "type": "heading",
+     "text": "Title",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "Copernicus LAC Infra - D3 Interface Control Document",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Prepared by",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "Terradue",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Reference",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "T2-ESA-COPLACI-ID-24-030",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Issue",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "1.3",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Date",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "2025-07-27",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Status",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "Issued",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Document Type",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "Interface Design Document",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Configuration",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "Configured document",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Change record",
+     "toc": false,
+     "size": 14.0,
+     "page": 2
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Date",
+       "Issue",
+       "Section",
+       "Page",
+       "Comment"
+      ],
+      [
+       "2024-08-15",
+       "1.0",
+       "All",
+       "All",
+       "Initial issue"
+      ],
+      [
+       "2024-12-03",
+       "1.1",
+       "All 2.3.1, 3",
+       "All 11-12, 14-17",
+       "● Typos ● Include different levels of ingestion, metadata registration, dataset copying, and dataset calibration"
+      ],
+      [
+       "2025-05-28",
+       "1.2",
+       "All 1.6",
+       "All 6",
+       "● Typos ● Align applicable documents version"
+      ],
+      [
+       "2025-07-27",
+       "1.3",
+       "6.1",
+       "31",
+       "● Clarified the use and scope of the signed URL data access interface in Section 6.1, including M2M usage, Web UI integration, and CWL workflow support."
+      ]
+     ],
+     "header": true,
+     "page": 2
+    }
+   ],
+   "id": "portada",
+   "chars": 287,
+   "figures": 3,
+   "tables": 1
+  },
+  {
+   "level": 1,
+   "num": "1",
+   "title": "Introduction",
+   "page": 4,
+   "blocks": [],
+   "id": "s1",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.1",
+   "title": "Purpose",
+   "page": 4,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The Interface Control Document (ICD) for the CopernicusLAC platform is designed to define and manage the interfaces between the platform and external systems, including data providers, third-party services, and external users. The primary goal of this document is to ensure that all interactions between the CopernicusLAC platform and external entities are clearly defined, secure, and compliant with relevant standards and regulations. This ICD provides a detailed description of the data exchange formats, protocols, and security measures employed by the platform to facilitate integration with external systems. By establishing these interfaces, the CopernicusLAC platform can effectively support data ingestion, discovery, visualisation, and access while maintaining high levels of performance, security, and scalability.",
+     "page": 4,
+     "indent": 0
+    }
+   ],
+   "id": "s1-1",
+   "chars": 825,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.2",
+   "title": "Background",
+   "page": 4,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The CopernicusLAC initiative is a collaborative effort between the European Space Agency (ESA), the European Commission's Directorate-General for International Partnerships (DG-INTPA), and the Government of Panama. The initiative aims to establish a Regional Copernicus Centre in Panama to facilitate the uptake and utilisation of Copernicus data in the LAC region. The primary focus of the Centre is to support disaster risk reduction and recovery efforts, leveraging Earth Observation (EO) data and geospatial technology to provide information services to local and regional stakeholders.",
+     "page": 4,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "This initiative is part of the broader EU-LAC Digital Alliance, which promotes cooperation in digital and space technologies between the European Union (EU) and LAC countries. The CopernicusLAC Centre is envisioned as a pilot project under the EU's Global Gateway strategy, aiming to foster international collaboration, enhance data sharing, and support the development of local capacities in EO data processing and utilisation.",
+     "page": 4,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The CopernicusLAC Centre is a regional facility dedicated to the management, processing, and dissemination of EO data from the Copernicus Program, specifically tailored for the LAC region. The centre aims to provide comprehensive services for data hosting, processing, and access, supporting a wide range of applications, including environmental monitoring, disaster risk reduction, and sustainable development. The centre also focuses on enhancing local capacities by transferring knowledge and providing training to local operators.",
+     "page": 4,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The CopernicusLAC Centre Platform refers to the technical infrastructure and software environment that enables the functionalities of the CopernicusLAC Centre. This platform includes the hardware, software, middleware, and network components required to ingest, process, store, and distribute Copernicus EO data. The platform supports various workflows",
+     "page": 4,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "and tools necessary for data management and analysis, ensuring seamless access and usability for different stakeholders. It is designed to be scalable, capable of handling large volumes of data and supporting a growing number of users and applications.",
+     "page": 5,
+     "indent": 0
+    }
+   ],
+   "id": "s1-2",
+   "chars": 2156,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.3",
+   "title": "Scope",
+   "page": 5,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "This document covers the interfaces between the CopernicusLAC platform and external systems, with a focus on four key functional areas: data ingestion, data discovery, data visualisation, and data access. The scope includes the specification of communication protocols, data formats, security measures, and compliance requirements that govern these interfaces. Additionally, the document outlines the testing, validation, and change management processes that ensure the reliability and integrity of the platform’s external interactions.",
+     "page": 5,
+     "indent": 0
+    }
+   ],
+   "id": "s1-3",
+   "chars": 536,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.4",
+   "title": "Audience",
+   "page": 5,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The intended audience for this document includes system architects, software developers, system integrators, project managers, and other stakeholders involved in the development, deployment, and maintenance of the CopernicusLAC platform. It is also relevant for external partners and third-party service providers who need to understand how to integrate their systems with the CopernicusLAC platform, as well as for security and compliance officers responsible for ensuring that external interactions meet regulatory requirements.",
+     "page": 5,
+     "indent": 0
+    }
+   ],
+   "id": "s1-4",
+   "chars": 530,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.5",
+   "title": "Document Structure",
+   "page": 5,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "This Service Specification document is divided into the following Chapters:",
+     "page": 5,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Chapter 1 - Introduction (current): Provides an overview of the document, including its purpose, scope, intended audience, and structure..",
+     "page": 5,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Section 2 - High-Level System Architecture: Describes the overall architecture of the CopernicusLAC platform, highlighting the key components and their roles within the system. This section serves as a foundation for understanding how the system components interact with external systems detailed in subsequent sections.",
+     "page": 5,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Section 3 - Data Ingestion Interfaces: Details the interfaces related to the ingestion of data into the system, focusing on the integration with the Copernicus Data Space Ecosystem (CDSE). It includes specifications on data formats, protocols, and security measures.",
+     "page": 5,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Section 4 - Data Discovery Interfaces: Focuses on the interfaces that enable data discovery within the system, specifically the STAC API. This section outlines the API endpoints, data structure, and security considerations.",
+     "page": 5,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Section 5 - Data Visualisation Interfaces: Describes the interfaces used for data visualisation, including those related to Titiler and the Web Map Tile Service (WMTS).",
+     "page": 5,
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "It covers the technical requirements, data rendering processes, and API specifications.",
+     "page": 6,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Section 6 - Data Access Interfaces: Addresses the interfaces involved in data access, particularly those using S3-compatible storage and Signed URLs. This section covers the data retrieval process, security measures, and performance considerations.",
+     "page": 6,
+     "indent": 1
+    }
+   ],
+   "id": "s1-5",
+   "chars": 1525,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.6",
+   "title": "Applicable Documents",
+   "page": 6,
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Ref.",
+       "Title and References",
+       "Issue"
+      ],
+      [
+       "[SOW]",
+       "CopernicusLAC Infrastructure Support (EOP-EOP-SI-SOW-2023-15)",
+       "1.0"
+      ],
+      [
+       "[CTR]",
+       "ESA Contract No. 4000140709/23/I-EF with Terradue for Platform Extensions with AI Capabilities",
+       "1.0"
+      ],
+      [
+       "[D1]",
+       "T2-ESA-COPLAC-RS-24-028 D1 CopernicusLAC Centre Specification and Performance Requirements",
+       "1.4"
+      ],
+      [
+       "[D2]",
+       "T2-ESA-COPLACI-DD-24-029 D2 System Architecture Description",
+       "1.3"
+      ]
+     ],
+     "header": true,
+     "page": 6
+    }
+   ],
+   "id": "s1-6",
+   "chars": 0,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 2,
+   "num": "1.7",
+   "title": "Reference Documents",
+   "page": 6,
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Ref.",
+       "Title and References",
+       "Issue"
+      ],
+      [
+       "[PROP]",
+       "T2-ESA-AO1-11947-OF-23-062 Terradue Offer for CopLAC Infra (all Volumes)",
+       "1.0"
+      ],
+      [
+       "[WMTS]",
+       "OGC WMTS Simple Profile",
+       "13-082r2"
+      ],
+      [
+       "[OAF]",
+       "OGC API - Features",
+       "17-069r4"
+      ],
+      [
+       "[OAP]",
+       "OGC API - Processes",
+       "18-062r2"
+      ]
+     ],
+     "header": true,
+     "page": 6
+    }
+   ],
+   "id": "s1-7",
+   "chars": 0,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 2,
+   "num": "1.8",
+   "title": "Acronyms and Abbreviations",
+   "page": 6,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The following acronyms are used within this document:",
+     "page": 6,
+     "indent": 0
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "API",
+       "Application Programming Interface"
+      ],
+      [
+       "CDSE",
+       "Copernicus Data Space Ecosystem"
+      ],
+      [
+       "COG",
+       "Cloud Optimised GeoTIFF"
+      ],
+      [
+       "CWL",
+       "Common Workflow Language"
+      ],
+      [
+       "DBaaS",
+       "Database as a Service"
+      ],
+      [
+       "EO",
+       "Earth Observation"
+      ],
+      [
+       "ESA",
+       "European Space Agency"
+      ],
+      [
+       "EU",
+       "European Union"
+      ],
+      [
+       "ETL",
+       "Extract, Transform, Load"
+      ],
+      [
+       "GDPR",
+       "General Data Protection Regulation"
+      ],
+      [
+       "HTTPS",
+       "HyperText Transfer Protocol Secure"
+      ],
+      [
+       "ICD",
+       "Interface Control Document"
+      ],
+      [
+       "LAC",
+       "Latin America and the Caribbean"
+      ],
+      [
+       "M2M",
+       "Machine-To-Machine"
+      ],
+      [
+       "OGC",
+       "Open Geospatial Consortium"
+      ],
+      [
+       "RBAC",
+       "Role-Based Access Control"
+      ],
+      [
+       "STAC",
+       "SpatioTemporal Asset Catalog"
+      ],
+      [
+       "WMTS",
+       "Web Map Tile Service"
+      ]
+     ],
+     "header": false,
+     "page": 6
+    }
+   ],
+   "id": "s1-8",
+   "chars": 53,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 1,
+   "num": "2",
+   "title": "High-Level System Architecture",
+   "page": 8,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The CopernicusLAC platform is designed as a modular, cloud-native system that supports the entire lifecycle of Earth Observation (EO) data, from acquisition and processing to discovery, access, and analysis. This section provides an overview of the platform's architecture, highlighting the key components and their roles within the system. Understanding this architecture is crucial for comprehending the interfaces detailed in subsequent sections.",
+     "page": 8,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "This high-level system architecture aligns with the detailed descriptions provided in the D2 System Architecture Description document. The D2 document elaborates on the specific technologies, workflows, and interactions within each component, providing a deeper understanding of the platform’s operation. For detailed diagrams, technical specifications, and component interactions, refer to the D2 System Architecture Description.",
+     "page": 8,
+     "indent": 0
+    }
+   ],
+   "id": "s2",
+   "chars": 879,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "2.1",
+   "title": "Overview",
+   "page": 8,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The CopernicusLAC platform is built on a distributed architecture that leverages modern cloud technologies to ensure scalability, flexibility, and resilience. The platform integrates multiple components, each responsible for specific functions within the EO data lifecycle. The architecture is designed to handle large volumes of data and complex workflows, ensuring that users can access and process EO data in a reliable and timely manner.",
+     "page": 8,
+     "indent": 0
+    },
+    {
+     "type": "figure",
+     "src": "fig-0068.png",
+     "w": 1736,
+     "h": 1512,
+     "page": 8,
+     "caption": "Figure 1 - CopernicusLAC Centre Platform System Components"
+    }
+   ],
+   "id": "s2-1",
+   "chars": 441,
+   "figures": 1,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "2.2",
+   "title": "Key Components",
+   "page": 9,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The platform comprises several core components, each of which plays a role in the system's overall functionality:",
+     "page": 9,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Data Ingestion",
+     "page": 9,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Functionality: The Data Ingestion component is responsible for acquiring EO data from various sources, including satellites, ground stations, and external data providers. This component supports multiple data formats and ingestion protocols to accommodate a diverse range of data sources.",
+     "page": 9,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Integration: Data Ingestion interfaces with the Data Processing component to pass on validated and pre-processed data. It also interacts with the storage systems for cataloguing and long-term storage.",
+     "page": 9,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Data Processing",
+     "page": 9,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Functionality: The Data Processing component is central to the platform’s capability to transform raw EO data into actionable insights. It manages the execution of complex workflows, orchestrating tasks across a distributed computing environment.",
+     "page": 9,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Integration: This component interacts closely with Data Ingestion for processing incoming data and with Data Discovery and Access for storing and retrieving processed outputs. It also interfaces with the Application Execution Engine for deploying and running EO algorithms.",
+     "page": 9,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Data Discovery and Access",
+     "page": 9,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Functionality: The Data Discovery and Access component allows users to search, retrieve, and visualise EO data. It provides tools for filtering datasets based on spatial, temporal, and thematic criteria, leveraging metadata cataloguing systems.",
+     "page": 9,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Integration: This component interfaces with the storage systems to access metadata and data files, and with Front-End Services to provide users with search and visualisation capabilities.",
+     "page": 9,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Front-End Services",
+     "page": 9,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Functionality: Front-End Services provide the user interface for interacting with the CopernicusLAC platform. This includes the web portal, interactive development environments, and web applications that allow users to access data, run analyses, and visualise results.",
+     "page": 9,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Integration: These services interface with the Data Processing and Data Discovery components to deliver processed data and analysis tools to the end-users. They also interact with the User Workspace to provide a smooth user experience.",
+     "page": 9,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "User Workspace",
+     "page": 9,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Functionality: The User Workspace is a personalised environment where users can manage, process, and analyse EO data. It provides access to the necessary tools and resources in a private, user-specific setting.",
+     "page": 9,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Integration: The User Workspace integrates with Front-End Services for data access and interaction, and with Data Processing for executing customised workflows.",
+     "page": 10,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Security and Access Control",
+     "page": 10,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Functionality: This component ensures the platform’s security by managing authentication, authorization, and access control. It safeguards data and services against unauthorised access and potential threats.",
+     "page": 10,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Integration: Security and Access Control interfaces with all other components to enforce security policies, manage user roles, and ensure compliance with regulatory standards. Keycloak is the central tool used for identity and access management across the platform.",
+     "page": 10,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Application Packaging and Deployment",
+     "page": 10,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Functionality: The Application Packaging and Deployment component manages the lifecycle of EO applications, from packaging as Docker containers to deployment across the platform. It ensures that applications are consistent, scalable, and easily deployable.",
+     "page": 10,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Integration: This component interacts with the Data Processing and Resource Management components to deploy applications within the platform’s infrastructure. It also interfaces with the Harbor container registry and Kubernetes for container management and orchestration.",
+     "page": 10,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Resource Management",
+     "page": 10,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Functionality: Resource Management is responsible for provisioning, managing, and optimising the platform’s computational and storage resources. This component ensures that the platform can scale to meet user demands.",
+     "page": 10,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Integration: Resource Management interfaces with Crossplane for dynamic resource provisioning and with monitoring tools to optimise resource usage across the platform. It plays a crucial role in maintaining the platform’s performance and cost-effectiveness.",
+     "page": 10,
+     "indent": 3
+    }
+   ],
+   "id": "s2-2",
+   "chars": 4065,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "2.3",
+   "title": "Component Interactions",
+   "page": 10,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The CopernicusLAC platform is designed with a focus on modularity and interoperability, ensuring that each component can operate independently while integrating with the others. The interaction between components is facilitated by a set of well-defined interfaces and protocols that manage data flow, communication, and execution of tasks across the platform, which are detailed in the sections of this document.",
+     "page": 10,
+     "indent": 0
+    }
+   ],
+   "id": "s2-3",
+   "chars": 412,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "2.3.1",
+   "title": "Data Flow from Ingestion to Processing",
+   "page": 10,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The data flow from ingestion to processing reflects a flexible and modular design that accommodates various levels of data ingestion, metadata registration, dataset copying, and dataset calibration. These levels influence how data moves through the system, ensuring",
+     "page": 10,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "that ingestion workflows align with the dataset's intended use while maintaining efficiency and interoperability across components.",
+     "page": 11,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Data ingested through the Data Ingestion component follows a structured workflow. For metadata registration, only metadata is validated, cataloged, and indexed within the Data Discovery and Access component, enabling users to discover and retrieve datasets directly from their original sources. For dataset copying, the ingestion workflow includes the validation, storage, and indexing of datasets within the platform's S3-compatible object storage system. In scenarios involving dataset calibration, additional processing steps are executed during ingestion to prepare the data for specialized analyses or workflows. These calibrated datasets are also stored locally, accompanied by updated metadata reflecting the calibration processes.",
+     "page": 11,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The Data Discovery and Access component ensures that all ingested or registered data is indexed and made searchable using the STAC specification. This cataloging process provides a unified interface for users to explore datasets, regardless of their physical storage location.",
+     "page": 11,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "When a user initiates a processing task, the Data Processing component retrieves the necessary datasets from the storage system or external access points defined during ingestion. The retrieval process is optimized to ensure that metadata alignment and dataset integrity are maintained. For locally stored datasets, the system uses Argo Workflows to orchestrate the execution of EO algorithms as defined in the Application Repository. These workflows manage dependencies and processing logic, ensuring that tasks such as data analysis, transformation, and visualization are performed.",
+     "page": 11,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "For datasets registered via metadata only, the processing component retrieves data directly from the external source as needed, ensuring interoperability with distributed data systems. In cases involving calibrated datasets, the processing workflows leverage the pre-processed data for further analysis, reducing the computational overhead required during execution.",
+     "page": 11,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The platform’s modularity ensures that the flow of data from ingestion to processing remains adaptable to varying user needs and operational requirements. Whether handling metadata-only ingestion for data discovery or managing full ingestion and calibration workflows for complex processing tasks, the system maintains integration across its components. This flexibility supports a wide range of use cases, from rapid metadata harvesting to large-scale EO data analysis.",
+     "page": 11,
+     "indent": 0
+    }
+   ],
+   "id": "s2-3-1",
+   "chars": 2830,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "2.3.2",
+   "title": "Interaction between Data Processing and User Interfaces",
+   "page": 11,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "As the Data Processing component completes the execution of workflows, the results are stored back into the storage system, with updated metadata added to the catalog. Users can then discover these processed datasets through the Data Discovery and Access interfaces.",
+     "page": 11,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Users interact with the platform via Front-end Services, which provide a unified interface to access data, run processing tasks, and visualise results. These services, including web applications, notebooks, and integrated development environments (IDEs), are tightly integrated with the User Workspace component, allowing users to manage their data and processing tasks.",
+     "page": 12,
+     "indent": 0
+    }
+   ],
+   "id": "s2-3-2",
+   "chars": 636,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "2.3.3",
+   "title": "Application Deployment and Execution",
+   "page": 12,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "EO applications are packaged and stored in the Application Repository as Docker containers and associated Application Package manifest encoded using the Common Workflow Language (CWL). The containers include all necessary dependencies, ensuring that applications can be deployed consistently across different environments within the platform.",
+     "page": 12,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The deployment of these applications is managed by Kubernetes, which is responsible for orchestrating the containers across the platform's infrastructure. Helm charts are used to define deployment configurations, enabling repeatable and scalable deployment processes.",
+     "page": 12,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Once deployed, these applications can be executed by the Data Processing component or directly by users through the Front-end Services. The platform supports both batch processing and real-time processing, catering to a wide range of use cases.",
+     "page": 12,
+     "indent": 0
+    }
+   ],
+   "id": "s2-3-3",
+   "chars": 853,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "2.3.4",
+   "title": "Security and Access Control",
+   "page": 12,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The platform's security framework is centralised through the Authentication and Authorization component, which uses Keycloak for identity management. All access to data, applications, and services is controlled by Keycloak, which enforces policies based on user roles and permissions.",
+     "page": 12,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Multi-Factor Authentication (MFA) and Role-Based Access Control (RBAC) ensure that users only have access to the resources necessary for their roles, reducing the risk of unauthorised access. Security logs are maintained to track user activity, providing an audit trail for compliance and security analysis.",
+     "page": 12,
+     "indent": 0
+    }
+   ],
+   "id": "s2-3-4",
+   "chars": 591,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "2.3.5",
+   "title": "Resource Management and Scalability",
+   "page": 12,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The Resource Management component ensures that the platform can scale dynamically to meet user demand. The platform can automatically do the provisioning and deprovisioning of cloud resources based on workload and application requirements. This dynamic scaling capability ensures that the platform remains responsive even during periods of high demand.",
+     "page": 12,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The platform's architecture supports horizontal scaling, where additional instances of processing components can be deployed as needed. This approach allows the platform to handle large-scale EO data processing tasks without compromising performance.",
+     "page": 12,
+     "indent": 0
+    }
+   ],
+   "id": "s2-3-5",
+   "chars": 602,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "3",
+   "title": "Data Ingestion",
+   "page": 13,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Details the interfaces used for ingesting data from external sources, including protocols, data formats, and security measures.",
+     "page": 13,
+     "indent": 0
+    }
+   ],
+   "id": "s3",
+   "chars": 127,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "3.1",
+   "title": "Overview",
+   "page": 13,
+   "blocks": [
+    {
+     "type": "figure",
+     "src": "fig-0081.png",
+     "w": 1651,
+     "h": 1342,
+     "page": 13,
+     "caption": "Figure 2 - Product Ingestion Sequence Diagram"
+    },
+    {
+     "type": "para",
+     "text": "The Data Ingestion interface in the CopernicusLAC system is responsible for managing the intake of EO data from external sources, particularly the Copernicus Data Space Ecosystem (CDSE). This process accommodates multiple levels of ingestion, depending on the dataset’s role and user requirements:",
+     "page": 13,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Metadata Harvesting: The platform registers metadata and access points for externally hosted datasets, enabling discovery and retrieval without duplicating the original data.",
+     "page": 13,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Metadata Harvesting and Dataset Copying: In cases where datasets are essential for local processing or frequent use, both metadata and the datasets themselves are ingested and stored in the platform’s infrastructure.",
+     "page": 14,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Metadata Harvesting with Calibration: Specific datasets may undergo additional calibration or transformation workflows during ingestion to meet predefined analytical or quality requirements.",
+     "page": 14,
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "At its maximum extent, this process involves triggering the ingestion workflow, validating the data, and making it accessible within the platform for further processing and analysis.",
+     "page": 14,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The sequence diagram above outlines the flow of interactions between different components during the ingestion process.",
+     "page": 14,
+     "indent": 0
+    }
+   ],
+   "id": "s3-1",
+   "chars": 1178,
+   "figures": 1,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "3.2",
+   "title": "Interface Requirements",
+   "page": 14,
+   "blocks": [],
+   "id": "s3-2",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.2.1",
+   "title": "Data Formats",
+   "page": 14,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The ingestion process expects a STAC Item describing the data which is the standard input for the ETL (Extract, Transform, Load) processes. The STAC Items assets should be in formats such as GeoTIFF, Cloud-Optimized GeoTIFF (COG), or other user-defined standards,",
+     "page": 14,
+     "indent": 0
+    }
+   ],
+   "id": "s3-2-1",
+   "chars": 263,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.2.2",
+   "title": "Initial Data Validation",
+   "page": 14,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Upon receiving the data, the system triggers the ingestion process via the Event Bus, which handles the topic related to new data acquisition. The ingestion workflow then reads the application workflow template from the Registry and obtains the necessary ingestion images.",
+     "page": 14,
+     "indent": 0
+    }
+   ],
+   "id": "s3-2-2",
+   "chars": 272,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.2.3",
+   "title": "Ingestion Process Execution",
+   "page": 14,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The ingestion instance is instantiated and executed by the Workflow Engine, which handles the data acquisition and processing. At its full scope the system computes the data, enriches and posts the STAC item to the STAC FastAPI, and stores the processed product in the S3 Data Bucket, however depending on the ingestion level the actions are:",
+     "page": 14,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "For metadata harvesting, the ingestion instance processes and indexes only the metadata, ensuring its alignment with the SpatioTemporal Asset Catalog (STAC) specification.",
+     "page": 14,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "For metadata harvesting and dataset copying, the ingestion workflow downloads the dataset, validates its integrity, and stores it in the platform’s S3-compatible object storage.",
+     "page": 14,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "For metadata harvesting with calibration, the workflow applies predefined calibration routines, such as georeferencing or format conversion, before registering the dataset and its metadata for discovery and access.",
+     "page": 14,
+     "indent": 1
+    }
+   ],
+   "id": "s3-2-3",
+   "chars": 904,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.2.4",
+   "title": "Application Exit Codes",
+   "page": 15,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Upon successful execution, the system returns an exit code indicating the success of the ingestion process. If the application runs successfully, a message is pushed onto the success topic in the Event Bus. In the case of failure, the system pushes a message onto the failure topic.",
+     "page": 15,
+     "indent": 0
+    }
+   ],
+   "id": "s3-2-4",
+   "chars": 282,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "3.3",
+   "title": "Data Formats and Protocols",
+   "page": 15,
+   "blocks": [],
+   "id": "s3-3",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.3.1",
+   "title": "Accepted Data Format",
+   "page": 15,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The ingestion process supports multiple formats tailored to each ingestion level. For metadata harvesting, the system processes STAC-compliant metadata files. For dataset copying and calibration, the ingestion interface accepts data in formats such as GeoTIFF, Cloud-Optimized GeoTIFF (COG), or other user-defined standards, ensuring compatibility with downstream workflows.",
+     "page": 15,
+     "indent": 0
+    }
+   ],
+   "id": "s3-3-1",
+   "chars": 374,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.3.2",
+   "title": "STAC Specification",
+   "page": 15,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The STAC Item within the archive must include all mandatory fields, such as spatial and temporal metadata, and valid asset references.",
+     "page": 15,
+     "indent": 0
+    }
+   ],
+   "id": "s3-3-2",
+   "chars": 134,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.3.3",
+   "title": "Data Transfer Protocols",
+   "page": 15,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The data transfer protocol is not fully defined yet but is expected to involve secure methods such as HTTPS that is the data transfer protocol employed for the S3-based storage system. The final choice will be determined based on the capabilities of the services provided by the Copernicus Data Space Ecosystem.",
+     "page": 15,
+     "indent": 0
+    }
+   ],
+   "id": "s3-3-3",
+   "chars": 311,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "3.4",
+   "title": "Security and Compliance",
+   "page": 15,
+   "blocks": [],
+   "id": "s3-4",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.4.1",
+   "title": "Data Integrity",
+   "page": 15,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Data integrity is ensured through checksum verification during ingestion. The system will validate the integrity of the data as it is processed by the ingestion application.",
+     "page": 15,
+     "indent": 0
+    }
+   ],
+   "id": "s3-4-1",
+   "chars": 173,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.4.2",
+   "title": "Access Control",
+   "page": 15,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Access to the ingestion interface is restricted to authorised entities. The system uses secure authentication methods, potentially including OAuth2, to manage access control.",
+     "page": 15,
+     "indent": 0
+    }
+   ],
+   "id": "s3-4-2",
+   "chars": 174,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.4.3",
+   "title": "Compliance",
+   "page": 16,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The system is designed to comply with data protection regulations, ensuring that any sensitive data ingested is handled securely in accordance with GDPR and other relevant regulations.",
+     "page": 16,
+     "indent": 0
+    }
+   ],
+   "id": "s3-4-3",
+   "chars": 184,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "3.5",
+   "title": "Error Handling and Logging",
+   "page": 16,
+   "blocks": [],
+   "id": "s3-5",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.5.1",
+   "title": "Error Detection",
+   "page": 16,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The system continuously monitors the ingestion process for errors, considering the different levels:",
+     "page": 16,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "For metadata harvesting, it verifies metadata integrity and completeness.",
+     "page": 16,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "For dataset copying, it validates file integrity using checksum verification.",
+     "page": 16,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "For calibration workflows, it ensures that all transformation routines are executed correctly and flags any discrepancies for operator review.",
+     "page": 16,
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "If any issues arise, such as incorrect file formats or invalid STAC Items, the system will move the problematic data to temporary storage and notify the monitoring system.",
+     "page": 16,
+     "indent": 0
+    }
+   ],
+   "id": "s3-5-1",
+   "chars": 563,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.5.2",
+   "title": "Logging",
+   "page": 16,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Comprehensive logs are maintained throughout the ingestion process, capturing details of successful ingestions as well as errors. These logs are essential for troubleshooting and auditing purposes.",
+     "page": 16,
+     "indent": 0
+    }
+   ],
+   "id": "s3-5-2",
+   "chars": 197,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "3.6",
+   "title": "Future Work",
+   "page": 16,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "This subsection provided the detailed process of data ingestion, highlighting the interactions between external repositories, the Event Bus, the Workflow Engine, and the various components involved in processing and storing the data. This diagram serves as a foundational reference for understanding the flow of data and control messages during ingestion.",
+     "page": 16,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Future iterations of the Data Ingestion interface will enhance support for more complex workflows, including user-defined calibration routines and dynamic prioritization of datasets based on usage patterns. These updates aim to further align ingestion processes with evolving user needs and platform objectives.",
+     "page": 16,
+     "indent": 0
+    }
+   ],
+   "id": "s3-6",
+   "chars": 666,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "4",
+   "title": "Data Discovery",
+   "page": 17,
+   "blocks": [],
+   "id": "s4",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "4.1",
+   "title": "Overview",
+   "page": 17,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The Data Discovery functionality in the CopernicusLAC system is provided through a catalog that utilises the SpatioTemporal Asset Catalog (STAC) REST API. This API enables the discovery and access of Earth Observation (EO) products by organising them into collections and allowing users to search and filter these collections based on specific criteria.",
+     "page": 17,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The STAC API is a widely adopted standard in the geospatial community, facilitating interoperability and ease of integration with other systems. This section will describe how data can be discovered using the STAC API, including methods for obtaining collection information, accessing metadata, filtering data, and retrieving specific items. Examples of API requests and responses are provided to illustrate the usage of these interfaces.",
+     "page": 17,
+     "indent": 0
+    }
+   ],
+   "id": "s4-1",
+   "chars": 791,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "4.2",
+   "title": "Interface Description",
+   "page": 17,
+   "blocks": [],
+   "id": "s4-2",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "4.2.1",
+   "title": "Obtain Collection Information",
+   "page": 17,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The STAC API allows users to obtain information about the available collections within the catalog. Two primary methods are available:",
+     "page": 17,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "GET /collections: Retrieves a JSON document containing all available collections.",
+     "page": 17,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "GET /collections/<collection-id>: Retrieves detailed information about a specific collection identified by <collection-id>.",
+     "page": 17,
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Each collection is described by metadata, including spatial and temporal extents, links to further information, and other relevant details. Below is an example response for a collection: { \"id\": \"sentinel-s2-l1c-cogs\", \"type\": \"Collection\", \"links\": [ { \"rel\": \"items\", \"type\": \"application/geo+json\", \"href\": \"<discovery-url>/collections/sentinel-s2-l1c-cogs/items\" }, { \"rel\": \"parent\", \"type\": \"application/json\", \"href\": \"<discovery-url>/\" }, { \"rel\": \"root\", \"type\": \"application/json\", \"href\": \"https://<discover-url>/\"",
+     "page": 17,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "}, { \"rel\": \"self\", \"type\": \"application/json\", \"href\": \"https://<discovery-url>/collections/sentinel-s2-l1c-cogs\" }, { \"rel\": \"http://www.opengis.net/def/rel/ogc/1.0/queryables\", \"href\": \"<discovery-url>/collections/sentinel-s2-l1c-cogs/queryables\", \"type\": \"application/schema+json\" } ], \"title\": \"Sentinel Level-1C COGs\", \"extent\": { \"spatial\": { \"bbox\": [ [ -180,-90,180,90 ]] }, \"temporal\": { \"interval\": [ [\"2023-06-01T00:00:00Z\",\"2023-06-30T23:59:59Z\" ] ] } }, \"license\": \"proprietary\", \"keywords\": [ \"copernicus\", \"esa\", \"eu\", \"msi\", \"radiance\", \"sentinel\" ], \"description\": \"Sentinel-2a and Sentinel-2b imagery, processed to Level 1C (TOA Reflectance) and converted to Cloud-Optimized \", \"stac_version\": \"1.0.0\" }",
+     "page": 18,
+     "indent": 0
+    }
+   ],
+   "id": "s4-2-1",
+   "chars": 1585,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "4.2.2",
+   "title": "Direct Metadata Access",
+   "page": 18,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Metadata about specific items within a collection can be accessed directly without filtering. The following methods are supported:",
+     "page": 18,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "GET /collections/<collection-id>/items: Retrieves a GeoJSON FeatureCollection representing all items within the specified collection.",
+     "page": 18,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "GET /collections/<collection-id>/items/<item-id>: Retrieves a single GeoJSON Feature representing the item identified by <item-id>.",
+     "page": 18,
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "For example, to access metadata for a specific Sentinel-2 item, the following request can be made: https://<discover-server>/collections/sentinel-s2-l1c-cogs/items/S2A _MSIL1C_20231122T102331_N0509_R065_T32TMR_20231122T122209",
+     "page": 18,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "This request would return a GeoJSON Feature with detailed metadata about the specific Sentinel-2 product.",
+     "page": 19,
+     "indent": 0
+    }
+   ],
+   "id": "s4-2-2",
+   "chars": 724,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "4.2.3",
+   "title": "Obtain Filter Criteria",
+   "page": 19,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The STAC API provides mechanisms to obtain and utilise filter criteria, known as \"queryables.\" These criteria allow users to refine their searches based on specific metadata fields such as date/time, geographic coverage, and cloud cover percentage. The filter criteria can be retrieved using the following method:",
+     "page": 19,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "GET /collections/<collection-id>/queryables: Returns a JSON document with information about applicable filter criteria.",
+     "page": 19,
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Example of a filter criteria response: { ... \"properties\": { ... \"datetime\": { \"type\": \"string\", \"title\": \"Acquired\", \"format\": \"date-time\", \"pattern\": \"(\\\\+00:00|Z)$\", \"description\": \"Datetime\" }, \"geometry\": { \"$ref\": \"https://geojson.org/schema/Feature.json\", \"title\": \"Item Geometry\", \"description\": \"Item Geometry\" }, \"eo:cloud_cover\": { \"$ref\": \"https://stac-extensions.github.io/eo/v1.0.0/schema.json#/definitions/fieldsproperties/eo:clou d_cover\" } } }",
+     "page": 19,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "This response provides the necessary information to construct search queries using the identified criteria.",
+     "page": 19,
+     "indent": 0
+    }
+   ],
+   "id": "s4-2-3",
+   "chars": 999,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "4.3",
+   "title": "Filtering",
+   "page": 19,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The STAC search endpoint supports two methods of filtering, allowing users to search for items that match specific criteria:",
+     "page": 19,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "GET /search: Uses URL query strings with filtering parameters (CQL2-TEXT).",
+     "page": 19,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "POST /search: Uses a request body containing filtering criteria formatted as a CQL2-JSON object.",
+     "page": 19,
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Both methods achieve similar results, though HTTP POST allows for more complex queries. Below are examples of filtering using these methods.",
+     "page": 20,
+     "indent": 0
+    }
+   ],
+   "id": "s4-3",
+   "chars": 434,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "4.3.1",
+   "title": "Filtering using CQL2-JSON (POST)",
+   "page": 20,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Example of filtering by date/time: { \"collections\": [ \"sentinel-s2-l1c-cogs\" ], \"filter-lang\": \"cql2-json\", \"filter\": { \"op\": \"T_INTERSECTS\", \"args\": [ { \"property\": \"datetime\" }, { \"interval\": [ \"2023-11-22T00:00:00Z\", \"2023-11-23T00:00:00Z\" ] } ] } }",
+     "page": 20,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Example of filtering by geographic area: { \"collections\": [ \"sentinel-s2-l1c-cogs\" ], \"filter-lang\": \"cql2-json\", \"filter\": { \"op\": \"S_INTERSECTS\", \"args\": [ { \"property\": \"geometry\" }, { \"type\": \"Polygon\", \"coordinates\": [ [ [7.8, 45.2], [9.0, 45.2], [9.0, 45.8], [7.8, 45.8], [7.8, 45.2] ] ]",
+     "page": 20,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "} ] } }",
+     "page": 21,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Example of filtering by cloud cover percentage: { \"collections\": [ \"sentinel-s2-l1c-cogs\" ], \"filter-lang\": \"cql2-json\", \"filter\": { \"op\": \"<\", \"args\": [ { \"property\": \"eo:cloud_cover\" }, 10 ] } }",
+     "page": 21,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Example of filtering by a combination of criteria (date/time and cloud cover percentage):",
+     "page": 21,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "{ \"collections\": [ \"sentinel-s2-l1c-cogs\" ], \"filter-lang\": \"cql2-json\", \"filter\": { \"op\": \"and\", \"args\": [ { \"op\": \"T_INTERSECTS\", \"args\": [ { \"property\": \"datetime\" }, { \"interval\": [ \"2023-11-22T00:00:00Z\", \"2023-11-23T00:00:00Z\" ] } ] }, { \"op\": \"<\", \"args\": [ {",
+     "page": 21,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "\"property\": \"eo:cloud_cover\" }, 0 ] } ] } }",
+     "page": 22,
+     "indent": 0
+    }
+   ],
+   "id": "s4-3-1",
+   "chars": 1146,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "4.3.2",
+   "title": "Filtering using CQL2-TEXT (GET)",
+   "page": 22,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "This method provides a serialised form of querying similar to CQL2-JSON. The following are equivalent query strings for the examples above:",
+     "page": 22,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Filter by date/time:",
+     "page": 22,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "filter-lang=cql2-text&collections=sentinel-s2-l1c-cogs&fi lter=datetime%3E=%272023-11-22T00:00:00Z%27%20and%20datet ime%3C%272023-11-23T00:00:00Z%27",
+     "page": 22,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Filter by geographic area:",
+     "page": 22,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "filter-lang=cql2-text&collections=sentinel-s2-l1c-cogs&fi lter=S_INTERSECTS(geometry,%20POLYGON((7.8%2045.2,9.0%204 5.2,9.0%2045.8,7.8%2045.8,7.8%2045.2)))",
+     "page": 22,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Filter by cloud cover percentage:",
+     "page": 22,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "filter-lang=cql2-text&collections=sentinel-s2-l1c-cogs&fi lter=eo:cloud_cover%3C10",
+     "page": 22,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Filter by a combination of criteria (date/time and cloud cover percentage):",
+     "page": 22,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "filter-lang=cql2-text&collections=sentinel-s2-l1c-cogs&fi lter=datetime%3E=%272023-11-22T00:00:00Z%27%20and%20datet ime%3C%272023-11-23T00:00:00Z%27%20and%20eo:cloud_cover%3 C10",
+     "page": 22,
+     "indent": 3
+    }
+   ],
+   "id": "s4-3-2",
+   "chars": 855,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "4.4",
+   "title": "STAC Items",
+   "page": 22,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "STAC Items are individual records within a collection, formatted as GeoJSON features. They represent specific EO products and include detailed metadata. Below is an example of a STAC Item for a Sentinel-2 product: { \"id\": \"S2A_MSIL1C_20231122T102331_N0509_R065_T32TMR_20231122T122209\", \"type\": \"Feature\", \"collection\": \"sentinel-s2-l1c-cogs\", \"links\": [ { \"rel\": \"collection\", \"type\": \"application/json\", \"href\": \"<discovery-url>/collections/sentinel-s2-l1c-cogs\"",
+     "page": 22,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "}, { \"rel\": \"parent\", \"type\": \"application/json\", \"href\": \"<discovery-url>/collections/sentinel-s2-l1c-cogs\" }, { \"rel\": \"root\", \"type\": \"application/json\", \"href\": \"<discovery-url>/\" }, { \"rel\": \"self\", \"type\": \"application/geo+json\", \"href\": \"<discovery-url>/collections/sentinel-s2-l1c-cogs/items/S2A_MSIL1C_20231122T102331_N0509_R065_ T32TMR_20231122T122209\" }, { \"rel\": \"xyz\", \"href\": \"<view-url>/collections/sentinel-s2-l1c-cogs/items/S2A_MSIL1C_20231122T102331_N0509_R065_T32TM R_20231122T122209/tiles/WebMercatorQuad/{z}/{x}/{y}@1x?&assets=red&assets=green&assets=blue&co lor_formula=Gamma%20RGB%201.5%20Saturation%201%20Sigmoidal%20RGB%2010%200.3&rescale=1,6000&res cale=1,6000&rescale=1,6000\", \"type\": \"image/png\", \"title\": \"True colour composite visualized through a XYZ\" }, { \"rel\": \"xyz\", \"href\": \"<view-url>/collections/sentinel-s2-l1c-cogs/items/S2A_MSIL1C_20231122T102331_N0509_R065_T32TM R_20231122T122209/tiles/WebMercatorQuad/{z}/{x}/{y}@1x?&assets=nir&assets=green&assets=red&col or_formula=Gamma%20RGB%201.5%20Saturation%201%20Sigmoidal%20RGB%2010%200.3&rescale=1,6000&resc ale=1,6000&rescale=1,6000\", \"type\": \"image/png\", \"title\": \"False colour composite visualized through a XYZ\" } ], \"assets\": { \"nir\": { \"href\": \"s3://<storage-base>/sentinel-2-l1c-ingestion-xvv8c/S2A_MSIL1C_20231122T102331_N0509_R065_T32T MR_20231122T122209/r-nir.tif\", \"type\": \"image/tiff; application=geotiff; profile=cloud-optimized\", \"roles\": [ \"data\", \"visual\", \"reflectance\" ], \"eo:bands\": [",
+     "page": 23,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "{ \"name\": \"nir\", \"common_name\": \"nir\", \"description\": \"nir 833nm TOA 10\", \"center_wavelength\": 0.8328, \"solar_illumination\": 1041.63 } ], \"raster:bands\": [ { \"histogram\": { \"max\": 27054.9431372549, \"min\": -51.94313725490196, \"count\": 256, \"buckets\": [",
+     "page": 24,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "] }, \"statistics\": { \"mean\": 1908.0699699159, \"stddev\": 1450.1018905764, \"maximum\": 27002.0, \"minimum\": 1.0, \"valid_percent\": 100.0 }, \"spatial_resolution\": 10.0 } ], \"auth:refs\": [ \"signed_url_auth\" ] }, ... }, \"geometry\": { \"type\": \"Polygon\", \"coordinates\": [ [ [ 7.706951084723532, 46.0462596089832 ], [ 7.706951084723532, 46.0462596089832 ], [ 7.729416423067862, 45.058191670236305 ], [ 9.123974498511316, 45.06519270654337 ], [ 9.126167237224049, 46.05350473573164 ], [ 7.706951084723532, 46.0462596089832 ] ] ] }, \"bbox\": [ 7.706951084723532,45.058191670236305, 9.126167237224049,46.05350473573164 ],",
+     "page": 24,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "\"properties\": { \"gsd\": 10.0, \"title\": \"SENTINEL-2A MSI L1C 65 2023-11-22 10:23:31\", \"created\": \"2023-11-22T12:22:09Z\", \"mission\": \"sentinel-2\", \"updated\": \"2024-01-23T11:41:41.147340Z\", \"datetime\": \"2023-11-22T10:23:31.024000Z\", \"platform\": \"sentinel-2a\", \"proj:epsg\": 32632, \"providers\": [ { \"url\": \"https://sentinel.esa.int/web/sentinel/missions/sentinel-2\", \"name\": \"ESA/EC (Copernicus)\", \"roles\": [ \"producer\", \"processor\", \"licensor\" ], \"description\": \"The Copernicus Sentinel-2 mission comprises a constellation of two polar-orbiting satellites placed in the same sun-synchronous orbit, phased at 180\\u00b0 to each other. It aims at monitoring variability in land surface conditions, and its wide swath width (290 km) and high revisit time (10 days at the equator with one satellite, and 5 days with 2 satellites under cloud-free conditions which results in 2-3 days at mid-latitudes) will support monitoring of Earth's surface changes.\" } ], \"description\": \"Name |Value\\n---- |-----\\nAgency | **ESA** \\nProduct Id| **S2A_MSIL1C_20231122T102331_N0509_R065_T32TMR_20231122T122209** \\nPlatform | **sentinel-2a** \\nInstrument | **MSI** \\nSource processing level | **L1C** \\nSensing Time | **2023-11-22 10:23:31** \\nService version | **NO_VERSION** \\nUpdated | **2024-01-23 11:41:41** \\nStatus | **Calibrated Dataset** \\nCreated | **2023-11-22 12:22:09** \\n\", \"instruments\": [ \"msi\" ], \"sensor_type\": \"optical\", \"constellation\": \"sentinel-2\", \"eo:cloud_cover\": 0.243363492490071, \"sat:orbit_state\": \"descending\", \"processing:level\": \"L1C\", \"processing:lineage\": \"Generation of Level-1C User Product\", \"sat:absolute_orbit\": 43963, \"sat:relative_orbit\": 65, \"processing_baseline\": \"05.09\", \"sat:platform_international_designator\": \"2015-000A\" \"auth:schemes\": { \"signed_url_auth\": { \"type\": \"signedUrl\", \"flows\": { \"authorizationCode\": { \"method\": \"POST\", \"parameters\": {",
+     "page": 25,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "\"url\": { \"in\": \"body\", \"schema\": { \"type\": \"string\", \"examples\": \"s3://<storage-base>/optical-calibration-sj889/S2B_MSIL2A_20230922T095649_N0509_R122_T33TUG_20 230922T125953-calibrated/red.tif\" }, \"required\": \"true\", \"description\": \"asset URL\" }, \"redirect\": { \"in\": \"body\", \"schema\": { \"type\": \"boolean\", \"examples\": \"true\" }, \"required\": \"true\", \"description\": \"indicate if the response include a 302 for an automatic redirect with 'Location' header\" }, \"Authorization\": { \"in\": \"header\", \"schema\": { \"type\": \"string\", \"examples\": \"Bearer secretKey1234567890\" }, \"required\": \"true\", \"description\": \"Authentication credentials\" } }, \"responseField\": \"signed_url\", \"authorizationApi\": \"<sign-url>\" } }, \"description\": \"Provides an authenticated download link for an asset URL\" } } }, \"stac_extensions\": [ \"https://stac-extensions.github.io/sat/v1.0.0/schema.json\", \"https://stac-extensions.github.io/eo/v1.1.0/schema.json\", \"https://stac-extensions.github.io/raster/v1.1.0/schema.json\", \"https://stac-extensions.github.io/projection/v1.1.0/schema.json\", \"https://stac-extensions.github.io/processing/v1.0.0/schema.json\", \"https://stac-extensions.github.io/view/v1.0.0/schema.json\", \"https://stac-extensions.github.io/web-map-links/v1.2.0/schema.json\", \"https://stac-extensions.github.io/authentication/v1.0.0/schema.json\" ], \"stac_version\": \"1.0.0\" }",
+     "page": 26,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Note the following information (highlighted in red above):",
+     "page": 27,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Links point to related resources, such as the collection or the catalogue.",
+     "page": 27,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Among the links, there are also visualisation links to a tile server (see Tiles).",
+     "page": 27,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Assets are downloadable resources containing the original data represented by the STAC item (image files, data files, other metadata files etc.).",
+     "page": 27,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "An asset may have information about the authentication method to be used for the download (e.g. signed URLs). In that case, there is a reference to an authentication scheme defined at the item/properties level (see below)",
+     "page": 27,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Properties represent basic metadata fields (collection-specific) that can be used for filtering.",
+     "page": 27,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Among the properties there can be a series of authentication schemes, i.e. instructions to which assets can refer in their download authentication information (see above).",
+     "page": 27,
+     "indent": 1
+    }
+   ],
+   "id": "s4-4",
+   "chars": 6876,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "5",
+   "title": "Data Visualisation",
+   "page": 28,
+   "blocks": [],
+   "id": "s5",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "5.1",
+   "title": "Overview",
+   "page": 28,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The Data Visualization component of the CopernicusLAC system provides users with the capability to visually explore EO data through various forms of visual representations. This section describes the methods and formats used to visualise data, including overview images and Web Map Tile Service (WMTS) endpoints, which are integral for creating interactive maps in web applications.",
+     "page": 28,
+     "indent": 0
+    }
+   ],
+   "id": "s5-1",
+   "chars": 382,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "5.2",
+   "title": "Visualisation Types",
+   "page": 28,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "There are two primary types of visualisations supported by the CopernicusLAC system:",
+     "page": 28,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Overview Images: These are static images providing a quick visual summary of a product.",
+     "page": 28,
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "WMTS Endpoints: These provide tile-based visualisations that can be used in interactive maps, allowing users to explore data at different zoom levels and geographic extents.",
+     "page": 28,
+     "indent": 1,
+     "marker": "2."
+    }
+   ],
+   "id": "s5-2",
+   "chars": 344,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "5.3",
+   "title": "Overview Images",
+   "page": 28,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Overview images are simplified visual representations of the EO products, designed to provide a quick preview of the data. These images are accessible via a specific STAC Item asset, which includes the following key attributes:",
+     "page": 28,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "href: The URL that points to the location of the overview image.",
+     "page": 28,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "role: Set to \"overview\", indicating that this asset is intended as a preview of the product.",
+     "page": 28,
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Example of a STAC Item with an overview image:",
+     "page": 28,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "-",
+     "page": 28,
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "{ ... features: [ { ... \"assets\": { ... \"overview\": { \"href\": \"<view-url>/collections/sentinel-s2-l1c-cogs/items/S2A_MSIL1C_20231122T102331_N0509_R065_T32TM R_20231122T122209/preview.png?&assets=red&assets=green&assets=blue&color_formula=Gamma%20RGB%2 01.5%20Saturation%201%20Sigmoidal%20RGB%2010%200.3&max_size=1024&resampling=cubic&rescale=1,75 00&rescale=1,7500&rescale=1,7500\", \"type\": \"image/png\",",
+     "page": 28,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "\"roles\": [ \"overview\" ], \"title\": \"Overview\" }, ... } } ] }",
+     "page": 29,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "This example shows how the href attribute links to an image, which is generated with specific parameters, such as resampling method and colour formula, to create a visually effective overview of the EO data.",
+     "page": 29,
+     "indent": 0
+    }
+   ],
+   "id": "s5-3",
+   "chars": 1098,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "5.4",
+   "title": "Web Map Tile Service (WMTS) Endpoints",
+   "page": 29,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The CopernicusLAC system provides WMTS endpoints for visualising EO data in web applications. These endpoints allow for the dynamic rendering of data as tiles, which can be integrated into interactive maps, enabling users to zoom in and out and explore the data geographically.",
+     "page": 29,
+     "indent": 0
+    }
+   ],
+   "id": "s5-4",
+   "chars": 277,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "5.4.1",
+   "title": "Tile Visualisations",
+   "page": 29,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Multiple tile visualisations may be available for a single product, such as true colour and false colour composites. These visualisations are accessed via tile link templates provided in the STAC Item’s links section. These templates follow the Web Map Links STAC extension and are identified by their titles.",
+     "page": 29,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Example of a STAC Item with tile links: { ... features: [ { ... \"links\": [ { \"rel\": \"xyz\", \"href\": \"<view-url>/collections/sentinel-s2-l1c-cogs/items/S2A_MSIL1C_20231122T102331_N0509_R065_T32TM R_20231122T122209/tiles/WebMercatorQuad/{z}/{x}/{y}@1x?&assets=red&assets=green&assets=blue&co lor_formula=Gamma%20RGB%201.5%20Saturation%201%20Sigmoidal%20RGB%2010%200.3&rescale=1,6000&res cale=1,6000&rescale=1,6000\", \"type\": \"image/png\", \"title\": \"True colour composite visualised through a XYZ\" }, { \"rel\": \"xyz\",",
+     "page": 29,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "\"href\": \"<view-url>/collections/sentinel-s2-l1c-cogs/items/S2A_MSIL1C_20231122T102331_N0509_R065_T32TM R_20231122T122209/tiles/WebMercatorQuad/{z}/{x}/{y}@1x?&assets=nir&assets=green&assets=red&col or_formula=Gamma%20RGB%201.5%20Saturation%201%20Sigmoidal%20RGB%2010%200.3&rescale=1,6000&resc ale=1,6000&rescale=1,6000\", \"type\": \"image/png\", \"title\": \"False colour composite visualised through a XYZ\" } ... } ], ... ] }",
+     "page": 30,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "In this example:",
+     "page": 30,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "The rel attribute is set to \"xyz\", indicating that these are XYZ tile links, a common format for web mapping applications.",
+     "page": 30,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The href attribute includes placeholders {z}, {x}, and {y}, which must be replaced with the zoom level and the zero-based column and row numbers to fetch the appropriate tile image.",
+     "page": 30,
+     "indent": 1
+    }
+   ],
+   "id": "s5-4-1",
+   "chars": 1557,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "5.4.2",
+   "title": "Tile Request Format",
+   "page": 30,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "To request a specific tile, the placeholders{z}, {x}, and {y}, in the tile link template must be replaced with actual values corresponding to the desired zoom level and geographic location on the tile grid. For example: <view-url>/collections/sentinel-s2-l1c-cogs/items/S2A_MSIL1C_2023112 2T102331_N0509_R065_T32TMR_20231122T122209/tiles/WebMercatorQuad/10/ 525/391@1x?&assets=red&assets=green&assets=blue&color_formula=Gamma% 20RGB%201.5%20Saturation%201%20Sigmoidal%20RGB%2010%200.3&rescale=1, 6000&rescale=1,6000&rescale=1,6000",
+     "page": 30,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "In this request:",
+     "page": 30,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "The {z} placeholder is replaced with 10, indicating the zoom level.",
+     "page": 30,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The {x} and {y} placeholders are replaced with 525 and 391, representing the tile’s column and row in the grid, respectively.",
+     "page": 30,
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "This URL will return a tile image showing the true colour composite of the EO product at the specified zoom level and location.",
+     "page": 30,
+     "indent": 0
+    }
+   ],
+   "id": "s5-4-2",
+   "chars": 865,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "6",
+   "title": "Data Access Interfaces",
+   "page": 31,
+   "blocks": [],
+   "id": "s6",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "6.1",
+   "title": "Overview",
+   "page": 31,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The Data Access interfaces in the CopernicusLAC system are designed to facilitate secure and efficient access to EO data stored in object storage. These interfaces allow users to download specific assets from the system, with access control enforced via pre-signed URLs. This section provides an overview of the mechanisms used to generate and use these signed URLs, ensuring that only authorised users can retrieve the data.",
+     "page": 31,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The signed URLs interface is designed primarily for machine-to-machine (M2M) access to S3-compatible object storage resources. Upon authentication and authorization, a client may request a pre-signed HTTPS URL that grants time-limited access to a specific object, without requiring the client to handle or store long-term credentials. This mechanism ensures secure, auditable, and scalable access to EO datasets and platform-generated products.",
+     "page": 31,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "This interface is also used internally by the platform components and externally by authenticated clients. More specifically:",
+     "page": 31,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Web UI Integration (Human-to-Machine access): The CopernicusLAC geobrowser interface will use this API transparently to allow users to download data via a one-click interaction. The front-end will handle the retrieval of a signed URL and trigger the download automatically, ensuring ease of use without exposing access tokens or object paths directly.",
+     "page": 31,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Workflow Integration (Machine-to-Machine access): For data processing services integrated via the CWL, there is no need for services to generate or manage signed URLs themselves. Instead, the platform handles data staging through a stage-in mechanism. This process ensures that input datasets are made available as local file paths inside the containerized service execution environment, avoiding the need for remote access logic within the service components.",
+     "page": 31,
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "This approach ensures consistency with best practices for data access security, scalability for high-throughput processing, and usability for human-facing interfaces.",
+     "page": 31,
+     "indent": 0
+    }
+   ],
+   "id": "s6-1",
+   "chars": 1971,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "6.2",
+   "title": "Downloading Data with Signed URLs",
+   "page": 31,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Accessing STAC item assets that are stored in object storage requires generating a pre-signed URL. This URL grants temporary access to the asset, allowing it to be downloaded via HTTP. The pre-signing process is handled through a specific authentication scheme, typically using the signed_url_auth method as defined in the STAC item metadata.",
+     "page": 31,
+     "indent": 0
+    }
+   ],
+   "id": "s6-2",
+   "chars": 342,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "6.2.1",
+   "title": "Authentication Scheme",
+   "page": 32,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The signed_url_auth scheme is a standard approach for securing access to assets in object storage. The scheme is defined within the STAC item's properties and specifies how a pre-signed URL can be obtained.",
+     "page": 32,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Example of a STAC item asset with the signed_url_auth scheme:",
+     "page": 32,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "{ ... features: [ { ... \"properties\": { ... \"auth:schemes\": { \"signed_url_auth\": { \"type\": \"signedUrl\", \"flows\": { \"authorizationCode\": { \"method\": \"POST\", \"parameters\": { \"url\": { \"in\": \"body\", \"schema\": { \"type\": \"string\", \"examples\": \"s3://<storage-base>/optical-calibration-sj889/S2B_MSIL2A_20230922T095649_N0509_R122_T33TUG_20 230922T125953-calibrated/red.tif\" }, \"required\": \"true\", \"description\": \"asset URL\" }, \"redirect\": { \"in\": \"body\", \"schema\": { \"type\": \"boolean\", \"examples\": \"true\" }, \"required\": \"true\", \"description\": \"indicate if the response include a 302 for an automatic redirect with 'Location' header\" }, \"Authorization\": { \"in\": \"header\", \"schema\": { \"type\": \"string\", \"examples\": \"Bearer secretKey1234567890\" }, \"required\": \"true\", \"description\": \"Authentication credentials\"",
+     "page": 32,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "} }, \"responseField\": \"signed_url\", \"authorizationApi\": \"https://example.com/signed_url/authorize\" } }, \"description\": \"Provides an authenticated download link for an asset URL\" } }, ... } } ] }",
+     "page": 33,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "In this example, the asset located at the specified S3 URL is protected by the signed_url_auth scheme, meaning that a signed URL must be generated to access it.",
+     "page": 33,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The authentication scheme to be used is specified in the asset information of the STAC item, e.g.: { ... \"assets\": { \"nir\": { \"href\": \"s3://<storage-base>/sentinel-2-l1c-ingestion-xvv8c/S2A_MSIL1C_20231122T102331_N0509_R065_T32T MR_20231122T122209/r-nir.tif\", ... \"auth:refs\": [ \"signed_url_auth\" ], ... }, ... }, ... }",
+     "page": 33,
+     "indent": 0
+    }
+   ],
+   "id": "s6-2-1",
+   "chars": 1740,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "6.2.2",
+   "title": "Generating a Signed URL",
+   "page": 33,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "To generate a signed URL, a POST request must be made to an authorization endpoint. This request includes the S3 URL of the asset as well as authentication credentials.",
+     "page": 33,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Example request using cURL:",
+     "page": 33,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "curl -X 'POST' \\ 'https://<sign-url>?url=s3%3A%2F%2Fsentinel-2%2Fred.tif' \\ -H 'Authorization: Bearer eyJ...cmQ' \\",
+     "page": 33,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "-d ''",
+     "page": 34,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "In this request:",
+     "page": 34,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "The url parameter contains the encoded S3 URL of the asset.",
+     "page": 34,
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "The Authorization header includes a Bearer token, which is used to authenticate the request.",
+     "page": 34,
+     "indent": 1
+    }
+   ],
+   "id": "s6-2-2",
+   "chars": 481,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "6.2.3",
+   "title": "Response and Redirection",
+   "page": 34,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The response to the POST request is a JSON object that contains the signed URL, which can be used to download the asset. If the redirect parameter is set to true, the response will also include a Location header that automatically redirects the user to the signed URL.",
+     "page": 34,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Example response: { \"signed_url\": \"<storage-url>/sentinel-2/red.tif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=36TH83i1lW kOseYhN96Z%2F20240122%2Fit-rom%2Fs3%2Faws4_request&X-Amz-Date=20240122T134237Z&X-Amz-Expires=1 20&X-Amz-SignedHeaders=host&X-Amz-Signature=2fc41c51180a954d93f38b2b868ad9026328fa384a975305d9 052715fdbef80b\" }",
+     "page": 34,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "If redirection is enabled, the resource will be automatically downloaded from the signed URL provided in the response.",
+     "page": 34,
+     "indent": 0
+    }
+   ],
+   "id": "s6-2-3",
+   "chars": 722,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "6.2.4",
+   "title": "Example Workflow",
+   "page": 34,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Request Signed URL: The user or application requests a signed URL by sending a POST request to the authorization endpoint with the asset's S3 URL and authentication credentials.",
+     "page": 34,
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Receive Signed URL: The server responds with a signed URL that provides temporary access to the asset.",
+     "page": 34,
+     "indent": 1,
+     "marker": "2."
+    },
+    {
+     "type": "bullet",
+     "text": "Download Asset: The user or application can then use the signed URL to download the asset directly from the object storage.",
+     "page": 34,
+     "indent": 1,
+     "marker": "3."
+    }
+   ],
+   "id": "s6-2-4",
+   "chars": 402,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "6.3",
+   "title": "Practical Example",
+   "page": 34,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Consider a scenario where a user wants to download a specific asset from the CopernicusLAC system, such as a NIR band image from Sentinel-2 data. The process would be as follows:",
+     "page": 34,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Identify the Asset",
+     "page": 34,
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "para",
+     "text": "The user identifies the desired asset from the STAC item metadata, noting the S3 URL and the required authentication scheme (signed_url_auth).",
+     "page": 34,
+     "indent": 4
+    },
+    {
+     "type": "bullet",
+     "text": "Generate Signed URL:",
+     "page": 35,
+     "indent": 1,
+     "marker": "2."
+    },
+    {
+     "type": "para",
+     "text": "The user sends a POST request to the authorization endpoint with the asset’s S3 URL. Example cURL request: curl -X 'POST' \\ 'https://<sign-url>?url=s3%3A%2F%2Fsentinel-2%2Fred.tif' \\ -H 'Authorization: Bearer eyJ...cmQ' \\ -d ''",
+     "page": 35,
+     "indent": 4
+    },
+    {
+     "type": "bullet",
+     "text": "Download the Asset:",
+     "page": 35,
+     "indent": 1,
+     "marker": "3."
+    },
+    {
+     "type": "para",
+     "text": "Upon receiving the signed URL in the response, the user can either manually download the asset using the provided URL or rely on the automatic redirection (if enabled) to initiate the download immediately.",
+     "page": 35,
+     "indent": 4
+    },
+    {
+     "type": "para",
+     "text": "This method ensures that data access within the CopernicusLAC system is both secure and efficient, protecting sensitive EO data while providing users with the flexibility to download assets as needed.",
+     "page": 35,
+     "indent": 0
+    }
+   ],
+   "id": "s6-3",
+   "chars": 1009,
+   "figures": 0,
+   "tables": 0
+  }
+ ]
+}

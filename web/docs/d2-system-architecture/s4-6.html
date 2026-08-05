@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.6 Metadata Enrichment for Visualization · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s4.html">4</a><i>›</i><span>4.6 · Metadata Enrichment for Visualization</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 4.6</span>
+  <h1>Metadata Enrichment for Visualization</h1>
+  <p class="lede">Uso de las extensiones STAC Rendering y Web Map Links para generar composiciones (color verdadero, infrarrojo) y enlaces a servicios WMTS/XYZ, con ejemplos JSON.</p>
+  <div class="tags"><span class="tag">Rendering</span><span class="tag">Web Map Links</span><span class="tag">JSON</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>45–47</b></span></div>
+</div>
+<section class="prose"><p>To facilitate visualisation of the dataset in the full scope of the platform services, the ingestion process leverages STAC extensions to provide rendering configurations and web map links for visualisation services.</p>
+<p>The process leverages the Rendering2 STAC Extension to define rendering configurations, such as creating true-colour or colour-infrared composites from different bands. If the STAC Item and its assets are already in the COG format and include rendering information, the dedicated and collection specific ETL process focuses on generating Web Map Links3 using the Web Map Links STAC Extension. This allows for the integration with web map services like OGC WMTS and XYZ, providing end-users with access to visual representations of the data.</p>
+<ol><li>Visualisation STAC Extensions:<ol><li>Rendering Extension: This extension provides details on how the STAC Item can be visualised (e.g., combining different bands to create a composite image).</li></ol></li></ol>
+<p>2 <a href="https://github.com/stac-extensions/render" target="_blank" rel="noopener">https://github.com/stac-extensions/render</a> 3 <a href="https://github.com/stac-extensions/web-map-links" target="_blank" rel="noopener">https://github.com/stac-extensions/web-map-links</a></p>
+<ol><li>Web Map Links Extension: This extension provides links to web maps (e.g., OGC WMTS and XYZ) that can render the STAC Item using the specified visualisation configuration.</li><li>Enrichment Process:<ol><li>Existing Visualisation Information: If the STAC Item already includes rendering information, the ETL process adds Web Map Links URL templates to implement these configurations.</li><li>Generating New Assets: For datasets that do not have visualisation-ready assets, the collection-specific / or a dedicated ETL process generates new COG and updates the STAC Item with rendering information and Web Map Links.</li><li>Publication: The enriched STAC Item and new assets are published to the object storage and registered in the catalog.</li></ol></li></ol>
+<p>An important aspect of the ETL process is the enrichment of data to enable visualisation. This involves leveraging the Rendering STAC Extension and the Web Map Links STAC Extension:</p>
+<ul><li>Rendering Extension: Provides rendering configurations for the STAC Item, such as combining different bands to create true-colour or colour-infrared composites.</li><li>Web Map Links Extension: Supplies links to web maps (e.g., OGC WMTS and XYZ) that can render the STAC Item using the specified visualisation configuration.</li></ul>
+<p>If the STAC Item included in the .zip archive contains the Rendering extension and the assets are in the Cloud Optimized Geotiff (COG) format, the ETL process focuses on generating the Web Map Links.</p>
+<p>Here is an example of a STAC Item with rendering information:</p>
+<pre><code>&quot;renders&quot;: {
+  &quot;trc&quot;: {
+    &quot;title&quot;: &quot;True-colour composite&quot;,
+    &quot;assets&quot;: [
+      &quot;red&quot;, &quot;green&quot;, &quot;blue&quot;
+    ],
+    &quot;resampling&quot;: &quot;nearest&quot;,
+    &quot;rescale&quot;: [
+      [0, 5000], [0, 5000], [0, 5000]
+    ]
+  },
+  &quot;civ&quot;: {
+    &quot;title&quot;: &quot;Colour-infrared composite&quot;,
+    &quot;assets&quot;: [
+      &quot;red&quot;, &quot;green&quot;, &quot;nir&quot;</code></pre>
+<pre><code>    ],
+    &quot;resampling&quot;: &quot;nearest&quot;,
+    &quot;rescale&quot;: [
+      [0, 5000], [0, 5000], [0, 5000]
+    ]
+  }
+}</code></pre>
+<p>And the web map links as an output of the ETL:</p>
+<pre><code>{
+      &quot;rel&quot;: &quot;xyz&quot;,
+      &quot;href&quot;:
+&quot;https://view.imagery.org?assets=red&amp;assets=green&amp;assets=blue&amp;resampling
+=nearest&amp;rescale=[0,5000]&amp;rescale=[0,5000]&amp;rescale=[0,5000]&amp;&quot;,
+      &quot;type&quot;: &quot;image/png&quot;,
+      &quot;title&quot;: &quot;True-colour composite&quot;,
+      &quot;render&quot;: &quot;trc&quot;
+    },
+    {
+      &quot;rel&quot;: &quot;xyz&quot;,
+      &quot;href&quot;:
+&quot;https://view.imagery.org?assets=red&amp;assets=green&amp;assets=nir&amp;resampling=
+nearest&amp;rescale=[0,5000]&amp;rescale=[0,5000]&amp;rescale=[0,5000]&amp;&quot;,
+      &quot;type&quot;: &quot;image/png&quot;,
+      &quot;title&quot;: &quot;Colour-infrared composite&quot;,
+      &quot;render&quot;: &quot;civ&quot;
+    }</code></pre></section>
+<nav class="pager"><a class="prev" href="s4-5.html"><i>←</i><span>4.5 · Metadata Profile</span></a><a class="next" href="s5.html"><span>5 · Data Discovery, Access and Visualisation</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

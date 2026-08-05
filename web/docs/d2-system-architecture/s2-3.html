@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.3 System Components · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s2.html">2</a><i>›</i><span>2.3 · System Components</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 2.3</span>
+  <h1>System Components</h1>
+  <p class="lede">Los ocho componentes de la plataforma entregada como PaaS agnóstico de nube: ingesta, descubrimiento y acceso, procesamiento, repositorio de aplicaciones, front-end, espacio de trabajo, autenticación y gestión de recursos.</p>
+  <div class="tags"><span class="tag">PaaS</span><span class="tag">Diagrama</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>10–12</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+</div>
+<section class="prose"><p>The Platform relies on a comprehensive suite of software tools and protocols to streamline various processes involved in EO data management and application development with the objective of providing a Cloud-agnostic EO Data Hosting and Exploitation environment. The components are delivered as a fully-fledged Platform-as-a-Service (PaaS) that supports:</p>
+<ul><li>Efficiency in Data Handling: Streamline the process of EO data ingestion and calibration, ensuring data integrity and accuracy.</li><li>Discoverability: Facilitate swift and precise data searches, aided by a geospatial and temporal querying mechanism.</li><li>Flexibility in Integration: Allow integration of external tools and data processing applications.</li><li>Versatile Execution: Provide a diverse execution environment ranging from local servers to cloud-based infrastructures.</li><li>User Engagement: Foster an interactive and intuitive user experience, offering a platform where applications can be easily searched, reviewed, and executed.</li></ul>
+<p>The diagram below shows the several key components, each fulfilling a specific role in the overall architecture.</p>
+<figure class="fig"><a href="img/fig-0115.png" target="_blank" rel="noopener"><img src="img/fig-0115.png" alt="Figure 1 - CopernicusLAC Centre Platform System Components" loading="lazy"></a><figcaption>Figure 1 - CopernicusLAC Centre Platform System Components</figcaption><span class="pg">p. 11</span></figure>
+<p>Key components:</p>
+<ul><li>Data Ingestion: Manages the ingestion of data from external sources, ensuring that data is validated and pre-processed before being stored or used.</li><li>Data Discovery and Access: Stores metadata about available data, manages the actual data storage, and provides tools for users to search, discover, and visualise data. It also manages secure access to data.</li><li>Data Processing: Facilitates communication between different processing components, manages workflows for processing data, and provides access to various data processing services, supporting additional functionalities as needed.</li><li>Application Repository: Stores packages of applications used for processing and analysis, manages containers for running applications, and ensures version control for applications and workflows.</li><li>Front-end Services: Acts as the main interface for users to interact with the platform, including specific web applications designed for different use cases, tools for interactive data analysis (such as QGIS, JupyterLab, and VS Code), a development environment for creating and testing applications, and support for interactive computational notebooks for data analysis.</li><li>User Workspace: Provides users with personal workspaces that include version control, storage, and repositories for managing their work and data.</li><li>Authentication and Authorization: Manages user authentication and authorization, ensuring secure access to the platform.</li><li>Resource Management: Oversees the allocation and management of system resources, ensuring operation and scalability.</li></ul></section>
+<nav class="pager"><a class="prev" href="s2-2.html"><i>←</i><span>2.2 · User Roles</span></a><a class="next" href="s2-4.html"><span>2.4 · High-Level Architecture Diagram</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

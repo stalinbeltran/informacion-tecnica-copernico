@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.3 Practical Example · D3</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D3</a><i>›</i><a href="s6.html">6</a><i>›</i><span>6.3 · Practical Example</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D3 · Interface Control Document · Capítulo 6.3</span>
+  <h1>Practical Example</h1>
+  <p class="lede">Caso completo de descarga de una banda NIR de Sentinel-2: identificar el asset, generar la URL firmada y descargar.</p>
+  <div class="tags"><span class="tag">Ejemplo</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>34–35</b></span></div>
+</div>
+<section class="prose"><p>Consider a scenario where a user wants to download a specific asset from the CopernicusLAC system, such as a NIR band image from Sentinel-2 data. The process would be as follows:</p>
+<ol><li>Identify the Asset</li></ol>
+<p>The user identifies the desired asset from the STAC item metadata, noting the S3 URL and the required authentication scheme (signed_url_auth).</p>
+<ol><li>Generate Signed URL:</li></ol>
+<p>The user sends a POST request to the authorization endpoint with the asset’s S3 URL. Example cURL request: curl -X &#x27;POST&#x27; \ &#x27;<a href="https://&lt;sign-url&gt;?url=s3%3A%2F%2Fsentinel-2%2Fred.tif&#x27;" target="_blank" rel="noopener">https://&lt;sign-url&gt;?url=s3%3A%2F%2Fsentinel-2%2Fred.tif&#x27;</a> \ -H &#x27;Authorization: Bearer eyJ...cmQ&#x27; \ -d &#x27;&#x27;</p>
+<ol><li>Download the Asset:</li></ol>
+<p>Upon receiving the signed URL in the response, the user can either manually download the asset using the provided URL or rely on the automatic redirection (if enabled) to initiate the download immediately.</p>
+<p>This method ensures that data access within the CopernicusLAC system is both secure and efficient, protecting sensitive EO data while providing users with the flexibility to download assets as needed.</p></section>
+<nav class="pager"><a class="prev" href="s6-2-4.html"><i>←</i><span>6.2.4 · Example Workflow</span></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

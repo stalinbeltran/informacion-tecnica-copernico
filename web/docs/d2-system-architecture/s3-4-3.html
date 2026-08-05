@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.4.3 Integration Points · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-4.html">3.4</a><i>›</i><span>3.4.3 · Integration Points</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.4.3</span>
+  <h1>Integration Points</h1>
+  <p class="lede">Sirve al motor de ejecución, al motor de workflows, al espacio de trabajo del usuario y, de forma indirecta, a los componentes de procesamiento e ingesta.</p>
+  <div class="tags"><span class="tag">Diagrama</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>27</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+</div>
+<section class="prose"><figure class="fig"><a href="img/fig-0159.png" target="_blank" rel="noopener"><img src="img/fig-0159.png" alt="Figure 6 - Application Registry integration points" loading="lazy"></a><figcaption>Figure 6 - Application Registry integration points</figcaption><span class="pg">p. 27</span></figure>
+<p>The Application Registry integrates with multiple other components within the CopernicusLAC platform to ensure application management and execution:</p>
+<ul><li>Application Execution Engine: Retrieves application packages from GitLab and deploys these as OGC API Processes. The registry ensures that the necessary application code, containers, and configurations are available to execute EO applications.</li><li>Processing Workflow Engine: The Processing Workflow Engine accesses the application packages and container images in the registry to orchestrate complex processing workflows, ensuring that all required dependencies and configurations are met.</li><li>User Workspace: Users interact with the Application Registry to retrieve operational application packages and copy them to their own private space. Each user workspace has dedicated software repositories in GitLab and a dedicated Harbor based container registry to manage private and operational packages and associated container registries.</li><li>Data Processing Component: The interaction with the Application Registry for the deployment and execution of applications is handled indirectly through the Data Processing Component, which orchestrates the retrieval and deployment of EO application packages on the Application Execution Engine.</li><li>Data Ingestion Component: Similar to the Data Processing component, the Data Ingestion component interacts with the Application Registry to retrieve application packages required for the ingestion, validation, and pre-processing of EO data.</li></ul></section>
+<nav class="pager"><a class="prev" href="s3-4-2.html"><i>←</i><span>3.4.2 · Implementation</span></a><a class="next" href="s3-4-4.html"><span>3.4.4 · Software Stack</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

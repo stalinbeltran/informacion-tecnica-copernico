@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.6.4 Software Stack · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-6.html">3.6</a><i>›</i><span>3.6.4 · Software Stack</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.6.4</span>
+  <h1>Software Stack</h1>
+  <p class="lede">PostgreSQL, PostGIS, PgSTAC, STAC API con FastAPI, GitLab, Harbor, S3, clientes CLI, Kubernetes, Crossplane, External Secrets Operator y API REST.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>33</b></span></div>
+</div>
+<section class="prose"><p>The User Workspace utilises a range of software tools and technologies to achieve its objectives:</p>
+<ul><li>PostgreSQL: Utilised for indexing and storing metadata. PostgreSQL&#x27;s advanced querying capabilities enable search and retrieval of metadata.</li><li>PostGIS: used to extend the capabilities of the PostgreSQL relational database by adding support for storing, indexing, and querying geospatial data</li><li>PgSTAC: Stores all collection and item records as JSONB, allowing for any STAC custom fields to be stored and retrieved transparently.</li><li>STAC API with FastAPI: Provides a standardised interface for programmatic access to the catalogued data, enabling users to perform detailed searches and retrieve metadata and data assets. The FastAPI interface validates requests and data sent to the PgSTAC backend.</li><li>GitLab: Used for version control, allowing users to manage their application packages and track changes.</li><li>Harbor: Used to store and manage container images associated with user-defined applications.</li><li>Data Storage: S3-compatible object storage or other scalable storage solutions are used to store user data and processing results.</li><li>CLI Clients: Provides command-line tools for data access, discovery, and processing.</li><li>Processing Job Management: Interfaces with the Data Processing Component to manage the submission, monitoring, and retrieval of processing jobs.</li><li>Kubernetes: Each user has a dedicated namespace on the Kubernetes cluster, managed by Crossplane.</li><li>Crossplane: Manages the provisioning of infrastructure resources and Helm releases, ensuring that users have the necessary resources for their tasks.</li><li>External Secrets Operator (ESO): Manages sensitive information and secrets, ensuring secure storage and retrieval.</li><li>RESTful API: Provides programmatic access to workspace functionalities, allowing for user and admin operations.</li></ul></section>
+<nav class="pager"><a class="prev" href="s3-6-3.html"><i>←</i><span>3.6.3 · Integration Points</span></a><a class="next" href="s3-7.html"><span>3.7 · Authentication and Authorization</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

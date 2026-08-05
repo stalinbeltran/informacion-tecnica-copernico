@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8.1 Annex A - Infrastructure Requirements for the CopernicusLAC Centre Platform · D1</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D1</a><i>›</i><a href="s8.html">8</a><i>›</i><span>8.1 · Annex A - Infrastructure Requirements for the CopernicusLAC Centre Platform</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D1 · CopernicusLAC Centre Specification and Performance Requirements · Capítulo 8.1</span>
+  <h1>Annex A - Infrastructure Requirements for the CopernicusLAC Centre Platform</h1>
+  <p class="lede">Anexo A: requisitos de infraestructura pensados para orientar la contratación de recursos cloud escalables, nativos de nube y de alta disponibilidad.</p>
+  <div class="tags"><span class="tag">Contratación</span></div>
+  <div class="metrics"><span title="Apartados"><b>6</b> apartados</span><span title="Páginas del PDF">pp. <b>38–40</b></span><span title="Tablas"><b>1</b> tabl.</span></div>
+</div>
+<section class="prose"><p>This annex outlines the infrastructure requirements for the establishment and operation of the CopernicusLAC Centre Platform. It is structured to inform the procurement of cloud infrastructure resources supporting large-scale EO data ingestion, processing, and dissemination. The infrastructure must be scalable, cloud-native, and built for high availability, performance, and secure federated data exchange with other Copernicus data centres.</p></section>
+<h2 class="secttl">Apartados</h2>
+<div class="grid">
+<a class="card leaf" href="s8-1-1.html">
+  <span class="eyebrow">8.1.1</span>
+  <h3>Compute &amp; Orchestration Environment</h3>
+  <p class="sum">Entorno de cómputo: KaaS y DBaaS obligatorios, clúster Kubernetes en HA escalable a 1000 nodos, y VMs de 4 vCPU/16 GB hasta 32 vCPU/128 GB.</p>
+  <div class="tags"><span class="tag">1000 nodos</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>38</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-1-2.html">
+  <span class="eyebrow">8.1.2</span>
+  <h3>Storage Architecture</h3>
+  <p class="sum">Almacenamiento por niveles: bloque SSD con 20.000 IOPS y 70 TB, objeto con 2 PB en línea y 20 PB en frío, y cuatro instancias PostgreSQL en HA de 16 vCPU y 64 GB.</p>
+  <div class="tags"><span class="tag">2 PB + 20 PB</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>38</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-1-3.html">
+  <span class="eyebrow">8.1.3</span>
+  <h3>Network Infrastructure</h3>
+  <p class="sum">Red: enlace externo dedicado de 3 Gbps mínimo, fabric interno de 10 Gbps o más con rutas redundantes, e integración con BELLA para conectar con el centro de Chile.</p>
+  <div class="tags"><span class="tag">BELLA</span><span class="tag">Chile</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>39</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-1-4.html">
+  <span class="eyebrow">8.1.4</span>
+  <h3>Security &amp; Availability</h3>
+  <p class="sum">Seguridad y disponibilidad: RBAC y MFA obligatorios, cifrado extremo a extremo, auditoría completa, cumplimiento RGPD y ESA, y objetivo de disponibilidad ≥99,5 %.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>39</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-1-5.html">
+  <span class="eyebrow">8.1.5</span>
+  <h3>Performance and Operational Requirements</h3>
+  <p class="sum">Rendimiento: soporte para ≥3000 usuarios concurrentes, escalado horizontal en cómputo, almacenamiento y servicios, y monitorización en tiempo real.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>39</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-1-6.html">
+  <span class="eyebrow">8.1.6</span>
+  <h3>Summary Table – Infrastructure Components</h3>
+  <p class="sum">Tabla resumen con todos los componentes de infraestructura, sus cantidades o capacidades y notas de configuración.</p>
+  <div class="tags"><span class="tag">Tabla</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>40</b></span><span title="Tablas"><b>1</b> tabl.</span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+</div>
+<nav class="pager"><a class="prev" href="s8.html"><i>←</i><span>8 · Annexes</span></a><a class="next" href="s8-1-1.html"><span>8.1.1 · Compute &amp; Orchestration Environment</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

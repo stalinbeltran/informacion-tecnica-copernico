@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.8 Compliance with Platform Standards · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s6.html">6</a><i>›</i><span>6.8 · Compliance with Platform Standards</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 6.8</span>
+  <h1>Compliance with Platform Standards</h1>
+  <p class="lede">Nueve estándares que los desarrolladores deben cumplir al empaquetar sus algoritmos EO, expresados con MUST y SHOULD.</p>
+  
+  <div class="metrics"><span title="Apartados"><b>9</b> apartados</span><span title="Páginas del PDF">pp. <b>69–71</b></span></div>
+</div>
+<section class="prose"><p>To ensure integration and reliable operation of EO applications within the CopernicusLAC platform, developers must adhere to specific platform standards during the application packaging process. Compliance with these standards is essential for maintaining consistency, security, and performance across the platform’s various components. This subsection outlines the key standards and practices that developers must follow when packaging their EO algorithms.</p></section>
+<h2 class="secttl">Apartados</h2>
+<div class="grid">
+<a class="card leaf" href="s6-8-1.html">
+  <span class="eyebrow">6.8.1</span>
+  <h3>Use of Common Workflow Language (CWL)</h3>
+  <p class="sum">MUST: toda aplicación EO debe describirse con CWL para garantizar portabilidad y reproducibilidad.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>69–70</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-8-2.html">
+  <span class="eyebrow">6.8.2</span>
+  <h3>Unattended Execution Capability</h3>
+  <p class="sum">MUST: las aplicaciones deben poder ejecutarse de forma desatendida, sin intervención humana.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>70</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-8-3.html">
+  <span class="eyebrow">6.8.3</span>
+  <h3>Docker Containerization</h3>
+  <p class="sum">MUST: encapsulación en contenedores Docker con todas sus dependencias; se recomiendan imágenes base ligeras.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>70</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-8-4.html">
+  <span class="eyebrow">6.8.4</span>
+  <h3>Adherence to Metadata Standards</h3>
+  <p class="sum">MUST: las salidas deben cumplir el perfil mínimo de metadatos y catalogarse en formato STAC.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>70</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-8-5.html">
+  <span class="eyebrow">6.8.5</span>
+  <h3>Security and Vulnerability Management</h3>
+  <p class="sum">MUST: escaneos de seguridad periódicos para que los contenedores estén libres de vulnerabilidades conocidas.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>70</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-8-6.html">
+  <span class="eyebrow">6.8.6</span>
+  <h3>GitLab for Version Control</h3>
+  <p class="sum">SHOULD: gestionar código, workflows CWL y Dockerfiles en GitLab, usando sus pipelines CI/CD.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>70</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-8-7.html">
+  <span class="eyebrow">6.8.7</span>
+  <h3>Resource Optimization and Performance</h3>
+  <p class="sum">SHOULD: definir requests y limits de recursos en Kubernetes y soportar procesamiento paralelo.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>70</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-8-8.html">
+  <span class="eyebrow">6.8.8</span>
+  <h3>Comprehensive Documentation</h3>
+  <p class="sum">SHOULD: acompañar cada aplicación con documentación de funcionalidad, entradas/salidas, ejemplos y despliegue.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>71</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s6-8-9.html">
+  <span class="eyebrow">6.8.9</span>
+  <h3>Testing and Validation</h3>
+  <p class="sum">SHOULD: pruebas unitarias, de integración y benchmarks antes del despliegue, con datasets de prueba.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>71</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+</div>
+<nav class="pager"><a class="prev" href="s6-7.html"><i>←</i><span>6.7 · Benefits</span></a><a class="next" href="s6-8-1.html"><span>6.8.1 · Use of Common Workflow Language (CWL)</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

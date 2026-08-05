@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.7.2 Implementation · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-7.html">3.7</a><i>›</i><span>3.7.2 · Implementation</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.7.2</span>
+  <h1>Implementation</h1>
+  <p class="lede">Keycloak cubre identidades, autenticación (OAuth/OpenID Connect), políticas de autorización, RBAC, SSO, MFA y auditoría.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>34</b></span></div>
+</div>
+<section class="prose"><p>The implementation of the Authentication and Authorization component involves several key elements designed to provide a secure and user-friendly experience, utilising the full stack of services provided by Keycloak:</p>
+<ul><li>User Identity Management: Keycloak manages user identities, including registration, authentication, and profile management.</li><li>Authentication Mechanisms: Secure authentication protocols, such as OAuth and OpenID Connect, are implemented through Keycloak to verify user identities and ensure secure access to the platform.</li><li>Authorization Policies: Keycloak defines and enforces authorization policies that determine what actions users can perform and what resources they can access based on their roles and permissions.</li><li>Role-Based Access Control (RBAC): Keycloak assigns roles to users and manages permissions based on these roles to ensure appropriate levels of access.</li><li>Single Sign-On (SSO): Keycloak enables users to log in once and gain access to multiple related but independent systems without re-authenticating.</li><li>Multi-Factor Authentication (MFA): Keycloak supports adding an additional layer of security by requiring users to provide two or more verification factors to gain access.</li><li>Audit Logging: Keycloak provides audit logging of authentication and authorization activities to monitor for suspicious behaviour and ensure compliance with security policies.</li></ul></section>
+<nav class="pager"><a class="prev" href="s3-7-1.html"><i>←</i><span>3.7.1 · Purpose</span></a><a class="next" href="s3-7-3.html"><span>3.7.3 · Integration Points</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

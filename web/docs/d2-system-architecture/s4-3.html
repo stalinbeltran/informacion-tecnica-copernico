@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.3 Application Package Selection · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s4.html">4</a><i>›</i><span>4.3 · Application Package Selection</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 4.3</span>
+  <h1>Application Package Selection</h1>
+  <p class="lede">Cómo se elige el paquete ETL adecuado a partir de las propiedades del STAC Item; si faltan, se aplica un ETL genérico con funcionalidad reducida de descubrimiento y visualización.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>42</b></span></div>
+</div>
+<section class="prose"><p>The selection of the Ingestion Application Package is an initial step to have the right ETL process in the data ingestion process. This selection determines how the data will be processed, ensuring that the appropriate tools and workflows are applied to each dataset based on its specific characteristics.</p>
+<ul><li>Purpose: The purpose of selecting an Ingestion Application Package is to tailor the data ingestion process to the specific requirements of the dataset. By selecting the correct package, the platform ensures that data is processed using the most suitable methods, optimising quality, consistency, and usability.</li><li>Implementation: The platform uses predefined rules and metadata properties (e.g., sensor type, data format, mission-specific characteristics) to match each dataset with the appropriate Ingestion Application Package. These packages are encoded using the CWL and may include specific tools, software dependencies, and processing steps that are required for the data type.</li><li>Customization: If the dataset has unique properties not covered by existing packages, a new Application Package can be created and deployed. This allows for flexibility in handling a wide variety of EO data types and ensures that the ingestion process remains robust and adaptable.</li><li>Integration with Argo Workflows: Once selected, the Ingestion Application Package is executed as part of the Argo Workflows pipeline, which orchestrates the ingestion, validation, and storage processes. This integration ensures that the workflow is executed from data upload to final storage.</li></ul>
+<p>The application package selection involves choosing the appropriate ETL process that is validated to act on the uploaded data based on the properties of the STAC Item. This is done by using predefined configuration items within the STAC properties to match the dataset with the corresponding ETL process, ensuring that the data is properly processed. If the STAC Item lacks specific properties, a generic ETL process is employed, which may result in limited discovery and visualisation functionalities. This targeted selection ensures that each dataset undergoes the most suitable transformation and enrichment process for optimal usability.</p>
+<p>The Ingestion ETL processes are implemented as OGC Earth Observation Application Packages encoded using the Common Workflow Language (CWL) and include necessary tools and workflows. The Application Package reads a STAC Catalog that references the uploaded STAC Item and its assets, transforms them as needed, and writes a new STAC Catalog. The transformed STAC Item and its assets are published in the object storage and registered in the catalogue for discovery and access.</p></section>
+<nav class="pager"><a class="prev" href="s4-2.html"><i>←</i><span>4.2 · Ingestion Workflow</span></a><a class="next" href="s4-4.html"><span>4.4 · Data Validation and Content Validation</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

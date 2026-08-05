@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.2.1 Obtain Collection Information · D3</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D3</a><i>›</i><a href="s4.html">4</a><i>›</i><a href="s4-2.html">4.2</a><i>›</i><span>4.2.1 · Obtain Collection Information</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D3 · Interface Control Document · Capítulo 4.2.1</span>
+  <h1>Obtain Collection Information</h1>
+  <p class="lede">GET /collections y GET /collections/&lt;id&gt;, con la respuesta JSON completa de la colección sentinel-s2-l1c-cogs como ejemplo.</p>
+  <div class="tags"><span class="tag">Endpoint</span><span class="tag">JSON</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>17–18</b></span></div>
+</div>
+<section class="prose"><p>The STAC API allows users to obtain information about the available collections within the catalog. Two primary methods are available:</p>
+<ul><li>GET /collections: Retrieves a JSON document containing all available collections.</li><li>GET /collections/&lt;collection-id&gt;: Retrieves detailed information about a specific collection identified by &lt;collection-id&gt;.</li></ul>
+<p>Each collection is described by metadata, including spatial and temporal extents, links to further information, and other relevant details. Below is an example response for a collection: { &quot;id&quot;: &quot;sentinel-s2-l1c-cogs&quot;, &quot;type&quot;: &quot;Collection&quot;, &quot;links&quot;: [ { &quot;rel&quot;: &quot;items&quot;, &quot;type&quot;: &quot;application/geo+json&quot;, &quot;href&quot;: &quot;&lt;discovery-url&gt;/collections/sentinel-s2-l1c-cogs/items&quot; }, { &quot;rel&quot;: &quot;parent&quot;, &quot;type&quot;: &quot;application/json&quot;, &quot;href&quot;: &quot;&lt;discovery-url&gt;/&quot; }, { &quot;rel&quot;: &quot;root&quot;, &quot;type&quot;: &quot;application/json&quot;, &quot;href&quot;: &quot;<a href="https://&lt;discover-url&gt;/&quot;" target="_blank" rel="noopener">https://&lt;discover-url&gt;/&quot;</a></p>
+<p>}, { &quot;rel&quot;: &quot;self&quot;, &quot;type&quot;: &quot;application/json&quot;, &quot;href&quot;: &quot;<a href="https://&lt;discovery-url&gt;/collections/sentinel-s2-l1c-cogs&quot;" target="_blank" rel="noopener">https://&lt;discovery-url&gt;/collections/sentinel-s2-l1c-cogs&quot;</a> }, { &quot;rel&quot;: &quot;<a href="http://www.opengis.net/def/rel/ogc/1.0/queryables&quot;," target="_blank" rel="noopener">http://www.opengis.net/def/rel/ogc/1.0/queryables&quot;,</a> &quot;href&quot;: &quot;&lt;discovery-url&gt;/collections/sentinel-s2-l1c-cogs/queryables&quot;, &quot;type&quot;: &quot;application/schema+json&quot; } ], &quot;title&quot;: &quot;Sentinel Level-1C COGs&quot;, &quot;extent&quot;: { &quot;spatial&quot;: { &quot;bbox&quot;: [ [ -180,-90,180,90 ]] }, &quot;temporal&quot;: { &quot;interval&quot;: [ [&quot;2023-06-01T00:00:00Z&quot;,&quot;2023-06-30T23:59:59Z&quot; ] ] } }, &quot;license&quot;: &quot;proprietary&quot;, &quot;keywords&quot;: [ &quot;copernicus&quot;, &quot;esa&quot;, &quot;eu&quot;, &quot;msi&quot;, &quot;radiance&quot;, &quot;sentinel&quot; ], &quot;description&quot;: &quot;Sentinel-2a and Sentinel-2b imagery, processed to Level 1C (TOA Reflectance) and converted to Cloud-Optimized &quot;, &quot;stac_version&quot;: &quot;1.0.0&quot; }</p></section>
+<nav class="pager"><a class="prev" href="s4-2.html"><i>←</i><span>4.2 · Interface Description</span></a><a class="next" href="s4-2-2.html"><span>4.2.2 · Direct Metadata Access</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

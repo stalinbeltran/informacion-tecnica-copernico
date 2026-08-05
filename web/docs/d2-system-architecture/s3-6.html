@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.6 User Workspace · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><span>3.6 · User Workspace</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.6</span>
+  <h1>User Workspace</h1>
+  <p class="lede">Espacio de trabajo del usuario: entorno personal con namespace propio en Kubernetes, repositorio GitLab y registro Harbor dedicados, aprovisionado por Crossplane.</p>
+  <div class="tags"><span class="tag">Crossplane</span><span class="tag">ArgoCD</span><span class="tag">ESO</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>31–33</b></span><span title="Figuras"><b>2</b> fig.</span></div>
+</div>
+<h2 class="secttl">Apartados</h2>
+<div class="grid">
+<a class="card leaf" href="s3-6-1.html">
+  <span class="eyebrow">3.6.1</span>
+  <h3>Purpose</h3>
+  <p class="sum">Entorno personalizado donde cada usuario gestiona, ejecuta y analiza sus tareas de procesamiento y sus paquetes de aplicación.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>31</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s3-6-2.html">
+  <span class="eyebrow">3.6.2</span>
+  <h3>Implementation</h3>
+  <p class="sum">Namespace dedicado en Kubernetes gestionado por Crossplane, control de versiones y registro de contenedores propios, clientes CLI, gestión de secretos con ESO y una API REST de workspace.</p>
+  <div class="tags"><span class="tag">Diagramas</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>31–32</b></span><span title="Figuras"><b>2</b> fig.</span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s3-6-3.html">
+  <span class="eyebrow">3.6.3</span>
+  <h3>Integration Points</h3>
+  <p class="sum">Se integra con descubrimiento y acceso, procesamiento, registro de aplicaciones, ArgoCD, Crossplane y los servicios de front-end.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>32–33</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s3-6-4.html">
+  <span class="eyebrow">3.6.4</span>
+  <h3>Software Stack</h3>
+  <p class="sum">PostgreSQL, PostGIS, PgSTAC, STAC API con FastAPI, GitLab, Harbor, S3, clientes CLI, Kubernetes, Crossplane, External Secrets Operator y API REST.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>33</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+</div>
+<nav class="pager"><a class="prev" href="s3-5-4.html"><i>←</i><span>3.5.4 · Software Stack</span></a><a class="next" href="s3-6-1.html"><span>3.6.1 · Purpose</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

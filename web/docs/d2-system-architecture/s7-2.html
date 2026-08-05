@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7.2 Common Workflow Language (CWL) · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s7.html">7</a><i>›</i><span>7.2 · Common Workflow Language (CWL)</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 7.2</span>
+  <h1>Common Workflow Language (CWL)</h1>
+  <p class="lede">CWL y sus motores de ejecución: cwltool (referencia, local), Toil (HPC y nube) y Calrissian (nativo de Kubernetes, el elegido para escalar).</p>
+  <div class="tags"><span class="tag">Calrissian</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>72–73</b></span></div>
+</div>
+<section class="prose"><p>The Common Workflow Language (CWL) is integral to the CopernicusLAC platform, providing a standardised approach for defining and executing complex data processing workflows. CWL&#x27;s primary strength lies in its ability to describe workflows in a way that is both platform-independent and highly reproducible. This standardisation ensures that workflows can be consistently executed across a variety of environments, from local development setups to large-scale cloud deployments.</p>
+<p>To execute CWL workflows, several tools and engines have been developed, each optimised for different environments and use cases. These tools ensure that the workflows described in CWL can be executed at scale, with support for parallel processing and integration with modern infrastructure:</p>
+<ul><li>cwltool: cwltool is the reference implementation of CWL, developed by the CWL project itself. It is a lightweight, Python-based tool designed for testing and running CWL workflows on a local machine. While cwltool is ideal for development and small-scale execution, it lacks the scalability required for large, production-grade environments.</li><li>Toil: Toil is a workflow engine designed for scalable, distributed computing environments. It supports the execution of CWL workflows across multiple compute nodes, making it suitable for high-performance computing (HPC) environments and cloud-based deployments. Toil integrates well with batch processing systems like SLURM and cloud services such as AWS Batch, allowing for flexible and powerful execution strategies.</li><li>Calrissian: Calrissian is a specialised CWL implementation designed to run within a Kubernetes cluster. Its primary goal is to harness the power of Kubernetes to execute workflows, taking full advantage of high-capacity clusters to run multiple steps in parallel. Calrissian is highly scalable and can dynamically allocate resources based</li></ul>
+<p>on the requirements of each workflow step, making it an ideal choice for environments where large-scale data processing tasks need to be executed reliably.</p>
+<p>Calrissian integrates with Kubernetes, allowing it to handle the orchestration of containers that execute individual workflow steps. By leveraging Kubernetes&#x27; built-in features, such as auto-scaling, load balancing, and fault tolerance, Calrissian ensures that workflows are executed with optimal resource utilisation and minimal downtime. This makes it particularly valuable for the CopernicusLAC platform, where the ability to scale workflows across a distributed infrastructure is crucial.</p></section>
+<nav class="pager"><a class="prev" href="s7-1.html"><i>←</i><span>7.1 · Purpose</span></a><a class="next" href="s7-3.html"><span>7.3 · Docker</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

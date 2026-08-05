@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D3 · Interface Control Document</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<script>window.__IDX__=[{"i": "portada", "n": "0", "t": "Portada, control del documento e índice", "s": "Portada, ficha de identificación del documento y registro de cambios de las versiones 1.0 a 1.3.", "l": 0}, {"i": "s1", "n": "1", "t": "Introduction", "s": "Propósito del ICD, contexto de la iniciativa CopernicusLAC, alcance, público destinatario, estructura del documento y referencias con el glosario de acrónimos.", "l": 1}, {"i": "s1-1", "n": "1.1", "t": "Purpose", "s": "Definir y gestionar las interfaces entre la plataforma y los sistemas externos: formatos de intercambio, protocolos y medidas de seguridad.", "l": 2}, {"i": "s1-2", "n": "1.2", "t": "Background", "s": "CopernicusLAC es una colaboración entre ESA, DG-INTPA y el Gobierno de Panamá para crear un Centro Regional Copernicus enfocado en reducción del riesgo de desastres.", "l": 2}, {"i": "s1-3", "n": "1.3", "t": "Scope", "s": "Cubre cuatro áreas funcionales —ingesta, descubrimiento, visualización y acceso— más los procesos de prueba, validación y gestión de cambios.", "l": 2}, {"i": "s1-4", "n": "1.4", "t": "Audience", "s": "Dirigido a arquitectos, desarrolladores, integradores, jefes de proyecto, socios externos y responsables de seguridad y cumplimiento.", "l": 2}, {"i": "s1-5", "n": "1.5", "t": "Document Structure", "s": "Mapa de los seis capítulos y de lo que aborda cada uno.", "l": 2}, {"i": "s1-6", "n": "1.6", "t": "Applicable Documents", "s": "Tabla de documentos aplicables: SOW, contrato ESA y entregables relacionados.", "l": 2}, {"i": "s1-7", "n": "1.7", "t": "Reference Documents", "s": "Tabla de documentos de referencia, incluida la propuesta técnica de Terradue.", "l": 2}, {"i": "s1-8", "n": "1.8", "t": "Acronyms and Abbreviations", "s": "Glosario de 18 acrónimos usados en el documento (API, CDSE, COG, CQL2, STAC, WMTS…).", "l": 2}, {"i": "s2", "n": "2", "t": "High-Level System Architecture", "s": "Arquitectura de alto nivel como base para entender las interfaces: visión general, los ocho componentes clave y cinco escenarios de interacción entre ellos. Remite a D2 para el detalle.", "l": 1}, {"i": "s2-1", "n": "2.1", "t": "Overview", "s": "Arquitectura distribuida y cloud-native pensada para escalar ante grandes volúmenes de datos y workflows complejos.", "l": 2}, {"i": "s2-2", "n": "2.2", "t": "Key Components", "s": "Los ocho componentes centrales —ingesta, procesamiento, descubrimiento y acceso, front-end, espacio de trabajo, seguridad, empaquetado y despliegue, gestión de recursos— con su función e integración.", "l": 2}, {"i": "s2-3", "n": "2.3", "t": "Component Interactions", "s": "Cómo interoperan los componentes: modularidad, interfaces bien definidas y protocolos que gobiernan el flujo de datos.", "l": 2}, {"i": "s2-3-1", "n": "2.3.1", "t": "Data Flow from Ingestion to Processing", "s": "Flujo de datos de la ingesta al procesamiento según el nivel elegido (solo metadatos, copia o calibración), y cómo el catálogo STAC unifica el acceso independientemente de dónde resida el dato.", "l": 3}, {"i": "s2-3-2", "n": "2.3.2", "t": "Interaction between Data Processing and User Interfaces", "s": "Los resultados del procesamiento se devuelven al almacenamiento con metadatos actualizados; los usuarios los descubren y consumen desde los servicios de front-end.", "l": 3}, {"i": "s2-3-3", "n": "2.3.3", "t": "Application Deployment and Execution", "s": "Las aplicaciones EO se empaquetan como contenedores Docker con manifiesto CWL, se despliegan con Kubernetes y Helm, y se ejecutan por lotes o en tiempo real.", "l": 3}, {"i": "s2-3-4", "n": "2.3.4", "t": "Security and Access Control", "s": "Keycloak centraliza identidad y control de acceso; MFA y RBAC limitan cada usuario a lo necesario, con registros de auditoría.", "l": 3}, {"i": "s2-3-5", "n": "2.3.5", "t": "Resource Management and Scalability", "s": "Aprovisionamiento y desaprovisionamiento automáticos de recursos y escalado horizontal para absorber picos de demanda.", "l": 3}, {"i": "s3", "n": "3", "t": "Data Ingestion", "s": "Interfaz de ingesta: cómo entran los datos desde fuentes externas —sobre todo el Copernicus Data Space Ecosystem—, con sus tres niveles, requisitos de formato, seguridad, gestión de errores y trabajo futuro.", "l": 1}, {"i": "s3-1", "n": "3.1", "t": "Overview", "s": "Tres niveles de ingesta: recolección de metadatos, recolección con copia del dataset y recolección con calibración; diagrama de secuencia del flujo entre componentes.", "l": 2}, {"i": "s3-2", "n": "3.2", "t": "Interface Requirements", "s": "Requisitos que debe cumplir quien entrega datos a la plataforma: formatos, validación inicial, ejecución del proceso y códigos de salida.", "l": 2}, {"i": "s3-2-1", "n": "3.2.1", "t": "Data Formats", "s": "La entrada estándar del ETL es un STAC Item; sus assets deben venir en GeoTIFF, COG u otros formatos acordados.", "l": 3}, {"i": "s3-2-2", "n": "3.2.2", "t": "Initial Data Validation", "s": "El Event Bus dispara la ingesta; el workflow lee la plantilla desde el Registry y obtiene las imágenes de ingesta necesarias.", "l": 3}, {"i": "s3-2-3", "n": "3.2.3", "t": "Ingestion Process Execution", "s": "El Workflow Engine instancia y ejecuta la ingesta; las acciones concretas (indexar, descargar y validar, o calibrar) dependen del nivel elegido.", "l": 3}, {"i": "s3-2-4", "n": "3.2.4", "t": "Application Exit Codes", "s": "El proceso devuelve un código de salida y publica un mensaje en el topic de éxito o de fallo del Event Bus.", "l": 3}, {"i": "s3-3", "n": "3.3", "t": "Data Formats and Protocols", "s": "Formatos aceptados, obligaciones de la especificación STAC y protocolos de transferencia previstos.", "l": 2}, {"i": "s3-3-1", "n": "3.3.1", "t": "Accepted Data Format", "s": "Metadatos conformes a STAC para la recolección; GeoTIFF, COG u otros estándares acordados cuando hay copia o calibración.", "l": 3}, {"i": "s3-3-2", "n": "3.3.2", "t": "STAC Specification", "s": "El STAC Item debe incluir todos los campos obligatorios —metadatos espaciales y temporales— y referencias válidas a los assets.", "l": 3}, {"i": "s3-3-3", "n": "3.3.3", "t": "Data Transfer Protocols", "s": "Protocolo aún no cerrado; se prevé HTTPS, el que ya emplea el almacenamiento S3. La decisión final depende de los servicios del CDSE.", "l": 3}, {"i": "s3-4", "n": "3.4", "t": "Security and Compliance", "s": "Integridad de los datos, control de acceso a la interfaz y cumplimiento normativo en la ingesta.", "l": 2}, {"i": "s3-4-1", "n": "3.4.1", "t": "Data Integrity", "s": "La integridad se garantiza mediante verificación de checksum durante la ingesta.", "l": 3}, {"i": "s3-4-2", "n": "3.4.2", "t": "Access Control", "s": "Acceso restringido a entidades autorizadas, con autenticación segura previsiblemente basada en OAuth2.", "l": 3}, {"i": "s3-4-3", "n": "3.4.3", "t": "Compliance", "s": "Los datos sensibles ingeridos se tratan conforme al RGPD y demás normativa aplicable.", "l": 3}, {"i": "s3-5", "n": "3.5", "t": "Error Handling and Logging", "s": "Detección de errores y registro de la actividad durante la ingesta.", "l": 2}, {"i": "s3-5-1", "n": "3.5.1", "t": "Error Detection", "s": "Comprobaciones distintas por nivel; los datos problemáticos se mueven a almacenamiento temporal y se notifica al sistema de monitorización.", "l": 3}, {"i": "s3-5-2", "n": "3.5.2", "t": "Logging", "s": "Registros completos de ingestas correctas y errores, necesarios para diagnóstico y auditoría.", "l": 3}, {"i": "s3-6", "n": "3.6", "t": "Future Work", "s": "Próximas iteraciones: rutinas de calibración definidas por el usuario y priorización dinámica de datasets según patrones de uso.", "l": 2}, {"i": "s4", "n": "4", "t": "Data Discovery", "s": "Interfaz de descubrimiento: la API REST de STAC. Endpoints de colecciones y items, acceso directo a metadatos, obtención de criterios de filtrado (queryables), filtrado con CQL2 y anatomía completa de un STAC Item.", "l": 1}, {"i": "s4-1", "n": "4.1", "t": "Overview", "s": "El catálogo se expone mediante la API REST de STAC, un estándar consolidado que organiza los productos EO en colecciones y permite buscarlos y filtrarlos.", "l": 2}, {"i": "s4-2", "n": "4.2", "t": "Interface Description", "s": "Los tres grupos de endpoints disponibles: colecciones, metadatos de items y criterios de filtrado.", "l": 2}, {"i": "s4-2-1", "n": "4.2.1", "t": "Obtain Collection Information", "s": "GET /collections y GET /collections/<id>, con la respuesta JSON completa de la colección sentinel-s2-l1c-cogs como ejemplo.", "l": 3}, {"i": "s4-2-2", "n": "4.2.2", "t": "Direct Metadata Access", "s": "GET .../items y GET .../items/<item-id> devuelven un FeatureCollection o un Feature GeoJSON, sin necesidad de filtrar.", "l": 3}, {"i": "s4-2-3", "n": "4.2.3", "t": "Obtain Filter Criteria", "s": "GET .../queryables devuelve los campos por los que se puede filtrar (datetime, geometry, eo:cloud_cover…), con ejemplo de respuesta.", "l": 3}, {"i": "s4-3", "n": "4.3", "t": "Filtering", "s": "Dos vías de filtrado en /search: GET con CQL2-TEXT en la query string y POST con CQL2-JSON en el cuerpo, que admite consultas más complejas.", "l": 2}, {"i": "s4-3-1", "n": "4.3.1", "t": "Filtering using CQL2-JSON (POST)", "s": "Cuatro ejemplos completos de cuerpo CQL2-JSON: por fecha (T_INTERSECTS), por área (S_INTERSECTS), por cobertura de nubes y combinando criterios.", "l": 3}, {"i": "s4-3-2", "n": "4.3.2", "t": "Filtering using CQL2-TEXT (GET)", "s": "Los mismos cuatro casos expresados como query string CQL2-TEXT para peticiones GET.", "l": 3}, {"i": "s4-4", "n": "4.4", "t": "STAC Items", "s": "Un STAC Item de Sentinel-2 completo, campo a campo: links (incluidos los de teselas xyz), assets con bandas y estadísticas, geometry, bbox, properties y esquemas de autenticación.", "l": 2}, {"i": "s5", "n": "5", "t": "Data Visualisation", "s": "Interfaz de visualización: los dos tipos soportados —imágenes de vista previa y endpoints WMTS/XYZ—, con las plantillas de enlace de teselas y el formato exacto de petición.", "l": 1}, {"i": "s5-1", "n": "5.1", "t": "Overview", "s": "La visualización permite explorar los datos EO mediante representaciones visuales: imágenes de resumen y teselas para mapas interactivos.", "l": 2}, {"i": "s5-2", "n": "5.2", "t": "Visualisation Types", "s": "Dos tipos: imágenes de vista previa estáticas y endpoints WMTS con teselas para mapas navegables.", "l": 2}, {"i": "s5-3", "n": "5.3", "t": "Overview Images", "s": "Las vistas previas se publican como asset del STAC Item con role \"overview\"; ejemplo con los parámetros de color, remuestreo y reescalado.", "l": 2}, {"i": "s5-4", "n": "5.4", "t": "Web Map Tile Service (WMTS) Endpoints", "s": "Los endpoints WMTS renderizan los datos como teselas dinámicas integrables en mapas web.", "l": 2}, {"i": "s5-4-1", "n": "5.4.1", "t": "Tile Visualisations", "s": "Un producto puede tener varias visualizaciones (color verdadero, falso color); se acceden mediante las plantillas de enlace de la extensión Web Map Links, con rel \"xyz\".", "l": 3}, {"i": "s5-4-2", "n": "5.4.2", "t": "Tile Request Format", "s": "Cómo sustituir los marcadores {z}, {x} e {y} por nivel de zoom, columna y fila para pedir una tesela concreta, con ejemplo de URL resuelta.", "l": 3}, {"i": "s6", "n": "6", "t": "Data Access Interfaces", "s": "Interfaz de acceso a datos: descarga de assets del almacenamiento de objetos mediante URLs pre-firmadas, con el esquema de autenticación, la generación, la respuesta y un ejemplo práctico de principio a fin.", "l": 1}, {"i": "s6-1", "n": "6.1", "t": "Overview", "s": "URLs pre-firmadas con acceso temporal, pensadas para máquina a máquina; el geobrowser las usa de forma transparente y los workflows CWL las evitan gracias al mecanismo de stage-in.", "l": 2}, {"i": "s6-2", "n": "6.2", "t": "Downloading Data with Signed URLs", "s": "Para descargar un asset almacenado en objetos hay que generar una URL pre-firmada mediante el esquema signed_url_auth declarado en los metadatos del STAC Item.", "l": 2}, {"i": "s6-2-1", "n": "6.2.1", "t": "Authentication Scheme", "s": "Definición completa del esquema signed_url_auth en las properties del item: método, parámetros de cuerpo y cabecera, responseField y authorizationApi; y cómo el asset lo referencia con auth:refs.", "l": 3}, {"i": "s6-2-2", "n": "6.2.2", "t": "Generating a Signed URL", "s": "Petición POST al endpoint de autorización con la URL S3 codificada y un token Bearer; ejemplo con cURL.", "l": 3}, {"i": "s6-2-3", "n": "6.2.3", "t": "Response and Redirection", "s": "La respuesta JSON contiene el campo signed_url con la firma AWS4-HMAC-SHA256 y su caducidad; con redirect activado se devuelve además una cabecera Location.", "l": 3}, {"i": "s6-2-4", "n": "6.2.4", "t": "Example Workflow", "s": "El flujo resumido en tres pasos: pedir la URL firmada, recibirla y descargar el asset.", "l": 3}, {"i": "s6-3", "n": "6.3", "t": "Practical Example", "s": "Caso completo de descarga de una banda NIR de Sentinel-2: identificar el asset, generar la URL firmada y descargar.", "l": 2}];</script>
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><span>D3</span></nav>
+<div class="pagehead doc">
+  <span class="eyebrow">T2-ESA-COPLACI-ID-24-030 · v1.3 · 35 páginas</span>
+  <h1>D3 — Interface Control Document</h1>
+  <p class="lede">Documento de control de interfaces (ICD): cómo se integran sistemas externos con la plataforma CopernicusLAC, con endpoints reales, ejemplos de consulta STAC, teselas WMTS y descarga mediante URLs firmadas.</p>
+  <p class="long">Documento de diseño de interfaces (D3) de Terradue para ESA. A diferencia de D2, que describe la arquitectura interna, este documento define el contrato hacia fuera: qué protocolos, formatos y esquemas de seguridad rigen las interacciones entre la plataforma del Centro CopernicusLAC y los sistemas externos —proveedores de datos, servicios de terceros y usuarios finales—. Cubre cuatro áreas funcionales: ingesta (integración con el Copernicus Data Space Ecosystem, formatos aceptados, validación y códigos de salida), descubrimiento (API STAC con colecciones, queryables y filtrado CQL2 en sus variantes JSON y texto), visualización (imágenes de vista previa y endpoints WMTS/XYZ con plantillas de teselas) y acceso a datos (esquema signed_url_auth para generar URLs pre-firmadas de descarga temporal desde el almacenamiento S3). Es el documento con más ejemplos concretos de petición y respuesta.</p>
+  <div class="tags"><span class="tag">Interfaces</span><span class="tag">STAC API</span><span class="tag">CQL2</span><span class="tag">WMTS</span><span class="tag">Signed URLs</span><span class="tag">Terradue</span><span class="tag">ESA</span></div>
+  <div class="metrics">
+    <span><b>6</b> capítulos</span>
+    <span><b>63</b> secciones</span>
+    <span><b>5</b> figuras</span>
+    <span><b>4</b> tablas</span>
+  </div>
+  <p class="src">Fuente: <a href="../../../T2-ESA-COPLACI-ID-24-030 D3 Interface Control Document v1.3.pdf">T2-ESA-COPLACI-ID-24-030 D3 Interface Control Document v1.3.pdf</a></p>
+</div>
+<div class="searchbox">
+  <input type="search" id="q" autocomplete="off"
+         placeholder="Buscar entre las 63 secciones del documento…">
+  <div id="results" class="results"></div>
+</div>
+<h2 class="secttl">Capítulos</h2><div class="grid">
+<a class="card leaf" href="portada.html">
+  <span class="eyebrow">—</span>
+  <h3>Portada, control del documento e índice</h3>
+  <p class="sum">Portada, ficha de identificación del documento y registro de cambios de las versiones 1.0 a 1.3.</p>
+  <div class="tags"><span class="tag">Metadatos</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>1–2</b></span><span title="Figuras"><b>3</b> fig.</span><span title="Tablas"><b>1</b> tabl.</span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card" href="s1.html">
+  <span class="eyebrow">1</span>
+  <h3>Introduction</h3>
+  <p class="sum">Propósito del ICD, contexto de la iniciativa CopernicusLAC, alcance, público destinatario, estructura del documento y referencias con el glosario de acrónimos.</p>
+  <div class="tags"><span class="tag">Contexto</span><span class="tag">Alcance</span><span class="tag">Referencias</span></div>
+  <div class="metrics"><span title="Apartados"><b>8</b> apartados</span><span title="Páginas del PDF">pp. <b>4–6</b></span><span title="Tablas"><b>3</b> tabl.</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s2.html">
+  <span class="eyebrow">2</span>
+  <h3>High-Level System Architecture</h3>
+  <p class="sum">Arquitectura de alto nivel como base para entender las interfaces: visión general, los ocho componentes clave y cinco escenarios de interacción entre ellos. Remite a D2 para el detalle.</p>
+  <div class="tags"><span class="tag">Arquitectura</span><span class="tag">Componentes</span></div>
+  <div class="metrics"><span title="Apartados"><b>3</b> apartados</span><span title="Páginas del PDF">pp. <b>8–12</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s3.html">
+  <span class="eyebrow">3</span>
+  <h3>Data Ingestion</h3>
+  <p class="sum">Interfaz de ingesta: cómo entran los datos desde fuentes externas —sobre todo el Copernicus Data Space Ecosystem—, con sus tres niveles, requisitos de formato, seguridad, gestión de errores y trabajo futuro.</p>
+  <div class="tags"><span class="tag">Ingesta</span><span class="tag">CDSE</span><span class="tag">STAC</span><span class="tag">Event Bus</span></div>
+  <div class="metrics"><span title="Apartados"><b>6</b> apartados</span><span title="Páginas del PDF">pp. <b>13–16</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s4.html">
+  <span class="eyebrow">4</span>
+  <h3>Data Discovery</h3>
+  <p class="sum">Interfaz de descubrimiento: la API REST de STAC. Endpoints de colecciones y items, acceso directo a metadatos, obtención de criterios de filtrado (queryables), filtrado con CQL2 y anatomía completa de un STAC Item.</p>
+  <div class="tags"><span class="tag">STAC API</span><span class="tag">CQL2</span><span class="tag">GeoJSON</span><span class="tag">Ejemplos</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>17–27</b></span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s5.html">
+  <span class="eyebrow">5</span>
+  <h3>Data Visualisation</h3>
+  <p class="sum">Interfaz de visualización: los dos tipos soportados —imágenes de vista previa y endpoints WMTS/XYZ—, con las plantillas de enlace de teselas y el formato exacto de petición.</p>
+  <div class="tags"><span class="tag">Visualización</span><span class="tag">WMTS</span><span class="tag">XYZ</span><span class="tag">Titiler</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>28–30</b></span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s6.html">
+  <span class="eyebrow">6</span>
+  <h3>Data Access Interfaces</h3>
+  <p class="sum">Interfaz de acceso a datos: descarga de assets del almacenamiento de objetos mediante URLs pre-firmadas, con el esquema de autenticación, la generación, la respuesta y un ejemplo práctico de principio a fin.</p>
+  <div class="tags"><span class="tag">Signed URLs</span><span class="tag">S3</span><span class="tag">Bearer token</span><span class="tag">cURL</span></div>
+  <div class="metrics"><span title="Apartados"><b>3</b> apartados</span><span title="Páginas del PDF">pp. <b>31–35</b></span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+</div>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

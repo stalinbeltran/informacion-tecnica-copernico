@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.1.3 Integration Points · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-1.html">3.1</a><i>›</i><span>3.1.3 · Integration Points</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.1.3</span>
+  <h1>Integration Points</h1>
+  <p class="lede">Se integra con CDSE y el Centro de Datos de Chile como fuentes, con el Repositorio de Aplicaciones para obtener los ETL y con Descubrimiento y Acceso para publicar lo ingerido.</p>
+  <div class="tags"><span class="tag">Diagrama</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>19</b></span><span title="Figuras"><b>1</b> fig.</span></div>
+</div>
+<section class="prose"><figure class="fig"><a href="img/fig-0135.png" target="_blank" rel="noopener"><img src="img/fig-0135.png" alt="Figure 3 - Data Ingestion integration points" loading="lazy"></a><figcaption>Figure 3 - Data Ingestion integration points</figcaption><span class="pg">p. 19</span></figure>
+<p>The Data Ingestion component integrates with three other components within the CopernicusLAC platform to ensure data flow and interoperability:</p>
+<ul><li>Copernicus Data Space Ecosystem and Copernicus Data Centre (Chile): These external sources provide the raw satellite data that is ingested into the platform.</li><li>Application Repository: The Data Validation and Pre-processing Workflow Engine retrieves ETL (Extract, Transform, Load) applications from the Application Repository to manage the ingestion for all specific data collections or product types.</li><li>Data Discovery and Access: Once data is ingested and validated, it is stored and registered within the Data Discovery and Access component, making the data and web map tiles available and catalogued for user access.</li></ul></section>
+<nav class="pager"><a class="prev" href="s3-1-2.html"><i>←</i><span>3.1.2 · Implementation</span></a><a class="next" href="s3-1-4.html"><span>3.1.4 · Software Stack</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

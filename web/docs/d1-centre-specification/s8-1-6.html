@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8.1.6 Summary Table – Infrastructure Components · D1</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D1</a><i>›</i><a href="s8.html">8</a><i>›</i><a href="s8-1.html">8.1</a><i>›</i><span>8.1.6 · Summary Table – Infrastructure Components</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D1 · CopernicusLAC Centre Specification and Performance Requirements · Capítulo 8.1.6</span>
+  <h1>Summary Table – Infrastructure Components</h1>
+  <p class="lede">Tabla resumen con todos los componentes de infraestructura, sus cantidades o capacidades y notas de configuración.</p>
+  <div class="tags"><span class="tag">Tabla</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>40</b></span><span title="Tablas"><b>1</b> tabl.</span></div>
+</div>
+<section class="prose"><div class="tablewrap"><table><caption>Table 3 - Infrastructure Components summary</caption><thead><tr><th>Component</th><th>Qty / Capacity</th><th>Configuration / Notes</th></tr></thead><tbody><tr><td>Kubernetes Cluster (HA)</td><td>1</td><td>Managed service, scalable up to 1000 nodes</td></tr><tr><td>VMs (4 vCPU, 16 GB RAM)</td><td>24</td><td>Core services</td></tr><tr><td>VMs (8 vCPU, 32 GB RAM)</td><td>64 + 60</td><td>Core + processing workloads</td></tr><tr><td>VMs (16 vCPU, 64 GB RAM)</td><td>60</td><td>EO processing</td></tr><tr><td>VMs (32 vCPU, 128 GB RAM)</td><td>40</td><td>EO processing</td></tr><tr><td>Load Balancer (HA)</td><td>1</td><td>Managed, ≥ 4 Gbps capacity</td></tr><tr><td>PostgreSQL DB (HA)</td><td>4 instances</td><td>16 vCPU, 64 GB RAM each</td></tr><tr><td>SSD Block Storage</td><td>70 TB</td><td>High IOPS, low latency tier</td></tr><tr><td>Object Storage (Online)</td><td>2 PB</td><td>For current datasets</td></tr><tr><td>Object Storage (Cold Archive)</td><td>20 PB</td><td>For historical data</td></tr><tr><td>External Network</td><td>≥ 3 Gbps</td><td>Internet access, firewall-protected</td></tr><tr><td>Internal Network</td><td>≥ 10 Gbps</td><td>Redundant paths, BELLA backbone</td></tr><tr><td>Security Stack</td><td>IDS/IPS, RBAC, MFA</td><td>With encrypted communications and auditing</td></tr><tr><td>Availability Target</td><td>≥ 99.5% uptime</td><td>Disaster recovery and failover supported</td></tr></tbody></table></div></section>
+<nav class="pager"><a class="prev" href="s8-1-5.html"><i>←</i><span>8.1.5 · Performance and Operational Requirements</span></a><a class="next" href="s8-2.html"><span>8.2 · Annex B - Estimated Man-Power Effort for Operations and Maintenance</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

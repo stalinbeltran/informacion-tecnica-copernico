@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5.1 SpatioTemporal Asset Catalog (STAC) · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s5.html">5</a><i>›</i><span>5.1 · SpatioTemporal Asset Catalog (STAC)</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 5.1</span>
+  <h1>SpatioTemporal Asset Catalog (STAC)</h1>
+  <p class="lede">Qué es STAC y por qué se adopta: items, assets, colecciones, extensiones, enlaces, bounding boxes espacio-temporales y naturaleza flat-file; incluye las extensiones Web Map Links y Authentication (URLs firmadas).</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>48–50</b></span></div>
+</div>
+<section class="prose"><p>STAC serves as a standardised representation for all these geospatial assets and their associated metadata. Metadata, in this context, includes information about when and where a dataset was collected, the type of sensor used, its resolution, and other descriptive details. By adhering to a common specification provided by STAC, various organisations and platforms are representing their geospatial assets in a manner that&#x27;s consistent and easily comprehensible. This uniformity ensures that different datasets, even if they are from diverse sources or missions, can be understood and compared with minimal friction in a federated landscape.</p>
+<p>One of the defining features of STAC that is extremely relevant for CopernicusLAC is its flat-file nature, meaning it is stored alongside the data it describes, usually as a JSON file. This co-location ensures that the metadata remains directly accessible and linked to its corresponding dataset. Within a STAC item, individual assets are detailed, representing various components or layers of a geospatial product, such as RGB images, thermal bands, or other data files. By defining these assets, STAC provides users with a comprehensive view of what each dataset comprises, aiding in precise data retrievals.</p>
+<p>The STAC API optimises geospatial data accessibility with a dynamic interface for users and systems to search and access the catalogued assets. Adhering to modern RESTful principles, the API facilitates interactions with STAC Items and Collections. By using this interface, users can perform real-time searches, refining their queries based on spatiotemporal parameters, specific asset types, or even custom metadata fields. This dramatically reduces the time taken to locate pertinent datasets, streamlining the entire data discovery process.</p>
+<p>In this context, STAC ensures that geospatial data can be easily catalogued, discovered, and accessed in a standardised manner by adhering to certain conventions and rules:</p>
+<ul><li>STAC Item: The core building block of STAC, a STAC Item represents a spatiotemporal asset and contains a collection of metadata. Each item is described using JSON, a lightweight data-interchange format.</li><li>Assets: Within each STAC Item, assets define the actual data files. They might refer to different bands of satellite imagery, resolution levels, or even derived products.</li></ul>
+<p>Assets specify URIs for data retrieval, as well as media type identifiers to convey the nature of the data.</p>
+<ul><li>STAC Collection: This is a collection of STAC Items, with metadata about the aggregation of items, potentially describing properties like the spatial and temporal extents of all the contained items.</li><li>Core and Extensions: STAC is designed to be extensible. While it has a core specification that ensures basic functionality and interoperability, extensions can be added to cater to specific use-cases, like satellite, label, or point cloud extensions.</li><li>Linking Mechanism: STAC uses a consistent linking mechanism. Every STAC item, catalog, and collection contains an array of links, which can be used to navigate to related items, parent or child catalogues, or even out to other specifications.</li><li>Spatial and Temporal Bounding Boxes: Each STAC item provides spatial bounds (usually described by a bounding box or polygon) and temporal bounds (start and end times) to aid in discovery based on space and time criteria.</li><li>Flat-File Nature: As previously mentioned, STAC specifications are often stored as flat JSON files alongside the data they describe. This co-location ensures rapid access to metadata without necessitating complex database queries.</li><li>Self-Describing JSON: STAC relies on self-describing JSON structures, meaning each file is intended to be understood in isolation. This makes it scalable and easy to parse without deep dependencies.</li></ul>
+<p>A primary advantage of STAC is that it defines an extensible vocabulary, ensuring metadata consistency across varied datasets. Given the diverse sources of EO data, from an assortment of sensors, platforms, and missions, and ever-growing use cases, there&#x27;s a potential for metadata variations. STAC&#x27;s framework compels providers to use a harmonised set of conventions.</p>
+<p>In addition to the core functionalities of STAC, the catalogue incorporates the &quot;Web Map Links Extension&quot;4. This extension enriches the STAC catalog by adding an additional link element within the STAC item structure.</p>
+<p>The link elements provided together in the STAC Item points to web map services that are capable of visualising the geospatial data described by the item. It allows client applications to directly access and visualise the spatial data through interactive map services, enhancing their understanding and interpretation of the data.</p>
+<p>To bolster the security and controlled access to the geospatial data the catalog also integrates the use of signed URLs through the STAC &quot;Authentication Extension&quot;5. The STAC Authentication Extension&#x27;s signed URL information is specifically integrated into the STAC for secure data downloading. This mechanism ensures that access to spatial data assets is tightly controlled:</p>
+<p>4 <a href="https://github.com/stac-extensions/web-map-links" target="_blank" rel="noopener">https://github.com/stac-extensions/web-map-links</a> 5 <a href="https://github.com/stac-extensions/authentication" target="_blank" rel="noopener">https://github.com/stac-extensions/authentication</a></p>
+<ul><li>Signed URL Generation: When a user requests access to an asset, the system generates a signed URL. This URL is uniquely created for the specific request and user, embedding security credentials directly into the URL.</li><li>Temporary Access: Each signed URL is valid for a limited time, ensuring that access to the asset is temporary and controlled. This time-bound nature of URLs enhances security by minimising the risk of unauthorised access.</li><li>Direct and Secure Data Download: The signed URLs allow users to download assets directly from the catalog without the need for additional layers of authentication at the point of download, streamlining the user experience while maintaining security.</li></ul></section>
+<nav class="pager"><a class="prev" href="s5.html"><i>←</i><span>5 · Data Discovery, Access and Visualisation</span></a><a class="next" href="s5-2.html"><span>5.2 · Catalogue API</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5.4.1 Tile Visualisations · D3</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D3</a><i>›</i><a href="s5.html">5</a><i>›</i><a href="s5-4.html">5.4</a><i>›</i><span>5.4.1 · Tile Visualisations</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D3 · Interface Control Document · Capítulo 5.4.1</span>
+  <h1>Tile Visualisations</h1>
+  <p class="lede">Un producto puede tener varias visualizaciones (color verdadero, falso color); se acceden mediante las plantillas de enlace de la extensión Web Map Links, con rel &quot;xyz&quot;.</p>
+  <div class="tags"><span class="tag">JSON</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>29–30</b></span></div>
+</div>
+<section class="prose"><p>Multiple tile visualisations may be available for a single product, such as true colour and false colour composites. These visualisations are accessed via tile link templates provided in the STAC Item’s links section. These templates follow the Web Map Links STAC extension and are identified by their titles.</p>
+<p>Example of a STAC Item with tile links: { ... features: [ { ... &quot;links&quot;: [ { &quot;rel&quot;: &quot;xyz&quot;, &quot;href&quot;: &quot;&lt;view-url&gt;/collections/sentinel-s2-l1c-cogs/items/S2A_MSIL1C_20231122T102331_N0509_R065_T32TM R_20231122T122209/tiles/WebMercatorQuad/{z}/{x}/{y}@1x?&amp;assets=red&amp;assets=green&amp;assets=blue&amp;co lor_formula=Gamma%20RGB%201.5%20Saturation%201%20Sigmoidal%20RGB%2010%200.3&amp;rescale=1,6000&amp;res cale=1,6000&amp;rescale=1,6000&quot;, &quot;type&quot;: &quot;image/png&quot;, &quot;title&quot;: &quot;True colour composite visualised through a XYZ&quot; }, { &quot;rel&quot;: &quot;xyz&quot;,</p>
+<p>&quot;href&quot;: &quot;&lt;view-url&gt;/collections/sentinel-s2-l1c-cogs/items/S2A_MSIL1C_20231122T102331_N0509_R065_T32TM R_20231122T122209/tiles/WebMercatorQuad/{z}/{x}/{y}@1x?&amp;assets=nir&amp;assets=green&amp;assets=red&amp;col or_formula=Gamma%20RGB%201.5%20Saturation%201%20Sigmoidal%20RGB%2010%200.3&amp;rescale=1,6000&amp;resc ale=1,6000&amp;rescale=1,6000&quot;, &quot;type&quot;: &quot;image/png&quot;, &quot;title&quot;: &quot;False colour composite visualised through a XYZ&quot; } ... } ], ... ] }</p>
+<p>In this example:</p>
+<ul><li>The rel attribute is set to &quot;xyz&quot;, indicating that these are XYZ tile links, a common format for web mapping applications.</li><li>The href attribute includes placeholders {z}, {x}, and {y}, which must be replaced with the zoom level and the zero-based column and row numbers to fetch the appropriate tile image.</li></ul></section>
+<nav class="pager"><a class="prev" href="s5-4.html"><i>←</i><span>5.4 · Web Map Tile Service (WMTS) Endpoints</span></a><a class="next" href="s5-4-2.html"><span>5.4.2 · Tile Request Format</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

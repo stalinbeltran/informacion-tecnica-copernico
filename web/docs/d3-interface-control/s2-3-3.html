@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.3.3 Application Deployment and Execution · D3</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D3</a><i>›</i><a href="s2.html">2</a><i>›</i><a href="s2-3.html">2.3</a><i>›</i><span>2.3.3 · Application Deployment and Execution</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D3 · Interface Control Document · Capítulo 2.3.3</span>
+  <h1>Application Deployment and Execution</h1>
+  <p class="lede">Las aplicaciones EO se empaquetan como contenedores Docker con manifiesto CWL, se despliegan con Kubernetes y Helm, y se ejecutan por lotes o en tiempo real.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>12</b></span></div>
+</div>
+<section class="prose"><p>EO applications are packaged and stored in the Application Repository as Docker containers and associated Application Package manifest encoded using the Common Workflow Language (CWL). The containers include all necessary dependencies, ensuring that applications can be deployed consistently across different environments within the platform.</p>
+<p>The deployment of these applications is managed by Kubernetes, which is responsible for orchestrating the containers across the platform&#x27;s infrastructure. Helm charts are used to define deployment configurations, enabling repeatable and scalable deployment processes.</p>
+<p>Once deployed, these applications can be executed by the Data Processing component or directly by users through the Front-end Services. The platform supports both batch processing and real-time processing, catering to a wide range of use cases.</p></section>
+<nav class="pager"><a class="prev" href="s2-3-2.html"><i>←</i><span>2.3.2 · Interaction between Data Processing and User Interfaces</span></a><a class="next" href="s2-3-4.html"><span>2.3.4 · Security and Access Control</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

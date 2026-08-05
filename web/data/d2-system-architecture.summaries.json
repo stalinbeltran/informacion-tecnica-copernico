@@ -1,0 +1,173 @@
+{
+  "doc": {
+    "short": "Arquitectura técnica completa de la plataforma del Centro CopernicusLAC (Panamá): componentes, flujos de ingesta, catálogo STAC, empaquetado de aplicaciones EO, tecnologías, seguridad y escalabilidad.",
+    "long": "Documento de diseño (D2) elaborado por Terradue para ESA que describe la arquitectura del sistema de la plataforma del Centro CopernicusLAC, el centro regional de Copernicus para América Latina y el Caribe con sede en Panamá. Define ocho componentes funcionales —ingesta, descubrimiento y acceso, procesamiento, registro de aplicaciones, servicios de front-end, espacio de trabajo de usuario, autenticación y gestión de recursos— y detalla, para cada uno, su propósito, implementación, puntos de integración y pila de software. Desarrolla además el proceso completo de ingesta de datos EO, el catálogo STAC y su API, el empaquetado de aplicaciones con CWL y contenedores, el catálogo de tecnologías base (Kubernetes, Argo, GitLab, Harbor, Keycloak, Titiler, PostgreSQL…), el marco de seguridad y cumplimiento (ESA PDP) y las estrategias de escalabilidad para soportar hasta 3.000 usuarios.",
+    "tags": ["Arquitectura", "Copernicus", "STAC", "Kubernetes", "CWL", "Terradue", "ESA"]
+  },
+  "sections": {
+    "portada": {
+      "short": "Portada, ficha de identificación del documento y registro de cambios de las versiones 1.0 a 1.3.",
+      "tags": ["Metadatos"]
+    },
+
+    "s1": {
+      "short": "Presenta el propósito del documento, el contexto de la iniciativa CopernicusLAC, el alcance, la estructura por capítulos y los documentos aplicables, de referencia y acrónimos.",
+      "tags": ["Contexto", "Alcance", "Referencias"]
+    },
+    "s1-1": { "short": "Objetivo del documento: describir la arquitectura del sistema de la plataforma del Centro CopernicusLAC." },
+    "s1-2": { "short": "CopernicusLAC es una colaboración entre ESA, DG-INTPA y el Gobierno de Panamá para crear un Centro Regional Copernicus enfocado en reducción del riesgo de desastres, dentro de la Alianza Digital UE-LAC y la estrategia Global Gateway.", "tags": ["ESA", "Panamá", "EU-LAC"] },
+    "s1-3": { "short": "Cubre el diseño de alto nivel, los componentes y las funcionalidades; deja fuera las especificaciones detalladas de interfaces y de operación, tratadas en los entregables D3 y D4." },
+    "s1-4": { "short": "Mapa de los capítulos del documento y de lo que aborda cada uno." },
+    "s1-5": { "short": "Tabla de documentos aplicables: SOW, contrato ESA y entregable D1 de requisitos.", "tags": ["Tabla"] },
+    "s1-6": { "short": "Tabla de documentos de referencia, incluida la propuesta técnica de Terradue.", "tags": ["Tabla"] },
+    "s1-7": { "short": "Glosario de 30 acrónimos usados en el documento (API, CDSE, COG, CWL, STAC, WMTS…).", "tags": ["Glosario"] },
+
+    "s2": {
+      "short": "Visión general del sistema: objetivos, roles de usuario, los ocho componentes funcionales, el diagrama de arquitectura de alto nivel, los supuestos de infraestructura y el resumen de requisitos clave.",
+      "tags": ["Visión general", "Componentes", "Requisitos"]
+    },
+    "s2-1": { "short": "Cinco objetivos: accesibilidad a los datos, capacidad de procesamiento, federación con el Centro de Datos de Chile, escalabilidad y soporte/formación a instituciones locales." },
+    "s2-2": { "short": "Cinco roles de usuario: Data Explorer, Service Stakeholder, Data Analyst, Service Developer y Operator, con sus actividades características.", "tags": ["Roles"] },
+    "s2-3": { "short": "Los ocho componentes de la plataforma entregada como PaaS agnóstico de nube: ingesta, descubrimiento y acceso, procesamiento, repositorio de aplicaciones, front-end, espacio de trabajo, autenticación y gestión de recursos.", "tags": ["PaaS", "Diagrama"] },
+    "s2-4": { "short": "Diagrama funcional de alto nivel: cómo fluyen los datos entre módulos y el papel central de los endpoints de API.", "tags": ["Diagrama"] },
+    "s2-5": { "short": "Supuesto principal: despliegue sobre Kubernetes as a Service, almacenamiento de objetos S3 (con nivel de archivo frío) y bases de datos gestionadas (PostgreSQL). Restricción: dependencia del proveedor de infraestructura.", "tags": ["KaaS", "DBaaS", "S3"] },
+    "s2-6": { "short": "Resumen de los requisitos definidos en D1, agrupados en seis áreas." },
+    "s2-6-1": { "short": "Ingesta y gestión de grandes volúmenes de datos Copernicus (Sentinel-1, -2, -3 y -5P) con sincronización periódica." },
+    "s2-6-2": { "short": "Catálogo con búsqueda y recuperación, entorno de procesamiento escalable bajo demanda y sistemático, e integración de toolboxes EO estándar." },
+    "s2-6-3": { "short": "Protocolos de intercambio e interoperabilidad con el Centro de Datos Copernicus de Chile y otras entidades." },
+    "s2-6-4": { "short": "Cumplimiento de normativa de protección de datos y garantías de confidencialidad, integridad y disponibilidad." },
+    "s2-6-5": { "short": "Soporte de hasta 3.000 usuarios con capacidad de crecer, y alto rendimiento en procesamiento y recuperación." },
+    "s2-6-6": { "short": "Manuales, materiales de formación, soporte técnico y un plan de transferencia de la operación a instituciones locales." },
+
+    "s3": {
+      "short": "Descripción detallada de los ocho componentes del sistema. Cada uno se documenta con la misma plantilla: propósito, implementación, puntos de integración y pila de software.",
+      "tags": ["Componentes", "Integración", "Software stack"]
+    },
+    "s3-1": { "short": "Componente de ingesta: gestiona la entrada de datos desde fuentes externas en tres niveles (solo metadatos, con copia del dataset y con calibración), validando y catalogando antes de almacenar.", "tags": ["Kafka", "Argo", "CWL", "STAC"] },
+    "s3-1-1": { "short": "Soporta tres niveles de ingesta según el papel del dataset: registro de metadatos, registro con copia local y registro con calibración." },
+    "s3-1-2": { "short": "Pipelines automatizados con arquitectura dirigida por eventos, validación por nivel de ingesta y workflows en CWL conformes a las buenas prácticas OGC de EO Application Package." },
+    "s3-1-3": { "short": "Se integra con CDSE y el Centro de Datos de Chile como fuentes, con el Repositorio de Aplicaciones para obtener los ETL y con Descubrimiento y Acceso para publicar lo ingerido.", "tags": ["Diagrama"] },
+    "s3-1-4": { "short": "Kafka como bus de eventos, Argo Workflows para orquestación, Python/ETL para validación, CWL, Kubernetes, almacenamiento S3 y STAC para los metadatos." },
+    "s3-2": { "short": "Componente de descubrimiento y acceso: indexa los metadatos, expone la API STAC, sirve teselas de mapa y genera URLs firmadas para la descarga segura.", "tags": ["STAC API", "PgSTAC", "Titiler", "PostgreSQL"] },
+    "s3-2-1": { "short": "Permitir a los usuarios buscar, descubrir y acceder a los datos EO ingeridos de forma organizada y usable." },
+    "s3-2-2": { "short": "Indexación en PostgreSQL, API STAC implementada con FastAPI sobre PgSTAC, herramientas de visualización vía WMTS/Titiler y servicio de URLs firmadas para descarga desde S3." },
+    "s3-2-3": { "short": "Conecta con ingesta (recibe metadatos), procesamiento (publica productos derivados), front-end, espacio de trabajo, visualización y descarga.", "tags": ["Diagrama"] },
+    "s3-2-4": { "short": "PostgreSQL, PostGIS, PgSTAC, STAC API con FastAPI, almacenamiento S3, Titiler y el servicio de URLs firmadas." },
+    "s3-3": { "short": "Componente de procesamiento: transforma datos EO crudos en información mediante un bus de eventos, un motor de workflows y un motor de ejecución de aplicaciones expuesto como OGC API Processes.", "tags": ["Argo", "Calrissian", "OGC API Processes"] },
+    "s3-3-1": { "short": "Infraestructura escalable para procesamiento sistemático y bajo demanda: limpieza, transformación, análisis y visualización de datos EO." },
+    "s3-3-2": { "short": "Tres piezas: bus de eventos (Argo Events sobre Kafka), motor de workflows (Argo Workflows con CWL) y motor de ejecución de aplicaciones con las funciones de despliegue (OGC API Processes Parte 2) y ejecución (Parte 1)." },
+    "s3-3-3": { "short": "Se integra con descubrimiento y acceso, espacio de trabajo, front-end, visualización y el repositorio de aplicaciones.", "tags": ["Diagrama"] },
+    "s3-3-4": { "short": "Calrissian, Argo Workflows y Events, Docker/podman, Kubernetes, Python y GDAL, almacenamiento S3 y ZOO Project como implementación de OGC API Processes." },
+    "s3-4": { "short": "Registro de aplicaciones: repositorio centralizado de los paquetes de aplicaciones EO (descripciones CWL, código, configuración) y de sus imágenes de contenedor.", "tags": ["GitLab", "Harbor"] },
+    "s3-4-1": { "short": "Almacenar, organizar y recuperar de forma segura los paquetes de aplicaciones EO para su despliegue y ejecución, con consistencia y reproducibilidad." },
+    "s3-4-2": { "short": "GitLab guarda los paquetes como artefactos de CI con control de versiones y metadatos; Harbor actúa como registro de contenedores; ambos aplican control de acceso." },
+    "s3-4-3": { "short": "Sirve al motor de ejecución, al motor de workflows, al espacio de trabajo del usuario y, de forma indirecta, a los componentes de procesamiento e ingesta.", "tags": ["Diagrama"] },
+    "s3-4-4": { "short": "GitLab, Harbor, PostgreSQL gestionado para metadatos y control de acceso mediante IAM." },
+    "s3-5": { "short": "Servicios de front-end: el Portal CopernicusLAC, aplicaciones gráficas interactivas (QGIS, Panoply), notebooks Jupyter, IDE VSCode y las aplicaciones web de servicio co-diseñadas con los stakeholders.", "tags": ["Portal", "JupyterHub", "React"] },
+    "s3-5-1": { "short": "Ofrecer interfaces accesibles e intuitivas para que los usuarios exploten las capacidades de la plataforma." },
+    "s3-5-2": { "short": "Portal web centralizado, aplicaciones gráficas interactivas, notebooks, IDE, autenticación integrada, clientes de visualización contra Titiler y aplicaciones web de caso de uso." },
+    "s3-5-3": { "short": "Se apoya en el espacio de trabajo, descubrimiento y acceso, procesamiento, registro de aplicaciones, servicios de seguridad y gestión de recursos.", "tags": ["Diagrama"] },
+    "s3-5-4": { "short": "React o Angular, D3.js/Leaflet/OpenLayers, JupyterHub, VSCode, OAuth/OpenID Connect, APIs REST, Docker y CI/CD de GitLab." },
+    "s3-6": { "short": "Espacio de trabajo del usuario: entorno personal con namespace propio en Kubernetes, repositorio GitLab y registro Harbor dedicados, aprovisionado por Crossplane.", "tags": ["Crossplane", "ArgoCD", "ESO"] },
+    "s3-6-1": { "short": "Entorno personalizado donde cada usuario gestiona, ejecuta y analiza sus tareas de procesamiento y sus paquetes de aplicación." },
+    "s3-6-2": { "short": "Namespace dedicado en Kubernetes gestionado por Crossplane, control de versiones y registro de contenedores propios, clientes CLI, gestión de secretos con ESO y una API REST de workspace.", "tags": ["Diagramas"] },
+    "s3-6-3": { "short": "Se integra con descubrimiento y acceso, procesamiento, registro de aplicaciones, ArgoCD, Crossplane y los servicios de front-end." },
+    "s3-6-4": { "short": "PostgreSQL, PostGIS, PgSTAC, STAC API con FastAPI, GitLab, Harbor, S3, clientes CLI, Kubernetes, Crossplane, External Secrets Operator y API REST." },
+    "s3-7": { "short": "Autenticación y autorización: gestión de identidades y control de acceso basado en Keycloak, con SSO, RBAC, MFA y registro de auditoría.", "tags": ["Keycloak", "OAuth", "RBAC", "MFA"] },
+    "s3-7-1": { "short": "Marco de seguridad escalable que protege los recursos y servicios de accesos no autorizados." },
+    "s3-7-2": { "short": "Keycloak cubre identidades, autenticación (OAuth/OpenID Connect), políticas de autorización, RBAC, SSO, MFA y auditoría." },
+    "s3-7-3": { "short": "Controla el acceso al espacio de trabajo, front-end, datos, procesamiento, registro de aplicaciones y recursos aprovisionados.", "tags": ["Diagrama"] },
+    "s3-7-4": { "short": "Keycloak como solución única, con OAuth/OpenID Connect, integración LDAP, JWT e IAM." },
+    "s3-8": { "short": "Gestión de recursos: aprovisionamiento, configuración y escalado automático de la infraestructura mediante Crossplane sobre APIs nativas de Kubernetes.", "tags": ["Crossplane", "Helm", "Prometheus"] },
+    "s3-8-1": { "short": "Automatizar el aprovisionamiento y escalado de los recursos de infraestructura, reduciendo la carga operativa." },
+    "s3-8-2": { "short": "Crossplane aprovisiona y configura recursos, escala dinámicamente, monitoriza el uso, gestiona secretos con ESO y aplica políticas." },
+    "s3-8-3": { "short": "Da servicio al espacio de trabajo, front-end, descubrimiento y acceso, procesamiento, registro de aplicaciones y seguridad.", "tags": ["Diagrama"] },
+    "s3-8-4": { "short": "Crossplane, Kubernetes, External Secrets Operator, Terraform (opcional), Prometheus y Grafana, Helm y las APIs de los proveedores de nube." },
+
+    "s4": {
+      "short": "Proceso completo de ingesta de datos EO: tecnologías empleadas, workflow paso a paso, selección del paquete de aplicación ETL, validación de contenido, perfil mínimo de metadatos STAC y enriquecimiento para visualización.",
+      "tags": ["Ingesta", "ETL", "STAC", "COG"]
+    },
+    "s4-1": { "short": "CWL define los workflows, Argo Workflows los orquesta y STAC estandariza el catálogo; los tres se adaptan a cada nivel de ingesta." },
+    "s4-2": { "short": "Siete etapas del workflow —aserción de formato, selección del paquete, validación y preprocesado, extracción de metadatos, enriquecimiento, registro en catálogo y carga en S3— más el tratamiento de errores por nivel de ingesta.", "tags": ["Diagrama", "7 etapas"] },
+    "s4-3": { "short": "Cómo se elige el paquete ETL adecuado a partir de las propiedades del STAC Item; si faltan, se aplica un ETL genérico con funcionalidad reducida de descubrimiento y visualización." },
+    "s4-4": { "short": "Validaciones específicas por nivel: presencia y conformidad del STAC Item, presencia de assets, verificación de checksums, validación de formato y comprobaciones de calibración y transformación." },
+    "s4-5": { "short": "Perfil mínimo de metadatos basado en STAC: tabla con los campos obligatorios (id, geometry, bbox, datetime, assets…) que debe llevar todo activo geoespacial.", "tags": ["Tabla", "STAC"] },
+    "s4-6": { "short": "Uso de las extensiones STAC Rendering y Web Map Links para generar composiciones (color verdadero, infrarrojo) y enlaces a servicios WMTS/XYZ, con ejemplos JSON.", "tags": ["Rendering", "Web Map Links", "JSON"] },
+
+    "s5": {
+      "short": "Descubrimiento, acceso y visualización de datos: el estándar STAC, la API de catálogo con ejemplos de consultas, el acceso directo a datos en la nube con COG, la interfaz gráfica del portal y la integración de Titiler.",
+      "tags": ["STAC", "API", "COG", "GUI", "Titiler"]
+    },
+    "s5-1": { "short": "Qué es STAC y por qué se adopta: items, assets, colecciones, extensiones, enlaces, bounding boxes espacio-temporales y naturaleza flat-file; incluye las extensiones Web Map Links y Authentication (URLs firmadas)." },
+    "s5-2": { "short": "La API STAC como interfaz REST de búsqueda: ejemplos de consultas temporales, espaciales, por cobertura de nubes y por misión, consultas combinadas, uso de CQL y la extensión Filter.", "tags": ["Ejemplos de API"] },
+    "s5-3": { "short": "Cómo STAC y COG permiten acceder a porciones concretas de un ráster directamente desde el almacenamiento en nube, y el papel del STAC Catalog como manifiesto en las fases stage-in y stage-out y en escenarios fan-in/fan-out.", "tags": ["Diagrama", "stage-in/out"] },
+    "s5-4": { "short": "Diseño de la interfaz gráfica del portal: área de búsqueda y resultados, barra de navegación, mapa, barra temporal, colecciones, procesamiento, capas base y búsqueda libre; más los filtros geográficos y de metadatos avanzados.", "tags": ["Diagrama", "Filtros"] },
+    "s5-5": { "short": "Titiler como servidor de teselado dinámico sin estado, optimizado para COG en almacenamiento S3, integrable con Leaflet, OpenLayers o Mapbox GL JS.", "tags": ["Diagrama", "Titiler"] },
+
+    "s6": {
+      "short": "Empaquetado de aplicaciones EO: visión general del proceso, CWL con ejemplos, contenedores, escenarios de despliegue, control de versiones, control de acceso, beneficios y los estándares de obligado cumplimiento.",
+      "tags": ["CWL", "Docker", "GitLab", "Harbor", "OGC"]
+    },
+    "s6-1": { "short": "El proceso encapsula código, dependencias, configuración, metadatos y entorno de ejecución siguiendo las buenas prácticas OGC de EO Application Packaging y EOEPCA; cuatro pasos: definir workflows, crear el paquete, publicarlo en Harbor y versionarlo." },
+    "s6-2": { "short": "CWL en profundidad: las clases CommandLineTool y Workflow, sus componentes (inputs, outputs, baseCommand, steps, requirements) y dos ejemplos completos de cálculo de NDVI.", "tags": ["Código", "NDVI"] },
+    "s6-3": { "short": "Por qué la contenerización garantiza ejecución reproducible en entornos heterogéneos y cómo se combina con CWL para la gestión de dependencias." },
+    "s6-4": { "short": "Despliegue mediante charts de Helm sobre Kubernetes, con monitorización y escalado; el paquete soporta tres escenarios de ejecución distintos." },
+    "s6-4-1": { "short": "Ejecución local: usada en desarrollo y pruebas, con ciclos de feedback rápidos y depuración sencilla." },
+    "s6-4-2": { "short": "Ejecución en clúster Kubernetes: escalado automático, balanceo de carga y tolerancia a fallos para aplicaciones distribuidas." },
+    "s6-4-3": { "short": "Ejecución como servicio: la aplicación se expone vía OGC API Processes, permitiendo su integración con otros servicios geoespaciales." },
+    "s6-5": { "short": "GitLab como eje del versionado: repositorios, ramas y merges, tags y releases, y pipelines de CI; ejemplo del ciclo commit → CI → pruebas → despliegue → rollback." },
+    "s6-6": { "short": "Keycloak como sistema central de identidad integrado con GitLab (ramas protegidas) y Harbor (escaneo de vulnerabilidades), con SSO, RBAC, identidad federada, tokens y MFA.", "tags": ["Diagrama", "Keycloak"] },
+    "s6-7": { "short": "Beneficios del empaquetado: consistencia entre entornos, portabilidad y escalado con contenedores, fiabilidad por CI/CD y seguridad unificada con Keycloak." },
+    "s6-8": { "short": "Nueve estándares que los desarrolladores deben cumplir al empaquetar sus algoritmos EO, expresados con MUST y SHOULD." },
+    "s6-8-1": { "short": "MUST: toda aplicación EO debe describirse con CWL para garantizar portabilidad y reproducibilidad." },
+    "s6-8-2": { "short": "MUST: las aplicaciones deben poder ejecutarse de forma desatendida, sin intervención humana." },
+    "s6-8-3": { "short": "MUST: encapsulación en contenedores Docker con todas sus dependencias; se recomiendan imágenes base ligeras." },
+    "s6-8-4": { "short": "MUST: las salidas deben cumplir el perfil mínimo de metadatos y catalogarse en formato STAC." },
+    "s6-8-5": { "short": "MUST: escaneos de seguridad periódicos para que los contenedores estén libres de vulnerabilidades conocidas." },
+    "s6-8-6": { "short": "SHOULD: gestionar código, workflows CWL y Dockerfiles en GitLab, usando sus pipelines CI/CD." },
+    "s6-8-7": { "short": "SHOULD: definir requests y limits de recursos en Kubernetes y soportar procesamiento paralelo." },
+    "s6-8-8": { "short": "SHOULD: acompañar cada aplicación con documentación de funcionalidad, entradas/salidas, ejemplos y despliegue." },
+    "s6-8-9": { "short": "SHOULD: pruebas unitarias, de integración y benchmarks antes del despliegue, con datasets de prueba." },
+
+    "s7": {
+      "short": "Catálogo de las trece tecnologías y frameworks que sustentan la plataforma, con la justificación de cada elección y su papel concreto en el sistema.",
+      "tags": ["Stack tecnológico"]
+    },
+    "s7-1": { "short": "Justificar la selección tecnológica, describir su implementación e integración, y facilitar la transferencia de conocimiento." },
+    "s7-2": { "short": "CWL y sus motores de ejecución: cwltool (referencia, local), Toil (HPC y nube) y Calrissian (nativo de Kubernetes, el elegido para escalar).", "tags": ["Calrissian"] },
+    "s7-3": { "short": "Docker: contenerización de aplicaciones y dependencias para una ejecución consistente entre entornos." },
+    "s7-4": { "short": "Kubernetes: orquestación de contenedores, escalado, balanceo y alta disponibilidad." },
+    "s7-5": { "short": "GitLab: control de versiones y pipelines CI/CD del código de las aplicaciones EO." },
+    "s7-6": { "short": "Harbor: registro de imágenes con escaneo de vulnerabilidades, firma de imágenes y RBAC." },
+    "s7-7": { "short": "Argo Workflows: motor de workflows nativo de contenedores para orquestar trabajos paralelos en Kubernetes." },
+    "s7-8": { "short": "Apache Kafka: streaming de eventos distribuido para las tuberías de datos en tiempo real." },
+    "s7-9": { "short": "Crossplane: plano de control que extiende Kubernetes para gestionar infraestructura de nube como código." },
+    "s7-10": { "short": "Prometheus: recolección y almacenamiento de métricas del sistema, con consulta en tiempo real y detección proactiva de incidencias." },
+    "s7-11": { "short": "Grafana: visualización de las métricas de Prometheus mediante dashboards personalizables." },
+    "s7-12": { "short": "ZOO Project: framework de Web Processing Services que expone las aplicaciones EO como servicios web estándar." },
+    "s7-13": { "short": "Titiler: teselado dinámico de datos geoespaciales, especialmente COG, para visualización en tiempo real." },
+    "s7-14": { "short": "PostgreSQL: base de datos relacional para los metadatos STAC, prevista como servicio gestionado del proveedor de nube." },
+
+    "s8": {
+      "short": "Seguridad y cumplimiento: marco de seguridad, protección de datos personales conforme al ESA PDP, controles de acceso, monitorización y auditoría, y plan de respuesta a incidentes.",
+      "tags": ["Seguridad", "ESA PDP", "RBAC", "Auditoría"]
+    },
+    "s8-1": { "short": "Objetivo: proteger los datos —en especial los personales— y cumplir el marco de protección de datos personales de la ESA (PDP)." },
+    "s8-2": { "short": "Cifrado en reposo y en tránsito (TLS 1.2+), RBAC, transferencia segura (HTTPS, SFTP) y auditorías de seguridad periódicas." },
+    "s8-3": { "short": "Cumplimiento del ESA PDP: cláusulas contractuales tipo de la UE para transferencias, minimización de datos, gestión del consentimiento y derechos de los interesados." },
+    "s8-4": { "short": "RBAC con principio de mínimo privilegio, MFA y registro de auditoría; beneficios de centralizar la gestión de accesos en Keycloak." },
+    "s8-5": { "short": "Monitorización continua con Prometheus más auditorías periódicas de seguridad y de cumplimiento." },
+    "s8-6": { "short": "Plan de respuesta a incidentes en cuatro fases: detección, contención y mitigación, recuperación, y notificación al DPO de la ESA y a los interesados." },
+
+    "s9": {
+      "short": "Escalabilidad y rendimiento: estrategias de escalado, optimizaciones aplicadas, pruebas de carga y benchmarking, y gestión dinámica de recursos.",
+      "tags": ["Escalabilidad", "Rendimiento", "Kubernetes"]
+    },
+    "s9-1": { "short": "Objetivo: garantizar que la plataforma escale ante cargas crecientes sin comprometer velocidad, fiabilidad ni eficiencia de recursos." },
+    "s9-2": { "short": "Cuatro estrategias: contenerización con Kubernetes, arquitectura de microservicios, tecnologías cloud-native con Crossplane y gestión distribuida de datos." },
+    "s9-3": { "short": "Balanceo de carga, estrategias de caché, procesamiento optimizado en paralelo y asignación cuidadosa de recursos." },
+    "s9-4": { "short": "Pruebas de carga periódicas, benchmarking contra métricas predefinidas y monitorización continua con Prometheus." },
+    "s9-5": { "short": "Aprovisionamiento dinámico con Crossplane, escalado coste-eficiente y monitorización automatizada con Prometheus y Grafana." }
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.3.4 Software Stack · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-3.html">3.3</a><i>›</i><span>3.3.4 · Software Stack</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.3.4</span>
+  <h1>Software Stack</h1>
+  <p class="lede">Calrissian, Argo Workflows y Events, Docker/podman, Kubernetes, Python y GDAL, almacenamiento S3 y ZOO Project como implementación de OGC API Processes.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>25–26</b></span></div>
+</div>
+<section class="prose"><p>The Data Processing component utilises a range of software tools and technologies to achieve its objectives:</p>
+<ul><li>Calrissian1: a CWL runner for kubernetes used to submit and manage data processing workflow executions on Kubernetes, ensuring portability and scalability.</li><li>Argo Workflows: Orchestrates the execution of CWL-defined processing pipelines, providing scalable workflow management.</li><li>Argo Events: Provides an event-driven framework to trigger workflows based on specific events, ensuring responsive and automated processing.</li><li>Docker, podman: Containerizes processing tasks to ensure consistent and reproducible execution across different environments.</li><li>Kubernetes: Manages and orchestrates the execution of containerized processing tasks, providing dynamic scaling and reliability.</li><li>Python and GDAL: Commonly used for developing custom data processing scripts and tools, leveraging the extensive libraries and capabilities of Python and the Geospatial Data Abstraction Library (GDAL).</li><li>S3-Compatible Object Storage: Stores processed data, ensuring scalable data access and management.</li><li>Zoo Project is a software solution that implements the OGC API Processes. This standard provides a standardised web service interface for initiating and managing data processing tasks from front-end services.</li></ul>
+<p>1 <a href="https://github.com/Duke-GCB/calrissian" target="_blank" rel="noopener">https://github.com/Duke-GCB/calrissian</a></p>
+<ul><li>Deployment Interface (Part 2): Defines the standards and protocols for deploying EO applications within the environment.</li><li>Execution Interface (Part 1): Specifies the standards for executing the deployed applications, detailing how users can initiate and manage processing jobs.</li></ul></section>
+<nav class="pager"><a class="prev" href="s3-3-3.html"><i>←</i><span>3.3.3 · Integration Points</span></a><a class="next" href="s3-4.html"><span>3.4 · Application Registry</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

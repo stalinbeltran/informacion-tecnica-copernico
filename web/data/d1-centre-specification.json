@@ -1,0 +1,4047 @@
+{
+ "doc_id": "d1-centre-specification",
+ "source_pdf": "T2-ESA-COPLACI-RS-24-028 D1 CopernicusLAC Centre Specification and Performance Requirements v1.4.pdf",
+ "title": "T2-ESA-COPLACI-RS-24-028 D1 CopernicusLAC Centre Specification and Performance Requirements v1.4",
+ "pages": 42,
+ "sections": [
+  {
+   "level": 0,
+   "num": "0",
+   "title": "Portada, control del documento e índice",
+   "page": 1,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "CopernicusLAC",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "para",
+     "text": "Infrastructure Support",
+     "page": 1,
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "Specification and Performance",
+     "page": 1,
+     "indent": 3
+    },
+    {
+     "type": "para",
+     "text": "Requirements",
+     "page": 1,
+     "indent": 8
+    },
+    {
+     "type": "figure",
+     "src": "fig-0008.png",
+     "w": 1404,
+     "h": 354,
+     "page": 1
+    },
+    {
+     "type": "figure",
+     "src": "fig-0012.png",
+     "w": 299,
+     "h": 168,
+     "page": 1
+    },
+    {
+     "type": "figure",
+     "src": "fig-0011.png",
+     "w": 311,
+     "h": 162,
+     "page": 1
+    },
+    {
+     "type": "heading",
+     "text": "Title",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "Copernicus LAC Infra - D1 Specification and Performance Requirements",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Prepared by",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "Terradue",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Reference",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "T2-ESA-COPLACI-RS-24-028",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Issue",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "1.4",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Date",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "2025-07-27",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Status",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "Issued",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Document Type",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "Requirement Specification",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Configuration",
+     "toc": false,
+     "size": 10.0,
+     "page": 1
+    },
+    {
+     "type": "para",
+     "text": "Configured document",
+     "page": 1,
+     "indent": 5
+    },
+    {
+     "type": "heading",
+     "text": "Change record",
+     "toc": false,
+     "size": 14.0,
+     "page": 2
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Date",
+       "Issue",
+       "Section",
+       "Page",
+       "Comment"
+      ],
+      [
+       "2024-08-15",
+       "1.0",
+       "All",
+       "All",
+       "Initial issue"
+      ],
+      [
+       "2024-10-15",
+       "1.1",
+       "2.2 2.4 3.1.1 4.4",
+       "9 10 13 - 15 24 - 12",
+       "Issue to address DR comments: ● Changed Use Case Stakeholder to Service Stakeholder ● Changed Use Case Developer to Service Developer ● Included EO data volumes and storage capacity estimates ● New subsection summarising the hardware software and network infrastructure specifications"
+      ],
+      [
+       "2024-12-03",
+       "1.2",
+       "All",
+       "All",
+       "Typos"
+      ],
+      [
+       "2025-05-28",
+       "1.3",
+       "8",
+       "38 - 40",
+       "Update for ORR: Added Annex with requirements summary (PORR-A1)"
+      ],
+      [
+       "2025-07-27",
+       "1.4",
+       "8",
+       "41 - 42",
+       "Added annex B with estimated manpower for operations and maintenance"
+      ]
+     ],
+     "header": true,
+     "page": 2
+    }
+   ],
+   "id": "portada",
+   "chars": 318,
+   "figures": 3,
+   "tables": 1
+  },
+  {
+   "level": 1,
+   "num": "1",
+   "title": "Introduction",
+   "page": 4,
+   "blocks": [],
+   "id": "s1",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.1",
+   "title": "Purpose",
+   "page": 4,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The purpose of this document is to provide a comprehensive, high-level overview of the system specifications and performance requirements necessary for the successful establishment and operation of the CopernicusLAC Centre Platform. This document outlines the technical and operational standards that must be met to ensure the Centre's capability to handle large volumes of Earth Observation (EO) data and deliver geospatial information services to stakeholders across the Latin America and Caribbean (LAC) region.",
+     "page": 4,
+     "indent": 0
+    }
+   ],
+   "id": "s1-1",
+   "chars": 514,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.2",
+   "title": "Background",
+   "page": 4,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The CopernicusLAC initiative is a collaborative effort between the European Space Agency (ESA), the European Commission's Directorate-General for International Partnerships (DG-INTPA), and the Government of Panama. The initiative aims to establish a Regional Copernicus Centre in Panama to facilitate the uptake and utilisation of Copernicus data in the LAC region. The primary focus of the Centre is to support disaster risk reduction and recovery efforts, leveraging EO data and geospatial technology to provide information services to local and regional stakeholders.",
+     "page": 4,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "This initiative is part of the broader EU-LAC Digital Alliance, which promotes cooperation in digital and space technologies between the European Union (EU) and LAC countries. The CopernicusLAC Centre is envisioned as a pilot project under the EU's Global Gateway strategy, aiming to foster international collaboration, enhance data sharing, and support the development of local capacities in EO data processing and utilisation.",
+     "page": 4,
+     "indent": 0
+    }
+   ],
+   "id": "s1-2",
+   "chars": 998,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.3",
+   "title": "Scope",
+   "page": 4,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The scope of this document encompasses both the geographical and operational dimensions of the CopernicusLAC Centre. Geographically, the Centre is designed to serve the entire LAC region, which spans almost 22 million square kilometres and includes more than 670 million people. The Centre's primary focus will be on disaster risk reduction and recovery, with potential expansions into areas such as agriculture and climate resilience.",
+     "page": 4,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The CopernicusLAC Centre is a regional facility dedicated to the management, processing, and dissemination of EO data from the Copernicus Program, specifically tailored for the LAC region. The centre aims to provide comprehensive services for data hosting, processing, and access, supporting a wide range of applications, including environmental monitoring, disaster risk reduction, and sustainable development. The centre also focuses on enhancing local capacities by transferring knowledge and providing training to local operators.",
+     "page": 4,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The CopernicusLAC Centre Platform refers to the technical infrastructure and software environment that enables the functionalities of the CopernicusLAC Centre. This platform includes the hardware, software, middleware, and network components required to ingest, process, store, and distribute Copernicus EO data. The platform supports various workflows and tools necessary for data management and analysis, ensuring access and usability for different stakeholders. It is designed to be scalable and capable of handling large volumes of data and supporting a growing number of users and applications.",
+     "page": 5,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Operationally, the document details the infrastructure requirements, including hardware, software, and network specifications, as well as security protocols to protect data integrity and confidentiality of the platform. It also includes performance metrics to ensure system efficiency, scalability provisions to accommodate growing data volumes and user demands, and a framework for data hosting, processing, and federation with other data centres, particularly the CopernicusLAC Data Centre in Chile. The document also addresses user requirements, outlining the various user profiles and the interfaces necessary to meet their needs, as well as plans for system maintenance, operational support, and knowledge transfer to local operators. This comprehensive approach ensures that the CopernicusLAC Centre can deliver reliable EO data services to support decision-making and strategic planning across the LAC region.",
+     "page": 5,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "This document serves as the reference for the specifications and performance requirements necessary to establish and operate the CopernicusLAC Centre Platform. It provides detailed guidelines on the infrastructure, software, security, and operational standards that must be met to ensure the Platform's effectiveness and reliability. The specifications outlined in this document will guide the development and implementation phases, ensuring that the Platform meets its objectives and serves the needs of its diverse user base",
+     "page": 5,
+     "indent": 0
+    }
+   ],
+   "id": "s1-3",
+   "chars": 3010,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.4",
+   "title": "Document Structure",
+   "page": 5,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "This Service Specification document is divided into the following Chapters:",
+     "page": 5,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Chapter 1 (current) - This section provides an overview of the project detailing the context and objectives of the CopernicusLAC initiative and establishes the framework for the implementation and operation of the CopernicusLAC Centre Platform.",
+     "page": 5,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Chapter 2 - User Roles: This section details the various user roles within the CopernicusLAC platform, outlining their responsibilities and interactions with the system. It describes how different users will access, process, and analyse EO data and how the system is designed to accommodate these roles.",
+     "page": 5,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Chapter 3 - This section details the necessary features and capabilities of the Platform, including both functional and non-functional specifications. It outlines requirements for data hosting, processing, and exchange, as well as performance standards and security measures.",
+     "page": 5,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Chapter 4 - This section specifies the physical and software infrastructure required for the Platform. It includes the necessary hardware, software, and network components to support the system's operations.",
+     "page": 6,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Chapter 5 - This section provides guidelines for the operational phases of the Platform. It includes details on pre-operational and operational demonstrations, maintenance requirements, and support and training programs.",
+     "page": 6,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Chapter 6 - This section defines the key performance metrics for the Platform, including system availability, data throughput, latency, and user capacity. These metrics will be used to ensure the system meets the required performance standards.",
+     "page": 6,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Section 7 - This section provides a comprehensive summary of all the requirements identified in this document.",
+     "page": 6,
+     "indent": 0
+    }
+   ],
+   "id": "s1-4",
+   "chars": 1678,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.5",
+   "title": "Applicable Documents",
+   "page": 6,
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Ref.",
+       "Title and References",
+       "Issue"
+      ],
+      [
+       "[SOW]",
+       "CopernicusLAC Infrastructure Support (EOP-EOP-SI-SOW-2023-15)",
+       "1.0"
+      ],
+      [
+       "[CTR]",
+       "ESA Contract No. 4000144570/24/I-KE with Terradue Srl COPERNICUSLAC - INFRASTRUCTURE SUPPORT",
+       "01/03/2023"
+      ]
+     ],
+     "header": true,
+     "page": 6
+    }
+   ],
+   "id": "s1-5",
+   "chars": 0,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 2,
+   "num": "1.6",
+   "title": "Reference Documents",
+   "page": 6,
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Ref.",
+       "Title and References",
+       "Issue"
+      ],
+      [
+       "[PROP]",
+       "T2-ESA-AO1-11947-OF-23-062 Terradue Offer for CopLAC Infra (all Volumes)",
+       "1.0"
+      ]
+     ],
+     "header": true,
+     "page": 6
+    }
+   ],
+   "id": "s1-6",
+   "chars": 0,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 2,
+   "num": "1.7",
+   "title": "Acronyms and Abbreviations",
+   "page": 6,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The following acronyms are used within this document:",
+     "page": 6,
+     "indent": 0
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "API",
+       "Application Programming Interface"
+      ],
+      [
+       "CDSE",
+       "Copernicus Data Space Ecosystem"
+      ],
+      [
+       "CPU",
+       "Central Processing Unit"
+      ],
+      [
+       "CWL",
+       "Common Workflow Language"
+      ],
+      [
+       "DBaaS",
+       "Database as a Service"
+      ],
+      [
+       "DPO",
+       "Data Protection Officer"
+      ],
+      [
+       "DRR",
+       "Disaster Risk Reduction"
+      ],
+      [
+       "EO",
+       "Earth Observation"
+      ],
+      [
+       "ESA",
+       "European Space Agency"
+      ],
+      [
+       "EU",
+       "European Union"
+      ],
+      [
+       "GDPR",
+       "General Data Protection Regulation"
+      ],
+      [
+       "HA",
+       "High Availability"
+      ],
+      [
+       "HDD",
+       "Hard Disk Drive"
+      ],
+      [
+       "HTTPS",
+       "HyperText Transfer Protocol Secure"
+      ],
+      [
+       "IDS",
+       "Intrusion Detection System"
+      ],
+      [
+       "IPS",
+       "Intrusion Prevention System"
+      ],
+      [
+       "KaaS",
+       "Kubernetes as a Service"
+      ],
+      [
+       "KPI",
+       "Key Performance Indicator"
+      ],
+      [
+       "LAC",
+       "Latin America and the Caribbean"
+      ],
+      [
+       "MTTR",
+       "Mean Time to Repair"
+      ],
+      [
+       "NAS",
+       "Network Attached Storage"
+      ],
+      [
+       "OGC",
+       "Open Geospatial Consortium"
+      ],
+      [
+       "RBAC",
+       "Role-Based Access Control"
+      ],
+      [
+       "SAN",
+       "Storage Area Network"
+      ],
+      [
+       "SFTP",
+       "Secure File Transfer Protocol"
+      ],
+      [
+       "SLA",
+       "Service Level Agreement"
+      ],
+      [
+       "SSD",
+       "Solid State Drive"
+      ],
+      [
+       "STAC",
+       "SpatioTemporal Asset Catalog"
+      ],
+      [
+       "VM",
+       "Virtual Machine"
+      ],
+      [
+       "VPN",
+       "Virtual Private Network"
+      ],
+      [
+       "TLS",
+       "Transport Layer Security"
+      ],
+      [
+       "WMTS",
+       "Web Map Tile Service"
+      ]
+     ],
+     "header": false,
+     "page": 6
+    }
+   ],
+   "id": "s1-7",
+   "chars": 53,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 1,
+   "num": "2",
+   "title": "User Roles",
+   "page": 8,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "This section details the various user roles within the CopernicusLAC platform, outlining their responsibilities and interactions with the system. Understanding these roles is crucial for effective system operation and user support. It is important to note that the same individual may assume multiple roles depending on the specific activity being performed. This flexibility helps in defining the type of services each user needs according to their role at any given time. Users should be encouraged to perform their work within the platform to leverage its capabilities and minimise data downloads.",
+     "page": 8,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Each of these roles is integral to the successful operation and utilisation of the CopernicusLAC platform, ensuring that users can effectively access, process, and analyse EO data to meet their specific needs.",
+     "page": 8,
+     "indent": 0
+    }
+   ],
+   "id": "s2",
+   "chars": 809,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "2.1",
+   "title": "Data Explorer",
+   "page": 8,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Data Explorer users are individuals who access the CopernicusLAC platform to obtain and utilise EO data for various purposes. Their primary interactions with the system include:",
+     "page": 8,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Accessing the CopernicusLAC Portal for data search and retrieval supported by the platform's catalogue and geospatial tools for data exploration.",
+     "page": 8,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Use front-end services to browse available datasets and visualise data.",
+     "page": 8,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Performing simple analytics using visualisation and filtering services provided by the platform.",
+     "page": 8,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Conducting their analysis and processing tasks within the platform to leverage its computational capabilities and minimise data downloads.",
+     "page": 8,
+     "indent": 0
+    },
+    {
+     "type": "figure",
+     "src": "fig-0073.png",
+     "w": 610,
+     "h": 232,
+     "page": 8,
+     "caption": "Figure 1 - Data Explorer use case"
+    }
+   ],
+   "id": "s2-1",
+   "chars": 627,
+   "figures": 1,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "2.2",
+   "title": "Service Stakeholder",
+   "page": 9,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Service Stakeholders interact with service web applications that are co-designed with stakeholders and users from the CopernicusLAC services procurement. The service web applications, developed in the activities of a parallel project, provide essential EO-based information co-designed with stakeholders, enhancing the platform's relevance and usability in addressing key areas such as disaster risk reduction and climate event monitoring The Service Stakeholders main responsibilities include:",
+     "page": 9,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Utilising service web applications developed in the CopernicusLAC services procurement, focusing on:",
+     "page": 9,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Risk and Recovery Mapping",
+     "page": 9,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Spatially Explicit Vulnerability and Preparedness Assessment for Disaster Risk Reduction on a national to regional level, including baseline maps.",
+     "page": 9,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "EO Monitoring of Extreme Weather and Climate-Related Events (e.g., heatwaves, extreme rainfall, droughts, flooding, and wildfires).",
+     "page": 9,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Providing feedback on the functionality and usability of the web applications.",
+     "page": 9,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Applying the insights gained from the applications to their specific domain areas, such as disaster risk reduction and climate event monitoring.",
+     "page": 9,
+     "indent": 0
+    },
+    {
+     "type": "figure",
+     "src": "fig-0076.png",
+     "w": 842,
+     "h": 409,
+     "page": 9,
+     "caption": "Figure 2 - Service Stakeholder use case"
+    }
+   ],
+   "id": "s2-2",
+   "chars": 1118,
+   "figures": 1,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "2.3",
+   "title": "Data Analyst",
+   "page": 9,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Data Analysts focus on the detailed examination and interpretation of data to extract meaningful insights. Their tasks include:",
+     "page": 9,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Accessing and manipulating datasets through the CopernicusLAC Portal and associated APIs.",
+     "page": 9,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Applying various analytical techniques and tools to process and analyse data.",
+     "page": 10,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Creating reports and visualisations to present findings.",
+     "page": 10,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Utilising notebooks and interactive graphical applications (e.g., QGIS, Panoply) for detailed data analysis and visualisation.",
+     "page": 10,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Using notebooks and/or Cloud-based IDEs for advanced data analysis and algorithm development within the platform.",
+     "page": 10,
+     "indent": 0
+    },
+    {
+     "type": "figure",
+     "src": "fig-0079.png",
+     "w": 385,
+     "h": 445,
+     "page": 10,
+     "caption": "Figure 3 - Data Analyst use case"
+    }
+   ],
+   "id": "s2-3",
+   "chars": 588,
+   "figures": 1,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "2.4",
+   "title": "Service Developer",
+   "page": 10,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Service Developers are responsible for creating and implementing algorithms for data processing. They can also be external to the platform development and operations team and their primary activities involve:",
+     "page": 10,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Developing algorithms to process and analyse EO data delivered in specific service web applications, developed in the activities of a parallel project, provide essential EO-based information co-designed with stakeholders,",
+     "page": 10,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Using the interactive development environment to test and refine code within the platform.",
+     "page": 10,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Collaborating with Operators to ensure that the developed algorithms can be integrated into processing workflows and deployed as services.",
+     "page": 11,
+     "indent": 0
+    },
+    {
+     "type": "figure",
+     "src": "fig-0082.png",
+     "w": 588,
+     "h": 526,
+     "page": 11,
+     "caption": "Figure 4 - Developer use case"
+    }
+   ],
+   "id": "s2-4",
+   "chars": 657,
+   "figures": 1,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "2.5",
+   "title": "Operator",
+   "page": 11,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Operators oversee the overall operation and maintenance of the CopernicusLAC platform. Their key duties include:",
+     "page": 11,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Managing the deployment and orchestration of containerized applications.",
+     "page": 11,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Monitoring system performance and ensuring high availability.",
+     "page": 11,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Performing regular maintenance and updates to the system.",
+     "page": 11,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Deploying new services developed by Service Developers as part of the platform's offerings.",
+     "page": 11,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Addressing technical issues and ensuring the system operates smoothly.",
+     "page": 11,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Coordinating with other user roles to support their activities and address any issues that arise",
+     "page": 12,
+     "indent": 0
+    },
+    {
+     "type": "figure",
+     "src": "fig-0085.png",
+     "w": 761,
+     "h": 545,
+     "page": 12,
+     "caption": "Figure 5 - Operator use case"
+    }
+   ],
+   "id": "s2-5",
+   "chars": 559,
+   "figures": 1,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "3",
+   "title": "System Specifications",
+   "page": 13,
+   "blocks": [],
+   "id": "s3",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "3.1",
+   "title": "Functional Specifications",
+   "page": 13,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The functional specifications outline the necessary features and capabilities that the Platform must possess to ensure effective data hosting, processing, and exchange. These specifications will guide the development and implementation of the system to meet the project's objectives.",
+     "page": 13,
+     "indent": 0
+    }
+   ],
+   "id": "s3-1",
+   "chars": 283,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.1.1",
+   "title": "Data Hosting Requirements",
+   "page": 13,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Data hosting is a component of the Platform, requiring storage solutions that can accommodate large volumes of EO data and ensure their access and management.",
+     "page": 13,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Data Storage Capacity:",
+     "page": 13,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "The system must support scalable storage solutions capable of handling large volumes of Copernicus Sentinel data, including Sentinel-1, Sentinel-2, Sentinel-3, and Sentinel-5p mission data.",
+     "page": 13,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Initial capacity must be sufficient to support the full archive over the LAC region. As of June 2024, the total volume of archived data over the Latin America and Caribbean (LAC) region has reached approximately 15.1 petabytes (PB). This includes data from 2014 to June 2024.",
+     "page": 13,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "From 2025 onwards, the system should be capable of accommodating an annual data increase of approximately 2 PB per year.",
+     "page": 13,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Storage solutions must provide provisions for future expansion to accommodate this yearly increase.",
+     "page": 13,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Data Management:",
+     "page": 13,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Implement efficient data management practices to ensure data integrity, redundancy, and backup.",
+     "page": 13,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Storage solutions should incorporate distributed storage technologies to enhance data availability and resilience.",
+     "page": 13,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Data Access:",
+     "page": 13,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Provide access to stored data for authorised users through a web-based portal and APIs.",
+     "page": 13,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The system should support secure data access protocols and user authentication mechanisms.",
+     "page": 13,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Data Ingestion:",
+     "page": 13,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure continuous ingestion of data with the Copernicus Data Space Ecosystem (CDSE) and other relevant data hubs to maintain data consistency and availability.",
+     "page": 13,
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "The following table reports the current and expected data volumes (from 2014 to 2027) for the Sentinel missions part of the baseline offer of the CopernicusLAC",
+     "page": 13,
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Platform. These data volumes have determined the sizing of the platform’s storage capacity anticipated in the Data Storage Capacity bullet above.",
+     "page": 14,
+     "indent": 1
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "",
+       "",
+       "Size",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "Satellites in operations",
+       "Year",
+       "Sentinel-1",
+       "Sentinel-2",
+       "Sentinel-3",
+       "Sentinel-5P",
+       "Total",
+       "Cum. Tot."
+      ],
+      [
+       "S1A",
+       "2014",
+       "19.9 TB",
+       "0.0 GB",
+       "0.0 GB",
+       "0.0 GB",
+       "19.9 TB",
+       "19.9 TB"
+      ],
+      [
+       "S1A, S2A",
+       "2015",
+       "116.4 TB",
+       "68.5 TB",
+       "0.0 GB",
+       "0.0 GB",
+       "184.9 TB",
+       "204.8 TB"
+      ],
+      [
+       "S1A, S1B, S2A, S3A",
+       "2016",
+       "192.8 TB",
+       "379.7 TB",
+       "33.5 TB",
+       "0.0 GB",
+       "605.9 TB",
+       "810.7 TB"
+      ],
+      [
+       "S1A, S1B, S2A, S2B, S3A, S5P",
+       "2017",
+       "441.5 TB",
+       "619.5 TB",
+       "64.8 TB",
+       "0.0 GB",
+       "1.1 PB",
+       "1.9 PB"
+      ],
+      [
+       "S1A, S1B, S2A, S2B, S3A, S3B, S5P",
+       "2018",
+       "484.1 TB",
+       "1.3 PB",
+       "106.9 TB",
+       "37.1 TB",
+       "2.0 PB",
+       "3.9 PB"
+      ],
+      [
+       "S1A, S1B, S2A, S2B, S3A, S3B, S5P",
+       "2019",
+       "546.8 TB",
+       "1.5 PB",
+       "198.2 TB",
+       "63.0 TB",
+       "2.3 PB",
+       "6.2 PB"
+      ],
+      [
+       "S1A, S1B, S2A, S2B, S3A, S3B, S5P",
+       "2020",
+       "576.4 TB",
+       "1.3 PB",
+       "179.2 TB",
+       "64.8 TB",
+       "2.1 PB",
+       "8.3 PB"
+      ],
+      [
+       "S1A, S1B, S2A, S2B, S3A, S3B, S5P",
+       "2021",
+       "583.3 TB",
+       "1.5 PB",
+       "195.4 TB",
+       "68.0 TB",
+       "2.3 PB",
+       "10.6 PB"
+      ],
+      [
+       "S1A, S2A, S2B, S3A, S3B, S5P",
+       "2022",
+       "349.2 TB",
+       "1.0 PB",
+       "301.1 TB",
+       "57.7 TB",
+       "1.8 PB",
+       "12.4 PB"
+      ],
+      [
+       "S1A, S2A, S2B, S3A, S3B, S5P",
+       "2023",
+       "359.7 TB",
+       "1.0 PB",
+       "339.6 TB",
+       "29.9 TB",
+       "1.8 PB",
+       "14.2 PB"
+      ],
+      [
+       "S1A, S2A, S2B, S3A, S3B, S5P",
+       "2024",
+       "360.4 TB",
+       "1.0 PB",
+       "322.1 TB",
+       "75.2 TB",
+       "1.8 PB",
+       "16.0 PB"
+      ],
+      [
+       "S1A, S1C, S2B, S2C, S3A, S3B, S5P",
+       "2025",
+       "583.3 TB",
+       "1.0 PB",
+       "322.1 TB",
+       "75.2 TB",
+       "2.0 PB",
+       "18.0 PB"
+      ],
+      [
+       "S1A, S1C, S2B, S2C, S3A, S3B, S5P",
+       "2026",
+       "583.3 TB",
+       "1.0 PB",
+       "322.1 TB",
+       "75.2 TB",
+       "2.0 PB",
+       "20.0 PB"
+      ],
+      [
+       "S1A, S1C, S2B, S2C, S3A, S3B, S5P",
+       "2027",
+       "583.3 TB",
+       "1.0 PB",
+       "322.1 TB",
+       "75.2 TB",
+       "2.0 PB",
+       "22.0 PB"
+      ],
+      [
+       "",
+       "",
+       "5.8 PB",
+       "12.9 PB",
+       "2.7 PB",
+       "621.3 TB",
+       "22.0 PB",
+       ""
+      ]
+     ],
+     "header": true,
+     "page": 14,
+     "caption": "Table 1 - Sentinel missions data volumes from 2014 to 2027"
+    },
+    {
+     "type": "para",
+     "text": "The following two graphs illustrate respectively the yearly and cumulative data volume trends for each satellite during the 2014 - 2027 period:",
+     "page": 14,
+     "indent": 0
+    },
+    {
+     "type": "figure",
+     "src": "fig-0093.png",
+     "w": 1246,
+     "h": 702,
+     "page": 15,
+     "caption": "Figure 6 - Yearly data volume by satellite"
+    },
+    {
+     "type": "figure",
+     "src": "fig-0094.png",
+     "w": 1146,
+     "h": 702,
+     "page": 15,
+     "caption": "Figure 7 - Cumulative data volume by satellite"
+    }
+   ],
+   "id": "s3-1-1",
+   "chars": 1898,
+   "figures": 2,
+   "tables": 1
+  },
+  {
+   "level": 3,
+   "num": "3.1.2",
+   "title": "Data Processing Requirements",
+   "page": 16,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Data processing is essential for ingesting EO data and allow its subsequent transformation into actionable information according to the LAC community needs. The Platform must support scalable, automated processing workflows to handle various data processing needs. These workflows should align with recognized best practices for EO applications, ensuring standardised processing.",
+     "page": 16,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Data Ingestion:",
+     "page": 16,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Implement automated and scalable data ingestion processes that can handle both batch and real-time data streams. The system must support efficient data ingestion pipelines capable of managing ancillary datasets and user-provided data in standard formats.",
+     "page": 16,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure data quality, integrity and completeness through monitoring and management mechanisms for the data ingestion processes.",
+     "page": 16,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Data Processing:",
+     "page": 16,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Deploy a cloud-native processing environment that supports scalable and elastic data processing capabilities to handle varying workloads. The system should be able to manage complex workflows and integrate standard EO data processing toolboxes and additional tools identified in the CopernicusLAC Services procurement.",
+     "page": 16,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Support both on-demand and systematic processing workflows, allowing the system to scale up resources as required to support Disaster Risk Reduction (DRR) activities at national and continental scale with satisfactory performance.",
+     "page": 16,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Develop middleware components to facilitate data processing, including data transformation, aggregation, and analysis. Middleware must be delivered as open-source to enable future modifications and enhancements by local operators.",
+     "page": 16,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure that the processing workflows are designed to follow recognized best practices for EO application packages, ensuring standardisation, compatibility, and efficiency.",
+     "page": 16,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Provide comprehensive logging and monitoring capabilities to track the performance and health of data processing workflows.",
+     "page": 16,
+     "indent": 2
+    }
+   ],
+   "id": "s3-1-2",
+   "chars": 1862,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.1.3",
+   "title": "Data Exchange and Federation Requirements",
+   "page": 16,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Effective data exchange and federation are crucial for integrating the Platform with other data centres and platforms, enabling shared access and collaborative use of data.",
+     "page": 16,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Data Exchange:",
+     "page": 16,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Implement data exchange mechanisms to facilitate data sharing between the CopernicusLAC Centre Platform in Panama and the Copernicus Data Centre",
+     "page": 16,
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "in Chile. The system should support federation capabilities to enable shared access to data catalogues and retrieval of data across both centres.",
+     "page": 17,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure data exchange mechanisms are compliant with established standards and support interoperability with other regional and international data centres.",
+     "page": 17,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Develop APIs to provide programmatic access to data exchange functionalities, allowing integration with third-party platforms and services.",
+     "page": 17,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Federation:",
+     "page": 17,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Develop operational interfaces and appropriate tools to federate with other data centres, ensuring visibility of catalogues and access to shared data. The system should support API-based access to its functionalities, allowing integration with third-party platforms and services.",
+     "page": 17,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Implement mechanisms for metadata and catalog federation to provide a unified view of available data across federated centres without data and metadata duplication.",
+     "page": 17,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure secure and efficient data transfer protocols to facilitate data federation without compromising data integrity or data access performance.",
+     "page": 17,
+     "indent": 2
+    }
+   ],
+   "id": "s3-1-3",
+   "chars": 1366,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "3.2",
+   "title": "Non-Functional Specifications",
+   "page": 17,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The non-functional specifications define the quality attributes, performance standards, and security measures that the system must meet to ensure reliability, scalability, and compliance with regulatory requirements.",
+     "page": 17,
+     "indent": 0
+    }
+   ],
+   "id": "s3-2",
+   "chars": 216,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.2.1",
+   "title": "Performance Requirements",
+   "page": 17,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Performance requirements ensure that the system operates meeting the expected service levels for availability, scalability, and responsiveness.",
+     "page": 17,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "System Availability:",
+     "page": 17,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure high availability of the system with a target uptime of 99.5%. Implement redundancy and failover mechanisms to minimise downtime and ensure continuous operations.",
+     "page": 17,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Develop and implement disaster recovery plans and solutions to ensure system resilience and quick recovery in case of failures.",
+     "page": 17,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Scalability:",
+     "page": 17,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Design the system to scale horizontally to handle increasing data volumes and user demands. The system should support the efficient management of containerized applications and scale them dynamically based on workload demands.",
+     "page": 17,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Implement auto-scaling mechanisms to dynamically adjust resources based on current load and performance metrics.",
+     "page": 17,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "The system must be deployable in an infrastructure that provides Kubernetes as a Service (KaaS) and Databases as a Service (DBaaS) relying on the",
+     "page": 17,
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "cloud service provider for the management and orchestration of containerized applications through Kubernetes, and the provision of database setup, maintenance, backups, and scalability through DBaaS.",
+     "page": 18,
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Responsiveness:",
+     "page": 18,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Optimise the system for low-latency data access and processing. Implement caching strategies and efficient data retrieval mechanisms to enhance system responsiveness.",
+     "page": 18,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure processing workflows are optimised for performance, minimising execution time and resource usage.",
+     "page": 18,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Dependency on Resource Provider:",
+     "page": 18,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Given the reliance on Kubernetes as a Service and Databases as a Service, the system's performance and availability are partly contingent on the reliability and capabilities of the provider.",
+     "page": 18,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Monitor and manage the provider's scalability capabilities to ensure they meet the system's performance requirements and can allocate resources during peak demand periods.",
+     "page": 18,
+     "indent": 2
+    }
+   ],
+   "id": "s3-2-1",
+   "chars": 1831,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.2.2",
+   "title": "Security Requirements",
+   "page": 18,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Security requirements ensure that the system protects data and user information from unauthorised access and breaches, maintaining data confidentiality, integrity, and availability.",
+     "page": 18,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Data Security:",
+     "page": 18,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Implement comprehensive security measures to protect data integrity, confidentiality, and availability.",
+     "page": 18,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Employ encryption for data at rest and in transit using secure protocols such as HTTPS and SFTP with TLS 1.2 or later to safeguard sensitive information.",
+     "page": 18,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure regular security updates and patches for all software components to address vulnerabilities.",
+     "page": 18,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Conduct regular security audits and vulnerability assessments to identify and mitigate potential security risks.",
+     "page": 18,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Implement intrusion detection and prevention systems (IDS/IPS) to monitor and respond to suspicious activities.",
+     "page": 18,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "User Authentication and Authorization:",
+     "page": 18,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Use authentication mechanisms to verify the identity of users accessing the system.",
+     "page": 18,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Implement multi-factor authentication (MFA) to enhance user authentication security.",
+     "page": 18,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Enforce role-based access control (RBAC) to manage user permissions and access levels based on their roles and responsibilities.",
+     "page": 18,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Regularly review and update access controls to ensure that only authorised personnel have access to data and system functionalities.",
+     "page": 18,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Compliance:",
+     "page": 18,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure compliance with relevant data protection regulations, such as GDPR, to safeguard personal data and maintain user privacy.",
+     "page": 19,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Adhere to the ESA Personal Data Protection Framework, which includes adopting the level of protection resulting from the EU Standard Contractual Clauses for data transfer to third countries, as applicable.",
+     "page": 19,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure that any transfer of personal data outside the agreed territory is authorised by the ESA Data Protection Officer (DPO) and subject to adequate safeguards.",
+     "page": 19,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Maintain comprehensive logs and audit trails to support compliance reporting and forensic analysis in case of security incidents.",
+     "page": 19,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Data Minimization and Retention:",
+     "page": 19,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Transfer only the necessary categories of personal data for specific processing activities related to the CopernicusLAC initiatives, adhering to the principles of data minimization and purpose limitation.",
+     "page": 19,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure that personal data is retained only for as long as necessary to fulfil the purposes for which it was collected and processed, in compliance with applicable legal and regulatory requirements.",
+     "page": 19,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Technical and Organisational Measures:",
+     "page": 19,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Implement secure data transfer protocols, ensuring the secure transmission of personal data.",
+     "page": 19,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Provide adequate training for staff involved in data processing and transfer, covering data protection principles and secure data handling practices.",
+     "page": 19,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Establish secure authentication mechanisms, including strong passwords and MFA, to restrict access to data transfer systems.",
+     "page": 19,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Develop an incident response plan that includes procedures for promptly addressing any security incidents affecting personal data, including notifications to relevant authorities and data subjects as required by GDPR Article 33.",
+     "page": 19,
+     "indent": 2
+    }
+   ],
+   "id": "s3-2-2",
+   "chars": 2936,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "3.2.3",
+   "title": "Compliance Requirements",
+   "page": 19,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Compliance requirements ensure that the system adheres to industry standards and best practices, promoting interoperability, and enabling future enhancements. The Platform must integrate industry standards and best practices into its operations, ensuring the system's reliability, security, and scalability.",
+     "page": 19,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Standards Compliance:",
+     "page": 19,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure the system complies with relevant standards and best practices, such as the OGC Best Practice for EO Application Package (OGC 20-089r1), which promotes standardised, interoperable, and reusable EO applications.",
+     "page": 19,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Package EO data processing applications using the Common Workflow Language (CWL) to ensure interoperability and ease of data processing and analysis workflow sharing.",
+     "page": 19,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Use Docker, podman or equivalent tool producing OCI images for containerization of EO applications and their dependencies in portable container images.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Adopt industry de facto standards such as S3 for storage interfaces and Kubernetes for the orchestration of containerized applications.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Utilise SpatioTemporal Asset Catalog (STAC) for indexing and discovering geospatial data.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Implement OGC Web Map Tile Service (WMTS) to provide georeferenced map tiles, supporting efficient and scalable delivery of map data.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Use OGC API - Features for accessing and querying geospatial features in a standardised way, promoting interoperability and ease of integration.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Implement OGC API - Processes to facilitate the execution of geospatial processes via standard web interfaces, enabling integration and automation of complex workflows.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Open Source:",
+     "page": 20,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Deliver all middleware and tools developed under this procurement as open-source to facilitate future modifications and enhancements by local operators.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure that open-source components are well-documented and supported, providing clear guidelines for future development and integration. Documentation should include detailed instructions for deploying, configuring, and using the software, as well as contributing to its development.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Encourage the use of existing open-source tools and libraries that comply with OGC standards and best practices, fostering an ecosystem of interoperable and reusable components.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Technical Implementation:",
+     "page": 20,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Adopt CWL for defining and executing data processing workflows.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Use Docker, podman or equivalent tool producing OCI images to containerize applications, ensuring that they run consistently regardless of where they are deployed.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Utilise Kubernetes as the orchestrator for managing containerized applications with automated deployment and scaling ensuring efficient resource utilisation and high availability.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Integrate S3-compatible storage solutions for scalable and flexible object storage, supporting large volumes of EO data ensuring compatibility with a wide range of tools and services, facilitating data management and access.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Implement STAC to standardise the way geospatial data is indexed and discovered, making it easier to search and retrieve EO data.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Utilise STAC for defining data processing geospatial data inputs.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Use OGC WMTS to serve georeferenced map tiles, enhancing the performance and scalability of map data delivery.",
+     "page": 20,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Integrate OGC API - Features to provide standardised access to geospatial features, supporting efficient querying and data retrieval.",
+     "page": 21,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Implement OGC API - Processes to enable the execution of geospatial processes via standardised web API interfaces, supporting automation and integration of complex workflows.",
+     "page": 21,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Integrate with standard EO data processing toolboxes and custom-developed tools that adhere to best practices, ensuring the system can effectively process and analyse EO data in a standardised manner.",
+     "page": 21,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Conduct regular audits and assessments to ensure continued compliance with OGC standards and best practices, adapting to any updates or changes in the standards.",
+     "page": 21,
+     "indent": 2
+    }
+   ],
+   "id": "s3-2-3",
+   "chars": 3781,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "4",
+   "title": "Infrastructure Specifications",
+   "page": 22,
+   "blocks": [],
+   "id": "s4",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "4.1",
+   "title": "Hardware Specifications",
+   "page": 22,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The hardware specifications detail the physical and/or virtual components required to support the operations of the Platform. These components must be capable of handling the data storage, processing, and exchange needs as outlined in the project objectives. The specifications will identify the responsibilities of third-party infrastructure providers, platform developers, and platform operators.",
+     "page": 22,
+     "indent": 0
+    }
+   ],
+   "id": "s4-1",
+   "chars": 398,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "4.1.1",
+   "title": "Server Specifications",
+   "page": 22,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "High-performance servers equipped with multi-core processors (e.g., Intel Xeon Cascade Lake or newer) to handle intensive data processing tasks.",
+     "page": 22,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Up to 512 GB RAM and 64 CPUs per server to support high-performance computing requirements.",
+     "page": 22,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Scalable storage solutions, starting with a minimum of 500 TB of raw storage, expandable based on data volume growth. Solutions should include high-speed SSDs for caching and frequently accessed data, and high-capacity HDDs for bulk storage.",
+     "page": 22,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Redundant power supplies and cooling systems to ensure hardware reliability and uptime.",
+     "page": 22,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The infrastructure provider should supply and manage the high-performance servers, scalable storage solutions, and redundant power supplies. Cooling systems should also be maintained by the provider to ensure optimal hardware performance and uptime.",
+     "page": 22,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Ensuring that the servers are configured correctly for specific data processing tasks, optimising the use of RAM, CPU and storage, and managing data distribution across storage solutions fall under the platform's responsibilities.",
+     "page": 22,
+     "indent": 0
+    }
+   ],
+   "id": "s4-1-1",
+   "chars": 1042,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "4.1.2",
+   "title": "Storage Systems",
+   "page": 22,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Integration with S3-compatible storage to enable scalable and flexible object storage for large volumes of EO data. The object storage solution used for long-term retention and archival of EO data shall have a minimum capacity of 22 PB.",
+     "page": 22,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Distributed storage architecture to ensure data redundancy and fault tolerance. Solutions should be able to support scalable and resilient data storage needs.",
+     "page": 22,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Network-attached storage (NAS) and/or storage area network (SAN) configurations to provide efficient and high-speed data access.",
+     "page": 22,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Backup systems to ensure data integrity and availability, with automated backup schedules and secure off-site storage options.",
+     "page": 22,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The infrastructure provider should offer and maintain the distributed storage architecture, NAS/SAN configurations, backup systems, and S3-compatible storage solutions supporting event notifications for object creation and removal.",
+     "page": 23,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The platform should integrate the storage solutions with the processing workflows, managing data redundancy and fault tolerance, setting up automated backup schedules, and ensuring secure off-site storage.",
+     "page": 23,
+     "indent": 0
+    }
+   ],
+   "id": "s4-1-2",
+   "chars": 1084,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "4.2",
+   "title": "Software Specifications",
+   "page": 23,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The software stack includes the operating systems, middleware, and application software required to manage data storage, processing, and access. The software must support scalable and efficient operations, aligned with industry best practices.",
+     "page": 23,
+     "indent": 0
+    }
+   ],
+   "id": "s4-2",
+   "chars": 243,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "4.2.1",
+   "title": "Operating Systems",
+   "page": 23,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Linux-based operating systems (e.g., Ubuntu) for server environments, chosen for their stability, security, and performance.",
+     "page": 23,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Regular updates and patches to maintain security and compatibility with other software components.",
+     "page": 23,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The platform operations should manage the provisioning and maintenance of the operating systems, including regular updates and security patches. It should also configure the operating systems to meet specific application needs, optimising performance, and ensuring compatibility with other components of the software stack.",
+     "page": 23,
+     "indent": 0
+    }
+   ],
+   "id": "s4-2-1",
+   "chars": 545,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "4.2.2",
+   "title": "Middleware",
+   "page": 23,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Container orchestration platforms, such as Kubernetes, to manage the deployment, scaling, and operation of containerized applications across clusters of hosts. Kubernetes should support automated scheduling, autoscaling, self-healing, and service discovery.",
+     "page": 23,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Workflow management systems, such as Argo Workflows, to orchestrate complex data processing pipelines, ensuring efficient resource utilisation and task execution. These systems should support the CWL standard to facilitate the creation, scheduling, and execution of workflows that adhere to recognized best practices for EO applications.",
+     "page": 23,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Integration with standard EO data processing toolboxes and custom-developed tools to handle specific processing requirements.",
+     "page": 23,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The infrastructure provider should offer the container orchestration platform and ensure its reliable operation, including automated scheduling, autoscaling, self-healing, and service discovery features.",
+     "page": 23,
+     "indent": 0
+    }
+   ],
+   "id": "s4-2-2",
+   "chars": 922,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "4.2.3",
+   "title": "Application Software",
+   "page": 24,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Web-based portals for user access to data and services, featuring intuitive interfaces and authentication mechanisms.",
+     "page": 24,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "APIs for programmatic access to data and processing services, supporting integration with third-party applications and services.",
+     "page": 24,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Data catalog and management systems to facilitate data discovery, access, and retrieval, supporting metadata standards and providing efficient search capabilities.",
+     "page": 24,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Visualisation tools to enable interactive exploration and analysis of EO data, supporting geospatial functionalities and user-defined parameters.",
+     "page": 24,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The infrastructure provider should offer Database as a Service (DBaaS) as part of their services. Developing and maintaining the web-based portals, APIs, data catalogues, and visualisation tools, ensuring they are optimised for performance, security, and user experience are responsibilities of the Platform.",
+     "page": 24,
+     "indent": 0
+    }
+   ],
+   "id": "s4-2-3",
+   "chars": 861,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "4.3",
+   "title": "Network Specification",
+   "page": 24,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The network infrastructure must support reliable and high-speed data transfer and communication, both within the CopernicusLAC Centre and with external partners and data centres.",
+     "page": 24,
+     "indent": 0
+    }
+   ],
+   "id": "s4-3",
+   "chars": 178,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "4.3.1",
+   "title": "Internal Network:",
+   "page": 24,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "High-speed internal network (10 Gbps or higher) to ensure efficient data transfer between servers, storage systems, and other hardware components.",
+     "page": 24,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Redundant networking paths to provide failover capabilities and maintain network availability in case of hardware failure.",
+     "page": 24,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The infrastructure provider should maintain the high-speed internal network infrastructure and ensure redundancy and failover capabilities.",
+     "page": 24,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The Platform operations should optimise the internal network for specific application needs, monitoring network performance, and managing internal data traffic.",
+     "page": 24,
+     "indent": 0
+    }
+   ],
+   "id": "s4-3-1",
+   "chars": 567,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "4.3.2",
+   "title": "External Connectivity",
+   "page": 24,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "High-bandwidth internet connections (3 Gbps or higher) to support data exchange with external data centres, users, and collaborators. Connections should be capable of handling large volumes of data transfer with minimal latency.",
+     "page": 24,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Integration with regional high-speed networks, such as the BELLA program, to facilitate timely access to Copernicus observations and regional data distribution.",
+     "page": 24,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The infrastructure provider should supply and manage the high-bandwidth internet connections and ensure integration with regional high-speed networks.",
+     "page": 24,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The Platform operations should manage external data transfers, ensuring efficient use of bandwidth, and optimising data exchange processes.",
+     "page": 25,
+     "indent": 0
+    }
+   ],
+   "id": "s4-3-2",
+   "chars": 677,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "4.3.3",
+   "title": "Network Security",
+   "page": 25,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "To safeguard the Platform's network infrastructure against cyber threats, a comprehensive security approach is implemented. This approach includes the use of firewalls at both network and application layers, as well as intrusion detection and prevention systems (IDS/IPS). These systems control and monitor incoming and outgoing network traffic based on predetermined security rules, providing protection against unauthorised access and potential cyber threats.",
+     "page": 25,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Regular network audits and security assessments are conducted to identify and mitigate vulnerabilities, ensuring that the network remains resilient against evolving threats. The infrastructure provider is responsible for maintaining firewalls, VPNs, and conducting these security assessments. Meanwhile, the Platform operations team is tasked with configuring security settings to meet specific needs, monitoring network security, and implementing additional security measures as necessary.",
+     "page": 25,
+     "indent": 0
+    },
+    {
+     "type": "figure",
+     "src": "fig-0116.png",
+     "w": 415,
+     "h": 492,
+     "page": 25,
+     "caption": "Figure 8 - Network Security Architecture for CopernicusLAC Platform"
+    },
+    {
+     "type": "para",
+     "text": "The network architecture, as depicted above, illustrates the key components of the network security setup. Traffic from the Internet is first filtered through a firewall before reaching the",
+     "page": 25,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "CentrePlatform. Internal communications between the CentrePlatform, Observations, and DataDistribution components are carried out over high-speed internal connections, further secured by the infrastructure provider.",
+     "page": 26,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "External Connection: 3 Gbps or higher external connection, secured by the firewall, ensures that traffic from the Internet is controlled and monitored before it reaches the internal systems.",
+     "page": 26,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Internal Network: The internal network operates at 10 Gbps or higher, facilitating fast and secure communication between the CentrePlatform, Observations, and DataDistribution components, all of which are protected by the BELLA (Building Europe Link to Latin America) network infrastructure.",
+     "page": 26,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "This layered security approach, supported by regular assessments and updates, ensures that the platform's network remains secure, efficient, and capable of supporting its operations.",
+     "page": 26,
+     "indent": 0
+    }
+   ],
+   "id": "s4-3-3",
+   "chars": 2018,
+   "figures": 1,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "4.4",
+   "title": "Specifications Summary",
+   "page": 26,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The CopernicusLAC platform will rely on a scalable infrastructure to support its extensive user base and data processing needs. The infrastructure must ensure high availability, efficient resource allocation, and support for various services such as Kubernetes, virtual machines (VMs), load balancing, database management, and storage. The key requirements it will follow include:",
+     "page": 26,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Kubernetes Managed Service: A High Availability (HA) configuration supporting up to 1000 nodes, ensuring scalability and failover management for container orchestration.",
+     "page": 26,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Virtual Machines (VMs): A range of VMs with varying configurations/flavours to support core platform components and specific processing needs, optimised for high-performance computing.",
+     "page": 26,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Dedicated Load Balancer: A managed service in HA configuration with at least 4 Gbps capacity to distribute traffic across services.",
+     "page": 26,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Database Management: PostgreSQL in HA configuration to ensure data availability, integrity, and performance.",
+     "page": 26,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Storage Solutions: A combination of block storage (SSD) for fast access (e.g. 20,000 IOPS, 1 ms read/write latency), object storage for online data, and cold storage for archiving previous years' data, ensuring scalability and data integrity.",
+     "page": 26,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The table below summarises the infrastructure specifications:",
+     "page": 26,
+     "indent": 0
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Component",
+       "Number of instances",
+       "vCPU",
+       "RAM (GB)",
+       "Block Storage (GB)",
+       "Object Storage (PB)",
+       "Operating System",
+       "Comments"
+      ],
+      [
+       "Kubernetes Managed Service (HA)",
+       "1",
+       "-",
+       "-",
+       "-",
+       "-",
+       "-",
+       "Managed service, high availability, up to 1000 nodes"
+      ],
+      [
+       "Cloud Server - VM (4CPU, 16GB)",
+       "24",
+       "4",
+       "16",
+       "500",
+       "-",
+       "Linux",
+       "Core platform components"
+      ],
+      [
+       "Cloud Server - VM (8CPU, 32GB)",
+       "64",
+       "8",
+       "32",
+       "500",
+       "-",
+       "Linux",
+       "Core platform components"
+      ],
+      [
+       "Dedicated Load Balancer (HA)",
+       "1",
+       "-",
+       "-",
+       "-",
+       "-",
+       "-",
+       "Managed service, high availability, 4Gb/sec capacity"
+      ],
+      [
+       "DB PostgreSQL (HA)",
+       "4",
+       "16",
+       "64",
+       "800",
+       "-",
+       "-",
+       "Managed database service, high availability"
+      ],
+      [
+       "Block Storage (SSD)",
+       "1",
+       "-",
+       "-",
+       "70,000",
+       "-",
+       "-",
+       "Managed ultra high I/O block storage service"
+      ],
+      [
+       "Object Storage (Online)",
+       "1",
+       "-",
+       "-",
+       "-",
+       "2",
+       "-",
+       "Managed object storage, 1 year of data (see section 3.1.1)"
+      ],
+      [
+       "Object Storage (Cold)",
+       "1",
+       "-",
+       "-",
+       "-",
+       "20",
+       "-",
+       "Managed cold storage, previous years’ data (see section 3.1.1)"
+      ],
+      [
+       "Cloud Server - VM (8CPU, 32GB)",
+       "60",
+       "8",
+       "32",
+       "100",
+       "-",
+       "Linux",
+       "Processing needs"
+      ],
+      [
+       "Cloud Server - VM (16CPU, 64GB)",
+       "60",
+       "16",
+       "64",
+       "100",
+       "-",
+       "Linux",
+       "Processing needs"
+      ],
+      [
+       "Cloud Server - VM (32CPU, 128GB)",
+       "40",
+       "32",
+       "128",
+       "100",
+       "-",
+       "Linux",
+       "Processing needs"
+      ]
+     ],
+     "header": true,
+     "page": 27,
+     "caption": "Table 2 - CopernicusLAC platform infrastructure specification"
+    }
+   ],
+   "id": "s4-4",
+   "chars": 1275,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 1,
+   "num": "5",
+   "title": "Operational Specifications",
+   "page": 28,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The operational specifications section outlines the activities and requirements necessary to ensure the Platform successful setup, functionality, and long-term sustainability. This section aims to provide a detailed framework for the operational demonstration phases, maintenance protocols, and support and training strategies essential for the effective management and operation of the centre.",
+     "page": 28,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "A key component of the operational specifications is the knowledge transfer to local operators in Panama. This initiative ensures that local personnel are equipped with the necessary skills and knowledge to manage, operate, and maintain the Platform autonomously. The goal is to build local capacity, foster expertise in EO data management and processing, and ensure the long-term sustainability and self-sufficiency of the centre.",
+     "page": 28,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "This section is structured to provide a comprehensive guide covering pre-operational (KO+6 months to KO+12 months) and operational demonstration (KO+12 months onwards) phases, maintenance requirements as well as support and training plans. These elements collectively ensure that the Platform is operated efficiently, meets performance expectations, and is prepared for future growth and challenges.",
+     "page": 28,
+     "indent": 0
+    }
+   ],
+   "id": "s5",
+   "chars": 1224,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "5.1",
+   "title": "Operational Demonstration",
+   "page": 28,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The operational demonstration phase ensures that the Platform is fully functional and meets all specified requirements. This phase is divided into two key stages: the pre-operational demonstration and the operational demonstration.",
+     "page": 28,
+     "indent": 0
+    }
+   ],
+   "id": "s5-1",
+   "chars": 231,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "5.1.1",
+   "title": "Pre-operational Demonstration",
+   "page": 28,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The pre-operational demonstration serves as the initial testing phase to validate the basic functionalities and performance of the system. This phase focuses on identifying and addressing any potential issues before full-scale operations commence.",
+     "page": 28,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Objectives:",
+     "page": 28,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Verify the installation and configuration of hardware and software components.",
+     "page": 28,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Test the basic functionality of data ingestion, processing, and storage systems.",
+     "page": 28,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Validate network connectivity and security measures.",
+     "page": 28,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure that initial workflows for data processing follow established standards and practices.",
+     "page": 28,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Assess system performance under a controlled, simulated workload.",
+     "page": 28,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Activities:",
+     "page": 28,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Conduct end-to-end testing of the data ingestion and processing pipelines.",
+     "page": 28,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Perform initial data federation with external data centres.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Validate user access through the web-based portal and APIs.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Test the integration of middleware components and ensure they function as intended.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Document any issues encountered and develop mitigation strategies.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Deliverables:",
+     "page": 29,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Pre-operational demonstration report detailing the test results, identified issues, and proposed solutions.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Updated system documentation based on the findings of the pre-operational tests.",
+     "page": 29,
+     "indent": 2
+    }
+   ],
+   "id": "s5-1-1",
+   "chars": 1178,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "5.1.2",
+   "title": "Operational Demonstration",
+   "page": 29,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The operational demonstration phase is designed to validate the full operational capabilities of the Platform. This phase ensures that the system can handle real-world workloads and meet all specified success criteria.",
+     "page": 29,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Objectives:",
+     "page": 29,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Demonstrate the full functionality of the system under realistic conditions.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Validate the scalability and performance of data processing and storage systems.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure data exchange and federation with external data centres.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Confirm the effectiveness of security measures and compliance with regulatory requirements.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Assess the system's ability to support Disaster Risk Reduction (DRR) activities and other use cases.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Activities:",
+     "page": 29,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Execute comprehensive end-to-end tests with real-world data sets and workloads.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Validate the performance of data hosting and processing systems under peak load conditions.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Test the integration and interoperability of the system with external data centres and third-party applications.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Perform security audits and penetration testing to ensure the robustness of security measures.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Collect feedback from users and stakeholders to identify areas for improvement.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Success Criteria:",
+     "page": 29,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Achieve specified performance metrics for data ingestion, processing, and storage.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Demonstrate reliable and secure data exchange with external data centres.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Validate compliance with all regulatory and security requirements.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure system stability and performance under real-world workloads.",
+     "page": 29,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Obtain positive feedback from users and stakeholders on system usability and functionality.",
+     "page": 30,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Deliverables:",
+     "page": 30,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Operational demonstration report detailing the test results, success criteria achieved, and any remaining issues to be addressed.",
+     "page": 30,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Finalised system documentation reflecting the operational setup and configurations.",
+     "page": 30,
+     "indent": 2
+    }
+   ],
+   "id": "s5-1-2",
+   "chars": 1726,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "5.2",
+   "title": "Maintenance Requirements",
+   "page": 30,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The maintenance requirements outline the necessary activities to ensure the continuous and efficient operation of the Platform. These activities include scheduled updates, upgrades, and routine maintenance tasks.",
+     "page": 30,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Scheduled Updates:",
+     "page": 30,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Regularly update the operating systems, middleware, and application software to ensure security and compatibility with other components.",
+     "page": 30,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Implement patches and updates for all software components to address known vulnerabilities and improve system performance.",
+     "page": 30,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Upgrades:",
+     "page": 30,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Plan and execute system upgrades to enhance hardware and software capabilities as needed.",
+     "page": 30,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure minimal downtime and disruption during upgrades by scheduling them during off-peak hours and providing advance notice to users.",
+     "page": 30,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Routine Maintenance:",
+     "page": 30,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Perform regular backups of all data and system configurations.",
+     "page": 30,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Monitor system performance and resource utilisation to identify and address potential issues proactively.",
+     "page": 30,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Conduct periodic security audits and vulnerability assessments to ensure continued compliance with security standards.",
+     "page": 30,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Documentation:",
+     "page": 30,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Maintain detailed records of all maintenance activities, including updates, upgrades, and any issues encountered and resolved.",
+     "page": 30,
+     "indent": 2
+    }
+   ],
+   "id": "s5-2",
+   "chars": 1165,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "5.3",
+   "title": "Support and Training",
+   "page": 30,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "To ensure the successful operation of the Platform, a comprehensive support and training plan must be implemented. This plan must include knowledge transfer to local operators and ongoing training programs for system operators.",
+     "page": 30,
+     "indent": 0
+    }
+   ],
+   "id": "s5-3",
+   "chars": 227,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "5.3.1",
+   "title": "Knowledge Transfer",
+   "page": 31,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The knowledge transfer plan must ensure that local operators have the necessary knowledge and skills to manage and operate the Platform independently.",
+     "page": 31,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Objectives:",
+     "page": 31,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Provide detailed documentation and training materials covering the major aspects of the system.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure local operators understand the system architecture, workflows, and maintenance procedures.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Facilitate hands-on training sessions to reinforce theoretical knowledge.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Activities:",
+     "page": 31,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Develop comprehensive training manuals and technical documentation.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Conduct workshops and training sessions with local operators to cover system installation, configuration, and maintenance.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Provide ongoing support and mentorship to local operators during the initial operational phase.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Deliverables:",
+     "page": 31,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Training manuals and technical documentation.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Knowledge transfer report detailing the training activities conducted and the proficiency level of local operators.",
+     "page": 31,
+     "indent": 2
+    }
+   ],
+   "id": "s5-3-1",
+   "chars": 894,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "5.3.2",
+   "title": "Training Programs",
+   "page": 31,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Ongoing training programs must ensure that system operators remain proficient in managing and operating the Platform. These programs should include regular training sessions and updates to reflect new features and best practices.",
+     "page": 31,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Objectives:",
+     "page": 31,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Keep system operators up-to-date with the latest system updates and best practices.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Provide training on new features and functionalities as they are implemented.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Enhance the skills and knowledge of system operators to improve overall system performance and reliability.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Activities:",
+     "page": 31,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Schedule regular training sessions and workshops to cover new features and updates.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Develop and distribute training materials and guides for new functionalities.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Conduct periodic assessments to evaluate the proficiency of system operators and identify areas for improvement.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Deliverables:",
+     "page": 31,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Training schedules and materials.",
+     "page": 31,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Assessment reports evaluating the proficiency of system operators.",
+     "page": 31,
+     "indent": 2
+    }
+   ],
+   "id": "s5-3-2",
+   "chars": 902,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "6",
+   "title": "Performance Metrics",
+   "page": 32,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The performance metrics for the Platform are designed to ensure efficient system operation, meeting user demands, and maintaining high reliability and availability. These metrics lay the groundwork for the Key Performance Indicators (KPIs) that will be detailed in the Service Level Agreement (SLA). Establishing these metrics ensures that service levels are measurable, monitored, and reported effectively.",
+     "page": 32,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "By focusing on system availability, data throughput, latency, and user capacity, the Platform can deliver services and support a growing user base effectively. These metrics will be formalised in the subsequent Service Level Agreement (SLA), providing a clear framework for performance measurement and continuous improvement.",
+     "page": 32,
+     "indent": 0
+    }
+   ],
+   "id": "s6",
+   "chars": 732,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "6.1",
+   "title": "System Availability and Uptime",
+   "page": 32,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "System availability and uptime are key for the reliability of the Platform, ensuring the system is accessible and operational for users at all times with minimal downtime.",
+     "page": 32,
+     "indent": 0
+    }
+   ],
+   "id": "s6-1",
+   "chars": 171,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "6.1.1",
+   "title": "Metrics and Targets",
+   "page": 32,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The system should achieve an uptime of 99.5% annually, translating to a maximum allowable downtime of approximately 44 hours per year. Scheduled maintenance should be planned during off-peak hours with advance communication to minimise user impact. Unscheduled downtime and blocking issues should be addressed promptly, targeting a mean time to repair (MTTR) of less than 1 hour. Continuous monitoring of system health and performance, coupled with automated alerts for potential issues, will ensure rapid response and resolution.",
+     "page": 32,
+     "indent": 0
+    }
+   ],
+   "id": "s6-1-1",
+   "chars": 530,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "6.1.2",
+   "title": "Proposed KPI",
+   "page": 32,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "System Availability: Measure and report system uptime, targeting 99.5% availability, including detailed records of downtime events and resolution times. Link availability to the performance of the data ingestion, catalog and access services.",
+     "page": 32,
+     "indent": 0
+    }
+   ],
+   "id": "s6-1-2",
+   "chars": 241,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "6.2",
+   "title": "Data Throughput and Latency",
+   "page": 32,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Data throughput and latency are essential for assessing the performance of data processing and transfer within the Platform, ensuring timely data processing and availability to users.",
+     "page": 32,
+     "indent": 0
+    }
+   ],
+   "id": "s6-2",
+   "chars": 183,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "6.2.1",
+   "title": "Performance Metrics",
+   "page": 32,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The system should support a data ingestion and processing throughput of at least 0,350 TB per hour, with scalability to handle peak data loads up to 3,5 TB per hour during high-demand periods. Data processing latency should be minimised, with an end-to-end",
+     "page": 32,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "processing target of less than 1 hour for standard data products. Real-time data streams should have a maximum latency of 5 minutes from ingestion to availability. Performance monitoring tools should be implemented to track data throughput and latency continuously, optimising data processing pipelines to reduce bottlenecks and improve efficiency.",
+     "page": 33,
+     "indent": 0
+    }
+   ],
+   "id": "s6-2-1",
+   "chars": 604,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "6.2.2",
+   "title": "Proposed KPI",
+   "page": 33,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Data Ingestion Timeliness: Measure the time from data availability at the source to data being accessible in the system, with specific targets for different data types.",
+     "page": 33,
+     "indent": 0
+    }
+   ],
+   "id": "s6-2-2",
+   "chars": 168,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "6.3",
+   "title": "User Capacity and Scalability",
+   "page": 33,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "User capacity and scalability metrics ensure that the Platform can support a growing number of users and handle increased demand without compromising performance.",
+     "page": 33,
+     "indent": 0
+    }
+   ],
+   "id": "s6-3",
+   "chars": 162,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "6.3.1",
+   "title": "Capacity Planning",
+   "page": 33,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The system should support up to 3,000 concurrent users, ensuring reliable access to data and services. User access should be managed to prevent overloads, prioritising critical users and tasks. Horizontal scaling should be implemented to add more resources as user demand grows, ensuring the system architecture supports scalability with minimal downtime or reconfiguration.",
+     "page": 33,
+     "indent": 0
+    }
+   ],
+   "id": "s6-3-1",
+   "chars": 374,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "6.3.2",
+   "title": "Performance Metrics",
+   "page": 33,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Maintain an average response time of less than 5 seconds for user requests under normal load conditions, ensuring the system can handle peak loads with response times not exceeding 7,5 seconds. Resource utilisation should be monitored continuously to ensure optimal performance, targeting utilisation levels between 50-70% under normal conditions, allowing headroom for peak loads.",
+     "page": 33,
+     "indent": 0
+    }
+   ],
+   "id": "s6-3-2",
+   "chars": 381,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "6.3.3",
+   "title": "Proposed KPI",
+   "page": 33,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "User Capacity and Scalability: Measure the number of concurrent users supported and system response times under varying loads, reporting on resource utilisation and scaling events.",
+     "page": 33,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Data Offer Completeness: Measure the percentage of successful data items requests made by the users.",
+     "page": 33,
+     "indent": 0
+    }
+   ],
+   "id": "s6-3-3",
+   "chars": 280,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "7",
+   "title": "Summary of Requirements",
+   "page": 34,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "This section summarises all the requirements outlined in the \"CopernicusLAC Centre Specification and Performance Requirements\" document. Each requirement is assigned a unique ID for easy reference and the requirements are divided into different tables based on their type: Functional Specifications, Non-Functional Specifications, Infrastructure Specifications, Operational Specifications and Performance Metrics.",
+     "page": 34,
+     "indent": 0
+    }
+   ],
+   "id": "s7",
+   "chars": 413,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.1",
+   "title": "Functional Specifications",
+   "page": 34,
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "ID",
+       "Requirement"
+      ],
+      [
+       "FS-1",
+       "Scalable storage solutions for large volumes of Copernicus Sentinel data."
+      ],
+      [
+       "FS-2",
+       "Efficient data management practices ensuring data integrity, redundancy, and backup."
+      ],
+      [
+       "FS-3",
+       "Access to stored data for authorised users through a web-based portal and APIs."
+      ],
+      [
+       "FS-4",
+       "Continuous federation of data between the CopernicusLAC Centre and other relevant data hubs."
+      ],
+      [
+       "FS-5",
+       "Automated and scalable data ingestion processes handling batch and real-time data streams."
+      ],
+      [
+       "FS-6",
+       "Cloud-native processing environment supporting scalable and elastic data processing capabilities."
+      ],
+      [
+       "FS-7",
+       "Integration of standard EO data processing toolboxes and additional tools identified in the CopernicusLAC services procurement."
+      ],
+      [
+       "FS-8",
+       "Middleware components to facilitate data processing, delivered as open-source."
+      ],
+      [
+       "FS-9",
+       "Data exchange mechanisms facilitating data sharing between CopernicusLAC Centre and other data centres."
+      ],
+      [
+       "FS-10",
+       "Compliance with established standards (e.g., OGC) for data exchange and interoperability with other data centres."
+      ],
+      [
+       "FS-11",
+       "APIs providing programmatic access to data exchange functionalities."
+      ]
+     ],
+     "header": true,
+     "page": 34
+    }
+   ],
+   "id": "s7-1",
+   "chars": 0,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 2,
+   "num": "7.2",
+   "title": "Non-Functional Specifications",
+   "page": 35,
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "ID",
+       "Requirement"
+      ],
+      [
+       "NS-1",
+       "System uptime target of 99.5% annually."
+      ],
+      [
+       "NS-2",
+       "Disaster recovery plans ensure system resilience and quick recovery in case of failures."
+      ],
+      [
+       "NS-3",
+       "Horizontal scaling to handle increasing data volumes and user demands."
+      ],
+      [
+       "NS-4",
+       "Optimization for low-latency data access and processing."
+      ],
+      [
+       "NS-5",
+       "Comprehensive security measures protecting data integrity, confidentiality, and availability."
+      ],
+      [
+       "NS-6",
+       "Authentication and authorization mechanisms, including multi-factor authentication (MFA) and role-based access control (RBAC)."
+      ],
+      [
+       "NS-7",
+       "Compliance with data protection regulations, including GDPR, and maintaining comprehensive logs and audit trails."
+      ],
+      [
+       "NS-8",
+       "Secure data transfer protocols and incident response plans."
+      ],
+      [
+       "NS-9",
+       "Compliance with OGC standards, including CWL, Docker, S3, Kubernetes, STAC, OGC WMTS, OGC API - Features, and OGC API - Processes."
+      ],
+      [
+       "NS-10",
+       "Delivery of all middleware and tools as open-source with comprehensive documentation."
+      ]
+     ],
+     "header": true,
+     "page": 35
+    }
+   ],
+   "id": "s7-2",
+   "chars": 0,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 2,
+   "num": "7.3",
+   "title": "Infrastructure Specifications",
+   "page": 35,
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "ID",
+       "Requirement"
+      ],
+      [
+       "IS-1",
+       "High-performance servers with multi-core processors and a minimum of 256 GB RAM per server."
+      ],
+      [
+       "IS-2",
+       "Distributed storage architecture with a minimum of 1 PB raw storage, scalable and with backup systems."
+      ],
+      [
+       "IS-3",
+       "High-speed Ethernet switches (10 Gbps or higher) with redundant network interfaces."
+      ],
+      [
+       "IS-4",
+       "Linux-based operating systems, regularly updated and patched."
+      ],
+      [
+       "ID",
+       "Requirement"
+      ],
+      [
+       "IS-5",
+       "Middleware supports container orchestration, workflow management, and integration with EO processing toolboxes."
+      ],
+      [
+       "IS-6",
+       "Web-based portals, APIs, data catalog and management systems, and visualisation tools."
+      ],
+      [
+       "IS-7",
+       "High-speed internal network (10 Gbps or higher) with redundant networking paths."
+      ],
+      [
+       "IS-8",
+       "High-bandwidth internet connections for data exchange with external data centres, integrating with regional high-speed networks."
+      ],
+      [
+       "IS-9",
+       "Firewalls, VPNs, and regular network audits and security assessments."
+      ]
+     ],
+     "header": true,
+     "page": 35
+    }
+   ],
+   "id": "s7-3",
+   "chars": 0,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 2,
+   "num": "7.4",
+   "title": "Operational Specifications",
+   "page": 36,
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "ID",
+       "Requirement"
+      ],
+      [
+       "OS-1",
+       "Comprehensive system integration tests and performance benchmarking."
+      ],
+      [
+       "OS-2",
+       "Comprehensive operational demonstration with real-world data sets and workloads, validating scalability and performance."
+      ],
+      [
+       "OS-3",
+       "Scheduled updates, upgrades, and regular maintenance tasks to ensure continuous and efficient operation."
+      ],
+      [
+       "OS-4",
+       "Automated monitoring and alert systems for proactive issue identification and resolution."
+      ],
+      [
+       "OS-5",
+       "Comprehensive training programs and documentation for local operators, including ongoing support and mentorship."
+      ],
+      [
+       "OS-6",
+       "Knowledge transfer initiatives to ensure continuity in case of staff turnover."
+      ]
+     ],
+     "header": true,
+     "page": 36
+    }
+   ],
+   "id": "s7-4",
+   "chars": 0,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 2,
+   "num": "7.5",
+   "title": "Performance Metrics",
+   "page": 36,
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "ID",
+       "Requirement"
+      ],
+      [
+       "PM-1",
+       "Continuous monitoring of system health and performance, with automated alerts for rapid response and resolution."
+      ],
+      [
+       "ID",
+       "Requirement"
+      ],
+      [
+       "PM-2",
+       "Performance monitoring tools to track data throughput and latency, optimising data processing pipelines."
+      ],
+      [
+       "PM-3",
+       "Horizontal scaling to add resources as user demand grows, ensuring system architecture supports scalability."
+      ]
+     ],
+     "header": true,
+     "page": 36
+    }
+   ],
+   "id": "s7-5",
+   "chars": 0,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 1,
+   "num": "8",
+   "title": "Annexes",
+   "page": 38,
+   "blocks": [],
+   "id": "s8",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "8.1",
+   "title": "Annex A - Infrastructure Requirements for the CopernicusLAC Centre Platform",
+   "page": 38,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "This annex outlines the infrastructure requirements for the establishment and operation of the CopernicusLAC Centre Platform. It is structured to inform the procurement of cloud infrastructure resources supporting large-scale EO data ingestion, processing, and dissemination. The infrastructure must be scalable, cloud-native, and built for high availability, performance, and secure federated data exchange with other Copernicus data centres.",
+     "page": 38,
+     "indent": 0
+    }
+   ],
+   "id": "s8-1",
+   "chars": 443,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.1.1",
+   "title": "Compute & Orchestration Environment",
+   "page": 38,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Cloud-Native Design: The platform must be deployed on infrastructure supporting Kubernetes as a Service (KaaS) and Databases as a Service (DBaaS) to allow dynamic workload orchestration and seamless database provisioning.",
+     "page": 38,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Kubernetes Cluster: A High Availability (HA) managed Kubernetes service capable of scaling to 1000 nodes, supporting:",
+     "page": 38,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Automated scheduling, auto-scaling, self-healing, and service discovery.",
+     "page": 38,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Execution of containerized EO workflows (e.g. using CWL/Argo Workflows).",
+     "page": 38,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Virtual Machines (VMs): Multiple VM classes are required to support both core platform services and high-performance data processing:",
+     "page": 38,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "From 4 vCPU/16 GB to 32 vCPU/128 GB instances.",
+     "page": 38,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Optimized for parallel, data-intensive EO tasks.",
+     "page": 38,
+     "indent": 0
+    }
+   ],
+   "id": "s8-1-1",
+   "chars": 709,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.1.2",
+   "title": "Storage Architecture",
+   "page": 38,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Tiered Storage Strategy combining:",
+     "page": 38,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Block Storage (SSD): Ultra-fast disks with up to 20,000 IOPS, 1 ms latency, and 70 TB of provisioned capacity for active workflows and cache.",
+     "page": 38,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Object Storage:",
+     "page": 38,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "2 PB online tier for near-real-time access to active datasets.",
+     "page": 38,
+     "indent": 4
+    },
+    {
+     "type": "bullet",
+     "text": "20 PB cold tier for archival of previous years’ Sentinel data.",
+     "page": 38,
+     "indent": 4
+    },
+    {
+     "type": "bullet",
+     "text": "Database Services:",
+     "page": 38,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "PostgreSQL (HA): Four instances (16 vCPU, 64 GB RAM each), ensuring transactional integrity and high availability for catalogue and metadata services.",
+     "page": 38,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Storage must be distributed and fault-tolerant, capable of serving both interactive access and bulk processing simultaneously.",
+     "page": 38,
+     "indent": 0
+    }
+   ],
+   "id": "s8-1-2",
+   "chars": 608,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.1.3",
+   "title": "Network Infrastructure",
+   "page": 39,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "External Connectivity:",
+     "page": 39,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Minimum 3 Gbps dedicated uplink, protected by multi-layered firewall systems and intrusion detection.",
+     "page": 39,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Internal Networking:",
+     "page": 39,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "High-performance internal fabric at ≥10 Gbps, supporting rapid data transfer between storage, compute, and platform components.",
+     "page": 39,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Designed with redundant paths and failover mechanisms to guarantee service continuity.",
+     "page": 39,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Federated Access & Data Exchange:",
+     "page": 39,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Integration with the BELLA backbone for interconnection with the Chile Copernicus Data Centre.",
+     "page": 39,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Catalogue federation and data access through STAC-compliant APIs.",
+     "page": 39,
+     "indent": 2
+    }
+   ],
+   "id": "s8-1-3",
+   "chars": 548,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.1.4",
+   "title": "Security & Availability",
+   "page": 39,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Access Control:",
+     "page": 39,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Mandatory Role-Based Access Control (RBAC) and Multi-Factor Authentication (MFA) for user and admin access.",
+     "page": 39,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Data Protection:",
+     "page": 39,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "End-to-end encryption at rest and in transit.",
+     "page": 39,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Comprehensive audit logging for all access and operational actions.",
+     "page": 39,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Compliance:",
+     "page": 39,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Adherence to GDPR and ESA security standards.",
+     "page": 39,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "High Availability Objectives:",
+     "page": 39,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "The system must meet a ≥99.5% uptime target, with full support for disaster recovery and automated failover.",
+     "page": 39,
+     "indent": 2
+    }
+   ],
+   "id": "s8-1-4",
+   "chars": 443,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.1.5",
+   "title": "Performance and Operational Requirements",
+   "page": 39,
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Designed to support ≥3000 concurrent users with guaranteed responsiveness.",
+     "page": 39,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Horizontal scaling is required across compute, storage, and service tiers.",
+     "page": 39,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Performance monitoring tools must ensure real-time tracking of:",
+     "page": 39,
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Resource utilization,",
+     "page": 39,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Data throughput and latency,",
+     "page": 39,
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "System health and user traffic patterns.",
+     "page": 39,
+     "indent": 2
+    }
+   ],
+   "id": "s8-1-5",
+   "chars": 300,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.1.6",
+   "title": "Summary Table – Infrastructure Components",
+   "page": 40,
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Component",
+       "Qty / Capacity",
+       "Configuration / Notes"
+      ],
+      [
+       "Kubernetes Cluster (HA)",
+       "1",
+       "Managed service, scalable up to 1000 nodes"
+      ],
+      [
+       "VMs (4 vCPU, 16 GB RAM)",
+       "24",
+       "Core services"
+      ],
+      [
+       "VMs (8 vCPU, 32 GB RAM)",
+       "64 + 60",
+       "Core + processing workloads"
+      ],
+      [
+       "VMs (16 vCPU, 64 GB RAM)",
+       "60",
+       "EO processing"
+      ],
+      [
+       "VMs (32 vCPU, 128 GB RAM)",
+       "40",
+       "EO processing"
+      ],
+      [
+       "Load Balancer (HA)",
+       "1",
+       "Managed, ≥ 4 Gbps capacity"
+      ],
+      [
+       "PostgreSQL DB (HA)",
+       "4 instances",
+       "16 vCPU, 64 GB RAM each"
+      ],
+      [
+       "SSD Block Storage",
+       "70 TB",
+       "High IOPS, low latency tier"
+      ],
+      [
+       "Object Storage (Online)",
+       "2 PB",
+       "For current datasets"
+      ],
+      [
+       "Object Storage (Cold Archive)",
+       "20 PB",
+       "For historical data"
+      ],
+      [
+       "External Network",
+       "≥ 3 Gbps",
+       "Internet access, firewall-protected"
+      ],
+      [
+       "Internal Network",
+       "≥ 10 Gbps",
+       "Redundant paths, BELLA backbone"
+      ],
+      [
+       "Security Stack",
+       "IDS/IPS, RBAC, MFA",
+       "With encrypted communications and auditing"
+      ],
+      [
+       "Availability Target",
+       "≥ 99.5% uptime",
+       "Disaster recovery and failover supported"
+      ]
+     ],
+     "header": true,
+     "page": 40,
+     "caption": "Table 3 - Infrastructure Components summary"
+    }
+   ],
+   "id": "s8-1-6",
+   "chars": 0,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 2,
+   "num": "8.2",
+   "title": "Annex B - Estimated Man-Power Effort for Operations and Maintenance",
+   "page": 40,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "This annex provides an estimate of the man-power resources required to operate and maintain the CopernicusLAC Centre Platform during its operational phase. The figures presented below are indicative and reflect the anticipated effort to ensure reliable service availability, ongoing infrastructure support, user assistance, and compliance with technical, security, and procedural requirements. This effort estimate assumes that the platform infrastructure is aligned with the requirements described in Annex A.",
+     "page": 40,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The estimation is structured around the key functional domains involved in the platform’s operation. These include core infrastructure and orchestration, platform services, data validation and user support, security management, and training and documentation. The estimates are expressed in Full-Time Equivalent (FTE) terms and are based on a continuous operational model.",
+     "page": 41,
+     "indent": 0
+    }
+   ],
+   "id": "s8-2",
+   "chars": 882,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.2.1",
+   "title": "Roles and Responsibilities",
+   "page": 41,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The Platform Operator is expected to be the central operational role, overseeing the health of the infrastructure, monitoring container orchestration environments, deploying updates, and coordinating the day-to-day running of services. A continuous effort is foreseen to cover 24/7 availability and ensure proper functioning of the system.",
+     "page": 41,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "A DevOps Engineer will support automation, monitoring, infrastructure updates, and maintenance of the CI/CD pipelines. This role, essential for managing both preventive and corrective interventions on the platform.",
+     "page": 41,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The EO Data Analyst will contribute to the verification and validation of data products, focusing on data quality, consistency of ingestion workflows, and processing outcomes. This effort, while not continuous at full load, is expected to be higher during periods of high ingestion and routine validation operations.",
+     "page": 41,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "The User Support Officer will ensure helpdesk operations, account management, onboarding support, and resolution of user service requests. A full time person might be considered necessary to address user support in both English and Spanish, ensuring responsiveness across multiple time zones.",
+     "page": 41,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "For system security and data protection, the involvement of a Security and Compliance Officer is necessary to perform periodic audits, monitor compliance with GDPR and ESA data protection rules, and oversee system hardening. The effort of this role is estimated to be low and based on a quarterly security cycle and audit programme.",
+     "page": 41,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "A Training and Knowledge Transfer Lead will coordinate the delivery of capacity-building activities aimed at local operators in Panama. This includes preparation of manuals, delivery of initial and refresher training sessions, and mentoring. A dedicated effort is expected during the first 12 to 18 months of operations, with reduced commitment thereafter.",
+     "page": 41,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Finally, a Quality Assurance and Documentation function will maintain technical documentation, Standard Operating Procedures (SOPs), and reports for internal and external stakeholders.",
+     "page": 41,
+     "indent": 0
+    }
+   ],
+   "id": "s8-2-1",
+   "chars": 2033,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.2.2",
+   "title": "Consolidated Effort Summary",
+   "page": 41,
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The table below summarizes the estimated man-power required for each activity domain of the CopernicusLAC Centre Platform.",
+     "page": 41,
+     "indent": 0
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Activity Domain",
+       "Estimated Total Effort"
+      ],
+      [
+       "Operations and Infrastructure",
+       "3.5 FTE (Platform Ops + DevOps)"
+      ],
+      [
+       "Support and User Services",
+       "2.0 FTE (User Support + EO Analyst)"
+      ],
+      [
+       "Security and Compliance",
+       "0.5 FTE"
+      ],
+      [
+       "Training and Documentation",
+       "1.0 FTE (first 12–18 months), then 0.5 FTE ongoing"
+      ]
+     ],
+     "header": true,
+     "page": 42,
+     "caption": "Table 4 - Operations & Maintenance effort summary"
+    },
+    {
+     "type": "para",
+     "text": "These estimates assume the use of managed services for Kubernetes and database operations, and rely on cloud-hosted infrastructure with monitoring and backup systems integrated as part of the baseline provisioning. In case of hybrid or fully on-premise deployments, additional system administration resources may be required.",
+     "page": 42,
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Operational responsibility is expected to transition progressively to local staff during the early phases of maturity, supported by a structured knowledge transfer programme. Adjustments to these figures should be made during project implementation, based on actual platform configuration, usage metrics, and service uptake.",
+     "page": 42,
+     "indent": 0
+    }
+   ],
+   "id": "s8-2-2",
+   "chars": 771,
+   "figures": 0,
+   "tables": 1
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.1 Overview · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s6.html">6</a><i>›</i><span>6.1 · Overview</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 6.1</span>
+  <h1>Overview</h1>
+  <p class="lede">El proceso encapsula código, dependencias, configuración, metadatos y entorno de ejecución siguiendo las buenas prácticas OGC de EO Application Packaging y EOEPCA; cuatro pasos: definir workflows, crear el paquete, publicarlo en Harbor y versionarlo.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>59–60</b></span></div>
+</div>
+<section class="prose"><p>Application packaging in the CopernicusLAC platform is a systematic process that encapsulates all components necessary for EO data processing workflows. This includes the application code, dependencies, configuration files, metadata, and runtime environments. The primary objective is to create standardised, portable packages that can be deployed consistently across diverse environments, from local development setups to cloud-based infrastructures and to be deployed as a web service.</p>
+<p>This process adheres to the Best Practices for Earth Observation Application Packaging7 as defined by the Open Geospatial Consortium (OGC) and the EO Exploitation Platform Common Architecture8 (EOEPCA) spearheaded by the European Space Agency (ESA). These guidelines ensure that EO applications are reproducible and portable across different execution scenarios.</p>
+<p>The application packaging process leverages several key technologies:</p>
+<ul><li>CWL: Standard for describing the workflows and tools used in EO data processing. It ensures that applications are portable and can be executed consistently.</li><li>GitLab: GitLab is used for version control, managing the application code, workflows, and configuration files. It also handles Continuous Integration (CI) pipelines that automate the packaging process.</li><li>Harbor: Harbor serves as the container registry where Docker images of the packaged applications are stored. These images include all necessary runtime environments and dependencies.</li><li>Kubernetes and Helm: These tools are used to deploy the packaged applications within the platform’s cloud environment. Kubernetes orchestrates the containers, while Helm manages the deployment configurations.</li></ul>
+<p>The packaging workflow involves several key steps:</p>
+<ul><li>Defining Workflows and Dependencies: The first step involves defining the data processing workflows using CWL. This includes specifying tools, input/output files,</li></ul>
+<p>7 <a href="https://docs.ogc.org/bp/20-089r1.html" target="_blank" rel="noopener">https://docs.ogc.org/bp/20-089r1.html</a> 8 <a href="https://eoepca.org/" target="_blank" rel="noopener">https://eoepca.org/</a></p>
+<p>and dependencies required by the application. CWL provides a standardised syntax that ensures workflows are portable and reproducible.</p>
+<ul><li>Creating Application Packages: Application code, dependencies, and configuration files are packaged into a Docker image. This image is created using Dockerfiles, which specify the environment and dependencies required by the application.</li><li>Storing Packages in Harbor: The Docker image, along with its metadata, is pushed to the Harbor container registry. Harbor ensures that these packages are securely stored and easily retrievable for deployment.</li><li>Versioning: Each application package is versioned using GitLab. Version control allows developers to track changes over time, ensuring that different versions of an application can be maintained, tested, and deployed as needed.</li></ul></section>
+<nav class="pager"><a class="prev" href="s6.html"><i>←</i><span>6 · Application Packaging</span></a><a class="next" href="s6-2.html"><span>6.2 · Common Workflow Language (CWL)</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

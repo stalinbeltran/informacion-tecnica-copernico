@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.2.2 Direct Metadata Access · D3</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D3</a><i>›</i><a href="s4.html">4</a><i>›</i><a href="s4-2.html">4.2</a><i>›</i><span>4.2.2 · Direct Metadata Access</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D3 · Interface Control Document · Capítulo 4.2.2</span>
+  <h1>Direct Metadata Access</h1>
+  <p class="lede">GET .../items y GET .../items/&lt;item-id&gt; devuelven un FeatureCollection o un Feature GeoJSON, sin necesidad de filtrar.</p>
+  <div class="tags"><span class="tag">Endpoint</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>18–19</b></span></div>
+</div>
+<section class="prose"><p>Metadata about specific items within a collection can be accessed directly without filtering. The following methods are supported:</p>
+<ul><li>GET /collections/&lt;collection-id&gt;/items: Retrieves a GeoJSON FeatureCollection representing all items within the specified collection.</li><li>GET /collections/&lt;collection-id&gt;/items/&lt;item-id&gt;: Retrieves a single GeoJSON Feature representing the item identified by &lt;item-id&gt;.</li></ul>
+<p>For example, to access metadata for a specific Sentinel-2 item, the following request can be made: <a href="https://&lt;discover-server&gt;/collections/sentinel-s2-l1c-cogs/items/S2A" target="_blank" rel="noopener">https://&lt;discover-server&gt;/collections/sentinel-s2-l1c-cogs/items/S2A</a> _MSIL1C_20231122T102331_N0509_R065_T32TMR_20231122T122209</p>
+<p>This request would return a GeoJSON Feature with detailed metadata about the specific Sentinel-2 product.</p></section>
+<nav class="pager"><a class="prev" href="s4-2-1.html"><i>←</i><span>4.2.1 · Obtain Collection Information</span></a><a class="next" href="s4-2-3.html"><span>4.2.3 · Obtain Filter Criteria</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

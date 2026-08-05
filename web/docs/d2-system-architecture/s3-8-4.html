@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.8.4 Software Stack · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-8.html">3.8</a><i>›</i><span>3.8.4 · Software Stack</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.8.4</span>
+  <h1>Software Stack</h1>
+  <p class="lede">Crossplane, Kubernetes, External Secrets Operator, Terraform (opcional), Prometheus y Grafana, Helm y las APIs de los proveedores de nube.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>37–38</b></span></div>
+</div>
+<section class="prose"><p>The Resource Management component utilises a range of software tools and technologies to achieve its objectives:</p>
+<ul><li>Crossplane: An open-source control plane that enables the provisioning and management of cloud infrastructure resources through Kubernetes-native APIs.</li><li>Kubernetes: Used to orchestrate and manage containerized applications and infrastructure resources, providing scalability and reliability.</li><li>External Secrets Operator (ESO): Manages and injects secrets into Kubernetes resources, ensuring secure handling of sensitive information.</li><li>Terraform: Optionally used for defining and provisioning infrastructure as code, complementing Crossplane&#x27;s capabilities.</li><li>Prometheus and Grafana: For monitoring resource utilisation and performance metrics, providing visibility into the health and efficiency of the infrastructure.</li><li>Helm: Manages the deployment and configuration of Kubernetes applications, ensuring consistent and repeatable setups.</li><li>Cloud Provider APIs: Interfaces with cloud service providers (e.g., AWS, Azure, GCP) to provision and manage infrastructure resources.</li></ul></section>
+<nav class="pager"><a class="prev" href="s3-8-3.html"><i>←</i><span>3.8.3 · Integration Points</span></a><a class="next" href="s4.html"><span>4 · Data Ingestion Process</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

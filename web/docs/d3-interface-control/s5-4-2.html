@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5.4.2 Tile Request Format · D3</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D3</a><i>›</i><a href="s5.html">5</a><i>›</i><a href="s5-4.html">5.4</a><i>›</i><span>5.4.2 · Tile Request Format</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D3 · Interface Control Document · Capítulo 5.4.2</span>
+  <h1>Tile Request Format</h1>
+  <p class="lede">Cómo sustituir los marcadores {z}, {x} e {y} por nivel de zoom, columna y fila para pedir una tesela concreta, con ejemplo de URL resuelta.</p>
+  <div class="tags"><span class="tag">Ejemplo</span></div>
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>30</b></span></div>
+</div>
+<section class="prose"><p>To request a specific tile, the placeholders{z}, {x}, and {y}, in the tile link template must be replaced with actual values corresponding to the desired zoom level and geographic location on the tile grid. For example: &lt;view-url&gt;/collections/sentinel-s2-l1c-cogs/items/S2A_MSIL1C_2023112 2T102331_N0509_R065_T32TMR_20231122T122209/tiles/WebMercatorQuad/10/ 525/391@1x?&amp;assets=red&amp;assets=green&amp;assets=blue&amp;color_formula=Gamma% 20RGB%201.5%20Saturation%201%20Sigmoidal%20RGB%2010%200.3&amp;rescale=1, 6000&amp;rescale=1,6000&amp;rescale=1,6000</p>
+<p>In this request:</p>
+<ul><li>The {z} placeholder is replaced with 10, indicating the zoom level.</li><li>The {x} and {y} placeholders are replaced with 525 and 391, representing the tile’s column and row in the grid, respectively.</li></ul>
+<p>This URL will return a tile image showing the true colour composite of the EO product at the specified zoom level and location.</p></section>
+<nav class="pager"><a class="prev" href="s5-4-1.html"><i>←</i><span>5.4.1 · Tile Visualisations</span></a><a class="next" href="s6.html"><span>6 · Data Access Interfaces</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

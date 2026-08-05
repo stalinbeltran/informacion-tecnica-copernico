@@ -1,0 +1,99 @@
+{
+  "doc": {
+    "short": "Documento de control de interfaces (ICD): cómo se integran sistemas externos con la plataforma CopernicusLAC, con endpoints reales, ejemplos de consulta STAC, teselas WMTS y descarga mediante URLs firmadas.",
+    "long": "Documento de diseño de interfaces (D3) de Terradue para ESA. A diferencia de D2, que describe la arquitectura interna, este documento define el contrato hacia fuera: qué protocolos, formatos y esquemas de seguridad rigen las interacciones entre la plataforma del Centro CopernicusLAC y los sistemas externos —proveedores de datos, servicios de terceros y usuarios finales—. Cubre cuatro áreas funcionales: ingesta (integración con el Copernicus Data Space Ecosystem, formatos aceptados, validación y códigos de salida), descubrimiento (API STAC con colecciones, queryables y filtrado CQL2 en sus variantes JSON y texto), visualización (imágenes de vista previa y endpoints WMTS/XYZ con plantillas de teselas) y acceso a datos (esquema signed_url_auth para generar URLs pre-firmadas de descarga temporal desde el almacenamiento S3). Es el documento con más ejemplos concretos de petición y respuesta.",
+    "tags": ["Interfaces", "STAC API", "CQL2", "WMTS", "Signed URLs", "Terradue", "ESA"]
+  },
+  "sections": {
+    "portada": {
+      "short": "Portada, ficha de identificación del documento y registro de cambios de las versiones 1.0 a 1.3.",
+      "tags": ["Metadatos"]
+    },
+
+    "s1": {
+      "short": "Propósito del ICD, contexto de la iniciativa CopernicusLAC, alcance, público destinatario, estructura del documento y referencias con el glosario de acrónimos.",
+      "tags": ["Contexto", "Alcance", "Referencias"]
+    },
+    "s1-1": { "short": "Definir y gestionar las interfaces entre la plataforma y los sistemas externos: formatos de intercambio, protocolos y medidas de seguridad." },
+    "s1-2": { "short": "CopernicusLAC es una colaboración entre ESA, DG-INTPA y el Gobierno de Panamá para crear un Centro Regional Copernicus enfocado en reducción del riesgo de desastres.", "tags": ["ESA", "Panamá", "EU-LAC"] },
+    "s1-3": { "short": "Cubre cuatro áreas funcionales —ingesta, descubrimiento, visualización y acceso— más los procesos de prueba, validación y gestión de cambios." },
+    "s1-4": { "short": "Dirigido a arquitectos, desarrolladores, integradores, jefes de proyecto, socios externos y responsables de seguridad y cumplimiento." },
+    "s1-5": { "short": "Mapa de los seis capítulos y de lo que aborda cada uno." },
+    "s1-6": { "short": "Tabla de documentos aplicables: SOW, contrato ESA y entregables relacionados.", "tags": ["Tabla"] },
+    "s1-7": { "short": "Tabla de documentos de referencia, incluida la propuesta técnica de Terradue.", "tags": ["Tabla"] },
+    "s1-8": { "short": "Glosario de 18 acrónimos usados en el documento (API, CDSE, COG, CQL2, STAC, WMTS…).", "tags": ["Glosario"] },
+
+    "s2": {
+      "short": "Arquitectura de alto nivel como base para entender las interfaces: visión general, los ocho componentes clave y cinco escenarios de interacción entre ellos. Remite a D2 para el detalle.",
+      "tags": ["Arquitectura", "Componentes"]
+    },
+    "s2-1": { "short": "Arquitectura distribuida y cloud-native pensada para escalar ante grandes volúmenes de datos y workflows complejos.", "tags": ["Diagrama"] },
+    "s2-2": { "short": "Los ocho componentes centrales —ingesta, procesamiento, descubrimiento y acceso, front-end, espacio de trabajo, seguridad, empaquetado y despliegue, gestión de recursos— con su función e integración." },
+    "s2-3": { "short": "Cómo interoperan los componentes: modularidad, interfaces bien definidas y protocolos que gobiernan el flujo de datos." },
+    "s2-3-1": { "short": "Flujo de datos de la ingesta al procesamiento según el nivel elegido (solo metadatos, copia o calibración), y cómo el catálogo STAC unifica el acceso independientemente de dónde resida el dato." },
+    "s2-3-2": { "short": "Los resultados del procesamiento se devuelven al almacenamiento con metadatos actualizados; los usuarios los descubren y consumen desde los servicios de front-end." },
+    "s2-3-3": { "short": "Las aplicaciones EO se empaquetan como contenedores Docker con manifiesto CWL, se despliegan con Kubernetes y Helm, y se ejecutan por lotes o en tiempo real." },
+    "s2-3-4": { "short": "Keycloak centraliza identidad y control de acceso; MFA y RBAC limitan cada usuario a lo necesario, con registros de auditoría." },
+    "s2-3-5": { "short": "Aprovisionamiento y desaprovisionamiento automáticos de recursos y escalado horizontal para absorber picos de demanda." },
+
+    "s3": {
+      "short": "Interfaz de ingesta: cómo entran los datos desde fuentes externas —sobre todo el Copernicus Data Space Ecosystem—, con sus tres niveles, requisitos de formato, seguridad, gestión de errores y trabajo futuro.",
+      "tags": ["Ingesta", "CDSE", "STAC", "Event Bus"]
+    },
+    "s3-1": { "short": "Tres niveles de ingesta: recolección de metadatos, recolección con copia del dataset y recolección con calibración; diagrama de secuencia del flujo entre componentes.", "tags": ["Diagrama"] },
+    "s3-2": { "short": "Requisitos que debe cumplir quien entrega datos a la plataforma: formatos, validación inicial, ejecución del proceso y códigos de salida." },
+    "s3-2-1": { "short": "La entrada estándar del ETL es un STAC Item; sus assets deben venir en GeoTIFF, COG u otros formatos acordados." },
+    "s3-2-2": { "short": "El Event Bus dispara la ingesta; el workflow lee la plantilla desde el Registry y obtiene las imágenes de ingesta necesarias." },
+    "s3-2-3": { "short": "El Workflow Engine instancia y ejecuta la ingesta; las acciones concretas (indexar, descargar y validar, o calibrar) dependen del nivel elegido." },
+    "s3-2-4": { "short": "El proceso devuelve un código de salida y publica un mensaje en el topic de éxito o de fallo del Event Bus." },
+    "s3-3": { "short": "Formatos aceptados, obligaciones de la especificación STAC y protocolos de transferencia previstos." },
+    "s3-3-1": { "short": "Metadatos conformes a STAC para la recolección; GeoTIFF, COG u otros estándares acordados cuando hay copia o calibración." },
+    "s3-3-2": { "short": "El STAC Item debe incluir todos los campos obligatorios —metadatos espaciales y temporales— y referencias válidas a los assets." },
+    "s3-3-3": { "short": "Protocolo aún no cerrado; se prevé HTTPS, el que ya emplea el almacenamiento S3. La decisión final depende de los servicios del CDSE.", "tags": ["Abierto"] },
+    "s3-4": { "short": "Integridad de los datos, control de acceso a la interfaz y cumplimiento normativo en la ingesta." },
+    "s3-4-1": { "short": "La integridad se garantiza mediante verificación de checksum durante la ingesta." },
+    "s3-4-2": { "short": "Acceso restringido a entidades autorizadas, con autenticación segura previsiblemente basada en OAuth2." },
+    "s3-4-3": { "short": "Los datos sensibles ingeridos se tratan conforme al RGPD y demás normativa aplicable." },
+    "s3-5": { "short": "Detección de errores y registro de la actividad durante la ingesta." },
+    "s3-5-1": { "short": "Comprobaciones distintas por nivel; los datos problemáticos se mueven a almacenamiento temporal y se notifica al sistema de monitorización." },
+    "s3-5-2": { "short": "Registros completos de ingestas correctas y errores, necesarios para diagnóstico y auditoría." },
+    "s3-6": { "short": "Próximas iteraciones: rutinas de calibración definidas por el usuario y priorización dinámica de datasets según patrones de uso.", "tags": ["Roadmap"] },
+
+    "s4": {
+      "short": "Interfaz de descubrimiento: la API REST de STAC. Endpoints de colecciones y items, acceso directo a metadatos, obtención de criterios de filtrado (queryables), filtrado con CQL2 y anatomía completa de un STAC Item.",
+      "tags": ["STAC API", "CQL2", "GeoJSON", "Ejemplos"]
+    },
+    "s4-1": { "short": "El catálogo se expone mediante la API REST de STAC, un estándar consolidado que organiza los productos EO en colecciones y permite buscarlos y filtrarlos." },
+    "s4-2": { "short": "Los tres grupos de endpoints disponibles: colecciones, metadatos de items y criterios de filtrado." },
+    "s4-2-1": { "short": "GET /collections y GET /collections/<id>, con la respuesta JSON completa de la colección sentinel-s2-l1c-cogs como ejemplo.", "tags": ["Endpoint", "JSON"] },
+    "s4-2-2": { "short": "GET .../items y GET .../items/<item-id> devuelven un FeatureCollection o un Feature GeoJSON, sin necesidad de filtrar.", "tags": ["Endpoint"] },
+    "s4-2-3": { "short": "GET .../queryables devuelve los campos por los que se puede filtrar (datetime, geometry, eo:cloud_cover…), con ejemplo de respuesta.", "tags": ["Endpoint", "JSON"] },
+    "s4-3": { "short": "Dos vías de filtrado en /search: GET con CQL2-TEXT en la query string y POST con CQL2-JSON en el cuerpo, que admite consultas más complejas." },
+    "s4-3-1": { "short": "Cuatro ejemplos completos de cuerpo CQL2-JSON: por fecha (T_INTERSECTS), por área (S_INTERSECTS), por cobertura de nubes y combinando criterios.", "tags": ["POST", "Ejemplos"] },
+    "s4-3-2": { "short": "Los mismos cuatro casos expresados como query string CQL2-TEXT para peticiones GET.", "tags": ["GET", "Ejemplos"] },
+    "s4-4": { "short": "Un STAC Item de Sentinel-2 completo, campo a campo: links (incluidos los de teselas xyz), assets con bandas y estadísticas, geometry, bbox, properties y esquemas de autenticación.", "tags": ["Ejemplo extenso", "Sentinel-2"] },
+
+    "s5": {
+      "short": "Interfaz de visualización: los dos tipos soportados —imágenes de vista previa y endpoints WMTS/XYZ—, con las plantillas de enlace de teselas y el formato exacto de petición.",
+      "tags": ["Visualización", "WMTS", "XYZ", "Titiler"]
+    },
+    "s5-1": { "short": "La visualización permite explorar los datos EO mediante representaciones visuales: imágenes de resumen y teselas para mapas interactivos." },
+    "s5-2": { "short": "Dos tipos: imágenes de vista previa estáticas y endpoints WMTS con teselas para mapas navegables." },
+    "s5-3": { "short": "Las vistas previas se publican como asset del STAC Item con role \"overview\"; ejemplo con los parámetros de color, remuestreo y reescalado.", "tags": ["JSON"] },
+    "s5-4": { "short": "Los endpoints WMTS renderizan los datos como teselas dinámicas integrables en mapas web." },
+    "s5-4-1": { "short": "Un producto puede tener varias visualizaciones (color verdadero, falso color); se acceden mediante las plantillas de enlace de la extensión Web Map Links, con rel \"xyz\".", "tags": ["JSON"] },
+    "s5-4-2": { "short": "Cómo sustituir los marcadores {z}, {x} e {y} por nivel de zoom, columna y fila para pedir una tesela concreta, con ejemplo de URL resuelta.", "tags": ["Ejemplo"] },
+
+    "s6": {
+      "short": "Interfaz de acceso a datos: descarga de assets del almacenamiento de objetos mediante URLs pre-firmadas, con el esquema de autenticación, la generación, la respuesta y un ejemplo práctico de principio a fin.",
+      "tags": ["Signed URLs", "S3", "Bearer token", "cURL"]
+    },
+    "s6-1": { "short": "URLs pre-firmadas con acceso temporal, pensadas para máquina a máquina; el geobrowser las usa de forma transparente y los workflows CWL las evitan gracias al mecanismo de stage-in." },
+    "s6-2": { "short": "Para descargar un asset almacenado en objetos hay que generar una URL pre-firmada mediante el esquema signed_url_auth declarado en los metadatos del STAC Item." },
+    "s6-2-1": { "short": "Definición completa del esquema signed_url_auth en las properties del item: método, parámetros de cuerpo y cabecera, responseField y authorizationApi; y cómo el asset lo referencia con auth:refs.", "tags": ["JSON"] },
+    "s6-2-2": { "short": "Petición POST al endpoint de autorización con la URL S3 codificada y un token Bearer; ejemplo con cURL.", "tags": ["cURL"] },
+    "s6-2-3": { "short": "La respuesta JSON contiene el campo signed_url con la firma AWS4-HMAC-SHA256 y su caducidad; con redirect activado se devuelve además una cabecera Location.", "tags": ["JSON"] },
+    "s6-2-4": { "short": "El flujo resumido en tres pasos: pedir la URL firmada, recibirla y descargar el asset." },
+    "s6-3": { "short": "Caso completo de descarga de una banda NIR de Sentinel-2: identificar el asset, generar la URL firmada y descargar.", "tags": ["Ejemplo"] }
+  }
+}

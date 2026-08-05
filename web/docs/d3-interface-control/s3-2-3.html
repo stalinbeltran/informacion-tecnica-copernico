@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.2.3 Ingestion Process Execution · D3</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D3</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-2.html">3.2</a><i>›</i><span>3.2.3 · Ingestion Process Execution</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D3 · Interface Control Document · Capítulo 3.2.3</span>
+  <h1>Ingestion Process Execution</h1>
+  <p class="lede">El Workflow Engine instancia y ejecuta la ingesta; las acciones concretas (indexar, descargar y validar, o calibrar) dependen del nivel elegido.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>14</b></span></div>
+</div>
+<section class="prose"><p>The ingestion instance is instantiated and executed by the Workflow Engine, which handles the data acquisition and processing. At its full scope the system computes the data, enriches and posts the STAC item to the STAC FastAPI, and stores the processed product in the S3 Data Bucket, however depending on the ingestion level the actions are:</p>
+<ul><li>For metadata harvesting, the ingestion instance processes and indexes only the metadata, ensuring its alignment with the SpatioTemporal Asset Catalog (STAC) specification.</li><li>For metadata harvesting and dataset copying, the ingestion workflow downloads the dataset, validates its integrity, and stores it in the platform’s S3-compatible object storage.</li><li>For metadata harvesting with calibration, the workflow applies predefined calibration routines, such as georeferencing or format conversion, before registering the dataset and its metadata for discovery and access.</li></ul></section>
+<nav class="pager"><a class="prev" href="s3-2-2.html"><i>←</i><span>3.2.2 · Initial Data Validation</span></a><a class="next" href="s3-2-4.html"><span>3.2.4 · Application Exit Codes</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

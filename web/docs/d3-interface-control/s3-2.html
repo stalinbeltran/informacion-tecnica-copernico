@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.2 Interface Requirements · D3</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D3</a><i>›</i><a href="s3.html">3</a><i>›</i><span>3.2 · Interface Requirements</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D3 · Interface Control Document · Capítulo 3.2</span>
+  <h1>Interface Requirements</h1>
+  <p class="lede">Requisitos que debe cumplir quien entrega datos a la plataforma: formatos, validación inicial, ejecución del proceso y códigos de salida.</p>
+  
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>14–15</b></span></div>
+</div>
+<h2 class="secttl">Apartados</h2>
+<div class="grid">
+<a class="card leaf" href="s3-2-1.html">
+  <span class="eyebrow">3.2.1</span>
+  <h3>Data Formats</h3>
+  <p class="sum">La entrada estándar del ETL es un STAC Item; sus assets deben venir en GeoTIFF, COG u otros formatos acordados.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>14</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s3-2-2.html">
+  <span class="eyebrow">3.2.2</span>
+  <h3>Initial Data Validation</h3>
+  <p class="sum">El Event Bus dispara la ingesta; el workflow lee la plantilla desde el Registry y obtiene las imágenes de ingesta necesarias.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>14</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s3-2-3.html">
+  <span class="eyebrow">3.2.3</span>
+  <h3>Ingestion Process Execution</h3>
+  <p class="sum">El Workflow Engine instancia y ejecuta la ingesta; las acciones concretas (indexar, descargar y validar, o calibrar) dependen del nivel elegido.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>14</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s3-2-4.html">
+  <span class="eyebrow">3.2.4</span>
+  <h3>Application Exit Codes</h3>
+  <p class="sum">El proceso devuelve un código de salida y publica un mensaje en el topic de éxito o de fallo del Event Bus.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>15</b></span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+</div>
+<nav class="pager"><a class="prev" href="s3-1.html"><i>←</i><span>3.1 · Overview</span></a><a class="next" href="s3-2-1.html"><span>3.2.1 · Data Formats</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

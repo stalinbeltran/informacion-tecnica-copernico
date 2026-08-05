@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.4.4 Software Stack · D2</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">D2</a><i>›</i><a href="s3.html">3</a><i>›</i><a href="s3-4.html">3.4</a><i>›</i><span>3.4.4 · Software Stack</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">D2 · System Architecture Description · Capítulo 3.4.4</span>
+  <h1>Software Stack</h1>
+  <p class="lede">GitLab, Harbor, PostgreSQL gestionado para metadatos y control de acceso mediante IAM.</p>
+  
+  <div class="metrics"><span title="Páginas del PDF">pp. <b>28</b></span></div>
+</div>
+<section class="prose"><p>The Application Registry utilises a range of software tools and technologies to achieve its objectives:</p>
+<ul><li>GitLab: Used to store the application packages, including CWL descriptions, code, and configuration files. It provides version control and metadata management.</li><li>Harbor: Used to store and manage container images associated with application packages, ensuring that containers are easily accessible and deployable.</li><li>Metadata Database and Search: PostgreSQL, provided as a service by the cloud provider, is used within GitLab to manage the metadata associated with each application package and to enable querying capabilities.</li><li>Access Control: Implemented using IAM (Identity and Access Management) solutions within GitLab and Harbor to ensure secure access to the registry.</li></ul></section>
+<nav class="pager"><a class="prev" href="s3-4-3.html"><i>←</i><span>3.4.3 · Integration Points</span></a><a class="next" href="s3-5.html"><span>3.5 · Front-end Services</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
+  El contenido original de los documentos se conserva en inglés.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>
