@@ -20,17 +20,17 @@
 <div class="pagehead">
   <span class="eyebrow">D3 · Interface Control Document · Capítulo 5.3</span>
   <h1>Overview Images</h1>
-  <p class="lede">Las vistas previas se publican como asset del STAC Item con role &quot;overview&quot;; ejemplo con los parámetros de color, remuestreo y reescalado.</p>
+  <p class="lede">Las vistas previas se publican como asset del <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> Item con role &quot;overview&quot;; ejemplo con los parámetros de color, remuestreo y reescalado.</p>
   <div class="tags"><span class="tag">JSON</span></div>
   <div class="metrics"><span title="Páginas del PDF">pp. <b>28–29</b></span></div>
 </div>
-<section class="prose"><p>Overview images are simplified visual representations of the EO products, designed to provide a quick preview of the data. These images are accessible via a specific STAC Item asset, which includes the following key attributes:</p>
+<section class="prose"><p>Overview images are simplified visual representations of the <abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr> products, designed to provide a quick preview of the data. These images are accessible via a specific <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> Item asset, which includes the following key attributes:</p>
 <ul><li>href: The URL that points to the location of the overview image.</li><li>role: Set to &quot;overview&quot;, indicating that this asset is intended as a preview of the product.</li></ul>
-<p>Example of a STAC Item with an overview image:</p>
+<p>Example of a <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> Item with an overview image:</p>
 <p>-</p>
 <p>{ ... features: [ { ... &quot;assets&quot;: { ... &quot;overview&quot;: { &quot;href&quot;: &quot;&lt;view-url&gt;/collections/sentinel-s2-l1c-cogs/items/S2A_MSIL1C_20231122T102331_N0509_R065_T32TM R_20231122T122209/preview.png?&amp;assets=red&amp;assets=green&amp;assets=blue&amp;color_formula=Gamma%20RGB%2 01.5%20Saturation%201%20Sigmoidal%20RGB%2010%200.3&amp;max_size=1024&amp;resampling=cubic&amp;rescale=1,75 00&amp;rescale=1,7500&amp;rescale=1,7500&quot;, &quot;type&quot;: &quot;image/png&quot;,</p>
 <p>&quot;roles&quot;: [ &quot;overview&quot; ], &quot;title&quot;: &quot;Overview&quot; }, ... } } ] }</p>
-<p>This example shows how the href attribute links to an image, which is generated with specific parameters, such as resampling method and colour formula, to create a visually effective overview of the EO data.</p></section>
+<p>This example shows how the href attribute links to an image, which is generated with specific parameters, such as resampling method and colour formula, to create a visually effective overview of the <abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr> data.</p></section>
 <nav class="pager"><a class="prev" href="s5-2.html"><i>←</i><span>5.2 · Visualisation Types</span></a><a class="next" href="s5-4.html"><span>5.4 · Web Map Tile Service (WMTS) Endpoints</span><i>→</i></a></nav>
 </main>
 <footer class="foot">

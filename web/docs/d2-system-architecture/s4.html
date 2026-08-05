@@ -20,19 +20,19 @@
 <div class="pagehead">
   <span class="eyebrow">D2 · System Architecture Description · Capítulo 4</span>
   <h1>Data Ingestion Process</h1>
-  <p class="lede">Proceso completo de ingesta de datos EO: tecnologías empleadas, workflow paso a paso, selección del paquete de aplicación ETL, validación de contenido, perfil mínimo de metadatos STAC y enriquecimiento para visualización.</p>
+  <p class="lede">Proceso completo de ingesta de datos <abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr>: tecnologías empleadas, workflow paso a paso, selección del paquete de aplicación <abbr class="acr" title="Extract, Transform, Load" tabindex="0">ETL</abbr>, validación de contenido, perfil mínimo de metadatos <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> y enriquecimiento para visualización.</p>
   <div class="tags"><span class="tag">Ingesta</span><span class="tag">ETL</span><span class="tag">STAC</span><span class="tag">COG</span></div>
   <div class="metrics"><span title="Apartados"><b>6</b> apartados</span><span title="Páginas del PDF">pp. <b>39–47</b></span><span title="Figuras"><b>1</b> fig.</span><span title="Tablas"><b>1</b> tabl.</span></div>
 </div>
-<section class="prose"><p>The purpose of this section is to describe the process by which EO data is integrated into the CopernicusLAC platform. This process is essential for ensuring that data is accurately brought into the system, validated, and made available for subsequent discovery and processing activities.</p>
-<p>Data ingestion is the process of collecting, validating, and storing EO data. This process ensures that data is properly formatted, compliant with metadata standards, and securely stored for further use. The ingestion process might also involve pre-processing steps such as data or format transformation to ensure compatibility with the platform’s storage and processing systems.</p>
+<section class="prose"><p>The purpose of this section is to describe the process by which <abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr> data is integrated into the CopernicusLAC platform. This process is essential for ensuring that data is accurately brought into the system, validated, and made available for subsequent discovery and processing activities.</p>
+<p>Data ingestion is the process of collecting, validating, and storing <abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr> data. This process ensures that data is properly formatted, compliant with metadata standards, and securely stored for further use. The ingestion process might also involve pre-processing steps such as data or format transformation to ensure compatibility with the platform’s storage and processing systems.</p>
 <p>The section outlines the technologies, workflows, and standards involved in data ingestion, ensuring consistency and reliability across the platform.</p></section>
 <h2 class="secttl">En este capítulo</h2>
 <div class="grid">
 <a class="card leaf" href="s4-1.html">
   <span class="eyebrow">4.1</span>
   <h3>Technologies Used</h3>
-  <p class="sum">CWL define los workflows, Argo Workflows los orquesta y STAC estandariza el catálogo; los tres se adaptan a cada nivel de ingesta.</p>
+  <p class="sum"><abbr class="acr" title="Common Workflow Language" tabindex="0">CWL</abbr> define los workflows, Argo Workflows los orquesta y <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> estandariza el catálogo; los tres se adaptan a cada nivel de ingesta.</p>
   
   <div class="metrics"><span title="Páginas del PDF">pp. <b>39–40</b></span></div>
   <span class="go">Ver el detalle <i>→</i></span>
@@ -48,7 +48,7 @@
 <a class="card leaf" href="s4-3.html">
   <span class="eyebrow">4.3</span>
   <h3>Application Package Selection</h3>
-  <p class="sum">Cómo se elige el paquete ETL adecuado a partir de las propiedades del STAC Item; si faltan, se aplica un ETL genérico con funcionalidad reducida de descubrimiento y visualización.</p>
+  <p class="sum">Cómo se elige el paquete <abbr class="acr" title="Extract, Transform, Load" tabindex="0">ETL</abbr> adecuado a partir de las propiedades del <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> Item; si faltan, se aplica un <abbr class="acr" title="Extract, Transform, Load" tabindex="0">ETL</abbr> genérico con funcionalidad reducida de descubrimiento y visualización.</p>
   
   <div class="metrics"><span title="Páginas del PDF">pp. <b>42</b></span></div>
   <span class="go">Ver el detalle <i>→</i></span>
@@ -56,7 +56,7 @@
 <a class="card leaf" href="s4-4.html">
   <span class="eyebrow">4.4</span>
   <h3>Data Validation and Content Validation</h3>
-  <p class="sum">Validaciones específicas por nivel: presencia y conformidad del STAC Item, presencia de assets, verificación de checksums, validación de formato y comprobaciones de calibración y transformación.</p>
+  <p class="sum">Validaciones específicas por nivel: presencia y conformidad del <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> Item, presencia de assets, verificación de checksums, validación de formato y comprobaciones de calibración y transformación.</p>
   
   <div class="metrics"><span title="Páginas del PDF">pp. <b>43–44</b></span></div>
   <span class="go">Ver el detalle <i>→</i></span>
@@ -64,7 +64,7 @@
 <a class="card leaf" href="s4-5.html">
   <span class="eyebrow">4.5</span>
   <h3>Metadata Profile</h3>
-  <p class="sum">Perfil mínimo de metadatos basado en STAC: tabla con los campos obligatorios (id, geometry, bbox, datetime, assets…) que debe llevar todo activo geoespacial.</p>
+  <p class="sum">Perfil mínimo de metadatos basado en <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr>: tabla con los campos obligatorios (id, geometry, bbox, datetime, assets…) que debe llevar todo activo geoespacial.</p>
   <div class="tags"><span class="tag">Tabla</span><span class="tag">STAC</span></div>
   <div class="metrics"><span title="Páginas del PDF">pp. <b>44</b></span><span title="Tablas"><b>1</b> tabl.</span></div>
   <span class="go">Ver el detalle <i>→</i></span>
@@ -72,7 +72,7 @@
 <a class="card leaf" href="s4-6.html">
   <span class="eyebrow">4.6</span>
   <h3>Metadata Enrichment for Visualization</h3>
-  <p class="sum">Uso de las extensiones STAC Rendering y Web Map Links para generar composiciones (color verdadero, infrarrojo) y enlaces a servicios WMTS/XYZ, con ejemplos JSON.</p>
+  <p class="sum">Uso de las extensiones <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> Rendering y Web Map Links para generar composiciones (color verdadero, infrarrojo) y enlaces a servicios <abbr class="acr" title="Web Map Tile Service" tabindex="0">WMTS</abbr>/XYZ, con ejemplos JSON.</p>
   <div class="tags"><span class="tag">Rendering</span><span class="tag">Web Map Links</span><span class="tag">JSON</span></div>
   <div class="metrics"><span title="Páginas del PDF">pp. <b>45–47</b></span></div>
   <span class="go">Ver el detalle <i>→</i></span>

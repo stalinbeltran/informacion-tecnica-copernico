@@ -26,7 +26,7 @@
 </div>
 <section class="prose"><p>To generate a signed URL, a POST request must be made to an authorization endpoint. This request includes the S3 URL of the asset as well as authentication credentials.</p>
 <p>Example request using cURL:</p>
-<p>curl -X &#x27;POST&#x27; \ &#x27;<a href="https://&lt;sign-url&gt;?url=s3%3A%2F%2Fsentinel-2%2Fred.tif&#x27;" target="_blank" rel="noopener">https://&lt;sign-url&gt;?url=s3%3A%2F%2Fsentinel-2%2Fred.tif&#x27;</a> \ -H &#x27;Authorization: Bearer eyJ...cmQ&#x27; \</p>
+<p>curl -X &#x27;POST&#x27; \ &#x27;https://&lt;sign-url&gt;?url=s3%3A%2F%2Fsentinel-2%2Fred.tif&#x27; \ -H &#x27;Authorization: Bearer eyJ...cmQ&#x27; \</p>
 <p>-d &#x27;&#x27;</p>
 <p>In this request:</p>
 <ul><li>The url parameter contains the encoded S3 URL of the asset.</li><li>The Authorization header includes a Bearer token, which is used to authenticate the request.</li></ul></section>

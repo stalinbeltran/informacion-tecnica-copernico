@@ -19,6 +19,23 @@ Cada página lleva migas de pan, navegación anterior/siguiente y métricas
 (páginas del PDF, número de figuras y tablas) que anticipan la profundidad de
 lo que hay debajo. El botón ◐ de la barra superior alterna tema claro/oscuro.
 
+### Siglas con definición al vuelo
+
+Las siglas aparecen subrayadas con puntos en el texto; al pasar el ratón (o al
+tocarlas, o al llegar a ellas con el tabulador) muestran su significado sin
+salir de la página. El glosario se construye automáticamente fusionando las
+tablas de acrónimos de los tres documentos, de modo que una sigla definida solo
+en D2 también se explica al leer D1 o D3.
+
+Se marcan tanto en el texto de los documentos como en los resúmenes en español
+(portada, cabeceras de página y tarjetas de navegación). Dentro de una tarjeta
+el globo aparece al pasar el ratón pero el clic sigue navegando, para no romper
+el enlace.
+
+No se marcan siglas dentro de los bloques de código ni en las propias tablas de
+acrónimos. Si el JavaScript no se ejecuta, el navegador muestra igualmente el
+tooltip nativo del atributo `title`.
+
 ## Estructura del proyecto
 
 ```

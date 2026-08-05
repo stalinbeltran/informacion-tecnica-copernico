@@ -20,11 +20,11 @@
 <div class="pagehead">
   <span class="eyebrow">D3 · Interface Control Document · Capítulo 2.3.3</span>
   <h1>Application Deployment and Execution</h1>
-  <p class="lede">Las aplicaciones EO se empaquetan como contenedores Docker con manifiesto CWL, se despliegan con Kubernetes y Helm, y se ejecutan por lotes o en tiempo real.</p>
+  <p class="lede">Las aplicaciones <abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr> se empaquetan como contenedores Docker con manifiesto <abbr class="acr" title="Common Workflow Language" tabindex="0">CWL</abbr>, se despliegan con Kubernetes y Helm, y se ejecutan por lotes o en tiempo real.</p>
   
   <div class="metrics"><span title="Páginas del PDF">pp. <b>12</b></span></div>
 </div>
-<section class="prose"><p>EO applications are packaged and stored in the Application Repository as Docker containers and associated Application Package manifest encoded using the Common Workflow Language (CWL). The containers include all necessary dependencies, ensuring that applications can be deployed consistently across different environments within the platform.</p>
+<section class="prose"><p><abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr> applications are packaged and stored in the Application Repository as Docker containers and associated Application Package manifest encoded using the Common Workflow Language (<abbr class="acr" title="Common Workflow Language" tabindex="0">CWL</abbr>). The containers include all necessary dependencies, ensuring that applications can be deployed consistently across different environments within the platform.</p>
 <p>The deployment of these applications is managed by Kubernetes, which is responsible for orchestrating the containers across the platform&#x27;s infrastructure. Helm charts are used to define deployment configurations, enabling repeatable and scalable deployment processes.</p>
 <p>Once deployed, these applications can be executed by the Data Processing component or directly by users through the Front-end Services. The platform supports both batch processing and real-time processing, catering to a wide range of use cases.</p></section>
 <nav class="pager"><a class="prev" href="s2-3-2.html"><i>←</i><span>2.3.2 · Interaction between Data Processing and User Interfaces</span></a><a class="next" href="s2-3-4.html"><span>2.3.4 · Security and Access Control</span><i>→</i></a></nav>

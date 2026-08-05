@@ -20,8 +20,8 @@
 <div class="pagehead doc">
   <span class="eyebrow">T2-ESA-COPLACI-DD-24-029 · v1.3 · 83 páginas</span>
   <h1>D2 — System Architecture Description</h1>
-  <p class="lede">Arquitectura técnica completa de la plataforma del Centro CopernicusLAC (Panamá): componentes, flujos de ingesta, catálogo STAC, empaquetado de aplicaciones EO, tecnologías, seguridad y escalabilidad.</p>
-  <p class="long">Documento de diseño (D2) elaborado por Terradue para ESA que describe la arquitectura del sistema de la plataforma del Centro CopernicusLAC, el centro regional de Copernicus para América Latina y el Caribe con sede en Panamá. Define ocho componentes funcionales —ingesta, descubrimiento y acceso, procesamiento, registro de aplicaciones, servicios de front-end, espacio de trabajo de usuario, autenticación y gestión de recursos— y detalla, para cada uno, su propósito, implementación, puntos de integración y pila de software. Desarrolla además el proceso completo de ingesta de datos EO, el catálogo STAC y su API, el empaquetado de aplicaciones con CWL y contenedores, el catálogo de tecnologías base (Kubernetes, Argo, GitLab, Harbor, Keycloak, Titiler, PostgreSQL…), el marco de seguridad y cumplimiento (ESA PDP) y las estrategias de escalabilidad para soportar hasta 3.000 usuarios.</p>
+  <p class="lede">Arquitectura técnica completa de la plataforma del Centro CopernicusLAC (Panamá): componentes, flujos de ingesta, catálogo <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr>, empaquetado de aplicaciones <abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr>, tecnologías, seguridad y escalabilidad.</p>
+  <p class="long">Documento de diseño (D2) elaborado por Terradue para <abbr class="acr" title="European Space Agency" tabindex="0">ESA</abbr> que describe la arquitectura del sistema de la plataforma del Centro CopernicusLAC, el centro regional de Copernicus para América Latina y el Caribe con sede en Panamá. Define ocho componentes funcionales —ingesta, descubrimiento y acceso, procesamiento, registro de aplicaciones, servicios de front-end, espacio de trabajo de usuario, autenticación y gestión de recursos— y detalla, para cada uno, su propósito, implementación, puntos de integración y pila de software. Desarrolla además el proceso completo de ingesta de datos <abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr>, el catálogo <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> y su <abbr class="acr" title="Application Programming Interface" tabindex="0">API</abbr>, el empaquetado de aplicaciones con <abbr class="acr" title="Common Workflow Language" tabindex="0">CWL</abbr> y contenedores, el catálogo de tecnologías base (Kubernetes, Argo, GitLab, Harbor, Keycloak, Titiler, PostgreSQL…), el marco de seguridad y cumplimiento (<abbr class="acr" title="European Space Agency" tabindex="0">ESA</abbr> <abbr class="acr" title="Personal Data Protection" tabindex="0">PDP</abbr>) y las estrategias de escalabilidad para soportar hasta 3.000 usuarios.</p>
   <div class="tags"><span class="tag">Arquitectura</span><span class="tag">Copernicus</span><span class="tag">STAC</span><span class="tag">Kubernetes</span><span class="tag">CWL</span><span class="tag">Terradue</span><span class="tag">ESA</span></div>
   <div class="metrics">
     <span><b>9</b> capítulos</span>
@@ -72,7 +72,7 @@
 <a class="card" href="s4.html">
   <span class="eyebrow">4</span>
   <h3>Data Ingestion Process</h3>
-  <p class="sum">Proceso completo de ingesta de datos EO: tecnologías empleadas, workflow paso a paso, selección del paquete de aplicación ETL, validación de contenido, perfil mínimo de metadatos STAC y enriquecimiento para visualización.</p>
+  <p class="sum">Proceso completo de ingesta de datos <abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr>: tecnologías empleadas, workflow paso a paso, selección del paquete de aplicación <abbr class="acr" title="Extract, Transform, Load" tabindex="0">ETL</abbr>, validación de contenido, perfil mínimo de metadatos <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> y enriquecimiento para visualización.</p>
   <div class="tags"><span class="tag">Ingesta</span><span class="tag">ETL</span><span class="tag">STAC</span><span class="tag">COG</span></div>
   <div class="metrics"><span title="Apartados"><b>6</b> apartados</span><span title="Páginas del PDF">pp. <b>39–47</b></span><span title="Figuras"><b>1</b> fig.</span><span title="Tablas"><b>1</b> tabl.</span></div>
   <span class="go">Explorar <i>→</i></span>
@@ -80,7 +80,7 @@
 <a class="card" href="s5.html">
   <span class="eyebrow">5</span>
   <h3>Data Discovery, Access and Visualisation</h3>
-  <p class="sum">Descubrimiento, acceso y visualización de datos: el estándar STAC, la API de catálogo con ejemplos de consultas, el acceso directo a datos en la nube con COG, la interfaz gráfica del portal y la integración de Titiler.</p>
+  <p class="sum">Descubrimiento, acceso y visualización de datos: el estándar <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr>, la <abbr class="acr" title="Application Programming Interface" tabindex="0">API</abbr> de catálogo con ejemplos de consultas, el acceso directo a datos en la nube con <abbr class="acr" title="Cloud Optimised GeoTIFF" tabindex="0">COG</abbr>, la interfaz gráfica del portal y la integración de Titiler.</p>
   <div class="tags"><span class="tag">STAC</span><span class="tag">API</span><span class="tag">COG</span><span class="tag">GUI</span><span class="tag">Titiler</span></div>
   <div class="metrics"><span title="Apartados"><b>5</b> apartados</span><span title="Páginas del PDF">pp. <b>48–58</b></span><span title="Figuras"><b>5</b> fig.</span></div>
   <span class="go">Explorar <i>→</i></span>
@@ -88,7 +88,7 @@
 <a class="card" href="s6.html">
   <span class="eyebrow">6</span>
   <h3>Application Packaging</h3>
-  <p class="sum">Empaquetado de aplicaciones EO: visión general del proceso, CWL con ejemplos, contenedores, escenarios de despliegue, control de versiones, control de acceso, beneficios y los estándares de obligado cumplimiento.</p>
+  <p class="sum">Empaquetado de aplicaciones <abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr>: visión general del proceso, <abbr class="acr" title="Common Workflow Language" tabindex="0">CWL</abbr> con ejemplos, contenedores, escenarios de despliegue, control de versiones, control de acceso, beneficios y los estándares de obligado cumplimiento.</p>
   <div class="tags"><span class="tag">CWL</span><span class="tag">Docker</span><span class="tag">GitLab</span><span class="tag">Harbor</span><span class="tag">OGC</span></div>
   <div class="metrics"><span title="Apartados"><b>8</b> apartados</span><span title="Páginas del PDF">pp. <b>59–71</b></span><span title="Figuras"><b>1</b> fig.</span></div>
   <span class="go">Explorar <i>→</i></span>
@@ -104,7 +104,7 @@
 <a class="card" href="s8.html">
   <span class="eyebrow">8</span>
   <h3>Security and Compliance</h3>
-  <p class="sum">Seguridad y cumplimiento: marco de seguridad, protección de datos personales conforme al ESA PDP, controles de acceso, monitorización y auditoría, y plan de respuesta a incidentes.</p>
+  <p class="sum">Seguridad y cumplimiento: marco de seguridad, protección de datos personales conforme al <abbr class="acr" title="European Space Agency" tabindex="0">ESA</abbr> <abbr class="acr" title="Personal Data Protection" tabindex="0">PDP</abbr>, controles de acceso, monitorización y auditoría, y plan de respuesta a incidentes.</p>
   <div class="tags"><span class="tag">Seguridad</span><span class="tag">ESA PDP</span><span class="tag">RBAC</span><span class="tag">Auditoría</span></div>
   <div class="metrics"><span title="Apartados"><b>6</b> apartados</span><span title="Páginas del PDF">pp. <b>77–80</b></span></div>
   <span class="go">Explorar <i>→</i></span>

@@ -202,6 +202,9 @@ abbr.acr:hover,abbr.acr:focus{
   border-bottom-color:var(--accent); background:var(--accent-soft);
   border-radius:3px; outline:none;
 }
+/* en tarjetas y resúmenes basta la pista visual: el clic sigue navegando */
+.card abbr.acr{cursor:inherit}
+.card abbr.acr:hover{background:transparent}
 .acrtip{
   position:fixed; z-index:100; left:0; top:0;
   max-width:min(320px,calc(100vw - 24px));

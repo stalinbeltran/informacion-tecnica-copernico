@@ -20,17 +20,17 @@
 <div class="pagehead">
   <span class="eyebrow">D2 · System Architecture Description · Capítulo 5</span>
   <h1>Data Discovery, Access and Visualisation</h1>
-  <p class="lede">Descubrimiento, acceso y visualización de datos: el estándar STAC, la API de catálogo con ejemplos de consultas, el acceso directo a datos en la nube con COG, la interfaz gráfica del portal y la integración de Titiler.</p>
+  <p class="lede">Descubrimiento, acceso y visualización de datos: el estándar <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr>, la <abbr class="acr" title="Application Programming Interface" tabindex="0">API</abbr> de catálogo con ejemplos de consultas, el acceso directo a datos en la nube con <abbr class="acr" title="Cloud Optimised GeoTIFF" tabindex="0">COG</abbr>, la interfaz gráfica del portal y la integración de Titiler.</p>
   <div class="tags"><span class="tag">STAC</span><span class="tag">API</span><span class="tag">COG</span><span class="tag">GUI</span><span class="tag">Titiler</span></div>
   <div class="metrics"><span title="Apartados"><b>5</b> apartados</span><span title="Páginas del PDF">pp. <b>48–58</b></span><span title="Figuras"><b>5</b> fig.</span></div>
 </div>
-<section class="prose"><p>Data discovery in the CopernicusLAC platform is designed to be comprehensive and user-friendly, ensuring that users can locate and retrieve EO data relevant to their needs. The process is supported by metadata cataloguing, indexing, and an intuitive interface that allows users to interact with the data in meaningful ways. Central to this design is the integration of the STAC and the STAC API, which provide a standardised framework for describing and accessing EO data.</p></section>
+<section class="prose"><p>Data discovery in the CopernicusLAC platform is designed to be comprehensive and user-friendly, ensuring that users can locate and retrieve <abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr> data relevant to their needs. The process is supported by metadata cataloguing, indexing, and an intuitive interface that allows users to interact with the data in meaningful ways. Central to this design is the integration of the <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> and the <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> <abbr class="acr" title="Application Programming Interface" tabindex="0">API</abbr>, which provide a standardised framework for describing and accessing <abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr> data.</p></section>
 <h2 class="secttl">En este capítulo</h2>
 <div class="grid">
 <a class="card leaf" href="s5-1.html">
   <span class="eyebrow">5.1</span>
   <h3>SpatioTemporal Asset Catalog (STAC)</h3>
-  <p class="sum">Qué es STAC y por qué se adopta: items, assets, colecciones, extensiones, enlaces, bounding boxes espacio-temporales y naturaleza flat-file; incluye las extensiones Web Map Links y Authentication (URLs firmadas).</p>
+  <p class="sum">Qué es <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> y por qué se adopta: items, assets, colecciones, extensiones, enlaces, bounding boxes espacio-temporales y naturaleza flat-file; incluye las extensiones Web Map Links y Authentication (URLs firmadas).</p>
   
   <div class="metrics"><span title="Páginas del PDF">pp. <b>48–50</b></span></div>
   <span class="go">Ver el detalle <i>→</i></span>
@@ -38,7 +38,7 @@
 <a class="card leaf" href="s5-2.html">
   <span class="eyebrow">5.2</span>
   <h3>Catalogue API</h3>
-  <p class="sum">La API STAC como interfaz REST de búsqueda: ejemplos de consultas temporales, espaciales, por cobertura de nubes y por misión, consultas combinadas, uso de CQL y la extensión Filter.</p>
+  <p class="sum">La <abbr class="acr" title="Application Programming Interface" tabindex="0">API</abbr> <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> como interfaz REST de búsqueda: ejemplos de consultas temporales, espaciales, por cobertura de nubes y por misión, consultas combinadas, uso de CQL y la extensión Filter.</p>
   <div class="tags"><span class="tag">Ejemplos de API</span></div>
   <div class="metrics"><span title="Páginas del PDF">pp. <b>50–52</b></span><span title="Figuras"><b>2</b> fig.</span></div>
   <span class="go">Ver el detalle <i>→</i></span>
@@ -46,7 +46,7 @@
 <a class="card leaf" href="s5-3.html">
   <span class="eyebrow">5.3</span>
   <h3>Data Access and Retrieval</h3>
-  <p class="sum">Cómo STAC y COG permiten acceder a porciones concretas de un ráster directamente desde el almacenamiento en nube, y el papel del STAC Catalog como manifiesto en las fases stage-in y stage-out y en escenarios fan-in/fan-out.</p>
+  <p class="sum">Cómo <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> y <abbr class="acr" title="Cloud Optimised GeoTIFF" tabindex="0">COG</abbr> permiten acceder a porciones concretas de un ráster directamente desde el almacenamiento en nube, y el papel del <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> Catalog como manifiesto en las fases stage-in y stage-out y en escenarios fan-in/fan-out.</p>
   <div class="tags"><span class="tag">Diagrama</span><span class="tag">stage-in/out</span></div>
   <div class="metrics"><span title="Páginas del PDF">pp. <b>52–54</b></span><span title="Figuras"><b>1</b> fig.</span></div>
   <span class="go">Ver el detalle <i>→</i></span>
@@ -62,7 +62,7 @@
 <a class="card leaf" href="s5-5.html">
   <span class="eyebrow">5.5</span>
   <h3>Visualisation Integration</h3>
-  <p class="sum">Titiler como servidor de teselado dinámico sin estado, optimizado para COG en almacenamiento S3, integrable con Leaflet, OpenLayers o Mapbox GL JS.</p>
+  <p class="sum">Titiler como servidor de teselado dinámico sin estado, optimizado para <abbr class="acr" title="Cloud Optimised GeoTIFF" tabindex="0">COG</abbr> en almacenamiento S3, integrable con Leaflet, OpenLayers o Mapbox GL JS.</p>
   <div class="tags"><span class="tag">Diagrama</span><span class="tag">Titiler</span></div>
   <div class="metrics"><span title="Páginas del PDF">pp. <b>57–58</b></span><span title="Figuras"><b>1</b> fig.</span></div>
   <span class="go">Ver el detalle <i>→</i></span>

@@ -20,8 +20,8 @@
 <div class="pagehead doc">
   <span class="eyebrow">T2-ESA-COPLACI-ID-24-030 · v1.3 · 35 páginas</span>
   <h1>D3 — Interface Control Document</h1>
-  <p class="lede">Documento de control de interfaces (ICD): cómo se integran sistemas externos con la plataforma CopernicusLAC, con endpoints reales, ejemplos de consulta STAC, teselas WMTS y descarga mediante URLs firmadas.</p>
-  <p class="long">Documento de diseño de interfaces (D3) de Terradue para ESA. A diferencia de D2, que describe la arquitectura interna, este documento define el contrato hacia fuera: qué protocolos, formatos y esquemas de seguridad rigen las interacciones entre la plataforma del Centro CopernicusLAC y los sistemas externos —proveedores de datos, servicios de terceros y usuarios finales—. Cubre cuatro áreas funcionales: ingesta (integración con el Copernicus Data Space Ecosystem, formatos aceptados, validación y códigos de salida), descubrimiento (API STAC con colecciones, queryables y filtrado CQL2 en sus variantes JSON y texto), visualización (imágenes de vista previa y endpoints WMTS/XYZ con plantillas de teselas) y acceso a datos (esquema signed_url_auth para generar URLs pre-firmadas de descarga temporal desde el almacenamiento S3). Es el documento con más ejemplos concretos de petición y respuesta.</p>
+  <p class="lede">Documento de control de interfaces (<abbr class="acr" title="Interface Control Document" tabindex="0">ICD</abbr>): cómo se integran sistemas externos con la plataforma CopernicusLAC, con endpoints reales, ejemplos de consulta <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr>, teselas <abbr class="acr" title="Web Map Tile Service" tabindex="0">WMTS</abbr> y descarga mediante URLs firmadas.</p>
+  <p class="long">Documento de diseño de interfaces (D3) de Terradue para <abbr class="acr" title="European Space Agency" tabindex="0">ESA</abbr>. A diferencia de D2, que describe la arquitectura interna, este documento define el contrato hacia fuera: qué protocolos, formatos y esquemas de seguridad rigen las interacciones entre la plataforma del Centro CopernicusLAC y los sistemas externos —proveedores de datos, servicios de terceros y usuarios finales—. Cubre cuatro áreas funcionales: ingesta (integración con el Copernicus Data Space Ecosystem, formatos aceptados, validación y códigos de salida), descubrimiento (<abbr class="acr" title="Application Programming Interface" tabindex="0">API</abbr> <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> con colecciones, queryables y filtrado CQL2 en sus variantes JSON y texto), visualización (imágenes de vista previa y endpoints <abbr class="acr" title="Web Map Tile Service" tabindex="0">WMTS</abbr>/XYZ con plantillas de teselas) y acceso a datos (esquema signed_url_auth para generar URLs pre-firmadas de descarga temporal desde el almacenamiento S3). Es el documento con más ejemplos concretos de petición y respuesta.</p>
   <div class="tags"><span class="tag">Interfaces</span><span class="tag">STAC API</span><span class="tag">CQL2</span><span class="tag">WMTS</span><span class="tag">Signed URLs</span><span class="tag">Terradue</span><span class="tag">ESA</span></div>
   <div class="metrics">
     <span><b>6</b> capítulos</span>
@@ -48,7 +48,7 @@
 <a class="card" href="s1.html">
   <span class="eyebrow">1</span>
   <h3>Introduction</h3>
-  <p class="sum">Propósito del ICD, contexto de la iniciativa CopernicusLAC, alcance, público destinatario, estructura del documento y referencias con el glosario de acrónimos.</p>
+  <p class="sum">Propósito del <abbr class="acr" title="Interface Control Document" tabindex="0">ICD</abbr>, contexto de la iniciativa CopernicusLAC, alcance, público destinatario, estructura del documento y referencias con el glosario de acrónimos.</p>
   <div class="tags"><span class="tag">Contexto</span><span class="tag">Alcance</span><span class="tag">Referencias</span></div>
   <div class="metrics"><span title="Apartados"><b>8</b> apartados</span><span title="Páginas del PDF">pp. <b>4–6</b></span><span title="Tablas"><b>3</b> tabl.</span></div>
   <span class="go">Explorar <i>→</i></span>
@@ -72,7 +72,7 @@
 <a class="card" href="s4.html">
   <span class="eyebrow">4</span>
   <h3>Data Discovery</h3>
-  <p class="sum">Interfaz de descubrimiento: la API REST de STAC. Endpoints de colecciones y items, acceso directo a metadatos, obtención de criterios de filtrado (queryables), filtrado con CQL2 y anatomía completa de un STAC Item.</p>
+  <p class="sum">Interfaz de descubrimiento: la <abbr class="acr" title="Application Programming Interface" tabindex="0">API</abbr> REST de <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr>. Endpoints de colecciones y items, acceso directo a metadatos, obtención de criterios de filtrado (queryables), filtrado con CQL2 y anatomía completa de un <abbr class="acr" title="SpatioTemporal Asset Catalog" tabindex="0">STAC</abbr> Item.</p>
   <div class="tags"><span class="tag">STAC API</span><span class="tag">CQL2</span><span class="tag">GeoJSON</span><span class="tag">Ejemplos</span></div>
   <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>17–27</b></span></div>
   <span class="go">Explorar <i>→</i></span>
@@ -80,7 +80,7 @@
 <a class="card" href="s5.html">
   <span class="eyebrow">5</span>
   <h3>Data Visualisation</h3>
-  <p class="sum">Interfaz de visualización: los dos tipos soportados —imágenes de vista previa y endpoints WMTS/XYZ—, con las plantillas de enlace de teselas y el formato exacto de petición.</p>
+  <p class="sum">Interfaz de visualización: los dos tipos soportados —imágenes de vista previa y endpoints <abbr class="acr" title="Web Map Tile Service" tabindex="0">WMTS</abbr>/XYZ—, con las plantillas de enlace de teselas y el formato exacto de petición.</p>
   <div class="tags"><span class="tag">Visualización</span><span class="tag">WMTS</span><span class="tag">XYZ</span><span class="tag">Titiler</span></div>
   <div class="metrics"><span title="Apartados"><b>4</b> apartados</span><span title="Páginas del PDF">pp. <b>28–30</b></span></div>
   <span class="go">Explorar <i>→</i></span>

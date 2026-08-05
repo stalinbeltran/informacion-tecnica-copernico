@@ -74,7 +74,7 @@ def build_glossary():
     alt = "|".join(re.escape(k) for k in sorted(GLOSSARY, key=len, reverse=True))
     TOKEN_RE = re.compile(
         r"(?P<url>https?://[^\s<>\"]+)"
-        r"|(?<![A-Za-z0-9])(?P<acr>" + alt + r")s?(?![A-Za-z0-9_])")
+        r"|(?<![A-Za-z0-9_])(?P<acr>" + alt + r")s?(?![A-Za-z0-9_])")
 
 
 def esc(t, acronyms=True):
@@ -264,7 +264,7 @@ def card(href, eyebrow, title, summary, tags, st, kids, leaf):
     return f"""<a class="card{' leaf' if leaf else ''}" href="{href}">
   <span class="eyebrow">{e(eyebrow)}</span>
   <h3>{e(title)}</h3>
-  <p class="sum">{e(summary)}</p>
+  <p class="sum">{esc(summary)}</p>
   {tagchips(tags)}
   {metrics_html(st, kids)}
   <span class="go">{'Ver el detalle' if leaf else 'Explorar'} <i>→</i></span>
@@ -343,7 +343,7 @@ def build_doc(meta):
         body.append(f"""<div class="pagehead">
   <span class="eyebrow">{e(docname)}{' · Capítulo ' + sec["num"] if sec["num"] not in ("0","") else ''}</span>
   <h1>{e(sec["title"])}</h1>
-  <p class="lede">{e(sm(sec))}</p>
+  <p class="lede">{esc(sm(sec))}</p>
   {tagchips(tg(sec))}
   {metrics_html(st, node["kids"])}
 </div>""")
@@ -394,8 +394,8 @@ def build_doc(meta):
     body.append(f"""<div class="pagehead doc">
   <span class="eyebrow">{e(meta["ref"])} · {e(meta["version"])} · {doc["pages"]} páginas</span>
   <h1>{e(meta["code"])} — {e(meta["name"])}</h1>
-  <p class="lede">{e(d.get("short",""))}</p>
-  <p class="long">{e(d.get("long",""))}</p>
+  <p class="lede">{esc(d.get("short",""))}</p>
+  <p class="long">{esc(d.get("long",""))}</p>
   {tagchips(d.get("tags"))}
   <div class="metrics">
     <span><b>{n_chapters}</b> capítulos</span>
@@ -436,7 +436,7 @@ def build_home(results):
   <span class="eyebrow">{e(m["ref"])} · {e(m["version"])}</span>
   <h3>{e(m["code"])} — {e(m["name"])}</h3>
   <p class="role">{e(m.get("role",""))}</p>
-  <p class="sum">{e(r["summary"])}</p>
+  <p class="sum">{esc(r["summary"])}</p>
   {tagchips(r["tags"])}
   <div class="metrics">
     <span><b>{r["pages"]}</b> páginas</span>

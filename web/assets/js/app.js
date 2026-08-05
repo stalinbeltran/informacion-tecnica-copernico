@@ -72,8 +72,14 @@
     document.addEventListener("focusout", function () { if (!pinned) hide(); });
     document.addEventListener("click", function (ev) {
       var el = ev.target.closest("abbr.acr");
-      if (el) { ev.preventDefault(); pinned = current !== el || !pinned; show(el); }
-      else hide();
+      // dentro de una tarjeta manda el enlace: no se secuestra el clic
+      if (el && !el.closest("a")) {
+        ev.preventDefault();
+        pinned = current !== el || !pinned;
+        show(el);
+      } else {
+        hide();
+      }
     });
     document.addEventListener("keydown", function (ev) {
       if (ev.key === "Escape") hide();
