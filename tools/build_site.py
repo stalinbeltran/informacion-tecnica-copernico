@@ -8,6 +8,17 @@ DATA = os.path.join(WEB, "data")
 DOCS = os.path.join(WEB, "docs")
 
 # ----------------------------------------------------------------- catalogo
+# group: de donde viene el documento; kind: de que formato se extrajo, porque
+# un .docx no tiene paginacion fija y no puede anunciar numero de paginas
+GROUPS = [
+    ("esa", "Documentación técnica de la plataforma",
+     "Los entregables de Terradue para ESA: qué debe cumplir el Centro, cómo está "
+     "construida la plataforma y cómo se integra con ella desde fuera."),
+    ("aig", "Documentos del encargo y del puesto",
+     "El marco de contratación y del rol de administrador de middleware por parte "
+     "de la AIG de Panamá: pliego, términos de referencia y perfil."),
+]
+
 CATALOG = [
     {
         "id": "d1-centre-specification",
@@ -18,7 +29,7 @@ CATALOG = [
         "name": "CopernicusLAC Centre Specification and Performance Requirements",
         "version": "v1.4",
         "role": "Qué debe cumplir el Centro",
-        "ready": True,
+        "group": "esa", "kind": "pdf", "ready": True,
     },
     {
         "id": "d2-system-architecture",
@@ -28,7 +39,7 @@ CATALOG = [
         "name": "System Architecture Description",
         "version": "v1.3",
         "role": "Cómo está construida la plataforma",
-        "ready": True,
+        "group": "esa", "kind": "pdf", "ready": True,
     },
     {
         "id": "d3-interface-control",
@@ -38,7 +49,37 @@ CATALOG = [
         "name": "Interface Control Document",
         "version": "v1.3",
         "role": "Cómo se integra con ella desde fuera",
-        "ready": True,
+        "group": "esa", "kind": "pdf", "ready": True,
+    },
+    {
+        "id": "d4-tdr-middleware",
+        "code": "TDR",
+        "ref": "AIG · Panamá Digital · BID 5501/OC-PN",
+        "file": "TDR Adm del middleware selección directa - General - AIG.docx",
+        "name": "Términos de Referencia — Administrador del Middleware",
+        "version": "consultoría individual",
+        "role": "Qué se contrata y qué se espera del puesto",
+        "group": "aig", "kind": "word", "ready": True,
+    },
+    {
+        "id": "d5-pliego-cargos",
+        "code": "PLIEGO",
+        "ref": "LP No. 2025-1-46-01-08-LP-000003",
+        "file": "PLIEGO DE CARGOS Copernicus LAC Panamá 20250925.docx",
+        "name": "Pliego de Cargos — Servicio en la nube (IaaS, KaaS, DBaaS)",
+        "version": "septiembre 2025",
+        "role": "Qué contrata Panamá al proveedor de infraestructura",
+        "group": "aig", "kind": "word", "ready": True,
+    },
+    {
+        "id": "d6-perfil-middleware",
+        "code": "PERFIL",
+        "ref": "Middleware Profile Comparison and Role",
+        "file": "Middleware_Profile_Comparison_and_Role_EN.docx",
+        "name": "Comparación de perfil y definición del rol",
+        "version": "EN / ES",
+        "role": "Qué separa el alcance contratado de lo que pide ESA",
+        "group": "aig", "kind": "word", "ready": True,
     },
 ]
 
@@ -119,8 +160,9 @@ def page(title, subtitle, body, depth, extra_head="", body_class=""):
 {body}
 </main>
 <footer class="foot">
-  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA.
-  El contenido original de los documentos se conserva en inglés.</p>
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA
+  y de los documentos de contratación de la AIG de Panamá.
+  Los resúmenes son en español; el texto de cada documento conserva su idioma original.</p>
 </footer>
 <script src="{up}assets/js/app.js"></script>
 </body>
@@ -168,11 +210,13 @@ def render_blocks(blocks, imgdir="img"):
             out.append(f'<pre><code>{e(b["text"])}</code></pre>')
         elif t == "figure":
             cap = f'<figcaption>{esc(b["caption"])}</figcaption>' if b.get("caption") else ""
+            # las figuras de un .docx no llevan pagina: el formato no la fija
+            pg = f'<span class="pg">p. {b["page"]}</span>' if b.get("page") else ""
             out.append(
                 f'<figure class="fig">'
                 f'<a href="{imgdir}/{b["src"]}" target="_blank" rel="noopener">'
                 f'<img src="{imgdir}/{b["src"]}" alt="{e(b.get("caption","Figura"))}" loading="lazy">'
-                f'</a>{cap}<span class="pg">p. {b["page"]}</span></figure>')
+                f'</a>{cap}{pg}</figure>')
         elif t == "table":
             out.append(render_table(b))
         i += 1
@@ -390,9 +434,11 @@ def build_doc(meta):
     total = stats({"sec": {"figures": 0, "tables": 0, "chars": 0, "blocks": []},
                    "kids": roots})
     n_chapters = sum(1 for r in roots if r["sec"]["level"] == 1)
+    pdf = meta.get("kind", "pdf") == "pdf"
+    pg_eyebrow = f' · {doc["pages"]} páginas' if pdf and doc.get("pages") else ""
     body = [breadcrumb([("Documentos", "../../index.html"), (meta["code"], None)])]
     body.append(f"""<div class="pagehead doc">
-  <span class="eyebrow">{e(meta["ref"])} · {e(meta["version"])} · {doc["pages"]} páginas</span>
+  <span class="eyebrow">{e(meta["ref"])} · {e(meta["version"])}{pg_eyebrow}</span>
   <h1>{e(meta["code"])} — {e(meta["name"])}</h1>
   <p class="lede">{esc(d.get("short",""))}</p>
   <p class="long">{esc(d.get("long",""))}</p>
@@ -422,58 +468,66 @@ def build_doc(meta):
                      depth=2, extra_head=search_js))
 
     return {"sections": len(flat_nodes), "chapters": n_chapters,
-            "figs": total["figs"], "tabs": total["tabs"], "pages": doc["pages"],
+            "figs": total["figs"], "tabs": total["tabs"],
+            "pages": doc.get("pages", 0) if pdf else 0,
             "summary": d.get("short", ""), "tags": d.get("tags", [])}
 
 
 # ------------------------------------------------------------------ portada
 def build_home(results):
-    cards = []
-    for m in CATALOG:
+    def doccard(m):
         r = results.get(m["id"])
-        if r:
-            cards.append(f"""<a class="card doccard" href="docs/{m["id"]}/index.html">
+        if not r:
+            return f"""<div class="card doccard pending">
+  <span class="eyebrow">{e(m["ref"])} · {e(m["version"])}</span>
+  <h3>{e(m["code"])} — {e(m["name"])}</h3>
+  <p class="sum">Todavía no procesado. El archivo está en el proyecto y puede
+  incorporarse con el mismo flujo de extracción y generación.</p>
+  <span class="go pend">Pendiente de procesar</span>
+</div>"""
+        mets = []
+        if r["pages"]:
+            mets.append(f'<span><b>{r["pages"]}</b> páginas</span>')
+        mets.append(f'<span><b>{r["chapters"]}</b> capítulos</span>')
+        mets.append(f'<span><b>{r["sections"]}</b> secciones</span>')
+        if r["figs"]:
+            mets.append(f'<span><b>{r["figs"]}</b> figuras</span>')
+        if r["tabs"]:
+            mets.append(f'<span><b>{r["tabs"]}</b> tablas</span>')
+        return f"""<a class="card doccard" href="docs/{m["id"]}/index.html">
   <span class="eyebrow">{e(m["ref"])} · {e(m["version"])}</span>
   <h3>{e(m["code"])} — {e(m["name"])}</h3>
   <p class="role">{e(m.get("role",""))}</p>
   <p class="sum">{esc(r["summary"])}</p>
   {tagchips(r["tags"])}
-  <div class="metrics">
-    <span><b>{r["pages"]}</b> páginas</span>
-    <span><b>{r["chapters"]}</b> capítulos</span>
-    <span><b>{r["sections"]}</b> secciones</span>
-    <span><b>{r["figs"]}</b> figuras</span>
-    <span><b>{r["tabs"]}</b> tablas</span>
-  </div>
+  <div class="metrics">{"".join(mets)}</div>
   <span class="go">Explorar el documento <i>→</i></span>
-</a>""")
-        else:
-            cards.append(f"""<div class="card doccard pending">
-  <span class="eyebrow">{e(m["ref"])} · {e(m["version"])}</span>
-  <h3>{e(m["code"])} — {e(m["name"])}</h3>
-  <p class="sum">Todavía no procesado. El PDF está en el proyecto y puede incorporarse
-  con el mismo flujo de extracción y generación.</p>
-  <span class="go pend">Pendiente de procesar</span>
-</div>""")
+</a>"""
+
+    blocks = []
+    for gid, gtitle, gdesc in GROUPS:
+        mine = [m for m in CATALOG if m.get("group", "esa") == gid]
+        if not mine:
+            continue
+        blocks.append(f'<h2 class="secttl">{e(gtitle)}</h2>'
+                      f'<p class="grouplede">{esc(gdesc)}</p>'
+                      f'<div class="grid">{"".join(doccard(m) for m in mine)}</div>')
 
     body = f"""<div class="hero">
-  <span class="eyebrow">Documentación técnica · Terradue / ESA</span>
+  <span class="eyebrow">Terradue · ESA · AIG Panamá</span>
   <h1>Centro CopernicusLAC</h1>
-  <p class="lede">Los documentos técnicos del proyecto <b>CopernicusLAC Infrastructure Support</b>,
-  convertidos en una vista navegable por niveles: empieza por el documento, baja a sus capítulos,
-  de ahí a cada apartado y, al final del recorrido, al texto completo con sus figuras y tablas.</p>
+  <p class="lede">La documentación del proyecto <b>CopernicusLAC</b> convertida en una vista
+  navegable por niveles: empieza por el documento, baja a sus capítulos, de ahí a cada apartado
+  y, al final del recorrido, al texto completo con sus figuras y tablas.</p>
 </div>
-<h2 class="secttl">Documentos</h2>
-<div class="grid">
-{"".join(cards)}
-</div>
+{"".join(blocks)}
 <div class="howto">
   <h2>Cómo está organizado</h2>
   <ol class="levels">
     <li><b>Nivel 1 — Documentos.</b> Esta página: el nombre de cada archivo y qué contiene.</li>
     <li><b>Nivel 2 — Capítulos.</b> Los bloques principales del documento, cada uno con su resumen.</li>
     <li><b>Nivel 3 — Apartados.</b> Las secciones de cada capítulo, resumidas.</li>
-    <li><b>Nivel 4 — Detalle completo.</b> El texto íntegro con las figuras, tablas y ejemplos de código del PDF original.</li>
+    <li><b>Nivel 4 — Detalle completo.</b> El texto íntegro con las figuras, tablas y ejemplos de código del documento original.</li>
   </ol>
 </div>"""
     with open(os.path.join(WEB, "index.html"), "w", encoding="utf-8") as f:

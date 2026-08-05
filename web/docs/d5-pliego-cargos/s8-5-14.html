@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8.5.14 Especificaciones Técnicas del Balanceador de Carga: · PLIEGO</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">PLIEGO</a><i>›</i><a href="s8.html">8</a><i>›</i><a href="s8-5.html">8.5</a><i>›</i><span>8.5.14 · Especificaciones Técnicas del Balanceador de Carga:</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">PLIEGO · Pliego de Cargos — Servicio en la nube (IaaS, KaaS, DBaaS) · Capítulo 8.5.14</span>
+  <h1>Especificaciones Técnicas del Balanceador de Carga:</h1>
+  <p class="lede">Especificaciones del balanceador de carga: pico de veinticinco mil conexiones y demás requisitos.</p>
+  <div class="tags"><span class="tag">Balanceador</span></div>
+  <div class="metrics"></div>
+</div>
+<section class="prose"><ul><li>Capacidad de procesamiento: El balanceador de carga deberá soportar un pico máximo de veinticinco mil (25,000) solicitudes por segundo (RPS) para garantizar el rendimiento óptimo durante períodos de alta demanda operativa.</li><li>Conexiones concurrentes: El sistema deberá mantener hasta diez mil (10,000) conexiones concurrentes simultáneas, considerando una base estimada de seiscientos (600) usuarios activos del sistema.</li><li>Terminación <abbr class="acr" title="Transport Layer Security" tabindex="0">TLS</abbr>: La capacidad de terminación <abbr class="acr" title="Transport Layer Security" tabindex="0">TLS</abbr> en el balanceador de carga será opcional, no constituyendo un requisito obligatorio. En caso de que no se proporcione terminación <abbr class="acr" title="Transport Layer Security" tabindex="0">TLS</abbr>, el proveedor deberá garantizar el reenvío TCP en el puerto 443 como alternativa funcional.</li><li>Protocolos soportados: El balanceador deberá soportar los siguientes protocolos de comunicación:<ul><li>HTTP/<abbr class="acr" title="HyperText Transfer Protocol Secure" tabindex="0">HTTPS</abbr> (en caso de no contar con terminación <abbr class="acr" title="Transport Layer Security" tabindex="0">TLS</abbr>, se deberá proveer reenvío TCP en puerto 443)</li><li>WebSocket para comunicaciones bidireccionales en tiempo real</li></ul></li><li>Distribución de tráfico <abbr class="acr" title="Transport Layer Security" tabindex="0">TLS</abbr>: Se estima que el noventa y nueve por ciento (99%) del tráfico será sobre <abbr class="acr" title="Transport Layer Security" tabindex="0">TLS</abbr>, considerando que el sistema implementará redirección automática de usuarios hacia <abbr class="acr" title="HyperText Transfer Protocol Secure" tabindex="0">HTTPS</abbr> para garantizar la seguridad de las comunicaciones.</li><li>Alta disponibilidad: El balanceador de carga debe ser un servicio administrado y estar configurado en Alta Disponibilidad (<abbr class="acr" title="High Availability" tabindex="0">HA</abbr>), distribuido en al menos dos (2) zonas de disponibilidad dentro de la misma región.</li></ul></section>
+<nav class="pager"><a class="prev" href="s8-5-13.html"><i>←</i><span>8.5.13 · Internet dedicado:</span></a><a class="next" href="s8-5-15.html"><span>8.5.15 · Servicio de Administración de Infraestructura</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA
+  y de los documentos de contratación de la AIG de Panamá.
+  Los resúmenes son en español; el texto de cada documento conserva su idioma original.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

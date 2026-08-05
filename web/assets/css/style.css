@@ -114,6 +114,11 @@ main{max-width:var(--maxw); margin:0 auto; padding:28px 24px 64px}
   font-size:12px; font-weight:700; letter-spacing:.11em; text-transform:uppercase;
   color:var(--ink-3); margin:34px 0 14px;
 }
+/* entradilla de cada familia de documentos en la portada */
+.grouplede{
+  font-size:14.5px; line-height:1.65; color:var(--ink-2);
+  margin:-6px 0 16px; max-width:78ch;
+}
 
 /* ------------------------------------------------------------------- chips */
 .tags{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 0}

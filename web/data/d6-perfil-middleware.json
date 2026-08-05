@@ -1,0 +1,453 @@
+{
+ "doc_id": "d6-perfil-middleware",
+ "source_pdf": "Middleware_Profile_Comparison_and_Role_EN.docx",
+ "title": "d6-perfil-middleware",
+ "pages": 7,
+ "sections": [
+  {
+   "level": 1,
+   "num": "1",
+   "title": "Comparison Between Contracted Scope and ESA-Requested Middleware Administrator Profile",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "An analysis was conducted comparing the functions specified in the contracted scope of work with the functions requested by ESA for the resource responsible for Middleware administration. The analysis indicates that the profile requested by ESA partially overlaps with functions already explicitly included in the contracted scope, implying that several of these functions are already covered.",
+     "indent": 0
+    }
+   ],
+   "id": "s1",
+   "chars": 393,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.1",
+   "title": "Contracted Scope vs. ESA-Requested Competencies",
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Area / Competency",
+       "Contracted Scope (IaaS / KaaS / DBaaS)",
+       "ESA-Requested Profile",
+       "Coverage"
+      ],
+      [
+       "Kubernetes – Cluster Lifecycle",
+       "Deployment, initial configuration, upgrades, patching, HA, ETCD, master nodes",
+       "Cluster lifecycle (provisioning, upgrades, scaling, failures)",
+       "Covered"
+      ],
+      [
+       "Workload Operations",
+       "Cluster operation and support for deployed applications",
+       "Helm/manifests, rollout/rollback, troubleshooting",
+       "Partial (operations, not advanced engineering)"
+      ],
+      [
+       "Kubernetes Storage",
+       "Provisioning and management of StorageClasses, ETCD backup",
+       "StorageClasses, PV/PVC, CSI concepts",
+       "Covered"
+      ],
+      [
+       "Ingress / Networking",
+       "Ingress Controllers, network policies, security",
+       "Ingress/TLS, DNS basics",
+       "Covered"
+      ],
+      [
+       "Kubernetes Security",
+       "RBAC, namespaces, authentication, isolation",
+       "RBAC, quotas, network policies",
+       "Covered"
+      ],
+      [
+       "Observability",
+       "Metrics, logs, cluster events",
+       "Events, metrics, logs",
+       "Covered"
+      ],
+      [
+       "DBaaS – PostgreSQL Operations",
+       "HA, backups, restore, monitoring, patching, scalability",
+       "HA, backup verification, performance triage",
+       "Covered"
+      ],
+      [
+       "Database Access Management",
+       "User and administrative access management",
+       "Privileged access, audit trails",
+       "Covered"
+      ],
+      [
+       "S3 Object Storage",
+       "Not included in contracted scope",
+       "IAM, lifecycle, retention",
+       "Not covered"
+      ],
+      [
+       "Platform Domains Support (Copernicus)",
+       "Not included (infrastructure only)",
+       "Ingestion, catalog, workflows, registry, workspace",
+       "Not covered"
+      ],
+      [
+       "Advanced Incident Management",
+       "Infrastructure incident operations",
+       "Post-incident analysis, functional corrective actions",
+       "Partial"
+      ],
+      [
+       "Functional Change Management",
+       "Infrastructure changes",
+       "Platform/middleware-level changes",
+       "Not covered"
+      ],
+      [
+       "Operational Documentation",
+       "Configuration and change documentation",
+       "Runbooks, SOPs, platform checklists",
+       "Partial"
+      ],
+      [
+       "Middleware Optimization Engineering",
+       "Not included",
+       "Performance tuning, backpressure, advanced sizing",
+       "Not covered"
+      ]
+     ],
+     "header": true
+    }
+   ],
+   "id": "s1-1",
+   "chars": 0,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 1,
+   "num": "2",
+   "title": "Middleware Administrator Profile – Copernicus Platform",
+   "blocks": [],
+   "id": "s2",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "2.1",
+   "title": "Role Objective",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The Middleware Administrator is responsible for the operation, logical configuration, technical supervision, and second-level support of the Copernicus Middleware deployed on managed Kubernetes (KaaS) and third-party DBaaS services. This role does not manage infrastructure, but instead operates and supervises the Middleware runtime and its dependencies, acting as a technical liaison between the platform, the infrastructure provider, and ESA.",
+     "indent": 0
+    }
+   ],
+   "id": "s2-1",
+   "chars": 445,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "2.2",
+   "title": "General Scope of the Role",
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Operate the CopernicusLAC Middleware at the application and runtime layer.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Configure and maintain logical components on top of Kubernetes (excluding base cluster management).",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Diagnose functional and technical Middleware incidents.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Ensure KaaS, DBaaS, and storage services perform as expected.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Coordinate incidents, changes, and improvements with the infrastructure provider and ESA.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Document configurations, procedures, and operational events.",
+     "indent": 1
+    }
+   ],
+   "id": "s2-2",
+   "chars": 438,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "2.3",
+   "title": "Core Technical Competencies",
+   "blocks": [],
+   "id": "s2-3",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "2.3.1",
+   "title": "1. Middleware Operations on Kubernetes (Application Level)",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Deployment and operation of Middleware workloads using Helm and/or Kubernetes manifests, including rollouts, rollbacks, controlled updates, configuration of Deployments, StatefulSets, Jobs, CronJobs, ConfigMaps, and Secrets. Includes log inspection, basic diagnostics, and review of events and metrics for troubleshooting purposes only.\n\nExcludes cluster upgrades, ETCD management, OS patching, or base runtime maintenance.",
+     "indent": 0
+    }
+   ],
+   "id": "s2-3-1",
+   "chars": 423,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "2.3.2",
+   "title": "2. Logical Configuration on KaaS (No Service Administration)",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Configuration and usage of provider-managed StorageClasses, PersistentVolumes and Claims, Middleware-specific Ingress resources, application-level TLS certificates, and logical use of namespaces, RBAC, quotas, and network policies.",
+     "indent": 0
+    }
+   ],
+   "id": "s2-3-2",
+   "chars": 231,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "2.3.3",
+   "title": "3. DBaaS Operations and Supervision",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Operational monitoring of managed databases (availability, connectivity, basic performance), backup verification, restore testing (when defined), diagnosis of connectivity issues and basic bottlenecks, and coordination with the DBaaS provider for incidents, scalability, and planned changes.\n\nExcludes engine administration, patching, HA configuration, and backup execution.",
+     "indent": 0
+    }
+   ],
+   "id": "s2-3-3",
+   "chars": 374,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "2.3.4",
+   "title": "4. Object Storage Operations (S3-Compatible)",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Operational use of S3-compatible object storage, including access validation, bucket and policy verification, basic performance monitoring, and coordination with the provider for integrity or data recovery issues.",
+     "indent": 0
+    }
+   ],
+   "id": "s2-3-4",
+   "chars": 213,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "2.4",
+   "title": "Operational and Process Competencies",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Monitoring and observability, structured incident management, change management, operational security, documentation (runbooks, SOPs, checklists), and coordination with infrastructure providers, ESA, and internal technical users.",
+     "indent": 0
+    }
+   ],
+   "id": "s2-4",
+   "chars": 229,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "2.4.1",
+   "title": "Perfil del Administrador de Middleware – Plataforma Copernicus",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Objetivo del Rol\nEl Administrador de Middleware es responsable de la operación, configuración lógica, supervisión técnica y soporte de segundo nivel del Middleware de Copernicus desplegado sobre Kubernetes administrado (KaaS) y servicios DBaaS de terceros. Este rol no administra la infraestructura; su función es operar y supervisar el entorno de ejecución del Middleware y sus dependencias, actuando como enlace técnico entre la plataforma, el proveedor de infraestructura y la ESA.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Alcance General del Rol",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Operar el Middleware CopernicusLAC a nivel de aplicación y runtime.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Configurar y mantener componentes lógicos sobre Kubernetes (excluyendo la administración del clúster base).",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Diagnosticar incidentes funcionales y técnicos del Middleware.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Asegurar el correcto funcionamiento de los servicios KaaS, DBaaS y de almacenamiento.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Coordinar incidentes, cambios y mejoras con el proveedor de infraestructura y la ESA.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Documentar configuraciones, procedimientos y eventos operativos.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Competencias Técnicas Clave",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "1. Operación de Middleware sobre Kubernetes (Nivel de Aplicación)\nDespliegue y operación de cargas de trabajo del Middleware utilizando Helm y/o manifiestos de Kubernetes, incluyendo rollouts, rollbacks, actualizaciones controladas y configuración de Deployments, StatefulSets, Jobs, CronJobs, ConfigMaps y Secrets. Incluye revisión de logs, diagnósticos básicos y análisis de eventos y métricas únicamente con fines de resolución de incidentes.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Excluye actualizaciones del clúster, gestión de ETCD, parchado del sistema operativo o mantenimiento del runtime base.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "2. Configuración Lógica sobre KaaS (Sin Administración del Servicio)\nConfiguración y uso de StorageClasses administradas por el proveedor, PersistentVolumes y PersistentVolumeClaims, recursos Ingress específicos del Middleware, certificados TLS a nivel de aplicación, y uso lógico de namespaces, RBAC, cuotas y políticas de red.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "3. Operación y Supervisión de DBaaS\nMonitoreo operativo de bases de datos administradas (disponibilidad, conectividad y desempeño básico), verificación de respaldos, pruebas de restauración (cuando estén definidas), diagnóstico de problemas de conectividad y cuellos de botella básicos, así como coordinación con el proveedor DBaaS para la atención de incidentes, escalabilidad y cambios planificados.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Excluye la administración del motor de base de datos, parchado, configuración de alta disponibilidad y ejecución de respaldos.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "4. Operación de Almacenamiento de Objetos (Compatible con S3)\nUso operativo de almacenamiento de objetos compatible con S3, incluyendo validación de accesos, verificación de buckets y políticas, monitoreo básico de desempeño y coordinación con el proveedor ante temas de integridad o recuperación de datos.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Competencias Operativas y de Proceso\nMonitoreo y observabilidad, gestión estructurada de incidentes, gestión de cambios, seguridad operativa, documentación (runbooks, SOPs, listas de verificación) y coordinación con proveedores de infraestructura, la ESA y usuarios técnicos internos.",
+     "indent": 0
+    }
+   ],
+   "id": "s2-4-1",
+   "chars": 3012,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "3",
+   "title": "Gap Analysis",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "This document presents a gap analysis between the scope of services already contracted (IaaS / KaaS / DBaaS) and the Middleware Administrator profile requested by ESA for the Copernicus Platform. The objective of this analysis is to clarify overlaps, partial coverage, and uncovered responsibilities, in order to avoid duplication of roles and to clearly define accountability.",
+     "indent": 0
+    }
+   ],
+   "id": "s3",
+   "chars": 377,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "3.1",
+   "title": "Key Findings",
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Several of the competencies requested by ESA are already fully covered under the contracted infrastructure and managed services scope, particularly those related to Kubernetes cluster lifecycle, security, observability, and DBaaS operations.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Some functions requested by ESA are only partially covered, mainly where the contracted scope focuses on infrastructure-level operations, while ESA expectations extend into application- or middleware-level activities.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "A number of competencies requested by ESA are not included in the contracted scope. These gaps are concentrated around Middleware functional domains, S3 object storage management, advanced incident management, functional change management, and Middleware performance optimization.",
+     "indent": 1
+    }
+   ],
+   "id": "s3-1",
+   "chars": 738,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "3.2",
+   "title": "Conclusion",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "The analysis confirms that the ESA-requested Middleware Administrator role is distinct from the contracted infrastructure and managed services scope. While there is partial operational overlap, the Middleware Administrator primarily addresses application-layer and functional responsibilities that are not covered by the existing contract.",
+     "indent": 0
+    }
+   ],
+   "id": "s3-2",
+   "chars": 339,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "3.3",
+   "title": "Recommendation",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "It is recommended to formally define the Middleware Administrator as a complementary role focused on Middleware operation, functional troubleshooting, and coordination with ESA and the infrastructure provider, ensuring clear accountability and reducing operational risk.",
+     "indent": 0
+    }
+   ],
+   "id": "s3-3",
+   "chars": 270,
+   "figures": 0,
+   "tables": 0
+  }
+ ]
+}

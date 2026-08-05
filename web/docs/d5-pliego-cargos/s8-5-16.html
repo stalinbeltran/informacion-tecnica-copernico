@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8.5.16 Componentes del servicio: · PLIEGO</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">PLIEGO</a><i>›</i><a href="s8.html">8</a><i>›</i><a href="s8-5.html">8.5</a><i>›</i><span>8.5.16 · Componentes del servicio:</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">PLIEGO · Pliego de Cargos — Servicio en la nube (IaaS, KaaS, DBaaS) · Capítulo 8.5.16</span>
+  <h1>Componentes del servicio:</h1>
+  <p class="lede">Componentes del servicio, incluidas las funciones mínimas de <abbr class="acr" title="Database as a Service" tabindex="0">DBaaS</abbr> en etapa operativa.</p>
+  
+  <div class="metrics"></div>
+</div>
+<section class="prose"><ul><li>Funciones mínimas relacionadas con el <abbr class="acr" title="Database as a Service" tabindex="0">DBaaS</abbr> (en etapa operativa):<ul><li>Seguimiento técnico básico al servicio <abbr class="acr" title="Database as a Service" tabindex="0">DBaaS</abbr>, para asegurar su operatividad (respaldo, disponibilidad, performance básico).</li><li>Gestión de accesos administrativos para usuarios técnicos autorizados.</li><li>Coordinación con el proveedor <abbr class="acr" title="Database as a Service" tabindex="0">DBaaS</abbr> ante incidentes o comportamientos anómalos detectados por el middleware.</li><li>Verificación periódica de backups automáticos, según las políticas del servicio contratado.</li><li>Validación de alta disponibilidad activa (<abbr class="acr" title="High Availability" tabindex="0">HA</abbr> funcional).</li><li>Supervisión de recursos (uso de <abbr class="acr" title="Central Processing Unit" tabindex="0">CPU</abbr>, memoria, almacenamiento) y escalabilidad si aplica.</li><li>Documentación de ajustes, accesos y eventos críticos, para trazabilidad y auditoría.</li></ul></li><li>Funciones mínimas relacionadas con el <abbr class="acr" title="Kubernetes as a Service" tabindex="0">KaaS</abbr> (en etapa operativa):<ul><li>Configurar StorageClasses</li><li>Desplegar Ingresses específicos</li><li>Etiquetar nodos</li><li>Desplegar custom controllers</li><li>Editar deployments</li><li>Conectarse a pods</li><li>Revisar eventos y métricas para fines de diagnóstico (debug)</li></ul></li><li>Administración de Sistemas Operativos. El Middleware se desplegará completamente sobre Kubernetes, y no se utilizará directamente la capa de IaaS. El mantenimiento del sistema operativo y la aplicación de parches de seguridad deben estar cubiertos como parte del servicio de <abbr class="acr" title="Kubernetes as a Service" tabindex="0">KaaS</abbr>. Sin embargo, se espera que se tenga conocimientos básicos de configuración y mantenimiento del sistema operativo dentro del equipo, pero no es un requisito clave para el despliegue y operación del Middleware.</li><li>Documentación de configuraciones aplicadas y cambios realizados.</li></ul></section>
+<nav class="pager"><a class="prev" href="s8-5-15.html"><i>←</i><span>8.5.15 · Servicio de Administración de Infraestructura</span></a><a class="next" href="s8-5-17.html"><span>8.5.17 · Servicios de Administración Operativa:</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA
+  y de los documentos de contratación de la AIG de Panamá.
+  Los resúmenes son en español; el texto de cada documento conserva su idioma original.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

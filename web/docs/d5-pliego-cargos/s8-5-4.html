@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8.5.4 Modalidad de Prestación del Servicio · PLIEGO</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">PLIEGO</a><i>›</i><a href="s8.html">8</a><i>›</i><a href="s8-5.html">8.5</a><i>›</i><span>8.5.4 · Modalidad de Prestación del Servicio</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">PLIEGO · Pliego de Cargos — Servicio en la nube (IaaS, KaaS, DBaaS) · Capítulo 8.5.4</span>
+  <h1>Modalidad de Prestación del Servicio</h1>
+  <p class="lede">Modalidad de prestación: servicio 24/7.</p>
+  
+  <div class="metrics"></div>
+</div>
+<section class="prose"><p>El servicio deberá prestarse en horario 24/7.</p>
+<p>El período de contratación será de un (1) año.</p>
+<ul><li>La IaaS debe proporcionar un balanceador de carga con una capacidad mínima de 1 Gb/s y máxima de 4 Gb/s.</li><li>El almacenamiento en bloques se proporcionará mediante volúmenes persistentes conectados a la red <abbr class="acr" title="Solid State Drive" tabindex="0">SSD</abbr> de alto rendimiento.</li><li>La estrategia de backup debe incluir copias de seguridad incrementales diarias de todas las bases de datos de la infraestructura con un tiempo de retención de un (1) mes.</li><li>No se requiere copia de seguridad para las máquinas virtuales y el sistema de almacenamiento.</li><li>En el Anexo I se especifica los recursos que deben estar configurados en alta disponibilidad (<abbr class="acr" title="High Availability" tabindex="0">HA</abbr>), es decir, replicados y distribuidos en al menos dos (2) zonas de disponibilidad dentro de la misma región. - En el contexto de una solución IaaS, el término “zonas de disponibilidad dentro de la misma región” se refiere a ubicaciones físicas independientes pero conectadas dentro del mismo entorno geográfico (en este caso, Panamá). Estas zonas pueden estar ubicadas dentro del mismo centro de datos —siempre que estén separadas lógicamente e incluyan redundancia adecuada— o en centros de datos distintos, siempre que cumplan con el principio de aislamiento de fallos.</li></ul>
+<p>La noción clave de una zona de disponibilidad es el aislamiento de fallos: componentes como energía eléctrica, climatización (HVAC), red y otros deben estar segregados para evitar puntos únicos de falla.</p>
+<p>Desde el Día 1 deberán estar disponibles los siguientes servicios: Servicios administrados o Administración de infraestructura, servicio de conectividad, Kubernetes administrado, balanceador de carga, base de datos (PostgreSQL), almacenamiento en caliente y almacenamiento en bloque. No obstante, inicialmente se puede contar solo con una parte de la asignación final prevista. Como mínimo, deberán estar asignadas 5 máquinas virtuales (4CPU, 16GB) al servicio administrado de Kubernetes, 1TB de almacenamiento en bloque y 10TB de almacenamiento en caliente. La asignación podrá incrementarse progresivamente a partir del Día 1 hasta alcanzar la asignación final en el Día 1 + 3 meses. El almacenamiento en frío podrá estar disponible a partir del Día 1 + 1 mes, con un incremento progresivo hasta llegar a la asignación final en el Día 1 + 3 meses. Este cronograma es indicativo, ya que el plan real de migración dependerá no solo de la infraestructura, sino también del equipo de servicios administrados.</p>
+<p>Expectativa de tráfico de las máquinas virtuales y entre las mismas:</p>
+<ul><li>Valores de referencia, sobre operaciones de Entrada/Salida por segundo (IOPS) 500,000 IOPS (lectura) y 400,000 IOPS (escritura) para Almacenamiento de acceso rápido (Hot Storage)</li><li>Para Almacenamiento de bloque (<abbr class="acr" title="Solid State Drive" tabindex="0">SSD</abbr>), en uso de bases de datos internas se requiere IOPS alto, el valor mínimo recomendado es de 20,000 IOPS. Con velocidad mínima de transferencia de 312 MB/s para operaciones de entrada/salida (I/O) aleatorias, y latencia máxima de 1 milisegundo para almacenamiento de bloques. Estas especificaciones son críticas para garantizar el desempeño óptimo del middleware de procesamiento de datos satelitales.</li><li>Para el almacenamiento caliente de objetos (hot storage), el sistema deberá garantizar latencias máximas de 100 milisegundos para operaciones de lectura y 200 milisegundos para operaciones de escritura. Este almacenamiento será utilizado para el acceso frecuente a datos procesados y metadatos del sistema, por lo que debe mantener estos niveles de rendimiento de forma consistente bajo condiciones de carga operativa normal.</li><li>El almacenamiento en bloque (<abbr class="acr" title="Solid State Drive" tabindex="0">SSD</abbr>) deberá estar optimizado para operaciones de E/S (I/O) aleatorias, siendo recomendable un tamaño de bloque de 16Kb. El almacenamiento en caliente (Object Storage) también deberá estar optimizado para acceso parcial a archivos, con un tamaño de bloque recomendado de 128Kb.</li><li>El almacenamiento frío debe permitir la recuperación de un conjunto de datos Sentinel en un tiempo inferior al que se requeriría para descargar dichos datos a través de la red desde <abbr class="acr" title="European Space Agency" tabindex="0">ESA</abbr>/Copernicus. Se recomienda una estrategia de recuperación flexible, con opciones de recuperación expedited o standard en un rango de 3 a 5 horas.</li></ul></section>
+<nav class="pager"><a class="prev" href="s8-5-3.html"><i>←</i><span>8.5.3 · Responsabilidades del proveedor:</span></a><a class="next" href="s8-5-5.html"><span>8.5.5 · Requerimientos estimados de tráfico</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA
+  y de los documentos de contratación de la AIG de Panamá.
+  Los resúmenes son en español; el texto de cada documento conserva su idioma original.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

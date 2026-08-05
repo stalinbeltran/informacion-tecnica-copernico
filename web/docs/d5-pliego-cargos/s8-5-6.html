@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8.5.6 Almacenamiento: · PLIEGO</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">PLIEGO</a><i>›</i><a href="s8.html">8</a><i>›</i><a href="s8-5.html">8.5</a><i>›</i><span>8.5.6 · Almacenamiento:</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">PLIEGO · Pliego de Cargos — Servicio en la nube (IaaS, KaaS, DBaaS) · Capítulo 8.5.6</span>
+  <h1>Almacenamiento:</h1>
+  <p class="lede">Especificaciones de almacenamiento, incluido el almacenamiento de objetos compatible con S3.</p>
+  <div class="tags"><span class="tag">Almacenamiento</span><span class="tag">S3</span></div>
+  <div class="metrics"><span title="Tablas"><b>1</b> tabl.</span></div>
+</div>
+<section class="prose"><div class="tablewrap"><table class="plain"><tbody><tr><td>Almacenamiento de acceso rápido Petabyte (PB) Object Storage</td><td>Almacenamiento en frío Terabyte (TB) Object Storage</td></tr><tr><td>2</td><td>750</td></tr></tbody></table></div>
+<p>Se debe contemplar que, se implementará un esquema de rotación de datos. Al finalizar el período activo (establecido en un año), los datos almacenados en acceso rápido serán trasladados a almacenamiento en frío, y se cargarán nuevos datos para mantener la disponibilidad en acceso rápido. La información sobre la rotación de datos se proporciona únicamente como referencia y no forma parte del alcance del servicio a ser contratado.</p>
+<p>El sistema de almacenamiento debe ser compatible con S3 (S3-compatible storage).</p>
+<ul><li>El requerimiento de alta disponibilidad (<abbr class="acr" title="High Availability" tabindex="0">HA</abbr>) aplica a los nodos de procesamiento (processing nodes) y puede cumplirse dentro de una región de nube que ofrezca zonas de disponibilidad (availability zones), este requerimiento aplica específicamente a estos nodos de procesamiento (processing nodes), no al sistema de almacenamiento.</li><li>La data fría se gestionará de forma que mantenga un tamaño constante durante la vigencia del contrato, sin contemplar crecimiento anual.</li></ul>
+<p>La escalabilidad mencionada durante el año del contrato hace referencia a las capacidades estándar de un servicio IaaS, como el aprovisionamiento dinámico de recursos bajo demanda.</p>
+<p>El despliegue será realizado utilizando la interfaz del clúster de Kubernetes y la <abbr class="acr" title="Application Programming Interface" tabindex="0">API</abbr>, así como la <abbr class="acr" title="Application Programming Interface" tabindex="0">API</abbr> de almacenamiento de objetos S3. El Operador deberá contar con acceso directo, ya sea mediante <abbr class="acr" title="Virtual Private Network" tabindex="0">VPN</abbr> o interfaz web, a las <abbr class="acr" title="Application Programming Interface" tabindex="0">APIs</abbr> de Kubernetes y S3. Se recomienda el acceso mediante <abbr class="acr" title="Virtual Private Network" tabindex="0">VPN</abbr>. Además, se debe considerar que los nodos de Kubernetes deberán tener acceso a internet para descargar las imágenes de aplicaciones Middleware relevantes y los datos que se deberán transferir al almacenamiento S3.</p>
+<p>Información adicional sobre parámetros de almacenamiento (Hot Storage, Cold Storage y Block Storage):</p>
+<ul><li>Para Hot Storage y Cold Storage, el tamaño promedio de los objetos oscila entre 100 MB y 1 GB, con un máximo de 8 GB.<ul><li>Se debe considerar que son frecuentes las lecturas parciales con tamaños entre 16 KB y 1 MB, por lo que el Hot Storage deberá estar optimizado para accesos parciales.</li></ul></li><li>En Cold Storage, una solicitud promedio de recuperación corresponderá a 20 TB, y una vez recuperados, los datos deberán ser accesibles con el mismo desempeño y patrones de acceso que en el Hot Storage.</li><li>En cuanto a Block Storage (<abbr class="acr" title="Solid State Drive" tabindex="0">SSD</abbr> – PVC):<ul><li>Se recomienda un tamaño de bloque de 16 KB, adecuado para operaciones de I/O aleatorias (ejemplo: acceso a bases de datos).</li><li>El patrón de uso aceptado es de 70% lectura y 30% escritura.</li><li>Para entornos con VMFS, no existen requisitos específicos de tamaño de bloque; se acepta el valor por defecto de 1 MB.</li></ul></li></ul>
+<p>Especificaciones de Almacenamiento de Objetos (Object Storage):</p>
+<p>Para el almacenamiento caliente de objetos (hot storage), el sistema deberá garantizar latencias máximas de 100 milisegundos para operaciones de lectura y 200 milisegundos para operaciones de escritura. Este almacenamiento será utilizado para el acceso frecuente a datos procesados y metadatos del sistema, por lo que debe mantener estos niveles de rendimiento de forma consistente bajo condiciones de carga operativa normal.</p></section>
+<nav class="pager"><a class="prev" href="s8-5-5.html"><i>←</i><span>8.5.5 · Requerimientos estimados de tráfico</span></a><a class="next" href="s8-5-7.html"><span>8.5.7 · Kubernetes as a Service - Kubernetes como Servicio (KaaS):</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA
+  y de los documentos de contratación de la AIG de Panamá.
+  Los resúmenes son en español; el texto de cada documento conserva su idioma original.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

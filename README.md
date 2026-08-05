@@ -40,24 +40,31 @@ tooltip nativo del atributo `title`.
 
 ```
 .
-├─ *.pdf                                   documentos originales (sin modificar)
+├─ *.pdf, *.docx, *.doc                    documentos originales (sin modificar)
 ├─ tools/
-│  ├─ extract.py                           PDF → JSON estructurado + figuras PNG
+│  ├─ extract.py                           PDF  → JSON estructurado + figuras
+│  ├─ extract_docx.py                      DOCX → el mismo JSON + imágenes
+│  ├─ convert_doc.ps1                      .doc heredado → .docx (usa Word)
 │  └─ build_site.py                        JSON + resúmenes → sitio HTML estático
 └─ web/
    ├─ index.html                           nivel 1
    ├─ assets/css/style.css, assets/js/app.js
    ├─ data/
-   │  ├─ <doc>.json                        contenido extraído del PDF
+   │  ├─ <doc>.json                        contenido extraído del original
    │  └─ <doc>.summaries.json              resúmenes escritos a mano (editable)
    └─ docs/<doc>/
       ├─ index.html, s*.html               niveles 2, 3 y 4
-      └─ img/                              figuras extraídas del PDF
+      └─ img/                              figuras extraídas del original
 ```
+
+Los dos extractores emiten **el mismo esquema JSON**, de modo que `build_site.py`
+no distingue el formato de origen.
 
 ## Estado
 
-Los tres documentos están procesados.
+Los seis documentos están procesados, en dos familias.
+
+### Documentación técnica de la plataforma (Terradue / ESA)
 
 | Documento | Papel | Páginas | Secciones | Figuras | Tablas |
 |---|---|---:|---:|---:|---:|
@@ -65,19 +72,52 @@ Los tres documentos están procesados.
 | D2 — System Architecture Description (v1.3) | Cómo está construida la plataforma | 83 | 125 | 21 | 5 |
 | D3 — Interface Control Document (v1.3) | Cómo se integra con ella desde fuera | 35 | 63 | 5 | 4 |
 
-Los resúmenes están en español; el contenido de los documentos se conserva en
-su inglés original.
+### Documentos del encargo y del puesto (AIG Panamá)
+
+| Documento | Papel | Secciones | Figuras | Tablas |
+|---|---|---:|---:|---:|
+| TDR — Administrador del Middleware | Qué se contrata y qué se espera del puesto | 13 | 0 | 1 |
+| PLIEGO — Servicio en la nube (IaaS, KaaS, DBaaS) | Qué contrata Panamá al proveedor de infraestructura | 92 | 4 | 11 |
+| PERFIL — Comparación de perfil y definición del rol | Qué separa el alcance contratado de lo que pide ESA | 16 | 0 | 1 |
+
+Los documentos Word no anuncian número de páginas: el formato no fija una
+paginación, así que en su lugar se muestran secciones, figuras y tablas.
+
+Los resúmenes están en español; el texto de cada documento conserva su idioma
+original.
 
 ## Regenerar
 
-Requiere Python 3 con PyMuPDF (`pip install PyMuPDF`).
+Requiere Python 3 con PyMuPDF (`pip install PyMuPDF`) para los PDF. La
+extracción de `.docx` no necesita dependencias externas.
 
 ```bash
+# PDF
 python tools/extract.py "<archivo>.pdf" web/data/<doc>.json web/docs/<doc>/img <doc>
+
+# DOCX
+python tools/extract_docx.py "<archivo>.docx" web/data/<doc>.json web/docs/<doc>/img <doc>
+
+# .doc heredado: convertir primero (requiere Word instalado)
+powershell -File tools/convert_doc.ps1 "<archivo>.doc"
+
 python tools/build_site.py
 ```
 
-Para añadir un documento nuevo: ejecuta `extract.py`, escribe su archivo
-`web/data/<doc>.summaries.json` con los resúmenes, marca `"ready": True` en la
-lista `CATALOG` de `tools/build_site.py` y vuelve a ejecutar `build_site.py`.
-`build_site.py` no toca los PDF originales ni los resúmenes: solo regenera el HTML.
+Para añadir un documento nuevo: ejecuta el extractor que corresponda, escribe su
+archivo `web/data/<doc>.summaries.json` con los resúmenes, añádelo a la lista
+`CATALOG` de `tools/build_site.py` con `"ready": True` —indicando su `group`
+(`esa` o `aig`) y su `kind` (`pdf` o `word`)— y vuelve a ejecutar
+`build_site.py`, que no toca los originales ni los resúmenes: solo regenera el
+HTML.
+
+### Sobre la extracción de Word
+
+Un `.docx` no trae índice ni paginación fiables, así que el árbol de secciones
+se deduce de los títulos. Estos documentos apenas usan estilos de título, por lo
+que `extract_docx.py` combina varias señales: estilo real de encabezado,
+patrones de numeración (`CAPÍTULO`, romanos, decimales, `ANEXO`), ítems de lista
+numerada en mayúsculas y rótulos cortos en negrita. Además desenvuelve las
+tablas de una sola columna, que en el pliego encajonan capítulos enteros, y
+descarta el índice impreso. El atributo `outlineLvl` se ignora a propósito:
+aparece aplicado sobre texto corriente y no sirve como pista.

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PERFIL · Comparación de perfil y definición del rol</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<script>window.__IDX__=[{"i": "s1", "n": "1", "t": "Comparison Between Contracted Scope and ESA-Requested Middleware Administrator Profile", "s": "Comparación entre el alcance contratado y el perfil que pide ESA: varias funciones ya están cubiertas por el contrato de infraestructura, otras no.", "l": 1}, {"i": "s1-1", "n": "1.1", "t": "Contracted Scope vs. ESA-Requested Competencies", "s": "Tabla de once áreas —ciclo de vida del clúster, workloads, storage, ingress, seguridad, observabilidad, DBaaS, accesos, S3, dominios Copernicus e incidentes— con su cobertura: cubierta, parcial o no cubierta.", "l": 2}, {"i": "s2", "n": "2", "t": "Middleware Administrator Profile – Copernicus Platform", "s": "Definición formal del perfil de Administrador de Middleware de la plataforma Copernicus.", "l": 1}, {"i": "s2-1", "n": "2.1", "t": "Role Objective", "s": "Objetivo del rol: operar, configurar lógicamente, supervisar y dar soporte de segundo nivel al Middleware sobre Kubernetes administrado y DBaaS de terceros. No administra infraestructura.", "l": 2}, {"i": "s2-2", "n": "2.2", "t": "General Scope of the Role", "s": "Alcance general en seis puntos: operar a nivel de aplicación, configurar componentes lógicos sobre Kubernetes, diagnosticar incidentes, velar por KaaS/DBaaS/almacenamiento, coordinar con proveedor y ESA, y documentar.", "l": 2}, {"i": "s2-3", "n": "2.3", "t": "Core Technical Competencies", "s": "Las cuatro competencias técnicas núcleo, cada una con su lista de exclusiones.", "l": 2}, {"i": "s2-3-1", "n": "2.3.1", "t": "1. Middleware Operations on Kubernetes (Application Level)", "s": "Operación sobre Kubernetes a nivel de aplicación: Helm y manifiestos, rollouts y rollbacks, Deployments, StatefulSets, Jobs, CronJobs, ConfigMaps y Secrets. Excluye upgrades del clúster, ETCD, parcheo del SO y runtime base.", "l": 3}, {"i": "s2-3-2", "n": "2.3.2", "t": "2. Logical Configuration on KaaS (No Service Administration)", "s": "Configuración lógica sobre KaaS: StorageClasses del proveedor, PV y PVC, Ingress del Middleware, TLS de aplicación, namespaces, RBAC, cuotas y políticas de red. Sin administrar el servicio.", "l": 3}, {"i": "s2-3-3", "n": "2.3.3", "t": "3. DBaaS Operations and Supervision", "s": "Operación y supervisión de DBaaS: disponibilidad, conectividad, desempeño básico, verificación de respaldos y pruebas de restauración. Excluye administrar el motor, parchear, configurar HA y ejecutar respaldos.", "l": 3}, {"i": "s2-3-4", "n": "2.3.4", "t": "4. Object Storage Operations (S3-Compatible)", "s": "Operación de almacenamiento de objetos S3: validación de accesos, buckets y políticas, monitoreo básico y coordinación con el proveedor.", "l": 3}, {"i": "s2-4", "n": "2.4", "t": "Operational and Process Competencies", "s": "Competencias operativas y de proceso: observabilidad, gestión de incidentes y de cambios, seguridad operativa, documentación (runbooks, SOPs, checklists) y coordinación con proveedores, ESA y usuarios internos.", "l": 2}, {"i": "s2-4-1", "n": "2.4.1", "t": "Perfil del Administrador de Middleware – Plataforma Copernicus", "s": "El mismo perfil íntegro en español: objetivo, alcance, las cuatro competencias técnicas con sus exclusiones y las competencias operativas.", "l": 3}, {"i": "s3", "n": "3", "t": "Gap Analysis", "s": "Análisis de brechas entre lo contratado y lo solicitado, para evitar duplicidad de roles y fijar responsabilidades.", "l": 1}, {"i": "s3-1", "n": "3.1", "t": "Key Findings", "s": "Tres hallazgos: buena parte ya está cubierta por el contrato; algunas funciones solo parcialmente, donde el contrato llega al nivel de infraestructura y ESA espera nivel de aplicación; y quedan sin cubrir los dominios funcionales del Middleware, el almacenamiento S3, la gestión avanzada de incidentes y de cambios y la optimización del rendimiento.", "l": 2}, {"i": "s3-2", "n": "3.2", "t": "Conclusion", "s": "Conclusión: el rol que pide ESA es distinto del alcance contratado; hay solape operativo parcial, pero las responsabilidades de capa de aplicación no están cubiertas por el contrato vigente.", "l": 2}, {"i": "s3-3", "n": "3.3", "t": "Recommendation", "s": "Recomendación: definir formalmente el Administrador de Middleware como rol complementario centrado en operación, diagnóstico funcional y coordinación con ESA y el proveedor.", "l": 2}];</script>
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><span>PERFIL</span></nav>
+<div class="pagehead doc">
+  <span class="eyebrow">Middleware Profile Comparison and Role · EN / ES</span>
+  <h1>PERFIL — Comparación de perfil y definición del rol</h1>
+  <p class="lede">Análisis de brechas entre el alcance ya contratado al proveedor de infraestructura (IaaS/<abbr class="acr" title="Kubernetes as a Service" tabindex="0">KaaS</abbr>/<abbr class="acr" title="Database as a Service" tabindex="0">DBaaS</abbr>) y el perfil de Administrador de Middleware que pide <abbr class="acr" title="European Space Agency" tabindex="0">ESA</abbr>, con la definición del rol y la recomendación de tratarlo como puesto complementario.</p>
+  <p class="long">Documento breve pero decisivo para entender el encaje del puesto. Compara función por función lo que ya cubre el contrato de infraestructura con lo que <abbr class="acr" title="European Space Agency" tabindex="0">ESA</abbr> espera del responsable del Middleware, y clasifica cada competencia como cubierta, parcial o no cubierta. La conclusión es que el rol no se solapa con el proveedor: donde el contrato opera a nivel de infraestructura, el Administrador de Middleware opera a nivel de aplicación y runtime. Incluye la definición formal del rol —objetivo, alcance general, cuatro competencias técnicas núcleo y las competencias operativas y de proceso— con sus exclusiones explícitas en cada bloque, y cierra con hallazgos, conclusión y recomendación. El texto viene en inglés y se repite íntegro en español.</p>
+  <div class="tags"><span class="tag">Gap Analysis</span><span class="tag">Rol</span><span class="tag">KaaS</span><span class="tag">DBaaS</span><span class="tag">Alcance</span><span class="tag">ESA</span></div>
+  <div class="metrics">
+    <span><b>3</b> capítulos</span>
+    <span><b>16</b> secciones</span>
+    <span><b>0</b> figuras</span>
+    <span><b>1</b> tablas</span>
+  </div>
+  <p class="src">Fuente: <a href="../../../Middleware_Profile_Comparison_and_Role_EN.docx">Middleware_Profile_Comparison_and_Role_EN.docx</a></p>
+</div>
+<div class="searchbox">
+  <input type="search" id="q" autocomplete="off"
+         placeholder="Buscar entre las 16 secciones del documento…">
+  <div id="results" class="results"></div>
+</div>
+<h2 class="secttl">Capítulos</h2><div class="grid">
+<a class="card" href="s1.html">
+  <span class="eyebrow">1</span>
+  <h3>Comparison Between Contracted Scope and ESA-Requested Middleware Administrator Profile</h3>
+  <p class="sum">Comparación entre el alcance contratado y el perfil que pide <abbr class="acr" title="European Space Agency" tabindex="0">ESA</abbr>: varias funciones ya están cubiertas por el contrato de infraestructura, otras no.</p>
+  <div class="tags"><span class="tag">Comparación</span></div>
+  <div class="metrics"><span title="Apartados"><b>1</b> apartados</span><span title="Tablas"><b>1</b> tabl.</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s2.html">
+  <span class="eyebrow">2</span>
+  <h3>Middleware Administrator Profile – Copernicus Platform</h3>
+  <p class="sum">Definición formal del perfil de Administrador de Middleware de la plataforma Copernicus.</p>
+  <div class="tags"><span class="tag">Perfil</span></div>
+  <div class="metrics"><span title="Apartados"><b>4</b> apartados</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+<a class="card" href="s3.html">
+  <span class="eyebrow">3</span>
+  <h3>Gap Analysis</h3>
+  <p class="sum">Análisis de brechas entre lo contratado y lo solicitado, para evitar duplicidad de roles y fijar responsabilidades.</p>
+  <div class="tags"><span class="tag">Brechas</span></div>
+  <div class="metrics"><span title="Apartados"><b>3</b> apartados</span></div>
+  <span class="go">Explorar <i>→</i></span>
+</a>
+</div>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA
+  y de los documentos de contratación de la AIG de Panamá.
+  Los resúmenes son en español; el texto de cada documento conserva su idioma original.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.4.1 Perfil del Administrador de Middleware – Plataforma Copernicus · PERFIL</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">PERFIL</a><i>›</i><a href="s2.html">2</a><i>›</i><a href="s2-4.html">2.4</a><i>›</i><span>2.4.1 · Perfil del Administrador de Middleware – Plataforma Copernicus</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">PERFIL · Comparación de perfil y definición del rol · Capítulo 2.4.1</span>
+  <h1>Perfil del Administrador de Middleware – Plataforma Copernicus</h1>
+  <p class="lede">El mismo perfil íntegro en español: objetivo, alcance, las cuatro competencias técnicas con sus exclusiones y las competencias operativas.</p>
+  <div class="tags"><span class="tag">Español</span></div>
+  <div class="metrics"></div>
+</div>
+<section class="prose"><p>Objetivo del Rol
+El Administrador de Middleware es responsable de la operación, configuración lógica, supervisión técnica y soporte de segundo nivel del Middleware de Copernicus desplegado sobre Kubernetes administrado (<abbr class="acr" title="Kubernetes as a Service" tabindex="0">KaaS</abbr>) y servicios <abbr class="acr" title="Database as a Service" tabindex="0">DBaaS</abbr> de terceros. Este rol no administra la infraestructura; su función es operar y supervisar el entorno de ejecución del Middleware y sus dependencias, actuando como enlace técnico entre la plataforma, el proveedor de infraestructura y la <abbr class="acr" title="European Space Agency" tabindex="0">ESA</abbr>.</p>
+<p>Alcance General del Rol</p>
+<ul><li>Operar el Middleware CopernicusLAC a nivel de aplicación y runtime.</li><li>Configurar y mantener componentes lógicos sobre Kubernetes (excluyendo la administración del clúster base).</li><li>Diagnosticar incidentes funcionales y técnicos del Middleware.</li><li>Asegurar el correcto funcionamiento de los servicios <abbr class="acr" title="Kubernetes as a Service" tabindex="0">KaaS</abbr>, <abbr class="acr" title="Database as a Service" tabindex="0">DBaaS</abbr> y de almacenamiento.</li><li>Coordinar incidentes, cambios y mejoras con el proveedor de infraestructura y la <abbr class="acr" title="European Space Agency" tabindex="0">ESA</abbr>.</li><li>Documentar configuraciones, procedimientos y eventos operativos.</li></ul>
+<p>Competencias Técnicas Clave</p>
+<p>1. Operación de Middleware sobre Kubernetes (Nivel de Aplicación)
+Despliegue y operación de cargas de trabajo del Middleware utilizando Helm y/o manifiestos de Kubernetes, incluyendo rollouts, rollbacks, actualizaciones controladas y configuración de Deployments, StatefulSets, Jobs, CronJobs, ConfigMaps y Secrets. Incluye revisión de logs, diagnósticos básicos y análisis de eventos y métricas únicamente con fines de resolución de incidentes.</p>
+<p>Excluye actualizaciones del clúster, gestión de ETCD, parchado del sistema operativo o mantenimiento del runtime base.</p>
+<p>2. Configuración Lógica sobre <abbr class="acr" title="Kubernetes as a Service" tabindex="0">KaaS</abbr> (Sin Administración del Servicio)
+Configuración y uso de StorageClasses administradas por el proveedor, PersistentVolumes y PersistentVolumeClaims, recursos Ingress específicos del Middleware, certificados <abbr class="acr" title="Transport Layer Security" tabindex="0">TLS</abbr> a nivel de aplicación, y uso lógico de namespaces, <abbr class="acr" title="Role-Based Access Control" tabindex="0">RBAC</abbr>, cuotas y políticas de red.</p>
+<p>3. Operación y Supervisión de <abbr class="acr" title="Database as a Service" tabindex="0">DBaaS</abbr>
+Monitoreo operativo de bases de datos administradas (disponibilidad, conectividad y desempeño básico), verificación de respaldos, pruebas de restauración (cuando estén definidas), diagnóstico de problemas de conectividad y cuellos de botella básicos, así como coordinación con el proveedor <abbr class="acr" title="Database as a Service" tabindex="0">DBaaS</abbr> para la atención de incidentes, escalabilidad y cambios planificados.</p>
+<p>Excluye la administración del motor de base de datos, parchado, configuración de alta disponibilidad y ejecución de respaldos.</p>
+<p>4. Operación de Almacenamiento de Objetos (Compatible con S3)
+Uso operativo de almacenamiento de objetos compatible con S3, incluyendo validación de accesos, verificación de buckets y políticas, monitoreo básico de desempeño y coordinación con el proveedor ante temas de integridad o recuperación de datos.</p>
+<p>Competencias Operativas y de Proceso
+Monitoreo y observabilidad, gestión estructurada de incidentes, gestión de cambios, seguridad operativa, documentación (runbooks, SOPs, listas de verificación) y coordinación con proveedores de infraestructura, la <abbr class="acr" title="European Space Agency" tabindex="0">ESA</abbr> y usuarios técnicos internos.</p></section>
+<nav class="pager"><a class="prev" href="s2-4.html"><i>←</i><span>2.4 · Operational and Process Competencies</span></a><a class="next" href="s3.html"><span>3 · Gap Analysis</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA
+  y de los documentos de contratación de la AIG de Panamá.
+  Los resúmenes son en español; el texto de cada documento conserva su idioma original.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

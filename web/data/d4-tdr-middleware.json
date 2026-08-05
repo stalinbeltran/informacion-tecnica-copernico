@@ -1,0 +1,1018 @@
+{
+ "doc_id": "d4-tdr-middleware",
+ "source_pdf": "TDR Adm del middleware selección directa - General - AIG.docx",
+ "title": "d4-tdr-middleware",
+ "pages": 3,
+ "sections": [
+  {
+   "level": 0,
+   "num": "0",
+   "title": "Portada y preliminares",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "PANAMÁ",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "AUTORIDAD NACIONAL PARA LA INNOVACION GUBERNAMENTAL",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "PROGRAMA PANAMÁ DIGITAL",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Préstamo BID 5501/OC-PN",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "PROGRAMA “PANAMÁ DIGITAL (PN-L1171)",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "TÉRMINOS DE REFERENCIA PARA",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "CONSULTORÍA INDIVIDUAL",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "ACTIVIDAD: CONTRATACIÓN DE CONSULTOR INDIVIDUAL COMO ADMINISTRADOR DEL MIDDLEWARE DE COPERNICUS",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "LIDER TÉCNICO",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "EQUIPO TÉCNICO",
+     "indent": 0
+    }
+   ],
+   "id": "portada",
+   "chars": 309,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "1",
+   "title": "I. ANTECEDENTES",
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Del Programa",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "La República de Panamá ha suscrito el Contrato de Préstamo No. 5501/OC-PN con el Banco Interamericano de Desarrollo, cuyo organismo ejecutor es la Autoridad Nacional para la Innovación Gubernamental, con el objetivo de reducir los costos de la interacción, entre los ciudadanos y empresas y el Estado, contribuyendo así a la recuperación económica inclusiva.",
+     "indent": 1
+    }
+   ],
+   "id": "s1",
+   "chars": 370,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.1",
+   "title": "OBJETIVO DEL PROGRAMA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Contempla los siguientes objetivos específicos:",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "El objetivo específico es Incrementar la eficiencia en la prestación de trámites y servicios para ciudadanos y empresas.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Mejorar la efectividad de la ciberseguridad de los servicios digitales.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Incrementar la demanda de trámites y servicios digitales, con énfasis en las poblaciones vulnerables.",
+     "indent": 1,
+     "marker": "1."
+    }
+   ],
+   "id": "s1-1",
+   "chars": 339,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "1.2",
+   "title": "OBJETIVOS DE LA CONSULTORÍA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "De acuerdo con los objetivos del Programa Panamá Digital, se ha determinado la necesidad de realizar la selección directa del Consultor Individual, con el propósito de fortalecer la capacidad técnica y operativa de la Autoridad Nacional para la Innovación Gubernamental (AIG) en la gestión, operación y continuidad del Middleware de la Plataforma Copernicus LAC Panamá.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "En el marco de los objetivos del Programa Panamá Digital, la Autoridad Nacional para la Innovación Gubernamental (AIG) requiere la contratación de un consultor individual especializado con el propósito de garantizar la operación, supervisión técnica, configuración lógica y continuidad operativa del Middleware de la Plataforma Copernicus LAC Panamá, desplegado sobre servicios gestionados de Kubernetes (KaaS), bases de datos (DBaaS) y almacenamiento de objetos.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "La presente consultoría tiene como objetivo asegurar la estabilidad, disponibilidad y correcto desempeño de los servicios que conforman el Middleware, así como fortalecer la gestión operativa del entorno mediante la implementación de buenas prácticas en monitoreo, gestión de incidentes, configuración de componentes y documentación técnica, contribuyendo a la continuidad y evolución controlada de la plataforma.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "De igual manera, el consultor actuará como enlace técnico principal entre la Autoridad Nacional para la Innovación Gubernamental, el proveedor de infraestructura y la Agencia Espacial Europea (ESA), garantizando la adecuada coordinación técnica para la atención de requerimientos, incidentes, cambios y validaciones necesarias para el correcto funcionamiento del sistema.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Asimismo, se persigue asegurar el cumplimiento de los niveles de servicio establecidos, mediante la supervisión continua de los componentes del Middleware, la validación de los entregables técnicos del proveedor de infraestructura y la generación de información oportuna sobre el estado operativo, incidencias y riesgos asociados a la plataforma, contribuyendo al fortalecimiento de la capacidad institucional para la gestión de servicios digitales estratégicos.",
+     "indent": 0
+    }
+   ],
+   "id": "s1-2",
+   "chars": 2078,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "1.2.1",
+   "title": "Objetivo general:",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "El objetivo de esta consultoría es asegurar la operación, supervisión técnica, configuración lógica y continuidad operativa del Middleware de la Plataforma Copernicus LAC Panamá, desplegado sobre servicios gestionados de Kubernetes (KaaS), bases de datos (DBaaS) y almacenamiento de objetos, a nivel de aplicación y entorno de ejecución (runtime), ejerciendo el liderazgo técnico del proyecto y actuando como referente técnico principal ante la AIG, la Agencia Espacial Europea (ESA) y el proveedor de infraestructura, garantizando el correcto funcionamiento, la toma de decisiones técnicas oportunas y la alineación del entorno operativo con los estándares y requerimientos del proyecto.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "En virtud de la necesidad de contar con un componente especializado que gestione el middleware como capa central de integración y orquestación de servicios dentro del ecosistema Copernicus, se requiere un recurso que opere y supervise los componentes del sistema sin intervenir en la administración de la infraestructura subyacente, enfocándose en la estabilidad, disponibilidad y correcto desempeño de los servicios desplegados.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Asimismo, considerando que el Middleware constituye el punto clave de interacción entre los distintos módulos de la plataforma, los servicios de datos y los proveedores tecnológicos, esta consultoría permitirá fortalecer la gestión operativa mediante el monitoreo continuo, la atención de incidentes de segundo nivel, la configuración lógica de componentes sobre Kubernetes, y la coordinación efectiva con el proveedor de infraestructura, servicios DBaaS y la Agencia Espacial Europea (ESA).",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "De igual forma, se busca garantizar la trazabilidad operativa, la adecuada documentación técnica y la implementación de buenas prácticas en la gestión de cambios, seguridad y observabilidad, contribuyendo así a la continuidad, resiliencia y evolución controlada de la Plataforma Copernicus en Panamá.",
+     "indent": 0
+    }
+   ],
+   "id": "s1-2-1",
+   "chars": 1908,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "1.2.2",
+   "title": "Objetivos específicos:",
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Asegurar la disponibilidad, estabilidad y rendimiento del middleware de la plataforma Copernicus.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Administrar los componentes tecnológicos que permiten la integración, procesamiento y publicación de servicios geoespaciales.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Ejecutar la operación técnica de la Plataforma, asegurando el cumplimiento de los niveles de servicio establecidos.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Brindar soporte técnico especializado a las instituciones usuarias de la plataforma Copernicus cuando sea requerido.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Elaborar reportes periódicos sobre el estado de la plataforma, incidencias y riesgos.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Actuar como punto focal técnico principal de la AIG ante la Agencia Espacial Europea (ESA) y el proveedor de infraestructura, coordinando requerimientos, cambios, incidentes y validaciones técnicas.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Validar los entregables técnicos del proveedor de infraestructura, asegurando el cumplimiento de los estándares operativos y los niveles de servicio establecidos en el contrato.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Conducir las reuniones técnicas operativas del proyecto, asegurando el seguimiento formal de acuerdos, compromisos y decisiones adoptadas cuando sea necesario.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Implementar y utilizar mecanismos de monitoreo y observabilidad que permitan identificar oportunamente incidentes, riesgos operativos y oportunidades de mejora en el entorno del Middleware.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Mantener actualizada la documentación técnica y operativa del entorno, incluyendo procedimientos, runbooks, inventarios, bitácoras y demás registros necesarios para la gestión y continuidad del servicio.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Participar en actividades de transferencia de conocimiento y fortalecimiento de capacidades institucionales que contribuyan a la sostenibilidad operativa de la Plataforma Copernicus LAC Panamá.",
+     "indent": 1
+    }
+   ],
+   "id": "s1-2-2",
+   "chars": 1657,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "2",
+   "title": "III. CARACTERÍSTICAS DE LA CONSULTORÍA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "3.1. Tipo de consultoría: Individual, Nacional.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "3.2. Duración: Estas contrataciones tiene una duración total tal y como se describe a continuación:",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "3.2.1. El tiempo de duración de la consultoría se estima en diecinueve (19) meses calendarios de los cuales dieciocho (18) meses corresponden a ejecución técnica y un (01) mes adicional para el pago y cierre del contrato, que inicia a partir del día hábil siguiente de la notificación de la orden de proceder, una vez refrendado el contrato por la Contraloría General de la República.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "3.3. Lugar de trabajo: La AIG será responsable de la coordinación necesaria para establecer la relación entre el consultor y los equipos técnicos, proveedores y actores involucrados en la operación de la plataforma Copernicus LAC Panamá.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "La AIG proporcionará al consultor la información y documentación técnica necesaria para el desarrollo de sus funciones.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El consultor prestará sus servicios bajo una modalidad híbrida, que incluirá trabajo remoto y asistencia a reuniones presenciales y/o según sea requerido por la AIG mediante coordinación previa.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El sitio principal base para entregar los productos que se originen de las consultas efectuadas será en Oficinas de la Autoridad Nacional para la Innovación Gubernamental (AIG), ubicado en el en el PH NYSO, Piso 2, ubicado en Avenida Simón Bolivar, Vía Transístmica, Provincia de Panamá”",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "La AIG proporcionará a los consultores el acceso a las instalaciones, también identificará y proporcionará al consultor, toda la documentación existente necesaria para ejecutar la consultoría.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El consultor será responsable de los gastos asociados a su operación, incluyendo equipo de cómputo, conectividad y cualquier otro recurso necesario para el cumplimiento de sus funciones.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "De requerir el Contratante la continuidad de los servicios del Consultor , el contrato de consultoría podrá ser renovado, sujeto a una evaluación previa satisfactoria.",
+     "indent": 1
+    }
+   ],
+   "id": "s2",
+   "chars": 1912,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "2.1",
+   "title": "CUADRO Y PRODUCTOS DE LA CONSULTORÍA",
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Producto o Entregable",
+       "Contenido (Actividades)",
+       "Tiempo"
+      ],
+      [
+       "Producto 1 Plan de trabajo, diagnóstico inicial y puesta en operación Objetivo: Establecer la base operativa y técnica del Middleware.",
+       "Elaborar el cronograma detallado y el plan de trabajo operativo, técnico y de coordinación. Realizar el diagnóstico del entorno (servicios, componentes y dependencias). Levantar el inventario preliminar de servicios y estado operativo. Ejecutar y registrar las validaciones técnicas (conectividad, accesos, disponibilidad). Identificar y atender los incidentes iniciales. Definir la estructura del repositorio documental. Generar evidencia de la puesta en operación inicial. Recibir y registrar las sesiones de capacitación de la ESA Documentar procesos en el wiki/repositorio de forma estructurada y progresiva",
+       "A los treinta (30) días calendario, a partir del día hábil siguiente de la notificación de la orden de proceder, una vez refrendado el contrato por la Contraloría General de la República."
+      ],
+      [
+       "Producto 2 Operación inicial documentada – Fase 1 Objetivo: Asegurar la operación controlada inicial con documentación técnica base.",
+       "Registrar la operación del Middleware durante el período. Reportar y gestionar los incidentes del período. Documentar los despliegues realizados. Validar la conectividad con DBaaS y almacenamiento. Actualizar la arquitectura lógica del sistema. Levantar el inventario detallado de servicios y componentes. Elaborar los runbooks iniciales basados en la operación real. Registrar las coordinaciones técnicas realizadas. Actualizar el repositorio documental. Recibir y registrar las sesiones de capacitación de la ESA",
+       "A los tres (3) meses calendario, una vez recibido a satisfacción el entregable anterior."
+      ],
+      [
+       "Producto 3 Estabilización técnica del Middleware – Fase 2 Objetivo: Garantizar estabilidad operativa y desempeño de servicios críticos.",
+       "Elaborar el informe de estabilización con análisis de comportamiento. Documentar y ejecutar los ajustes de configuración. Validar y documentar el desempeño de servicios críticos. Identificar los flujos operativos reales. Ajustar los runbooks a escenarios reales. Consolidar el registro de coordinaciones con proveedores. Actualizar el repositorio documental. Registrar y dar seguimiento a los acuerdos técnicos derivados de reuniones operativas. Recibir y registrar las sesiones de capacitación de la ESA",
+       "A los cinco (5) meses calendario, una vez recibido a satisfacción el entregable anterior."
+      ],
+      [
+       "Producto 4 Transferencia técnica basada en operación real – Fase 3 Objetivo: Consolidar la operación del Middleware incorporando transferencia de conocimiento de forma progresiva y basada en la operación real.",
+       "Registrar la operación del Middleware durante el período. Documentar las actividades operativas realizadas en conjunto con el recurso designado. Ejecutar las actividades de transferencia de conocimiento en el contexto de la operación (shadowing y sesiones prácticas). Registrar la participación del recurso designado en tareas operativas. Ejecutar y documentar los casos prácticos en el entorno operativo o controlado. Identificar y documentar las brechas técnicas y definir acciones de seguimiento. Actualizar los runbooks y procedimientos con base en la operación real. Registrar y dar seguimiento a los acuerdos técnicos derivados de reuniones operativas. Recibir y registrar las sesiones de capacitación de la ESA Documentar procesos en el wiki/repositorio de forma estructurada y progresiva",
+       "A los siete (7) meses calendario, una vez recibido a satisfacción el entregable anterior."
+      ],
+      [
+       "Producto 5 Habilitación operativa y operación conjunta – Fase 4 Objetivo: Lograr autonomía operativa parcial del entorno.",
+       "Elaborar el informe de habilitación operativa del entorno. Documentar la operación conjunta con el recurso designado. Validar y documentar la operación autónoma parcial en tareas operativas. Documentar la gestión de incidentes realizada durante la operación. Consolidar los runbooks con base en la operación real. Estructurar el registro de incidencias y su tratamiento. Actualizar el repositorio documental. Registrar y dar seguimiento a los acuerdos técnicos derivados de reuniones operativas. Recibir y registrar las sesiones de capacitación de la ESA",
+       "A los nueve (9) meses calendario, una vez recibido a satisfacción el entregable anterior."
+      ],
+      [
+       "Producto 6 Estandarización de procesos operativos – Fase 5 Objetivo: Formalizar y estandarizar la operación del Middleware.",
+       "Documentar los procedimientos operativos (SOPs) derivados de la operación del Middleware. Documentar las prácticas aplicadas en la gestión de incidentes, cambios y problemas. Identificar los roles operativos involucrados en la ejecución de tareas del Middleware. Evidenciar la aplicación de los procedimientos en escenarios reales. Analizar y documentar las mejoras en tiempos de atención. Estructurar y actualizar el repositorio documental. Recibir y registrar las sesiones de capacitación de la ESA",
+       "A los once (11) meses calendario, una vez recibido a satisfacción el entregable anterior."
+      ],
+      [
+       "Producto 7 Optimización operativa y mejora continua – Fase 6 Objetivo: Optimizar la gestión operativa basada en métricas y lecciones aprendidas.",
+       "Analizar los incidentes y tendencias operativas del período. Documentar e implementar las mejoras en la operación del Middleware. Ajustar y mejorar los flujos de atención operativa con base en la experiencia. Registrar las coordinaciones técnicas con proveedores (KaaS, DBaaS, almacenamiento). Elaborar el documento de lecciones aprendidas. Actualizar el repositorio documental. Registrar y dar seguimiento a los acuerdos técnicos derivados de reuniones operativas. Recibir y registrar las sesiones de capacitación de la ESA",
+       "A los trece (13) meses calendario, una vez recibido a satisfacción el entregable anterior."
+      ],
+      [
+       "Producto 8 Cumplimiento y fortalecimiento operativo – Fase 7 Objetivo: Asegurar cumplimiento de estándares y consistencia operativa.",
+       "Dar seguimiento al uso de los procedimientos operativos documentados. Documentar la aplicación de prácticas operativas en el entorno real. Registrar los ajustes de configuración del Middleware a nivel lógico. Actualizar la arquitectura operativa del Middleware. Fortalecer y actualizar el repositorio documental.",
+       "A los quince (15) meses calendario, una vez recibido a satisfacción el entregable anterior."
+      ],
+      [
+       "Producto 9 Madurez y sostenibilidad del Middleware – Fase 8 Objetivo: Medir y asegurar la sostenibilidad técnica del entorno.",
+       "Dar seguimiento a los indicadores operativos disponibles del Middleware, según la información generada por la operación. Elaborar el informe de métricas operativas basado en la operación real. Analizar el comportamiento del entorno en condiciones de operación estable. Formular las recomendaciones técnicas para la sostenibilidad del servicio. Consolidar y actualizar la versión final del repositorio documental. Registrar y dar seguimiento a los acuerdos técnicos derivados de reuniones operativas.",
+       "A los diecisiete (17) meses calendario, una vez recibido a satisfacción el entregable anterior."
+      ],
+      [
+       "Producto 10 Cierre contractual y transferencia final Objetivo: Cerrar formalmente el servicio con transferencia validada.",
+       "Registrar la operación final del período. Validar el estado del entorno. Consolidar la totalidad de la documentación técnica. Organizar el repositorio documental en su versión final. Ejecutar y documentar la transferencia final del conocimiento. Formular las recomendaciones técnicas finales. Elaborar un informe acumulativo de validación técnica de entregables del proveedor IaaS. Elaborar el informe final de cierre.",
+       "A los dieciocho (18) meses calendario, una vez recibido a satisfacción el entregable anterior."
+      ],
+      [
+       "Cierre de contrato",
+       "",
+       "(1 mes para cierre)"
+      ],
+      [
+       "TOTAL",
+       "Diecinueve (19) meses calendarios, a partir del día hábil siguiente de la notificación de la orden de proceder, una vez refrendado el contrato por la Contraloría General de la República.",
+       ""
+      ]
+     ],
+     "header": true
+    },
+    {
+     "type": "para",
+     "text": "Toda la información de los productos generados para esta consultoría deberá ser entrega en formato impreso e igualmente en formato electrónico, específicamente en formato Microsoft Office (Word, Excel, PowerPoint) en 2 USB, los cuales deberán ser entregados a la AIG/UCP de la Autoridad Nacional para la Innovación Gubernamental (AIG) y en repositorios que le indique la unidad gestora de la AIG.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Los informes deberán ser entregados a la AIG/UCP de la Autoridad Nacional para la Innovación Gubernamental (AIG); PH NYSO, Piso 2Avenida Simón Bolívar, Vía Transístmica, República de Panamá.",
+     "indent": 0
+    }
+   ],
+   "id": "s2-1",
+   "chars": 586,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 1,
+   "num": "3",
+   "title": "VI. ACTIVIDADES",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Las actividades mínimas por desarrollar por el consultor se detallan a continuación, sin perjuicio de aquellas que resulten necesarias para el logro de los objetivos indicados y se acuerden con el organismo ejecutor, el Banco y el equipo del Programa las principales funciones serán:",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Operar el Middleware Copernicus LAC a nivel de aplicación y runtime.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Configurar y mantener componentes lógicos sobre Kubernetes (excluyendo la administración del clúster base).",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Diagnosticar incidentes funcionales y técnicos del Middleware.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Asegurar el correcto funcionamiento de los servicios KaaS, DBaaS y de almacenamiento.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Coordinar incidentes, cambios y mejoras con el proveedor de infraestructura y la ESA.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Documentar configuraciones, procedimientos y eventos operativos.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Validar técnicamente los entregables del proveedor de infraestructura, verificando el cumplimiento de los estándares operativos y niveles de servicio definidos.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Conducir las reuniones técnicas operativas del proyecto, asegurando el registro formal de acuerdos y el seguimiento de compromisos adoptados.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Todas las demás que sean necesarias para el ejercicio de sus funciones.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Elaborar informes de validación técnica contra los entregables del proveedor IaaS.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "En este sentido, el alcance incluye:",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Operación del Middleware a nivel de aplicación:",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Ejecución, despliegue y actualización de componentes del Middleware mediante herramientas como Helm y manifiestos de Kubernetes.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Gestión de ciclos de vida de aplicaciones (rollouts, rollbacks, reinicios controlados).",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Supervisión del estado de los servicios, pods y cargas de trabajo asociadas al Middleware.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Revisión y análisis de logs, eventos y métricas con fines de diagnóstico y resolución de incidentes.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Configuración lógica sobre entornos Kubernetes (KaaS):",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Configuración y mantenimiento de recursos lógicos como Deployments, StatefulSets, Jobs, CronJobs, ConfigMaps y Secrets.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Gestión de namespaces, políticas de acceso (RBAC), cuotas y configuraciones de red a nivel de aplicación.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Configuración de Ingress y certificados TLS asociados a los servicios del Middleware.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Uso de volúmenes persistentes (PVC) y clases de almacenamiento definidas por el proveedor.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Supervisión operativa de servicios DBaaS:",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Monitoreo de disponibilidad, conectividad y desempeño básico de las bases de datos utilizadas por el Middleware.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Validación de respaldos y participación en pruebas de restauración cuando estas pruebas se encuentren definidas y programadas por el proveedor DBaaS o por la AIG.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Diagnóstico de incidentes relacionados con acceso a datos y coordinación con el proveedor para su resolución.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Seguimiento a requerimientos de escalabilidad o cambios planificados.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Operación de almacenamiento de objetos (S3 compatible):",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Verificación de accesos, integridad y disponibilidad de buckets utilizados por la plataforma.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Monitoreo del desempeño y uso del almacenamiento.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Coordinación con el proveedor ante incidentes de acceso, integridad o recuperación de datos.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Monitoreo, incidentes y continuidad operativa:",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Implementación y uso de herramientas de monitoreo y observabilidad del Middleware.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Gestión de incidentes de segundo nivel, incluyendo análisis, escalamiento y seguimiento hasta su resolución.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Identificación proactiva de riesgos operativos y propuesta de acciones preventivas.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Apoyo en la gestión de continuidad y recuperación ante fallos a nivel de aplicación.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Monitoreo y observabilidad, gestión estructurada de incidentes, gestión de cambios, seguridad operativa, documentación (runbooks, SOPs, listas de verificación) y coordinación con proveedores de infraestructura, la ESA y usuarios técnicos internos.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Gestión de cambios y coordinación técnica:",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Apoyo en la planificación, ejecución y validación de cambios en el Middleware.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Coordinación técnica con el proveedor de infraestructura (KaaS, DBaaS, almacenamiento) y con la Agencia Espacial Europea (ESA).",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Participación en pruebas, despliegues y validaciones técnicas de nuevas funcionalidades o mejoras.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Validación técnica de entregables del proveedor IaaS: El consultor deberá elaborar, de forma mensual, un informe de validación de los entregables del proveedor de infraestructura, verificando el cumplimiento de SLA, disponibilidad, conectividad, incidentes y métricas de rendimiento. Cuando ambos consultores estén activos, esta función se distribuirá de manera alternada según lo coordine la AIG, debiendo el consultor que no lidera participar como revisor en cada período.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Documentación y buenas prácticas operativas:",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Elaboración y mantenimiento de documentación técnica (runbooks, procedimientos operativos estándar, diagramas y bitácoras).",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Registro de incidentes, cambios y eventos relevantes del sistema.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Aseguramiento del cumplimiento de buenas prácticas en seguridad, operación y gestión del entorno.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Transferencia de conocimiento y capacitación",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "El recurso contará con un proceso de capacitación inicial y transferencia de conocimiento sobre el middleware Copernicus, enfocado en su operación y gestión dentro de la plataforma.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Esta capacitación estará orientada a la correcta adopción del entorno y no sustituye los conocimientos técnicos requeridos para el rol.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "El consultor deberá asegurar la apropiación del conocimiento transferido y su aplicación en la operación diaria del servicio.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Como parte del cierre de la consultoría, el consultor deberá realizar la transferencia de conocimiento al personal designado por AIG, asegurando la continuidad operativa del middleware.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Esta transferencia incluirá, como mínimo, sesiones de traspaso, entrega de documentación técnica actualizada y acompañamiento en la transición operativa. Durante al menos 20 días calendarios.",
+     "indent": 1
+    }
+   ],
+   "id": "s3",
+   "chars": 5590,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "4",
+   "title": "VII. SUPERVISIÓN, COORDINACION Y CONTRAPARTES",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "La supervisión técnica de la consultoría estará a cargo de la Dirección de Innovación Gubernamental.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "El Consultor prestará sus servicios y presentará los productos para su aprobación a esta Dirección.",
+     "indent": 0
+    }
+   ],
+   "id": "s4",
+   "chars": 199,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "5",
+   "title": "VIII. PROCEDIMIENTO DE SELECCIÓN Y CONTRATACIÓN DEL CONSULTOR INDIVIDUAL",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Se realizará la Selección Directa del consultor.",
+     "indent": 0
+    }
+   ],
+   "id": "s5",
+   "chars": 48,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "5.1",
+   "title": "14. Prácticas Prohibidas",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "14.1 El Banco exige a todos los Prestatarios (incluidos los beneficiarios de donaciones), Organismos Ejecutores y Organismos Contratantes, al igual que a todas las firmas, entidades o individuos oferentes por participar o participando en actividades financiadas por el Banco incluidos, entre otros, solicitantes, oferentes, contratistas, firmas consultoras y consultores individuales, miembros del personal, subcontratistas, subconsultores, y proveedores de bienes o servicios (incluidos sus respectivos funcionarios, empleados y representantes, ya sean sus atribuciones expresas o implícitas) observar los más altos niveles éticos y denunciar al Banco todo acto sospechoso de constituir una Práctica Prohibida del cual tenga conocimiento o sea informado durante el proceso de selección, y las negociaciones o la ejecución de un contrato. Las Prácticas Prohibidas comprenden: (i) prácticas corruptas; (ii) prácticas fraudulentas; (iii) prácticas coercitivas; (iv) prácticas colusorias; (v) prácticas obstructivas; y (vi) apropiación indebida. El Banco ha establecido mecanismos para denunciar la supuesta comisión de Prácticas Prohibidas. Toda denuncia deberá ser remitida a la Oficina de Integridad Institucional (OII) del Banco para que se investigue debidamente. El Banco también ha adoptado procedimientos de sanción para la resolución de casos. Asimismo, el Banco ha celebrado acuerdos con otras Instituciones Financieras Internacionales (IFIs) a fin de dar un reconocimiento recíproco a las sanciones impuestas por sus respectivos órganos sancionadores. A efectos del cumplimiento de las Políticas para la Selección y Contratación de Consultores financiados por el Banco.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(a) El Banco define las expresiones que se indican a continuación:",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(i) una práctica corrupta consiste en ofrecer, dar, recibir o solicitar, directa o indirectamente, cualquier cosa de valor para influenciar indebidamente las acciones de otra parte;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(ii) una práctica fraudulenta es cualquier acto u omisión, incluida la tergiversación de hechos y circunstancias, que deliberada o imprudentemente, engañen, o intenten engañar, a alguna parte para obtener un beneficio financiero o de otra índole o para evadir una obligación;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(iii) una práctica coercitiva consiste en perjudicar o causar daño, o amenazar perjudicar o causar daño, directa o indirectamente, a cualquier parte o a sus bienes para influenciar indebidamente las acciones de una parte;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(iv) una práctica colusoria es un acuerdo entre dos o más partes realizado con la intención de alcanzar un propósito inapropiado, lo que incluye influenciar en forma inapropiada las acciones de otra parte;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(v) una práctica obstructiva consiste en:",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "i. destruir, falsificar, alterar u ocultar evidencia significativa para una investigación del Grupo BID, o realizar declaraciones falsas ante los investigadores con la intención de impedir una investigación del Grupo BID;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "ii. amenazar, hostigar o intimidar a cualquier parte para impedir que divulgue su conocimiento de asuntos que son importantes para una investigación del Grupo BID o que prosiga con la investigación; o",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "iii. actos realizados con la intención de impedir el ejercicio de los derechos contractuales de auditoría e inspección del Grupo BID previstos en las IAC 5.1(f) de abajo, o sus derechos de acceso a la información; y",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(vi) una apropiación indebida consiste en el uso de fondos o recursos del Grupo BID para un propósito indebido o para un propósito no autorizado, cometido de forma intencional o por negligencia grave.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(b) Si el Banco determina que cualquier parte que, directa o indirectamente, participe o intente participar en una actividad financiada por el Banco u obtenga o intente obtener financiamiento para una actividad financiada por el Banco (incluyendo, pero sin limitarse a, prestatarios, beneficiarios de financiamiento no reembolsable, beneficiarios, oferentes, proveedores, contratistas, subcontratistas, consultores, subconsultores, proveedores de servicios, agentes, intermediarios financieros, patrocinadores, partes de un acuerdo de garantía, administradores de fondos, obligados, emisores de títulos valores, y receptores de inversiones, incluidos los respectivos funcionarios, empleados agentes, afiliados y accionistas de cualquiera de las partes previamente listadas, según resulte aplicable) ha cometido una Práctica Prohibida en cualquier etapa de la selección o ejecución de un contrato, el Banco podrá:",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(i) no financiar ninguna propuesta de adjudicación un contrato para servicios de consultoría financiado por el Banco;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(ii) suspender los desembolsos de la operación si se determina, en cualquier etapa, que un empleado, agente o representante del Prestatario, el Organismo Ejecutor o el Organismo Contratante ha cometido una Práctica Prohibida;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(iii) declarar una Selección Viciada para financiamiento del Banco y cancelar y/o acelerar el pago de una parte del préstamo o de la donación relacionada inequívocamente con un contrato, cuando exista evidencia de que el representante del Prestatario, o Beneficiario de una donación, no ha tomado las medidas correctivas adecuadas (lo que incluye, entre otras cosas, la notificación adecuada al Banco tras tener conocimiento de la comisión de la Práctica Prohibida) en un plazo que el Banco considere razonable;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(iv) emitir una amonestación a la firma, entidad o individuo en el formato de una carta oficial de censura por su conducta;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(v) declarar a una firma, entidad o individuo inelegible, en forma permanente o por determinado período de tiempo, para (i) la participación y/o la adjudicación de contratos adicionales financiados con recursos del Banco y (ii) sea designado subconsultor, subcontratista o proveedor de bienes o servicios por otra firma elegible a la que se adjudique un contrato para ejecutar actividades financiadas por el Banco;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(vi) imponer otras sanciones que considere apropiadas, entre otras, restitución de fondos y multas equivalentes al reembolso de los costos vinculados con las investigaciones y actuaciones previstas en los Procedimientos de Sanciones. Dichas sanciones podrán ser impuestas en forma adicional o en sustitución de las sanciones arriba referidas (las sanciones “arriba referidas” son la amonestación y la inhabilitación/inelegibilidad);",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(vii) extender las sanciones impuestas a cualquier individuo, entidad o firma que, directa o indirectamente, sea propietario o controle a una entidad sancionada, sea de propiedad o esté controlada por un sancionado o sea objeto de propiedad o control común con un sancionado, así como a los funcionarios, empleados, afiliados, representantes o agentes de un sancionado que sean también propietarios de una entidad sancionada y/o ejerzan control sobre una entidad sancionada aun cuando no se haya concluido que esas partes incurrieron directamente en una Práctica Prohibida; y/o",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(viii) remitir el tema a las autoridades nacionales pertinentes encargadas de hacer cumplir las leyes. Los Consultores al presentar sus Ofertas, Propuestas o Solicitudes declaran y garantizan.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(c) Lo dispuesto en los incisos (i) y (ii) de las IAC 5.1(b) se aplicará también en los casos en que las partes hayan sido suspendidas temporalmente para la adjudicación de nuevos contratos en espera de que se adopte una decisión definitiva en un Procedimiento de Sanción, u otra resolución.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(d) La imposición de cualquier medida que sea tomada por el Banco de conformidad con las provisiones referidas anteriormente podrá ser de carácter público.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(e) Asimismo, cualquier firma, entidad o individuo actuando como oferente o participando en una actividad financiada por el Banco, incluidos, entre otros, solicitantes, oferentes, contratistas, firmas consultoras y consultores individuales, miembros del personal, subcontratistas, subconsultores, proveedores de bienes o servicios, Prestatarios (incluidos los Beneficiarios de donaciones), Organismos Ejecutores o Contratantes (incluidos sus respectivos funcionarios, empleados y representantes o agentes, ya sean sus atribuciones expresas o implícitas) podrán verse sujetos a sanciones de conformidad con lo dispuesto en convenios suscritos por el Banco con otras IFIs concernientes al reconocimiento recíproco de decisiones de inhabilitación. A efectos de lo dispuesto en estas IAC, el término “sanción” incluye toda inhabilitación permanente, imposición de condiciones para la participación en futuros contratos o adopción pública de medidas en respuesta a una contravención del marco vigente de una IFI aplicable a la resolución de denuncias de comisión de Prácticas Prohibidas.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(f) El Banco exige a los licitantes, oferentes, proponentes, solicitantes, proveedores de bienes y sus representantes o agentes, contratistas, consultores, funcionarios o empleados, subcontratistas, subconsultores, proveedores de servicios y sus representantes o agentes, y concesionarios le permitan al Banco revisar libros de cuentas o de contabilidad, registros incluyendo por ejemplo facturas, estados de cuentas, nominas, contratos u otros datos financieros y empresariales y otros documentos relacionados con la presentación de propuestas y el cumplimiento del contrato, y someterlos a una auditoría por auditores designados por el Banco, en el caso de que el Banco lo determine necesario. Todo licitante, oferente, proponente, solicitante, proveedor de bienes y su representante o agente, contratista, consultor, miembro del personal, subcontratista, subconsultor, proveedor de servicios y concesionario deberá prestar plena asistencia al Banco en su investigación. El Banco también requiere que los licitantes, oferentes, proponentes, solicitantes, proveedores de bienes y sus representantes o agentes, contratistas, consultores, miembros del personal, subcontratistas, subconsultores, proveedores de servicios y concesionarios: (i) conserven todos los documentos y registros relacionados con actividades financiadas por el Banco por un período de siete (7) años luego de terminado el trabajo contemplado en el respectivo contrato; y (ii) entreguen todo documento necesario para la investigación de denuncias de comisión de Prácticas Prohibidas y (iii) aseguren que los empleados o agentes de los licitantes, oferentes, proponentes, solicitantes, proveedores de bienes y sus representantes o agentes, contratistas, consultores, subcontratistas, subconsultores, proveedores de servicios y concesionarios que tengan conocimiento de que las actividades han sido financiadas por el Banco, estén disponibles para responder a las consultas relacionadas con la investigación provenientes de personal del Banco o de cualquier investigador, agente, auditor, o consultor debidamente designado. Si los licitantes, oferentes, proponentes, solicitantes, proveedores de bienes y sus representantes o agentes, contratistas, consultores, miembros del personal, subcontratistas, subconsultores, proveedores de servicios o concesionarios se niegan a cooperar o incumplen el requerimiento del Banco, o de cualquier otra forma obstaculizan la investigación, el Banco, discrecionalmente, podrá tomar medidas apropiadas en contra los licitantes, oferentes, proponentes, solicitantes, proveedores de bienes y sus representantes o agentes, contratistas, consultores, miembros del personal, subcontratistas, subconsultores, proveedores de servicios o concesionarios;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "10.2 Los Consultores al presentar sus Ofertas, Propuestas o Solicitudes declaran y garantizan:",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(a) que han leído y entendido las definiciones de Prácticas Prohibidas del Banco y las sanciones aplicables de conformidad con los Procedimientos de Sanciones;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(b) que ni ellos ni sus agentes, subcontratistas, subconsultores, directores, personal clave o accionistas principales han incurrido o no incurrirán en ninguna Práctica Prohibida descrita en este documento durante los procesos de selección, negociación, adjudicación o ejecución de este Contrato;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(c) que no han tergiversado ni ocultado ningún hecho sustancial durante los procesos de selección, negociación, adjudicación o ejecución de este Contrato;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(d) que ni ellos ni sus agentes, subcontratistas, subconsultores, directores, personal clave o accionistas principales son inelegibles para la adjudicación de contratos financiados por el Banco;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(e) que han declarado todas las comisiones, honorarios de representantes o agentes, pagos por servicios de facilitación o acuerdos para compartir ingresos relacionados con actividades financiadas por el Banco; y",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(f) que reconocen que el incumplimiento de cualquiera de estas garantías podrá dar lugar a la imposición por el Banco de una o más de las medidas descritas en las IAC 14.1.",
+     "indent": 7
+    }
+   ],
+   "id": "s5-1",
+   "chars": 12562,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "5.2",
+   "title": "15. Países Elegibles",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "“Países Elegibles: Alemania, Argentina, Austria, Bahamas, Barbados, Bélgica, Belice, Bolivia, Brasil, Canadá, Colombia, Costa Rica, Chile, Croacia, Dinamarca, Eslovenia, Ecuador, El Salvador, España, Estados Unidos, Finlandia, Francia, Guatemala, Guyana, Haití, Holanda, Honduras, Israel, Italia, Jamaica, Japón, México, Nicaragua, Noruega, Panamá, Paraguay, Perú, Portugal, Reino Unido, República de Corea, República Dominicana, República Popular de China, Suecia, Suiza, Surinam, Trinidad & Tobago, Uruguay y Venezuela.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "Territorios elegibles",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "a) Guadalupe, Guyana Francesa, Martinica, Reunión – por ser Departamentos de Francia.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "b) Islas Vírgenes Estadounidenses, Puerto Rico, Guam – por ser Territorios de los Estados Unidos de América.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "c)Aruba – por ser País Constituyente del Reino de los Países Bajos; y Bonaire, Curazao, Sint Maarten, Sint Eustatius – por ser Departamentos de Reino de los Países Bajos.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "d)Hong Kong – por ser Región Especial Administrativa de la República Popular de China.”",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "Opción (2) – cuando la financiación se haga por un Fondo administrado por el Banco, indique la lista de países elegibles: “Los Países Elegibles: Nacionalidad y origen de Bienes y Criterios para los Servicios",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "Las disposiciones de política hacen necesario establecer criterios para determinar: a) la nacionalidad de las firmas e individuos elegibles para proponer o participar en un contrato financiado por el banco, y b) el país de origen de bienes y servicios. Para ello, se utilizarán los siguientes criterios:",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(A) Nacionalidad.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "a) Un individuo es considerado un nacional de un país miembro del Banco si cumple con los siguientes requisitos:",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "i es ciudadano de un país miembro; o",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "ii ha establecido su domicilio en un país miembro como residente “bona fide” y está legalmente habilitado para trabajar en el país del domicilio.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "b) Una firma es considerada que tiene la nacionalidad de un país miembro si cumple los siguientes dos requisitos:",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "i. está legalmente constituida o incorporada bajo las leyes de un país miembro del Banco;",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "yii. más del cincuenta por ciento (50%) del capital de la firma es de propiedad de individuos o firmas de países miembros del Banco.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "Todos los integrantes de una APCA y todos los subcontratistas deben cumplir con los criterios de nacionalidad que se indican arriba.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(B) Origen de los Bienes.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "Los bienes que tengan su origen en un país miembro del Banco, si han sido explotados, cultivados o producidos en un país miembro del Banco. Se considera que un producto ha sido producido cuando diferencie sustancialmente en sus características básicas, función o propósito de la utilidad de sus partes o componentes.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "Para que un producto que conste de varios componentes individuales que deban estar interconectados (bien sea por el proveedor, el comprador o un tercero) sea funcional e independientemente de la complejidad de la interconexión, el Banco considera que dicho producto es elegible para financiamiento si el ensamble de los componentes tuvo lugar en un país miembro, independientemente del origen de los componentes. Cuando el producto sea un conjunto de varios productos individuales que normalmente son empacados y vendidos comercialmente como una unidad, se considera que ese producto se origina en el país donde el conjunto fue empacado y despachado al comprador.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "Para propósitos de origen, los productos rotulados “hechos en la Unión Europea” serán elegibles sin necesidad de identificar el correspondiente país específico de la Unión Europea.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "El origen de los materiales, partes o componentes de los productos o la nacionalidad de la firma que produce, ensambla, distribuye o vende los productos no determina el origen de los mismos.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "(C) Origen de Servicios.",
+     "indent": 7
+    },
+    {
+     "type": "para",
+     "text": "El país del origen de servicios es el del individuo o firma que suministre los servicios según se determine en los criterios de nacionalidad que se indican arriba. Estos criterios son aplicables a servicios secundarios para el suministro de bienes (tales como transporte, seguro, construcción, ensamble, etc).",
+     "indent": 7
+    }
+   ],
+   "id": "s5-2",
+   "chars": 3985,
+   "figures": 0,
+   "tables": 0
+  }
+ ]
+}

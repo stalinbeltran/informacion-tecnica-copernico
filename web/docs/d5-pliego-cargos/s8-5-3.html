@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8.5.3 Responsabilidades del proveedor: · PLIEGO</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">PLIEGO</a><i>›</i><a href="s8.html">8</a><i>›</i><a href="s8-5.html">8.5</a><i>›</i><span>8.5.3 · Responsabilidades del proveedor:</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">PLIEGO · Pliego de Cargos — Servicio en la nube (IaaS, KaaS, DBaaS) · Capítulo 8.5.3</span>
+  <h1>Responsabilidades del proveedor:</h1>
+  <p class="lede">Responsabilidades del proveedor: mantenimiento de la infraestructura física y del hipervisor, disponibilidad, monitoreo, respaldo, y sobre el clúster Kubernetes su despliegue, parcheo, alta disponibilidad, nodos maestros y ETCD, StorageClasses, autoescalado, observabilidad, red interna, <abbr class="acr" title="Role-Based Access Control" tabindex="0">RBAC</abbr> y documentación de cambios.</p>
+  <div class="tags"><span class="tag">Responsabilidades</span><span class="tag">Kubernetes</span></div>
+  <div class="metrics"></div>
+</div>
+<section class="prose"><ul><li>Mantenimiento, actualización y administración de toda la infraestructura física</li><li>Gestión y actualización del hipervisor</li><li>Garantía de disponibilidad y continuidad del servicio</li><li>Monitoreo de infraestructura</li><li>Soporte técnico especializado</li><li>Respaldo y recuperación de la infraestructura</li><li>El proveedor del servicio deberá asegurar la correcta gestión y operación de la plataforma Kubernetes como servicio (<abbr class="acr" title="Kubernetes as a Service" tabindex="0">KaaS</abbr>), incluyendo los siguientes aspectos:<ul><li>Despliegue inicial y configuración del clúster Kubernetes según las especificaciones requeridas.</li><li>Mantenimiento del clúster incluyendo parches, actualizaciones de seguridad y mejoras de versión del sistema.</li><li>Alta disponibilidad (<abbr class="acr" title="High Availability" tabindex="0">HA</abbr>) según requerimientos.</li><li>Gestión de los nodos maestros y ETCD, incluyendo respaldo y restauración de su estado.</li><li>Monitoreo y soporte del clúster Kubernetes como parte del servicio gestionado.</li><li>Provisión y gestión de StorageClasses compatibles con el entorno de almacenamiento definido.</li><li>Soporte para autoescalado de recursos (horizontal y vertical) en función de la carga de trabajo.</li><li>Integración de herramientas de observabilidad, incluyendo métricas, logs y eventos del clúster.</li><li>Gestión de red interna del clúster, incluyendo políticas de red y configuración de Ingress Controllers.</li><li>Seguridad del clúster, incluyendo autenticación, control de acceso basado en roles (<abbr class="acr" title="Role-Based Access Control" tabindex="0">RBAC</abbr>), y aislamiento de namespaces.</li><li>Garantizar respaldo automático de los datos críticos del clúster, como las bases de datos ETCD.</li><li>Documentación de configuración y cambios aplicados al clúster.</li></ul></li><li>Y demás actividades inherentes a un servicio IaaS.</li></ul>
+<p>Además, se requerirá <abbr class="acr" title="Database as a Service" tabindex="0">DBaaS</abbr></p>
+<ul><li>El proveedor del servicio deberá asegurar la operación continua, segura y eficiente del sistema de bases de datos gestionadas (<abbr class="acr" title="Database as a Service" tabindex="0">DBaaS</abbr>), incluyendo los siguientes aspectos:<ul><li>Provisión y configuración inicial de las bases de datos, según los requisitos técnicos establecidos.</li><li>Alta disponibilidad (<abbr class="acr" title="High Availability" tabindex="0">HA</abbr>) de las bases de datos, garantizando redundancia y tolerancia a fallos.</li><li>Monitoreo y mantenimiento continuo de las bases de datos, incluyendo métricas de uso, rendimiento y estado de salud.</li><li>Aplicación de parches y actualizaciones de seguridad de forma regular y controlada.</li><li>Gestión de respaldos automáticos periódicos, incluyendo verificación de integridad y recuperación bajo demanda.</li><li>Soporte técnico ante incidentes, incluyendo restauración de datos y recuperación de fallos.</li><li>Escalabilidad vertical y horizontal del servicio, según la demanda operativa del sistema.</li><li>Gestión de usuarios y accesos administrativos, garantizando seguridad y trazabilidad de los accesos.</li><li>Monitoreo de uso de recursos (<abbr class="acr" title="Central Processing Unit" tabindex="0">CPU</abbr>, memoria, almacenamiento) con alertas de umbral y ajustes proactivos.</li><li>Configuración de políticas de seguridad y cifrado, tanto en tránsito como en reposo.</li><li>Documentación técnica del entorno configurado, cambios aplicados y políticas operativas.</li></ul></li></ul>
+<p>Para la prestación del servicio, el oferente podrá contar con la cantidad de personal que considere necesaria para prestar el servicio de manera eficiente. Sin embargo debe cumplir con el requisito 9.18 del Capítulo II. La intención de este requisito es garantizar que el oferente disponga de personal técnico especializado y debidamente acreditado para la prestación del servicio IaaS, asegurando experiencia y capacidad en las áreas de infraestructura, soporte y seguridad. No implica que deba existir un número específico de personas dedicadas de manera exclusiva al proyecto, sino que el proponente debe demostrar que cuenta con los perfiles mínimos descritos, con disponibilidad para atender los requerimientos durante la vigencia del contrato.</p>
+<p>Los servicios administrados se ampliarán al final del documento.</p>
+<p>La Agencia Espacial Europea (<abbr class="acr" title="European Space Agency" tabindex="0">ESA</abbr>) proporcionará un middleware diseñado para el procesamiento, acceso y difusión de los datos. Este Software Central estará alojado en Kubernetes, por lo que corre en la plataforma <abbr class="acr" title="Kubernetes as a Service" tabindex="0">KaaS</abbr>, la cual a su vez corre sobre la infraestructura como servicio (IaaS) que deberá cumplir con los recursos TIC necesarios para ejecutar diversos algoritmos y cadenas de procesamiento <abbr class="acr" title="Earth Observation" tabindex="0">EO</abbr> (observación terrestre), y será escalable para adaptarse a las cambiantes necesidades operativas. Esta información se proporciona únicamente como referencia y no forma parte del alcance del servicio a ser contratado.</p>
+<ul><li>Además, el centro de datos que aloje la infraestructura como servicio (IaaS) deberá contar con certificación Tier III o superior, emitida por el Uptime Institute, en al menos una las siguientes categorías:<ul><li>Tier Certification of Constructed Facility (TCCF)</li><li>Tier Certification of Operational Sustainability (TCOS)</li></ul></li></ul>
+<p>Estas certificaciones deben estar vigentes.</p>
+<p>Este servicio busca garantizar el inicio operativo del componente aplicativo del Centro Copernicus <abbr class="acr" title="Latin America and the Caribbean" tabindex="0">LAC</abbr> Panamá.</p>
+<p>Este Centro de datos debe estar ubicado en Panamá.</p></section>
+<nav class="pager"><a class="prev" href="s8-5-2.html"><i>←</i><span>8.5.2 · Componentes incluidos:</span></a><a class="next" href="s8-5-4.html"><span>8.5.4 · Modalidad de Prestación del Servicio</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA
+  y de los documentos de contratación de la AIG de Panamá.
+  Los resúmenes son en español; el texto de cada documento conserva su idioma original.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

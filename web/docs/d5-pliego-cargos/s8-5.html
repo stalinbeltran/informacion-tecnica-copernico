@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8.5 Servicio de Conectividad · PLIEGO</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+
+</head>
+<body class="">
+<header class="topbar">
+  <a class="brand" href="../../index.html">
+    <span class="brand-mark">CL</span>
+    <span class="brand-txt">Información Técnica<br><b>CopernicusLAC</b></span>
+  </a>
+  <button class="theme-toggle" type="button" data-theme-toggle title="Cambiar tema">◐</button>
+</header>
+<main>
+<nav class="crumbs"><a href="../../index.html">Documentos</a><i>›</i><a href="index.html">PLIEGO</a><i>›</i><a href="s8.html">8</a><i>›</i><span>8.5 · Servicio de Conectividad</span></nav>
+<div class="pagehead">
+  <span class="eyebrow">PLIEGO · Pliego de Cargos — Servicio en la nube (IaaS, KaaS, DBaaS) · Capítulo 8.5</span>
+  <h1>Servicio de Conectividad</h1>
+  <p class="lede">Servicio de conectividad: descarga de datos Sentinel desde Europa por RedCLARA o internet dedicado, y acceso de los usuarios finales por internet.</p>
+  <div class="tags"><span class="tag">Conectividad</span></div>
+  <div class="metrics"><span title="Apartados"><b>17</b> apartados</span><span title="Figuras"><b>2</b> fig.</span><span title="Tablas"><b>4</b> tabl.</span></div>
+</div>
+<section class="prose"><ul><li>Descarga de datos Sentinel desde Europa mediante conexión dedicada vía RedCLARA o Internet dedicado (mínimo 3 Gbps).</li><li>Acceso del usuario final: Los usuarios accederán a la plataforma a través de internet mediante una dirección IP pública.</li></ul>
+<p>Para este proyecto, no es necesario disponer de una infraestructura de computación en nube de uso exclusivo. La solución puede operar en un entorno compartido donde los recursos sean utilizados de forma simultánea por múltiples clientes o proyectos, manteniendo los adecuados niveles de seguridad, aislamiento y rendimiento.</p></section>
+<h2 class="secttl">Apartados</h2>
+<div class="grid">
+<a class="card leaf" href="s8-5-1.html">
+  <span class="eyebrow">8.5.1</span>
+  <h3>Actividades y Servicios Específicos:</h3>
+  <p class="sum">Definición de IaaS y de las actividades y servicios específicos que comprende.</p>
+  
+  <div class="metrics"></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-2.html">
+  <span class="eyebrow">8.5.2</span>
+  <h3>Componentes incluidos:</h3>
+  <p class="sum">Componentes incluidos en el IaaS: cómputo virtualizado, almacenamiento escalable, red, hipervisor, infraestructura física y <abbr class="acr" title="Kubernetes as a Service" tabindex="0">KaaS</abbr>.</p>
+  
+  <div class="metrics"></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-3.html">
+  <span class="eyebrow">8.5.3</span>
+  <h3>Responsabilidades del proveedor:</h3>
+  <p class="sum">Responsabilidades del proveedor: mantenimiento de la infraestructura física y del hipervisor, disponibilidad, monitoreo, respaldo, y sobre el clúster Kubernetes su despliegue, parcheo, alta disponibilidad, nodos maestros y ETCD, StorageClasses, autoescalado, observabilidad, red interna, <abbr class="acr" title="Role-Based Access Control" tabindex="0">RBAC</abbr> y documentación de cambios.</p>
+  <div class="tags"><span class="tag">Responsabilidades</span><span class="tag">Kubernetes</span></div>
+  <div class="metrics"></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-4.html">
+  <span class="eyebrow">8.5.4</span>
+  <h3>Modalidad de Prestación del Servicio</h3>
+  <p class="sum">Modalidad de prestación: servicio 24/7.</p>
+  
+  <div class="metrics"></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-5.html">
+  <span class="eyebrow">8.5.5</span>
+  <h3>Requerimientos estimados de tráfico</h3>
+  <p class="sum">Requerimientos estimados de tráfico entre máquinas virtuales y hacia el exterior.</p>
+  
+  <div class="metrics"></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-6.html">
+  <span class="eyebrow">8.5.6</span>
+  <h3>Almacenamiento:</h3>
+  <p class="sum">Especificaciones de almacenamiento, incluido el almacenamiento de objetos compatible con S3.</p>
+  <div class="tags"><span class="tag">Almacenamiento</span><span class="tag">S3</span></div>
+  <div class="metrics"><span title="Tablas"><b>1</b> tabl.</span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-7.html">
+  <span class="eyebrow">8.5.7</span>
+  <h3>Kubernetes as a Service - Kubernetes como Servicio (KaaS):</h3>
+  <p class="sum">Kubernetes como servicio: la gestión y orquestación de aplicaciones en contenedores corre a cargo del proveedor.</p>
+  <div class="tags"><span class="tag">KaaS</span></div>
+  <div class="metrics"></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-8.html">
+  <span class="eyebrow">8.5.8</span>
+  <h3>Bases de Datos como Servicio (DBaaS):</h3>
+  <p class="sum">Bases de datos como servicio: solución PostgreSQL administrada, con aprovisionamiento, respaldo y alta disponibilidad del lado del proveedor.</p>
+  <div class="tags"><span class="tag">DBaaS</span><span class="tag">PostgreSQL</span></div>
+  <div class="metrics"></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-9.html">
+  <span class="eyebrow">8.5.9</span>
+  <h3>Seguridad:</h3>
+  <p class="sum">Seguridad: estándares internacionales aplicables a la infraestructura.</p>
+  
+  <div class="metrics"></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-10.html">
+  <span class="eyebrow">8.5.10</span>
+  <h3>Conectividad:</h3>
+  <p class="sum">Conectividad entre el centro de datos y las redes externas, con las dos opciones previstas.</p>
+  
+  <div class="metrics"></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-11.html">
+  <span class="eyebrow">8.5.11</span>
+  <h3>Opción 1:</h3>
+  <p class="sum">Opción 1 de conectividad.</p>
+  
+  <div class="metrics"></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-12.html">
+  <span class="eyebrow">8.5.12</span>
+  <h3>Conectividad – Enlace Internacional de Datos RedCLARA</h3>
+  <p class="sum">Enlace internacional de datos vía RedCLARA, con lo que debe incluir la propuesta técnica y económica.</p>
+  <div class="tags"><span class="tag">RedCLARA</span></div>
+  <div class="metrics"><span title="Figuras"><b>1</b> fig.</span><span title="Tablas"><b>1</b> tabl.</span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-13.html">
+  <span class="eyebrow">8.5.13</span>
+  <h3>Internet dedicado:</h3>
+  <p class="sum">Opción 2: enlace dedicado de 3 Gbps sobre internet.</p>
+  
+  <div class="metrics"><span title="Figuras"><b>1</b> fig.</span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-14.html">
+  <span class="eyebrow">8.5.14</span>
+  <h3>Especificaciones Técnicas del Balanceador de Carga:</h3>
+  <p class="sum">Especificaciones del balanceador de carga: pico de veinticinco mil conexiones y demás requisitos.</p>
+  <div class="tags"><span class="tag">Balanceador</span></div>
+  <div class="metrics"></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-15.html">
+  <span class="eyebrow">8.5.15</span>
+  <h3>Servicio de Administración de Infraestructura</h3>
+  <p class="sum">Servicio de administración de infraestructura: complemento del IaaS que extiende las responsabilidades del proveedor a la administración operativa.</p>
+  
+  <div class="metrics"></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-16.html">
+  <span class="eyebrow">8.5.16</span>
+  <h3>Componentes del servicio:</h3>
+  <p class="sum">Componentes del servicio, incluidas las funciones mínimas de <abbr class="acr" title="Database as a Service" tabindex="0">DBaaS</abbr> en etapa operativa.</p>
+  
+  <div class="metrics"></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+<a class="card leaf" href="s8-5-17.html">
+  <span class="eyebrow">8.5.17</span>
+  <h3>Servicios de Administración Operativa:</h3>
+  <p class="sum">Servicios de administración operativa: monitoreo 8x5 de sistemas operativos, Kubernetes y sus aplicaciones, y demás tareas de operación.</p>
+  <div class="tags"><span class="tag">Monitoreo</span><span class="tag">SLA</span></div>
+  <div class="metrics"><span title="Tablas"><b>2</b> tabl.</span></div>
+  <span class="go">Ver el detalle <i>→</i></span>
+</a>
+</div>
+<nav class="pager"><a class="prev" href="s8-4-1.html"><i>←</i><span>8.4.1 · Resumen de Alcance:</span></a><a class="next" href="s8-5-1.html"><span>8.5.1 · Actividades y Servicios Específicos:</span><i>→</i></a></nav>
+</main>
+<footer class="foot">
+  <p>Vista navegable generada a partir de la documentación técnica de Terradue / ESA
+  y de los documentos de contratación de la AIG de Panamá.
+  Los resúmenes son en español; el texto de cada documento conserva su idioma original.</p>
+</footer>
+<script src="../../assets/js/app.js"></script>
+</body>
+</html>

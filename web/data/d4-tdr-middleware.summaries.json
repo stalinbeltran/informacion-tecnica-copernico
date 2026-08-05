@@ -1,0 +1,48 @@
+{
+  "doc": {
+    "short": "Términos de referencia de la AIG para contratar, por selección directa, al consultor individual que actuará como Administrador del Middleware de la plataforma Copernicus LAC Panamá: objetivos, actividades, siete productos entregables y condiciones.",
+    "long": "Documento de contratación del Programa Panamá Digital (préstamo BID 5501/OC-PN) ejecutado por la AIG. Define el puesto que este proyecto documenta: una consultoría individual nacional de diecinueve meses —dieciocho de ejecución técnica y uno de cierre— en modalidad híbrida. El objetivo es asegurar la operación, supervisión técnica, configuración lógica y continuidad del Middleware desplegado sobre servicios gestionados (KaaS y DBaaS), y actuar como enlace técnico principal entre la AIG, el proveedor de infraestructura y la ESA. Recoge once objetivos específicos, el cuadro de siete productos con sus plazos escalonados desde el mes 1 hasta el mes 13, las actividades mínimas —que reproducen literalmente el alcance del documento de perfil— y las cláusulas del BID sobre prácticas prohibidas y países elegibles.",
+    "tags": ["AIG", "BID", "Consultoría", "Middleware", "Entregables", "Panamá"]
+  },
+  "sections": {
+    "portada": {
+      "short": "Portada del Programa Panamá Digital: entidad, préstamo BID, actividad y equipo técnico responsable.",
+      "tags": ["Metadatos"]
+    },
+
+    "s1": {
+      "short": "Antecedentes del Programa Panamá Digital y del contrato de préstamo con el Banco Interamericano de Desarrollo, con la AIG como organismo ejecutor.",
+      "tags": ["Contexto", "BID"]
+    },
+    "s1-1": { "short": "Los tres objetivos específicos del Programa: eficiencia en trámites y servicios, ciberseguridad de los servicios digitales y demanda con énfasis en poblaciones vulnerables." },
+    "s1-2": { "short": "Por qué se contrata: fortalecer la capacidad técnica y operativa, asegurar estabilidad y desempeño del Middleware, y disponer de un enlace técnico único con el proveedor y con la ESA." },
+    "s1-2-1": { "short": "Objetivo general: asegurar operación, supervisión técnica, configuración lógica y continuidad operativa del Middleware sobre servicios gestionados, con trazabilidad, documentación y buenas prácticas de cambios, seguridad y observabilidad." },
+    "s1-2-2": {
+      "short": "Once objetivos específicos: disponibilidad y rendimiento, administración de los componentes de integración y publicación geoespacial, cumplimiento de SLA, soporte a instituciones usuarias, reportes, punto focal ante ESA, validación de entregables del proveedor, conducción de reuniones técnicas, observabilidad, documentación y transferencia de conocimiento.",
+      "tags": ["Objetivos", "SLA"]
+    },
+
+    "s2": {
+      "short": "Características de la consultoría: individual y nacional, diecinueve meses, modalidad híbrida con sede en la AIG, gastos de equipo y conectividad a cargo del consultor y posibilidad de renovación previa evaluación.",
+      "tags": ["Condiciones", "Plazos"]
+    },
+    "s2-1": {
+      "short": "Cuadro de siete productos entregables con sus plazos: plan de trabajo y diagnóstico (mes 1), operación documentada (mes 3), estabilización técnica (mes 5), transferencia basada en operación real (mes 7), habilitación operativa (mes 9), estandarización con SOPs (mes 11) y optimización y mejora continua (mes 13).",
+      "tags": ["Entregables", "Cronograma"]
+    },
+
+    "s3": {
+      "short": "Actividades mínimas del consultor: operar el Middleware a nivel de aplicación y runtime, configurar componentes lógicos sobre Kubernetes excluyendo el clúster base, diagnosticar incidentes, velar por KaaS/DBaaS/almacenamiento, coordinar con proveedor y ESA, documentar, validar técnicamente los entregables del proveedor IaaS y conducir las reuniones técnicas.",
+      "tags": ["Actividades", "Kubernetes", "Helm"]
+    },
+
+    "s4": { "short": "La supervisión técnica corresponde a la Dirección de Innovación Gubernamental, ante la que se presentan los productos para aprobación." },
+
+    "s5": {
+      "short": "Procedimiento de selección directa del consultor, con las cláusulas del BID que lo acompañan.",
+      "tags": ["Contratación"]
+    },
+    "s5-1": { "short": "Prácticas prohibidas del BID: definiciones de práctica corrupta, fraudulenta, coercitiva, colusoria, obstructiva y apropiación indebida, con las sanciones y derechos de auditoría aplicables.", "tags": ["BID", "Cumplimiento"] },
+    "s5-2": { "short": "Países y territorios elegibles del Banco, y criterios de nacionalidad para individuos y firmas.", "tags": ["BID", "Elegibilidad"] }
+  }
+}

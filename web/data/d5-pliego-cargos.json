@@ -1,0 +1,4058 @@
+{
+ "doc_id": "d5-pliego-cargos",
+ "source_pdf": "PLIEGO DE CARGOS Copernicus LAC Panamá 20250925.docx",
+ "title": "d5-pliego-cargos",
+ "pages": 45,
+ "sections": [
+  {
+   "level": 0,
+   "num": "0",
+   "title": "Portada y preliminares",
+   "blocks": [
+    {
+     "type": "figure",
+     "src": "img-001.png",
+     "w": 650,
+     "h": 126
+    },
+    {
+     "type": "para",
+     "text": "PLIEGO DE CARGOS",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "PARA LA CONTRATACIÓN DE SUMINISTRO DE SERVICIOS",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "PRL-0050 LICITACIÓN PÚBLICA (LP) No. 2025-1-46-01-08-LP-000003",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "“SERVICIO EN LA NUBE, UTILIZANDO INFRAESTRUCTURA COMO SERVICIO (IAAS), SERVICIOS ADMINISTRADOS Y CONECTIVIDAD PARA EL PROYECTO CENTRO REGIONAL COPERNICUS LAC EN PANAMÁ”",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Agosto de 2025",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "CONTENIDO",
+     "indent": 1
+    }
+   ],
+   "id": "portada",
+   "chars": 316,
+   "figures": 1,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "3",
+   "title": "CAPÍTULO III. TERMINOS DE REFERENCIA Y ESPECIFICACIONES TÉCNICAS",
+   "blocks": [],
+   "id": "s3",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "4",
+   "title": "CAPÍTULO IV. MODELOS, FORMULARIOS E INSTRUCTIVOS",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "“ANEXOS”",
+     "indent": 1
+    }
+   ],
+   "id": "s4",
+   "chars": 8,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "5",
+   "title": "CAPÍTULO I: CONDICIONES GENERALES",
+   "blocks": [],
+   "id": "s5",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "7",
+   "title": "CAPÍTULO II: CONDICIONES ESPECIALES",
+   "blocks": [],
+   "id": "s7",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.1",
+   "title": "OBJETO DEL CONTRATO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "El objeto del contrato es el suministro de “SERVICIO EN LA NUBE, UTILIZANDO INFRAESTRUCTURA COMO SERVICIO (IAAS), SERVICIOS ADMINISTRADOS Y CONECTIVIDAD PARA EL PROYECTO CENTRO REGIONAL COPERNICUS LAC EN PANAMÁ”.",
+     "indent": 0
+    }
+   ],
+   "id": "s7-1",
+   "chars": 212,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.2",
+   "title": "FORMA DE ADJUDICACIÓN",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "La adjudicación de este acto público se realizará de manera GLOBAL.",
+     "indent": 2
+    }
+   ],
+   "id": "s7-2",
+   "chars": 67,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.3",
+   "title": "VALIDEZ DE LAS PROPUESTAS",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Las propuestas deben tener una validez de ciento veinte (120) días hábiles.",
+     "indent": 2
+    }
+   ],
+   "id": "s7-3",
+   "chars": 75,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.4",
+   "title": "PRECIO DE REFERENCIA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "El precio de referencia de este acto público es de UN MILLON, QUINIENTOS MIL BALBOAS CON 00/100 (B/.1,500,000.00) Incluyendo el ITBMS.",
+     "indent": 2
+    }
+   ],
+   "id": "s7-4",
+   "chars": 134,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.5",
+   "title": "REUNIÓN PREVIA Y HOMOLOGACIÓN.",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Se llevará a cabo el día 28 de agosto de 2025 a las nueve y media de la mañana (9:30 a.m.) a través de sesión en línea desde el Salón de Reuniones de la Dirección de Administración y Finanzas de la Autoridad nacional para la Innovación Gubernamental (AIG).",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "Plataforma Microsoft Teams",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "Id. de reunión: 212 160 653 309",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Código de acceso: ri6E3S4g",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Los interesados en participar en el Acto de Selección de Contratista podrán absolver consultas, esclarecer cualquier duda técnica que se tenga de la contratación, consulta general y formular observaciones que puedan afectar la participación de los posibles proponentes en condiciones igualitarias, así como aclarar cualquier aspecto del pliego de cargos u otro documento. De darse la necesidad de modificar el pliego de cargos, sus adendas deberán publicarse con una antelación no menor de ocho (8) días hábiles antes de la celebración del acto de selección de contratista, de acuerdo con lo dispuesto en el artículo 54 del Texto Único de la Ley 22 de 2006, ordenado por la Ley 153 de 2020 y el Decreto Ejecutivo N.o 439 de 10 de septiembre de 2020 modificado por el Decreto Ejecutivo N.o 34 de 24 de agosto de 2022.",
+     "indent": 2
+    }
+   ],
+   "id": "s7-5",
+   "chars": 1155,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.6",
+   "title": "FIANZA DE PROPUESTA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "La fianza de propuesta será por un monto de 10% del importe o valor total de la propuesta. Deberá ser emitida por un periodo de vigencia de Ciento Veinte 120 días hábiles.V.2.V.2.",
+     "indent": 2
+    }
+   ],
+   "id": "s7-6",
+   "chars": 179,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.7",
+   "title": "PRESENTACIÓN DE PROPUESTAS.",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "A partir del 1 de enero de 2021, todas las propuestas deberán ser presentadas electrónicamente en el Sistema Electrónico de Contrataciones Públicas “PanamaCompra”.",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "RECEPCIÓN DE PROPUESTA",
+     "indent": 0
+    }
+   ],
+   "id": "s7-7",
+   "chars": 185,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.8",
+   "title": "DIA: 30 DE SEPTIEMBRE DE 2025",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "HORA: 08:00 A.M. A 10:00 A.M.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "APERTURA DE PROPUESTA",
+     "indent": 0
+    }
+   ],
+   "id": "s7-8",
+   "chars": 50,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.9",
+   "title": "DIA: 30 DE SEPTIEMBRE DE 2025",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "HORA: 10:01 A.M.",
+     "indent": 0
+    }
+   ],
+   "id": "s7-9",
+   "chars": 16,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.10",
+   "title": "PROCEDIMIENTO APLICABLE",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Al tratarse de un procedimiento de Licitación Pública se seguirán las reglas contenidas en el artículo 58 del Texto Único de la Ley 22 de 2006, ordenado por la Ley 153 de 2020.",
+     "indent": 2
+    }
+   ],
+   "id": "s7-10",
+   "chars": 176,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.11",
+   "title": "REQUISITOS MÍNIMOS OBLIGATORIOS Y OTROS REQUISITOS",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Cada uno de los documentos abajo señalados, deberá estar debidamente identificados en la propuesta por medio de separadores, de manera tal que facilite su revisión, análisis y/o evaluación.",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "A continuación, los documentos mínimos obligatorios que deberán adjuntarse al Formulario de Propuesta.",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "Se recomienda la presentación de los requisitos mínimos obligatorios de acuerdo al siguiente orden:",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "IMPORTANTE: Incapacidad legal para contratar. Los proponentes deberán presentar junto con su oferta una declaración por parte de la persona natural o persona jurídica, en la que deberán certificar que no se encuentran incapacitados para contratar con las entidades estatales, de conformidad con el artículo 24 del Texto Único de la Ley 22 de 27 de junio de 2006, ordenado por la Ley 153 de 2020 y el artículo 8 del Decreto Ejecutivo 439 de 2020, modificado por el Decreto Ejecutivo No.34 de 24 de agosto de 2022; la misma será suscrita y presentada a través del Sistema Electrónico de Contrataciones Públicas “PanamaCompra” previo al envío de la propuesta.\n\nEn caso de consorcios, este documento deberá ser suscrito por la persona designada para representarlo, y mediante esta suscripción todas las personas que conforman el consorcio declaran y aceptan que no se encuentran incapacitadas para contratar con el Estado, respondiendo solidariamente de todas y cada una de las obligaciones derivadas de la propuesta y del contrato, así como por la falsedad de información y de documentos.",
+     "indent": 2
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "N°",
+       "Requisito/documento",
+       "Subsanable Si/No/No aplica"
+      ],
+      [
+       "",
+       "Certificado de existencia del proponente Certificado de existencia del Proponente. De tratarse de una persona natural, deberá acreditarse mediante la presentación de copia cotejada, copia simple o copia digital de la cédula de identidad personal o del pasaporte cuando se trate de personas naturales extranjeras. Cuando se trata de una persona jurídica, acreditarse mediante la presentación de copia cotejada, copia simple o copia digital de la Certificación del Registro Público, de encontrarse registrada en Panamá, o de la autoridad competente del país de constitución, cuando se trata de persona jurídica extranjera no registrada en Panamá (Esta certificación deberá haber sido expedida dentro de un (1) año inmediatamente anterior a su presentación, de conformidad con lo establecido en el artículo 637 del Código Judicial, en concordancia con el artículo 4 del Texto Único de la Ley 22 de 2006, ordenado por la Ley 153 de 2020); Igualmente, en el caso de personas jurídicas, deberá adjuntarse copia cotejada, copia simple o copia digital de la cédula de identidad personal o del pasaporte del representante legal. Cuando se trate de un consorcio o de unión temporal debe adjuntarse el acuerdo de consorcio notariado en el que se establecerán las condiciones básicas que regirán sus relaciones y la persona que lo representará, quien deberá ser una de aquellas que conforman el consorcio o asociación accidental; De igual forma, se deberá aportar copia cotejada, copia simple o copia digital de la cédula de identidad personal o del pasaporte de la persona natural que funja como representante legal del consorcio o asociación accidental. Todos los integrantes del consorcio o asociación accidental deberán estar inscritos en el Registro de Proponentes, antes de la celebración del acto público; de igual forma, el consorcio o asociación accidental deberá inscribirse por conducto de su empresa líder antes de la celebración del acto público. Observación: Para todos los efectos legales, se entiende por proponente cualquier persona natural o jurídica, nacional o extranjera, que participa y presente una oferta en un acto de selección de contratista.",
+       "NO"
+      ],
+      [
+       "",
+       "Poder de representación en el acto público de selección de contratista. En caso que la propuesta sea suscrita por persona distinta al representante legal del proponente, su representante deberá acreditar mediante original, copia cotejada, copia simple o copia digital, que cuenta con poder especial, cuya firma debe estar autenticada por Notario Público o con poder general debidamente inscrito en el Registro Público de Panamá, con las facultades expresas para actuar como representante en el acto de selección de contratista. En caso de propuesta de consorcios el poder deber ser otorgado por el representante legal de la empresa líder del consorcio.",
+       "NO"
+      ],
+      [
+       "",
+       "Paz y Salvo de Renta. Todo proponente que sea contribuyente en Panamá deberá acreditar que se encuentra a paz y salvo con el Tesoro Nacional, a través de la impresión de la certificación digital emitida por la Dirección General de Ingresos del Ministerio de Economía y Finanzas. Ante situaciones no imputables al proponente que le impidan la obtención de la referida certificación digital, la Dirección General de Ingresos podrá emitir dicho paz y salvo en medio impreso. Los proponentes extranjeros que no sean contribuyentes en Panamá deberán presentar una declaración jurada ante Notario, en la que harán constar que no son contribuyentes. No obstante, antes de la firma del contrato deberán inscribirse en la Dirección General de Ingresos, para obtener su Número Tributario (NT) y su respectivo paz y salvo con el Tesoro Nacional.",
+       "Sí"
+      ],
+      [
+       "",
+       "Paz y Salvo del Pago de Cuota Obrero Patronal a la Caja de Seguro Social. Todo proponente deberá acreditar que se encuentra paz y salvo con la Caja de Seguro Social en el pago de la cuota obrero patronal, a través de original, copia simple o digital del paz y salvo emitido por la Dirección General de Ingresos de la Caja de Seguro Social o en su defecto, mediante original, copia cotejada o copia digital de la certificación de no cotizante al régimen de seguridad social, emitida por dicha entidad de seguridad social.",
+       "Sí"
+      ],
+      [
+       "",
+       "Declaración Jurada de Medidas de Retorsión. Todo proponente, deberá cumplir con lo establecido en el artículo 12 de la Ley 48 del 26 de octubre del 2016, a través de la declaración jurada de las medidas de retorsión, cuya firma debe estar autenticada por Notario Público, la cual se presentará en original, copia simple o copia digital. En las contrataciones menores, no se les exigirá a las personas naturales de nacionalidad panameña la declaración jurada de medidas de retorsión.",
+       "NO"
+      ],
+      [
+       "",
+       "Idoneidad de la Junta Técnica de Ingeniería y Arquitectura Los proponentes, sean personas naturales o jurídicas, que participen en actos de selección de contratista, que incluyan actividades de ingeniería y/o arquitectura, deberán presentar la Certificación expedida por la JTIA. En el caso de consorcios, los mismos deberán cumplir con lo establecido en la Resolución JTIA No.063 de 18 de noviembre de 2020.",
+       "SÍ"
+      ],
+      [
+       "",
+       "Aviso de Operaciones: Todo proponente interesado en participar en un procedimiento de selección de contratista, deberá acreditar que tiene autorización para ejercer dicha actividad comercial, ya sea a través del aviso de operaciones o cualquier otro medio de prueba idóneo, cuyas actividades declaradas en el mismo, deben guardar relación con el objeto contractual. La documentación que acredite este requisito, podrá acreditarse mediante copia cotejada, copia simple o copia digital. Los miembros del consorcio que sean empresas extranjeras deberán aportar el documento similar que acredite que las mismas están autorizadas a operar comercialmente en el país en el que se encuentre registrada.",
+       "NO"
+      ],
+      [
+       "",
+       "Carta de Adhesión a Principios de Sostenibilidad Todos los proponentes deberán presentar la Carta de Adhesión a los Principios de Sostenibilidad para Proveedores del Estado, suscrita por el representante legal del proponente o persona delegada, en atención a lo establecido en artículo 40 del Texto Único de la Ley 22 de 2006, ordenado por la Ley 153 de 2020 y el artículo 52 del Decreto Ejecutivo No. 439 de 2020. Estos Principios de Sostenibilidad para Proveedores del Estado, tienen como propósito describir aquellas normas fundamentales en las relaciones comerciales que el Estado panameño espera mantener con sus proveedores.",
+       "NO"
+      ],
+      [
+       "",
+       "Pacto de Integridad Todos los proponentes deberán presentar conjuntamente con su propuesta el Pacto de Integridad suscrito por el representante legal del proponente o persona delegada, en atención a lo establecido en los artículos 15 y 39 del Texto Único de la Ley 22 de 2006, ordenado por la Ley 153 de 2020. Este Pacto de Integridad se fundamentará en los principios de transparencia y anticorrupción y deberá establecer que ninguna de las partes pagará, ofrecerá, exigirá ni aceptará sobornos ni actuará en colusión con otros competidores para obtener la adjudicación del contrato y se hará extensivo durante su ejecución. Los contratistas incluirán el pacto de integridad en los contratos que celebren con subcontratistas para el cumplimiento de las obligaciones establecidas en la contratación pública.",
+       "NO"
+      ],
+      [
+       "",
+       "Fianza de Propuesta. Todo proponente interesado en participar en un procedimiento de selección de contratista, que requiera presentación de una fianza de propuesta o garantía, según preceptúan los artículos 121 y 122 del Texto Único de la Ley N° 22 de 27 de junio de 2006, ordenado por la Ley N° 153 de 8 de mayo de 2020, deberán presentar de manera electrónica a la entidad licitante la Fianza de Propuesta. (Aplica solo para un acto mayor a B/.500,000.00). En los casos que el pliego de cargos permita la subsanación de este requisito, la corrección solo recaerá sobre el documento efectivamente presentado, de conformidad a lo establecido en el artículo 14 de la Resolución No.2259-2023-LEG/FySE de 10 de agosto de 2023. Su no presentación será causal de rechazo de plano de la propuesta.",
+       "NO"
+      ],
+      [
+       "",
+       "Declaración de Acciones Nominativas. En los actos públicos cuyo precio de referencia exceda los Quinientos Mil Balboas (B/.500,000.00), tratándose de proponentes que sean personas jurídicas, estas deberán presentar vía electrónica a través del portal de “PanamaCompra”, la declaración jurada de acciones nominativas establecida en el artículo 41 del Texto Único de la Ley 22 de 27 de junio de 2006, ordenado por la Ley No. 153 de 2020; la misma se entenderá presentada una vez sea ingresada al Sistema Electrónico de Contrataciones Públicas “PanamaCompra”, haciendo uso de la funcionalidad que tiene el proponente, a fin de poder cumplir con el requisito de participación en el proceso de selección de contratista que corresponda. Corresponderá a las comisiones evaluadoras o verificadoras que sean designadas en los respectivos Actos Públicos, validar a través del Sistema Electrónico de Contrataciones Públicas “PanamaCompra”, que la Declaración Jurada de Acciones Nominativas ha cumplido con las formalidades mínimas establecidas para su presentación, en atención a lo señalado en la Circular No.DGCP-DS-005-2021. Esta declaración deberá mantenerse actualizada de manera anual y su falta de presentación ante la DGCP será impedimento de participación como proponente. Este requisito de Ley, deberá cumplirse de acuerdo a lo indicado en la sección relacionada con los requisitos obligatorios, y en el formulario que se adjunte en el Capítulo IV del Pliego de Cargos.",
+       "NO"
+      ]
+     ],
+     "header": true
+    }
+   ],
+   "id": "s7-11",
+   "chars": 1475,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 2,
+   "num": "7.12",
+   "title": "OTROS",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "REQUISITOS/DOCUMENTOS ADICIONALES DE OBLIGATORIO CUMPLIMIENTO INCLUIDOS POR LA ENTIDAD LICITANTE",
+     "indent": 0
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "N°",
+       "Requisito/Documento",
+       "Subsanable Si/No/No Aplica"
+      ],
+      [
+       "",
+       "FORMULARIO DE DESGLOSE DE PRECIO: El proponente deberá presentar el Formulario de desglose de precio, de acuerdo con el modelo incluido en este pliego de cargos (Ver Formulario No 1 del Capítulo IV). El formulario de desglose de precio deberá estar debidamente firmado por el proponente; en caso de ser persona jurídica, deberá estar firmado por el representante o apoderado legales de la sociedad. En caso de que el proponente se presente en Consorcio o Asociación Accidental, el formulario de desglose de precio deberá estar firmado por el representante del Consorcio o Asociación Accidental.",
+       "NO"
+      ],
+      [
+       "",
+       "CARTA DE REFERENCIA COMERCIAL DE LOS PROPONENTES: El proponente deberá presentar tres (3) cartas de referencia comercial emitida por empresa privada o gobierno a las que les haya realizado el suministro y servicio objeto de este acto público, en los últimos cinco (5) años con entregas satisfactorias. Dirigida a la Autoridad Nacional para la Innovación Gubernamental (AIG). Estas cartas deben incluir: Descripción del proyecto Duración Datos de contacto del cliente. El proponente deberá presentar la CARTA / REFERENCIA COMERCIAL de acuerdo con el modelo incluido en este pliego de cargos (Ver Formulario No 3 del Capítulo IV).",
+       "SÍ"
+      ],
+      [
+       "",
+       "CARTA DE REFERENCIA BANCARIA El proponente debe presentar carta (s) de referencia bancaria emitidas por una Institución Bancaria reconocida por la Superintendencia de Bancos de la República de Panamá, que acrediten la solvencia económica del Proponente, mediante la certificación de cuentas con activos líquidos y/o líneas de créditos en donde se deberá como mínimo (6) cifras medias. La(s) carta(s) bancaria(s) debe ser presentada en papel membretado de la entidad bancaria que la emite, firmada en original por un representante autorizado por el banco para estos trámites y expedida en los máximos un (1) meses previos a la presentación de la Propuesta. En caso de que el Proponente se presente en consorcio o asociación accidental, el requisito puede ser cumplido si uno de los miembros del consorcio o asociación accidental aporta la certificación por cifra antes indicada o mediante la suma de las cartas de referencia bancaria de cada miembro del Consorcio o Asociación Accidental. Las cartas expedidas en el extranjero deberán estar legalizadas en cumplimiento de las formalidades establecidas en la Ley, y acompañarse de una certificación emitida por una entidad homóloga de la Superintendencia de Bancos de Panamá, que acredite que la institución bancaria está autorizada para operar en el país. Las certificaciones deberán ser emitidas en papel membrete, y contendrán teléfono y correo electrónico de la persona que la refrenda, en su defecto, deberá contar con un método de validación de dicha carta. El proponente deberá presentar la CARTA DE REFERENCIA BANCARIA de acuerdo con el modelo incluido en este pliego de cargos (Ver Formulario No 2 del Capítulo IV).",
+       "SÍ"
+      ],
+      [
+       "",
+       "CERTIFICACIÓN DEL CENTRO DE DATOS: El centro de datos que aloje la infraestructura como servicio (IaaS) deberá contar con certificación Tier III o superior, emitida por el Uptime Institute, en al menos una las siguientes categorías: Tier Certification of Constructed Facility (TCCF) Tier Certification of Operational Sustainability (TCOS). Presentar Certificación vigente.",
+       "NO"
+      ],
+      [
+       "",
+       "CERTIFICACIÓN DE GESTIÓN DE LA INFORMACIÓN VIGENTE: Certificación ISO 27001 o certificaciones de seguridad de la información equivalente. Presentar Certificación vigente.",
+       "NO"
+      ],
+      [
+       "",
+       "CAPACIDAD DE MONITOREO Y SOPORTE OPERATIVO El proponente deberá evidenciar su capacidad de monitoreo 24x7x365 de los servicios ofertados, incluyendo al menos los siguientes elementos: Centro de operaciones (NOC o SOC) con capacidad de vigilancia continua. Mecanismos de detección proactiva de fallas e intervención automatizada o manual. Generación de reportes de incidentes y tendencias de disponibilidad. Presentar declaración jurada certificando esta capacidad, dirigida a la AIG.",
+       "SÍ"
+      ],
+      [
+       "",
+       "PERSONAL TÉCNICO ESPECIALIZADO PARA EL SERVICIO IAAS: El proveedor debe tener como parte del equipo técnico que trabajará en el proyecto mínimo: 1 Ingeniero de Infraestructura: Formación académica: Ingeniería en Sistemas, Ingeniería Informática o Ciencias de la Computación, Licenciatura en desarrollo de Software o carrera equivalente. Presentar certificado o diploma que lo acredite. Presentar certificación de Idoneidad de la Junta Técnica de Ingeniería y Arquitectura (JTIA) firmado por su secretario. Experiencia General: Contar con tres (3) años de experiencia en desarrollo o gestión de proyectos de infraestructura en tecnología cloud. Demostrar mediante una (1) certificación de participación en proyectos afines a su perfil expedida por la empresa donde participó y hoja de vida. 1 Técnico de Soporte L2/L3 disponible 24/7 para resolución de incidentes. Formación académica: Técnico en Sistemas, Técnico Informática o Ciencias de la Computación, Técnico en desarrollo de Software o equivalente. Presentar certificado o diploma que lo acredite y hoja de vida. Experiencia General: Contar con tres (3) años de experiencia en desarrollo o gestión de proyectos de infraestructura en tecnología cloud. Demostrar mediante una (1) certificación de participación en proyectos a fines a su perfil expedida por la empresa donde participó. 1 Especialista en seguridad certificado para temas de cumplimiento y monitoreo. Formación académica: Ingeniería en Sistemas, Ingeniería Informática o Ciencias de la Computación, Licenciatura en desarrollo de Software o carreras equivalentes. Presentar certificado o diploma que lo acredite y hoja de vida. Presentar certificación en seguridad. Presentar certificación de Idoneidad de la Junta Técnica de Ingeniería y Arquitectura (JTIA) firmado por su secretario.",
+       "SÍ"
+      ],
+      [
+       "",
+       "PERSONAL TÉCNICO ESPECIALIZADO PARA EL SERVICIO DE ADMINISTRACIÓN DE INFRAESTRUCTURA: Requisitos mínimos: Formación académica: Ingeniería en Sistemas, Ingeniería Informática o Ciencias de la Computación, Licenciatura en desarrollo de Software o carreras equivalentes. Presentar certificado o diploma que lo acredite. Presentar certificación de Idoneidad de la Junta Técnica de Ingeniería y Arquitectura (JTIA) firmado por su secretario. Experiencia General: Contar con al menos 3 (tres) años de experiencia en Administración de plataformas basadas en Kubernetes, servicios DBaaS, y entornos Linux. Conocimientos técnicos en monitoreo, trazabilidad, gestión de incidentes y operación de infraestructura en entornos de nube. Dominio técnico para la interpretación de métricas, eventos y logs para fines de diagnóstico (debug). Conocimientos básicos en configuración y mantenimiento de sistemas operativos Linux. Demostrar mediante una (1) certificación de participación en proyectos afines a su perfil expedida por la empresa donde participó y presentar hoja de vida. Certificaciones: El proponente deberá contar con al menos un (1) profesional especializado en infraestructura con experiencia demostrable en las tecnologías a implementar, y con certificaciones vigentes en las siguientes áreas: Kubernetes: CKA (Certified Kubernetes Administrator) O CKAD (Certified Kubernetes Application Developer) O equivalente. Bases de Datos (PostgreSQL u otras relevantes): Certificaciones de PostgreSQL (u otras equivalentes). (Nota: Las certificaciones pueden estar distribuidas en uno o más integrantes del equipo técnico.",
+       "SÍ"
+      ],
+      [
+       "",
+       "DECLARACION JURADA DE CAPACIDAD DE PROVEER LOS SERVICIOS REQUERIDOS El proveedor debe incluir una Declaración Jurada en la cual establezca que el mismo cuenta con las capacidades técnicas para ofertar los siguientes servicios como parte de su oferta: Infraestructura como Servicio (IaaS): Soluciones activas y disponibles comercialmente que incluyan recursos de cómputo, almacenamiento, red y virtualización de acuerdo a las especificaciones técnicas descritas en el pliego. Kubernetes como Servicio (KaaS): Servicio gestionado que permita la orquestación de contenedores a través de Kubernetes, con capacidad de autoescalado y administración de clusters de acuerdo a las especificaciones técnicas descritas en el pliego. Base de Datos como Servicio (DBaaS): Solución de base de datos gestionada, con alta disponibilidad, respaldo, escalabilidad y soporte técnico de acuerdo a las especificaciones técnicas descritas en el pliego. Servicio de Administración de Infraestructura: Ver especificaciones técnicas. Conectividad: El proveedor debe incluir un diagrama de conectividad como anexo a la declaración jurada, donde se evidencie cómo cumple con los requerimientos técnicos de red establecidos en el pliego. Este diagrama debe reflejar la arquitectura propuesta y latencias esperadas, conforme a los lineamientos definidos en las especificaciones técnicas descritas en el pliego. Nota: Todos los puntos anteriores deben estar claramente indicados y sustentados en la propuesta.",
+       "SÍ"
+      ]
+     ],
+     "header": true
+    }
+   ],
+   "id": "s7-12",
+   "chars": 96,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 2,
+   "num": "7.13",
+   "title": "SUBSANACIÓN DE DOCUMENTOS",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "El periodo de subsanación de documentos será de tres (3) días hábiles.",
+     "indent": 1
+    }
+   ],
+   "id": "s7-13",
+   "chars": 70,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.14",
+   "title": "PLAZO PARA FORMALIZAR LA ADJUDICACIÓN Y EL CONTRATO U ORDEN DE COMPRA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Cumplidas las formalidades establecidas en la Ley y el pliego de cargos, se procederá a adjudicar el acto de selección de contratista mediante resolución motivada en un período no mayor de siete (7) días hábiles.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Una vez adjudicado el acto público, el representante legal de la entidad contratante o a quien se delegue esta función procederá a formalizar el contrato u orden de compra, en el plazo de 15 días hábiles.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El contrato u orden de compra se formalizará con la firma de las partes, se entenderá perfeccionado cuando sean refrendados por la Contraloría General de la República.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Los contratos u órdenes de compra surtirán sus efectos transcurridos dos días hábiles después de su publicación en el Sistema Electrónico de Contrataciones Públicas “PanamaCompra” o a partir de la publicación de la orden de proceder al contratista, salvo que esta indique una fecha posterior.",
+     "indent": 1
+    }
+   ],
+   "id": "s7-14",
+   "chars": 875,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.15",
+   "title": "FIANZA DE CUMPLIMIENTO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "La fianza de cumplimiento se consignará por una suma equivalente al 10% del valor del contrato y su vigencia corresponderá al periodo de ejecución del contrato principal y al término de la liquidación, más un término de un (1) año para responder por vicios redhibitorios, como mano de obra, material defectuoso o de inferior calidad que el adjudicado, o cualquier otro vicio o defecto en el objeto del contrato conforme a los artículos 123 y 129 del Texto Único de la Ley 22 de 2006, ordenado por la Ley153 de 2020.",
+     "indent": 1
+    }
+   ],
+   "id": "s7-15",
+   "chars": 515,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.16",
+   "title": "LUGAR Y PLAZO PARA LA ENTREGA DEL SUMINISTRO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "14.1. Lugar Los servicios se prestarán en la infraestructura del contratista, con puntos de conexión según se especifica en los escenarios de conectividad definidos en las especificaciones técnicas.",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "14.2. Plazo: Los servicios serán prestados durante doce (12) meses.",
+     "indent": 2
+    }
+   ],
+   "id": "s7-16",
+   "chars": 265,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.17",
+   "title": "FORMA DE PAGO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "El monto total del Contrato, será cancelado al Contratista, previa presentación de la gestión de pago y Acta de Aceptación correspondiente, mediante siete (7) pagos de la siguiente manera:",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "El primer pago, se efectuará a los quince (15) días después de la orden de proceder por los servicios de infraestructura como servicio (IaaS), y administración de infraestructura los cuales serán cargados al presupuesto de la vigencia del año 2025.",
+     "indent": 2,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "A partir del séptimo (7) mes se realizarán seis (6) pagos mensuales, realizando recibido conforme de los siguientes elementos:",
+     "indent": 2,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Factura debidamente elaborada según normativa fiscal vigente.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Informe mensual de cumplimiento de SLA.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Reporte de servicios prestados y métricas de rendimiento.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Certificación de cumplimiento de estándares de seguridad.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Etapas o Entregables",
+       "Fecha",
+       "% de pago"
+      ],
+      [
+       "Implementación inicial: Activación del servicio de IaaS Configuración de conectividad Pruebas de conectividad y rendimiento Entrega de documentación técnica Recepción inicial de conocimientos (handover técnico) Acta de aceptación de la etapa inicial EL CONTRATISTA, debe presentar un informe con la siguiente información: Entrega de documentación técnica correspondiente de la configuración inicial del servicio, pruebas de conectividad. Primer informe de avance detallando el estado de implementación, cumplimiento de SLA inicial y reporte de conectividad.",
+       "15 días hábiles después de la orden de proceder (año 2025)",
+       "50%"
+      ],
+      [
+       "Meses de operación y administración conforme. EL CONTRATISTA, debe presentar un informe con la siguiente información: Informe acumulado de cumplimiento de SLA, reportes de conectividad, incidentes, cambios y seguridad correspondientes a los primeros siete (7) meses. Certificación técnica del estado del servicio.",
+       "Mes 7",
+       "8.34%"
+      ],
+      [
+       "Mes de operación y administración conforme. EL CONTRATISTA, debe presentar un informe con la siguiente información: Informe mensual de SLA, conectividad, incidentes, configuraciones y seguridad correspondiente al mes de servicio.",
+       "Mes 8",
+       "8.34%"
+      ],
+      [
+       "Mes de operación y administración conforme. EL CONTRATISTA, debe presentar un informe con la siguiente información: Informe mensual de SLA, conectividad, incidentes, configuraciones y seguridad correspondiente al mes de servicio.",
+       "Mes 9",
+       "8.33%"
+      ],
+      [
+       "Mes de operación y administración conforme. EL CONTRATISTA, debe presentar un informe con la siguiente información: Informe mensual de SLA, conectividad, incidentes, configuraciones y seguridad correspondiente al mes de servicio.",
+       "Mes 10",
+       "8.33%"
+      ],
+      [
+       "Mes de operación y administración conforme. EL CONTRATISTA, debe presentar un informe con la siguiente información: Informe mensual de SLA, conectividad, incidentes, configuraciones y seguridad correspondiente al mes de servicio.",
+       "Mes 11",
+       "8.33%"
+      ],
+      [
+       "Mes de operación y administración conforme. EL CONTRATISTA, debe presentar un informe con la siguiente información: Informe mensual de SLA, conectividad, incidentes, configuraciones y seguridad correspondiente al mes de servicio.",
+       "Mes 12",
+       "8.33%"
+      ],
+      [
+       "Total",
+       "12 meses",
+       "100%"
+      ]
+     ],
+     "header": true
+    },
+    {
+     "type": "para",
+     "text": "Previo a la presentación de la cuenta total o parcial, el contratista deberá subsanar cualquier defecto u otros detalles que puedan surgir en el transcurso de presentación y cancelación de la cuenta.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "La Entidad Licitante realizará la retención del 50% de la suma correspondiente al ITBMS, establecido en la cuenta a presentar por el futuro proveedor, al tenor de lo establecido en el artículo 1 del Decreto Ejecutivo N°463 de 14 de octubre de 2015.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "AIG se compromete a efectuar el pago dentro de los sesenta (60) días calendario, contados a partir de la presentación de la cuenta respectiva, con toda la documentación exigida por las reglamentaciones vigentes.",
+     "indent": 1
+    }
+   ],
+   "id": "s7-17",
+   "chars": 1434,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 2,
+   "num": "7.18",
+   "title": "ACTA DE ACEPTACIÓN FINAL",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "La terminación de la ejecución del servicio, objeto del contrato se recogerá en el acta de aceptación final, después de comprobar que se han cumplido todos los requisitos del contrato.",
+     "indent": 1
+    }
+   ],
+   "id": "s7-18",
+   "chars": 184,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.19",
+   "title": "VIGENCIA Y LIQUIDACIÓN DEL CONTRATO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "El contrato tendrá una vigencia de catorce (14) meses contados a partir de la notificación del contrato o de la publicación de la orden de proceder a través del portal electrónico “PanamaCompra”, lo que incluye doce (12) meses de ejecución y dos (2) meses para la liquidación correspondiente.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El contrato se extenderá hasta la fecha de terminación o vencimiento de este, incluida sus prórrogas, y se considerará vigente hasta la fecha establecida para la liquidación, aunque haya expirado el plazo o término de ejecución pactado, conforme al artículo 106 del Texto Único de la Ley 22 de 2006, ordenado por la Ley 153 de 2020.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "La liquidación del contrato se realizará dentro de un (1) año siguiente a los doce (12) meses con que cuenta la entidad para recibir del servicio objeto de este contrato y recibido a satisfacción.",
+     "indent": 1
+    }
+   ],
+   "id": "s7-19",
+   "chars": 820,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.20",
+   "title": "MODIFICACIÓN DEL CONTRATO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Las cláusulas pactadas dentro del contrato podrán ser modificadas a través de Adendas, de conformidad con el Texto Único de la Ley 22 de 27 de junio de 2006, ordenado por la Ley 153 de 2020, las cuales estarán sujetas al refrendo de la Contraloría General de la República.",
+     "indent": 1
+    }
+   ],
+   "id": "s7-20",
+   "chars": 272,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.21",
+   "title": "SUBCONTRATISTAS",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Salvo que el contrato disponga lo contrario, o que de su naturaleza y condiciones se deduzca que el servicio ha de ser ejecutado directamente por el adjudicatario, este podrá concertar con terceros la realización de determinadas fases del servicio.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El contratista únicamente podrá subcontratar previa aprobación de la AIG, salvo prohibición expresa contenida en el pliego de cargos. Para ser subcontratista se requiere estar inscrito en el Registro de Proponentes y no estar inhabilitado para contratar con el Estado, al momento de la subcontratación.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El contratista adjudicatario del acto público responderá ante la entidad contratante, por las acciones u omisiones de su subcontratista. Será responsabilidad del contratista principal o adjudicatario, tomar las medidas y solicitar las garantías que considere necesarias para que los subcontratistas cumplan con las exigencias del subcontrato.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Todo subcontratista, de acuerdo con lo indicado en el artículo 174 del Texto Único de la Ley 22 de 2006, ordenado por la Ley 153 de 2020, debe inscribirse en el Registro de Proponente de la Dirección General de Contrataciones Públicas. La AIG en cualquier momento podrá solicitarle al adjudicatario la lista de sus subcontratistas.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El Estado velará porque en las subcontrataciones se dé prioridad a las micro y pequeñas empresas, estableciendo en el pliego de cargos la aprobación de subcontratación para estas.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Para este acto público, está permitida la subcontratación de determinadas fases, o actividades del contrato. Todo subcontratista debe ser aprobado previamente por escrito por parte de la AIG, indicándose expresamente las actividades del contrato que podrá ejecutar.",
+     "indent": 1
+    }
+   ],
+   "id": "s7-21",
+   "chars": 1667,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.22",
+   "title": "CESIÓN DE CONTRATO U ORDEN DE COMPRA Y CESIÓN DE CREDITOS",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "El contratista podrá ceder los derechos que nazcan del contrato u orden de compra, previo cumplimiento de los requisitos, autorizaciones y/o formalidades respectivas establecidas por la Ley, el reglamento, el contrato, o por las condiciones consignadas en el pliego de cargos que haya servido de base al procedimiento de selección de contratista.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Sin embargo, en todos los casos, será preciso que el cesionario reúna las condiciones y preste la garantía exigida al contratista, y que la Autoridad para la innovación gubernamental (AIG) y el garante consientan en la cesión, haciéndolo constar así en el expediente respectivo.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "De acuerdo al artículo 96 del Texto Único de la Ley 22 de 2006, ordenador por la Ley 153 de 2020, el cesionario deberá contar con la capacidad técnica y financiera para proseguir o dar inicio a la ejecución del contrato o de la orden de compra cuyos derechos y obligaciones hayan sido cedidos, en los mismos términos que el cedente.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Los créditos que se generen de un contrato podrán cederse en la forma que establezca la reglamentación dictada por el Ministerio de Economía y Finanzas.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Ambos procedimientos serán incorporados y desarrollados en el modelo de contrato que se incluya en el capítulo IV del pliego de cargos, o en la respectiva orden de compra.",
+     "indent": 1
+    }
+   ],
+   "id": "s7-22",
+   "chars": 1279,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.23",
+   "title": "MULTAS POR RETRASO EN LA ENTREGA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Se impondrá multa de 4% dividido entre treinta, por cada día calendario de atraso del valor equivalente a la parte del contrato dejada de entregar o ejecutar por el contratista.",
+     "indent": 1
+    }
+   ],
+   "id": "s7-23",
+   "chars": 177,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.24",
+   "title": "TERMINACIÓN UNILATERAL",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Sin perjuicio del procedimiento de resolución administrativa del contrato u orden de compra, la entidad contratante, en acto administrativo debidamente motivado, podrá disponer la terminación anticipada, cuando circunstancias de interés público debidamente comprobadas lo requieran, en cuyo caso el contratista deberá ser indemnizado por razón de los perjuicios causados con motivo de la terminación unilateral por la entidad contratante.",
+     "indent": 2
+    }
+   ],
+   "id": "s7-24",
+   "chars": 438,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "7.25",
+   "title": "RESOLUCIÓN ADMINISTRATIVA DEL CONTRATO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Las causales de resolución administrativa del Contrato serán las establecidas en el artículo 136 del Texto Único de la Ley 22 de 2006, que regula la Contratación Pública, ordenado por la Ley 153 de 2020.",
+     "indent": 0
+    }
+   ],
+   "id": "s7-25",
+   "chars": 203,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "8",
+   "title": "CAPÍTULO III",
+   "blocks": [],
+   "id": "s8",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "8.1",
+   "title": "ESPECIFICACIONES TÉCNICAS",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "ESPECIFICACIONES TÉCNICAS APLICABLES AL SUMINISTRO DE “SERVICIO EN LA NUBE, UTILIZANDO INFRAESTRUCTURA COMO SERVICIO (IAAS), SERVICIOS ADMINISTRADOS Y CONECTIVIDAD PARA EL PROYECTO CENTRO REGIONAL COPERNICUS LAC EN PANAMÁ”",
+     "indent": 0
+    }
+   ],
+   "id": "s8-1",
+   "chars": 222,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "8.2",
+   "title": "Antecedentes y Situación Actual",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "El programa Copernicus, liderado por la Unión Europea (UE) y la Agencia Espacial Europea (ESA), busca mejorar las capacidades de monitoreo y análisis de datos de Observación de la Tierra (EO, por sus siglas en inglés), brindando servicios gratuitos de acceso a datos satelitales con fines medioambientales, científicos y de gestión de riesgos.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "En el marco de su estrategia de cooperación internacional, el programa Copernicus ha impulsado la creación del proyecto Copernicus LAC, que tiene como objetivo establecer un Centro Regional para el Procesamiento y Distribución de Datos en América Latina y el Caribe, con el fin de fortalecer las capacidades locales en el uso y aprovechamiento de datos de observación de la Tierra.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "En este contexto, la República de Panamá, a través de la Autoridad Nacional para la Innovación Gubernamental (AIG), ha asumido el compromiso de implementar el Centro Regional Copernicus LAC Panamá, que tendrá como objetivo almacenar, procesar y distribuir información satelital Sentinel, facilitando su uso por parte de instituciones públicas, centros de investigación y usuarios técnicos.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Actualmente, el componente de software central (Middleware) para el funcionamiento de este centro está siendo desarrollado e implementado por la Agencia Espacial Europea (ESA), con la expectativa de que dicho componente se aloje en infraestructura tecnológica administrada desde Panamá. Esta infraestructura debe contar con alta disponibilidad, escalabilidad, conectividad internacional, y cumplir con estándares europeos de protección de datos y ciberseguridad.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Para garantizar el despliegue y operatividad del Centro Copernicus LAC Panamá, se requiere la contratación de un conjunto de servicios tecnológicos integrados, que incluyan:",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Infraestructura como Servicio (IaaS) que incluya el servicio de Kubernetes como Servicio (KaaS).",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Servicio de Bases de Datos como Servicio (DBaaS).",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Servicios gestionados complementarios (Administración de Infraestructura).",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Conectividad internacional de alta capacidad.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El presente proceso busca seleccionar un proveedor que ofrezca estos servicios de manera integrada, garantizando el cumplimiento de los estándares operativos, técnicos y regulatorios necesarios para asegurar la funcionalidad y sostenibilidad del Centro Regional Copernicus LAC en Panamá.",
+     "indent": 0
+    }
+   ],
+   "id": "s8-2",
+   "chars": 2299,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "8.3",
+   "title": "Alcance general del suministro",
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Objetivo General: Garantizar la disponibilidad, seguridad y funcionamiento óptimo de la infraestructura tecnológica del Centro Regional Copernicus LAC mediante servicios especializados de IaaS y conectividad.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Objetivos Específicos:",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Implementar una infraestructura IaaS escalable y robusta",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Garantizar conectividad de alta velocidad y disponibilidad",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Asegurar cumplimiento de estándares de seguridad informática",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Proporcionar servicios de almacenamiento masivo escalables",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Establecer mecanismos de respaldo",
+     "indent": 1,
+     "marker": "1."
+    }
+   ],
+   "id": "s8-3",
+   "chars": 495,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "8.4",
+   "title": "Alcance específico del suministro",
+   "blocks": [],
+   "id": "s8-4",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.4.1",
+   "title": "Resumen de Alcance:",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Se requiere el suministro de servicios necesarios para la operación del Centro Regional Copernicus LAC Panamá, e involucra los siguientes componentes:",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Servicio de Administración de Infraestructura\nGestión operativa de los componentes tecnológicos, incluyendo funciones relacionadas con el entorno KaaS y DBaaS (en fase operativa), monitoreo, trazabilidad, accesos, soporte y documentación técnica.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "DBaaS (Database as a Service)\nProvisión de una solución administrada de base de datos PostgreSQL con alta disponibilidad, respaldo, mantenimiento, escalabilidad y soporte técnico continuo.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "IaaS (Infraestructura como Servicio)\nInfraestructura virtualizada que incluye el suministro de máquinas virtuales, almacenamiento, balanceadores y red, así como la provisión de un servicio Kubernetes gestionado (KaaS) para orquestación de contenedores.",
+     "indent": 1,
+     "marker": "1."
+    }
+   ],
+   "id": "s8-4-1",
+   "chars": 836,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "8.5",
+   "title": "Servicio de Conectividad",
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Descarga de datos Sentinel desde Europa mediante conexión dedicada vía RedCLARA o Internet dedicado (mínimo 3 Gbps).",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Acceso del usuario final: Los usuarios accederán a la plataforma a través de internet mediante una dirección IP pública.",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "Para este proyecto, no es necesario disponer de una infraestructura de computación en nube de uso exclusivo. La solución puede operar en un entorno compartido donde los recursos sean utilizados de forma simultánea por múltiples clientes o proyectos, manteniendo los adecuados niveles de seguridad, aislamiento y rendimiento.",
+     "indent": 1
+    }
+   ],
+   "id": "s8-5",
+   "chars": 560,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.1",
+   "title": "Actividades y Servicios Específicos:",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Infraestructura como Servicio (IaaS), es un modelo de servicio en la nube donde el proveedor suministra y es dueño de los recursos de infraestructura de tecnología de la información de manera virtualizada y bajo demanda. El servicio incluye:",
+     "indent": 1
+    }
+   ],
+   "id": "s8-5-1",
+   "chars": 241,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.2",
+   "title": "Componentes incluidos:",
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Recursos de cómputo virtualizados (servidores virtuales, CPU, memoria RAM).",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Almacenamiento escalable (discos virtuales, almacenamiento en bloque y objeto).",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Conectividad de red (redes virtuales, balanceadores de carga, firewalls)",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Hipervisor y capa de virtualización.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Infraestructura física subyacente (servidores, storage, networking)",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "KaaS.",
+     "indent": 1
+    }
+   ],
+   "id": "s8-5-2",
+   "chars": 334,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.3",
+   "title": "Responsabilidades del proveedor:",
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Mantenimiento, actualización y administración de toda la infraestructura física",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Gestión y actualización del hipervisor",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Garantía de disponibilidad y continuidad del servicio",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Monitoreo de infraestructura",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Soporte técnico especializado",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Respaldo y recuperación de la infraestructura",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "El proveedor del servicio deberá asegurar la correcta gestión y operación de la plataforma Kubernetes como servicio (KaaS), incluyendo los siguientes aspectos:",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Despliegue inicial y configuración del clúster Kubernetes según las especificaciones requeridas.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Mantenimiento del clúster incluyendo parches, actualizaciones de seguridad y mejoras de versión del sistema.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Alta disponibilidad (HA) según requerimientos.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Gestión de los nodos maestros y ETCD, incluyendo respaldo y restauración de su estado.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Monitoreo y soporte del clúster Kubernetes como parte del servicio gestionado.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Provisión y gestión de StorageClasses compatibles con el entorno de almacenamiento definido.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Soporte para autoescalado de recursos (horizontal y vertical) en función de la carga de trabajo.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Integración de herramientas de observabilidad, incluyendo métricas, logs y eventos del clúster.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Gestión de red interna del clúster, incluyendo políticas de red y configuración de Ingress Controllers.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Seguridad del clúster, incluyendo autenticación, control de acceso basado en roles (RBAC), y aislamiento de namespaces.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Garantizar respaldo automático de los datos críticos del clúster, como las bases de datos ETCD.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Documentación de configuración y cambios aplicados al clúster.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Y demás actividades inherentes a un servicio IaaS.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Además, se requerirá DBaaS",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "El proveedor del servicio deberá asegurar la operación continua, segura y eficiente del sistema de bases de datos gestionadas (DBaaS), incluyendo los siguientes aspectos:",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Provisión y configuración inicial de las bases de datos, según los requisitos técnicos establecidos.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Alta disponibilidad (HA) de las bases de datos, garantizando redundancia y tolerancia a fallos.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Monitoreo y mantenimiento continuo de las bases de datos, incluyendo métricas de uso, rendimiento y estado de salud.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Aplicación de parches y actualizaciones de seguridad de forma regular y controlada.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Gestión de respaldos automáticos periódicos, incluyendo verificación de integridad y recuperación bajo demanda.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Soporte técnico ante incidentes, incluyendo restauración de datos y recuperación de fallos.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Escalabilidad vertical y horizontal del servicio, según la demanda operativa del sistema.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Gestión de usuarios y accesos administrativos, garantizando seguridad y trazabilidad de los accesos.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Monitoreo de uso de recursos (CPU, memoria, almacenamiento) con alertas de umbral y ajustes proactivos.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Configuración de políticas de seguridad y cifrado, tanto en tránsito como en reposo.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Documentación técnica del entorno configurado, cambios aplicados y políticas operativas.",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "Para la prestación del servicio, el oferente podrá contar con la cantidad de personal que considere necesaria para prestar el servicio de manera eficiente. Sin embargo debe cumplir con el requisito 9.18 del Capítulo II. La intención de este requisito es garantizar que el oferente disponga de personal técnico especializado y debidamente acreditado para la prestación del servicio IaaS, asegurando experiencia y capacidad en las áreas de infraestructura, soporte y seguridad. No implica que deba existir un número específico de personas dedicadas de manera exclusiva al proyecto, sino que el proponente debe demostrar que cuenta con los perfiles mínimos descritos, con disponibilidad para atender los requerimientos durante la vigencia del contrato.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Los servicios administrados se ampliarán al final del documento.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "La Agencia Espacial Europea (ESA) proporcionará un middleware diseñado para el procesamiento, acceso y difusión de los datos. Este Software Central estará alojado en Kubernetes, por lo que corre en la plataforma KaaS, la cual a su vez corre sobre la infraestructura como servicio (IaaS) que deberá cumplir con los recursos TIC necesarios para ejecutar diversos algoritmos y cadenas de procesamiento EO (observación terrestre), y será escalable para adaptarse a las cambiantes necesidades operativas. Esta información se proporciona únicamente como referencia y no forma parte del alcance del servicio a ser contratado.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Además, el centro de datos que aloje la infraestructura como servicio (IaaS) deberá contar con certificación Tier III o superior, emitida por el Uptime Institute, en al menos una las siguientes categorías:",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Tier Certification of Constructed Facility (TCCF)",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Tier Certification of Operational Sustainability (TCOS)",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "Estas certificaciones deben estar vigentes.",
+     "indent": 3
+    },
+    {
+     "type": "para",
+     "text": "Este servicio busca garantizar el inicio operativo del componente aplicativo del Centro Copernicus LAC Panamá.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Este Centro de datos debe estar ubicado en Panamá.",
+     "indent": 1
+    }
+   ],
+   "id": "s8-5-3",
+   "chars": 4756,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.4",
+   "title": "Modalidad de Prestación del Servicio",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "El servicio deberá prestarse en horario 24/7.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El período de contratación será de un (1) año.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "La IaaS debe proporcionar un balanceador de carga con una capacidad mínima de 1 Gb/s y máxima de 4 Gb/s.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "El almacenamiento en bloques se proporcionará mediante volúmenes persistentes conectados a la red SSD de alto rendimiento.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "La estrategia de backup debe incluir copias de seguridad incrementales diarias de todas las bases de datos de la infraestructura con un tiempo de retención de un (1) mes.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "No se requiere copia de seguridad para las máquinas virtuales y el sistema de almacenamiento.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "En el Anexo I se especifica los recursos que deben estar configurados en alta disponibilidad (HA), es decir, replicados y distribuidos en al menos dos (2) zonas de disponibilidad dentro de la misma región. - En el contexto de una solución IaaS, el término “zonas de disponibilidad dentro de la misma región” se refiere a ubicaciones físicas independientes pero conectadas dentro del mismo entorno geográfico (en este caso, Panamá). Estas zonas pueden estar ubicadas dentro del mismo centro de datos —siempre que estén separadas lógicamente e incluyan redundancia adecuada— o en centros de datos distintos, siempre que cumplan con el principio de aislamiento de fallos.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "La noción clave de una zona de disponibilidad es el aislamiento de fallos: componentes como energía eléctrica, climatización (HVAC), red y otros deben estar segregados para evitar puntos únicos de falla.",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "Desde el Día 1 deberán estar disponibles los siguientes servicios: Servicios administrados o Administración de infraestructura, servicio de conectividad, Kubernetes administrado, balanceador de carga, base de datos (PostgreSQL), almacenamiento en caliente y almacenamiento en bloque. No obstante, inicialmente se puede contar solo con una parte de la asignación final prevista. Como mínimo, deberán estar asignadas 5 máquinas virtuales (4CPU, 16GB) al servicio administrado de Kubernetes, 1TB de almacenamiento en bloque y 10TB de almacenamiento en caliente. La asignación podrá incrementarse progresivamente a partir del Día 1 hasta alcanzar la asignación final en el Día 1 + 3 meses. El almacenamiento en frío podrá estar disponible a partir del Día 1 + 1 mes, con un incremento progresivo hasta llegar a la asignación final en el Día 1 + 3 meses. Este cronograma es indicativo, ya que el plan real de migración dependerá no solo de la infraestructura, sino también del equipo de servicios administrados.",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "Expectativa de tráfico de las máquinas virtuales y entre las mismas:",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Valores de referencia, sobre operaciones de Entrada/Salida por segundo (IOPS) 500,000 IOPS (lectura) y 400,000 IOPS (escritura) para Almacenamiento de acceso rápido (Hot Storage)",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Para Almacenamiento de bloque (SSD), en uso de bases de datos internas se requiere IOPS alto, el valor mínimo recomendado es de 20,000 IOPS. Con velocidad mínima de transferencia de 312 MB/s para operaciones de entrada/salida (I/O) aleatorias, y latencia máxima de 1 milisegundo para almacenamiento de bloques. Estas especificaciones son críticas para garantizar el desempeño óptimo del middleware de procesamiento de datos satelitales.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Para el almacenamiento caliente de objetos (hot storage), el sistema deberá garantizar latencias máximas de 100 milisegundos para operaciones de lectura y 200 milisegundos para operaciones de escritura. Este almacenamiento será utilizado para el acceso frecuente a datos procesados y metadatos del sistema, por lo que debe mantener estos niveles de rendimiento de forma consistente bajo condiciones de carga operativa normal.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "El almacenamiento en bloque (SSD) deberá estar optimizado para operaciones de E/S (I/O) aleatorias, siendo recomendable un tamaño de bloque de 16Kb. El almacenamiento en caliente (Object Storage) también deberá estar optimizado para acceso parcial a archivos, con un tamaño de bloque recomendado de 128Kb.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "El almacenamiento frío debe permitir la recuperación de un conjunto de datos Sentinel en un tiempo inferior al que se requeriría para descargar dichos datos a través de la red desde ESA/Copernicus. Se recomienda una estrategia de recuperación flexible, con opciones de recuperación expedited o standard en un rango de 3 a 5 horas.",
+     "indent": 1
+    }
+   ],
+   "id": "s8-5-4",
+   "chars": 4199,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.5",
+   "title": "Requerimientos estimados de tráfico",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Debido a la naturaleza del sistema CopernicusLAC, la mayor parte de la transferencia de datos se realiza internamente entre máquinas virtuales, y entre las máquinas virtuales y el almacenamiento de objetos con redes externas. Por tanto, se recomienda planificar aproximadamente 10 Gbps para tráfico Este–Oeste y 3 Gbps para tráfico Norte–Sur.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "El servicio de IaaS debe tener compatibilidad con sistemas basados en Linux.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Se requiere que el proveedor cumpla con los reglamentos aplicables de la Unión Europea que correspondan al tipo de servicio ofrecido (infraestructura en la nube, protección de datos, ciberseguridad, etc.). Esto puede incluir, entre otros, el Reglamento General de Protección de Datos (GDPR), regulaciones sobre ciberseguridad. Se sugiere revisar las normativas relacionadas con la protección de datos al trabajar con instituciones europeas.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "La base de datos se proporcionará a través de una solución de base de datos gestionada.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "El centro de datos requiere estar ubicado en Panamá.",
+     "indent": 1
+    }
+   ],
+   "id": "s8-5-5",
+   "chars": 997,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.6",
+   "title": "Almacenamiento:",
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Almacenamiento de acceso rápido Petabyte (PB) Object Storage",
+       "Almacenamiento en frío Terabyte (TB) Object Storage"
+      ],
+      [
+       "2",
+       "750"
+      ]
+     ],
+     "header": false
+    },
+    {
+     "type": "para",
+     "text": "Se debe contemplar que, se implementará un esquema de rotación de datos. Al finalizar el período activo (establecido en un año), los datos almacenados en acceso rápido serán trasladados a almacenamiento en frío, y se cargarán nuevos datos para mantener la disponibilidad en acceso rápido. La información sobre la rotación de datos se proporciona únicamente como referencia y no forma parte del alcance del servicio a ser contratado.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El sistema de almacenamiento debe ser compatible con S3 (S3-compatible storage).",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "El requerimiento de alta disponibilidad (HA) aplica a los nodos de procesamiento (processing nodes) y puede cumplirse dentro de una región de nube que ofrezca zonas de disponibilidad (availability zones), este requerimiento aplica específicamente a estos nodos de procesamiento (processing nodes), no al sistema de almacenamiento.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "La data fría se gestionará de forma que mantenga un tamaño constante durante la vigencia del contrato, sin contemplar crecimiento anual.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "La escalabilidad mencionada durante el año del contrato hace referencia a las capacidades estándar de un servicio IaaS, como el aprovisionamiento dinámico de recursos bajo demanda.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El despliegue será realizado utilizando la interfaz del clúster de Kubernetes y la API, así como la API de almacenamiento de objetos S3. El Operador deberá contar con acceso directo, ya sea mediante VPN o interfaz web, a las APIs de Kubernetes y S3. Se recomienda el acceso mediante VPN. Además, se debe considerar que los nodos de Kubernetes deberán tener acceso a internet para descargar las imágenes de aplicaciones Middleware relevantes y los datos que se deberán transferir al almacenamiento S3.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Información adicional sobre parámetros de almacenamiento (Hot Storage, Cold Storage y Block Storage):",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Para Hot Storage y Cold Storage, el tamaño promedio de los objetos oscila entre 100 MB y 1 GB, con un máximo de 8 GB.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Se debe considerar que son frecuentes las lecturas parciales con tamaños entre 16 KB y 1 MB, por lo que el Hot Storage deberá estar optimizado para accesos parciales.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "En Cold Storage, una solicitud promedio de recuperación corresponderá a 20 TB, y una vez recuperados, los datos deberán ser accesibles con el mismo desempeño y patrones de acceso que en el Hot Storage.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "En cuanto a Block Storage (SSD – PVC):",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Se recomienda un tamaño de bloque de 16 KB, adecuado para operaciones de I/O aleatorias (ejemplo: acceso a bases de datos).",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "El patrón de uso aceptado es de 70% lectura y 30% escritura.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Para entornos con VMFS, no existen requisitos específicos de tamaño de bloque; se acepta el valor por defecto de 1 MB.",
+     "indent": 2
+    },
+    {
+     "type": "para",
+     "text": "Especificaciones de Almacenamiento de Objetos (Object Storage):",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Para el almacenamiento caliente de objetos (hot storage), el sistema deberá garantizar latencias máximas de 100 milisegundos para operaciones de lectura y 200 milisegundos para operaciones de escritura. Este almacenamiento será utilizado para el acceso frecuente a datos procesados y metadatos del sistema, por lo que debe mantener estos niveles de rendimiento de forma consistente bajo condiciones de carga operativa normal.",
+     "indent": 0
+    }
+   ],
+   "id": "s8-5-6",
+   "chars": 3070,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 3,
+   "num": "8.5.7",
+   "title": "Kubernetes as a Service - Kubernetes como Servicio (KaaS):",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Implica que la gestión y orquestación de aplicaciones en contenedores se realiza a través del proveedor de IaaS. Esto facilita el despliegue, la escalabilidad y la administración de las aplicaciones y servicios de la plataforma. Kubernetes aporta un marco sólido para automatizar el despliegue, escalado y operación de contenedores de aplicaciones en clusters de hosts.",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "El sistema de gestión de contenedores se debe proporcionar a través de una solución Kubernetes gestionada con capacidad de autoescalado.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Las máquinas virtuales indicadas en el Anexo I serán gestionadas por Kubernetes para orquestar los servicios.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "La seguridad de las máquinas virtuales subyacentes al servicio KaaS también debe ser gestionada.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "El motor de contenedores utilizado estará basado en Docker o containerd.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Es fundamental respaldar los nodos maestros (master nodes) y las bases de datos ETCD, ya que contienen el estado crítico del clúster y los datos de configuración.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Las bases de datos ETCD del clúster de Kubernetes deben respaldarse.",
+     "indent": 1
+    }
+   ],
+   "id": "s8-5-7",
+   "chars": 1012,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.8",
+   "title": "Bases de Datos como Servicio (DBaaS):",
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Se requiere una solución administrada de base de datos como parte del servicio. Este servicio incluye aprovisionamiento, configuración, mantenimiento, actualizaciones, respaldo automático, escalabilidad y alta disponibilidad. El DBaaS garantiza alta disponibilidad, rendimiento y escalabilidad de la base de datos, componente integral de la plataforma.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Versiones de BD: el mínimo requerido es PostgreSQL ≥ 13 y PostGIS ≥ 3, pero se recomienda utilizar al menos PostgreSQL 16 y PostGIS 3.5.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "La alta disponibilidad (HA) también debe aplicarse a PostgreSQL, ya que es un componente integral del sistema.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "La base de datos PostgreSQL debe contar con un mecanismo de respaldo (backup). Las bases de datos ETCD del clúster de Kubernetes deben respaldarse; sin embargo, esto normalmente está gestionado en el servicio de KaaS.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Ver ANEXO 1.",
+     "indent": 0
+    }
+   ],
+   "id": "s8-5-8",
+   "chars": 827,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.9",
+   "title": "Seguridad:",
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "La Infraestructura como Servicio (IaaS) debe operar conforme a estándares internacionales de seguridad informática y privacidad, como el NIST 800-53/ISO27001.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Se espera que el proveedor cuente, de manera inherente a su oferta de servicios en la nube, con mecanismos de seguridad aplicables de forma general a todos sus clientes. Esto incluye, como mínimo, componentes y controles que aseguren la integridad, confidencialidad y disponibilidad de la información, sin requerir configuraciones personalizadas o adquisiciones específicas para este proyecto.",
+     "indent": 1
+    }
+   ],
+   "id": "s8-5-9",
+   "chars": 551,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.10",
+   "title": "Conectividad:",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Como parte de los requisitos de conectividad, el proveedor será responsable de proveer la conexión entre el punto de origen de los datos de las misiones Sentinel (Europa) y el centro de datos donde estará alojada la solución.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El proveedor deberá suministrar un medio de comunicación dedicado de 3 Gbps para la descarga de los datos de las misiones Sentinel, garantizando niveles de servicio que aseguren capacidad, estabilidad y disponibilidad continua. La solución técnica elegida será propuesta por el proveedor y deberá cumplir los SLA definidos en el pliego.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "SLA mínimos:",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Disponibilidad ≥ 99,9 %",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Latencia máxima <170 ms para la opción 1 Enlace Internacional de Datos RedCLARA, si escoge la opción 2 Internet dedicado: <50ms",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Pérdida de paquetes < 0,1 %",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "La redundancia (activa-activa o activa-pasiva) no es un requisito obligatorio, asumiendo que las descargas pueden programarse a lo largo del día.",
+     "indent": 1
+    }
+   ],
+   "id": "s8-5-10",
+   "chars": 895,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.11",
+   "title": "Opción 1:",
+   "blocks": [],
+   "id": "s8-5-11",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.12",
+   "title": "Conectividad – Enlace Internacional de Datos RedCLARA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Para ello, deberá incluir dentro de su propuesta técnica y económica:",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "El costo del enlace internacional a través de RedCLARA, incluyendo el tramo entre Europa y el nodo local (Panamá).",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "La membresía anual de RedCLARA, que habilita el uso de dicha red para la transmisión segura y eficiente de grandes volúmenes de datos científicos y satelitales.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Enlace de última milla 3 Gbps",
+     "indent": 1
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Descripción",
+       "Costo"
+      ],
+      [
+       "Membresía",
+       "€ 87,667.00"
+      ],
+      [
+       "Telecomunicaciones",
+       "€ 56,500.00"
+      ],
+      [
+       "Enlace 3Gbps Local",
+       "€ 34.560.00"
+      ],
+      [
+       "Total",
+       "€178.727.00"
+      ]
+     ],
+     "header": false
+    },
+    {
+     "type": "para",
+     "text": "Tasa de referencia: €1 = B/. 1.17",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "El costo total aproximado es de B/.208,513.09, y de ser utilizada esta opción deberá ser asumido por el proveedor como parte integral del servicio ofrecido.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "El contrato se hará entre RedCLARA y AIG, la administración, y reportes lo debe hacer el proveedor directamente con RedCLARA copiando a la AIG / Panamá.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Todos los reportes operativos requeridos, incluyendo fallas, mantenimientos, y estadísticas de uso, debe ser copiando formalmente a la AIG (Panamá) en toda comunicación relevante, para efectos de trazabilidad y supervisión del servicio.",
+     "indent": 1
+    },
+    {
+     "type": "figure",
+     "src": "img-002.jpeg",
+     "w": 623,
+     "h": 258
+    },
+    {
+     "type": "para",
+     "text": "Opción 2",
+     "indent": 1
+    }
+   ],
+   "id": "s8-5-12",
+   "chars": 957,
+   "figures": 1,
+   "tables": 1
+  },
+  {
+   "level": 3,
+   "num": "8.5.13",
+   "title": "Internet dedicado:",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Si el enlace de 3 Gbps será provisto mediante un enlace dedicado sobre Internet, dicha conexión será suficiente para la conectividad con los usuarios finales.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "En cualquiera de los casos, la solución debe cumplir con los Acuerdos de Nivel de Servicio (SLA) mínimos definidos, en cuanto a capacidad, disponibilidad, latencia y pérdida de paquetes.",
+     "indent": 1
+    },
+    {
+     "type": "figure",
+     "src": "img-003.jpeg",
+     "w": 451,
+     "h": 103
+    },
+    {
+     "type": "bullet",
+     "text": "Acceso de los usuarios a la plataforma/servicio:",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Los usuarios accederán a la plataforma a través de internet mediante una dirección IP pública.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "En caso de que el proveedor opte por suministrar el enlace de descarga de datos Sentinel mediante una conexión a Internet (y no a través del nodo de RedCLARA), se considerará suficiente siempre que dicho enlace cumpla con una capacidad de al menos 3 Gbps simétricos (entrada y salida), garantizando no solo la ingesta de datos sino también el acceso concurrente de los usuarios a la plataforma.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "En caso de establecer la conectividad mediante RedCLARA, deberá garantizarse adicionalmente una salida a Internet de al menos 1 Gbps para el acceso de los usuarios finales a la plataforma.",
+     "indent": 1
+    }
+   ],
+   "id": "s8-5-13",
+   "chars": 1068,
+   "figures": 1,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.14",
+   "title": "Especificaciones Técnicas del Balanceador de Carga:",
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Capacidad de procesamiento: El balanceador de carga deberá soportar un pico máximo de veinticinco mil (25,000) solicitudes por segundo (RPS) para garantizar el rendimiento óptimo durante períodos de alta demanda operativa.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Conexiones concurrentes: El sistema deberá mantener hasta diez mil (10,000) conexiones concurrentes simultáneas, considerando una base estimada de seiscientos (600) usuarios activos del sistema.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Terminación TLS: La capacidad de terminación TLS en el balanceador de carga será opcional, no constituyendo un requisito obligatorio. En caso de que no se proporcione terminación TLS, el proveedor deberá garantizar el reenvío TCP en el puerto 443 como alternativa funcional.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Protocolos soportados: El balanceador deberá soportar los siguientes protocolos de comunicación:",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "HTTP/HTTPS (en caso de no contar con terminación TLS, se deberá proveer reenvío TCP en puerto 443)",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "WebSocket para comunicaciones bidireccionales en tiempo real",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Distribución de tráfico TLS: Se estima que el noventa y nueve por ciento (99%) del tráfico será sobre TLS, considerando que el sistema implementará redirección automática de usuarios hacia HTTPS para garantizar la seguridad de las comunicaciones.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Alta disponibilidad: El balanceador de carga debe ser un servicio administrado y estar configurado en Alta Disponibilidad (HA), distribuido en al menos dos (2) zonas de disponibilidad dentro de la misma región.",
+     "indent": 1
+    }
+   ],
+   "id": "s8-5-14",
+   "chars": 1400,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.15",
+   "title": "Servicio de Administración de Infraestructura",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Servicio complementario al IaaS que extiende las responsabilidades del proveedor para incluir la administración de los componentes que gestionaría el cliente.",
+     "indent": 0
+    }
+   ],
+   "id": "s8-5-15",
+   "chars": 158,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.16",
+   "title": "Componentes del servicio:",
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Funciones mínimas relacionadas con el DBaaS (en etapa operativa):",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Seguimiento técnico básico al servicio DBaaS, para asegurar su operatividad (respaldo, disponibilidad, performance básico).",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Gestión de accesos administrativos para usuarios técnicos autorizados.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Coordinación con el proveedor DBaaS ante incidentes o comportamientos anómalos detectados por el middleware.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Verificación periódica de backups automáticos, según las políticas del servicio contratado.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Validación de alta disponibilidad activa (HA funcional).",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Supervisión de recursos (uso de CPU, memoria, almacenamiento) y escalabilidad si aplica.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Documentación de ajustes, accesos y eventos críticos, para trazabilidad y auditoría.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Funciones mínimas relacionadas con el KaaS (en etapa operativa):",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Configurar StorageClasses",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Desplegar Ingresses específicos",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Etiquetar nodos",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Desplegar custom controllers",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Editar deployments",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Conectarse a pods",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Revisar eventos y métricas para fines de diagnóstico (debug)",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Administración de Sistemas Operativos. El Middleware se desplegará completamente sobre Kubernetes, y no se utilizará directamente la capa de IaaS. El mantenimiento del sistema operativo y la aplicación de parches de seguridad deben estar cubiertos como parte del servicio de KaaS. Sin embargo, se espera que se tenga conocimientos básicos de configuración y mantenimiento del sistema operativo dentro del equipo, pero no es un requisito clave para el despliegue y operación del Middleware.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Documentación de configuraciones aplicadas y cambios realizados.",
+     "indent": 1
+    }
+   ],
+   "id": "s8-5-16",
+   "chars": 1496,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "8.5.17",
+   "title": "Servicios de Administración Operativa:",
+   "blocks": [
+    {
+     "type": "bullet",
+     "text": "Monitoreo 8x5 de sistemas operativos, Kubernetes y sus aplicaciones.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Gestión proactiva de incidentes y problemas.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Optimización de rendimiento del sistema.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Registro y trazabilidad técnica de cambios, accesos y configuraciones.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Gestión de accesos administrativos a los servicios para usuarios técnicos autorizados.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Entrega de reportes periódicos (mensuales) sobre disponibilidad, incidentes y uso.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Contar con un punto de contacto técnico asignado. Asimismo, se debería establecer la posibilidad de realizar reuniones mensuales y/o semanales para tratar temas relacionados con la operación de la infraestructura.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "La ESA entrenará al personal de servicios administrados para realizar el despliegue del Middleware.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "Acuerdo de Nivel de Servicio (SLA): A continuación, se detalla el Acuerdo de Nivel de Servicio (SLA) propuesto para el servicio contratado, que incluye la clasificación de incidentes, tiempos máximos de respuesta y resolución, disponibilidad mínima, canales de atención y penalidades por incumplimiento.",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Clasificación de incidentes por nivel de severidad:",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Crítico: Incidentes que causan una interrupción total del servicio o afectan a la mayoría de los usuarios, comprometiendo funcionalidades esenciales del sistema.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Alto: Incidentes que afectan significativamente el rendimiento o la funcionalidad del sistema, pero no implican una interrupción completa.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Medio: Incidentes que afectan a un subconjunto limitado de usuarios o funcionalidades no críticas, con impacto moderado en las operaciones.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Normal: Incidentes menores que no afectan el funcionamiento general del sistema ni las operaciones críticas.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Tiempos máximos de respuesta y resolución: La siguiente tabla detalla los tiempos máximos de respuesta (tiempo desde que se reporta el incidente hasta que se inicia su atención) y resolución (tiempo para solucionar el incidente o restablecer el servicio) por nivel de severidad:",
+     "indent": 1
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Nivel de Severidad",
+       "Tiempo Máximo de Respuesta",
+       "Tiempo Máximo de Resolución"
+      ],
+      [
+       "Crítico",
+       "15 minutos",
+       "2 horas"
+      ],
+      [
+       "Alto",
+       "1 hora",
+       "4 horas"
+      ],
+      [
+       "Medio",
+       "2 horas",
+       "8 horas"
+      ],
+      [
+       "Normal",
+       "4 horas",
+       "24 horas"
+      ]
+     ],
+     "header": true
+    },
+    {
+     "type": "bullet",
+     "text": "Nota: Los tiempos de respuesta y resolución se aplican 24/7, incluyendo fines de semana y días festivos, para garantizar la continuidad del servicio de IaaS.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Porcentaje mínimo de disponibilidad mensual:",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "El sistema contratado garantiza un 99.95% de disponibilidad mensual (equivalente a un máximo de 43.2 minutos de tiempo de inactividad por mes). La disponibilidad se calcula excluyendo mantenimientos programados previamente notificados con al menos 48 horas de antelación.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Canales de atención y niveles de escalamiento:",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Canales de atención:",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Teléfono: Línea de soporte disponible 24/7 para incidentes críticos y altos.",
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Correo electrónico: Para incidentes de nivel medio y bajo, con registro en el sistema de tickets.",
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Portal web: Sistema de tickets en línea para reportar y dar seguimiento a incidentes.",
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Niveles de escalamiento:",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Nivel 1: Soporte inicial por parte del equipo técnico de primera línea (respuesta inmediata para incidentes críticos y altos, en un máximo de 24 horas para incidentes medios y bajos).",
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Nivel 2: Escalamiento a ingenieros especializados si el incidente no se resuelve en el tiempo máximo de respuesta establecido.",
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Nivel 3: Escalamiento a equipos de gestión senior o proveedores externos (si aplica) para incidentes críticos que no se resuelvan en el tiempo máximo de resolución.",
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Los usuarios serán notificados sobre el estado del incidente a través del canal de reporte utilizado.",
+     "indent": 3
+    },
+    {
+     "type": "bullet",
+     "text": "Penalidades aplicables por incumplimiento:",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "En caso de incumplimiento de los tiempos de respuesta o resolución establecidos, se aplicará una penalización de una multa equivalente al cuatro por ciento (4%) de la suma de la mensualidad, dividido entre treinta (30), por cada día calendario o su proporcional de afectación.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "Las penalidades se aplicarán como créditos en la facturación del mes siguiente o como reembolsos, según lo acordado contractualmente.",
+     "indent": 2
+    },
+    {
+     "type": "bullet",
+     "text": "RTO (Recovery Time Objective): Tiempo máximo aceptable para restaurar un sistema tras una interrupción, reflejando el impacto tolerable del tiempo de inactividad.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "RPO (Recovery Point Objective): Máxima pérdida de datos aceptable, medida en tiempo desde el último respaldo hasta el fallo, indicando cuánto dato puede perderse sin un impacto significativo.",
+     "indent": 1
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "RTO",
+       "RPO"
+      ],
+      [
+       "< 24 horas",
+       "< 1 hora"
+      ]
+     ],
+     "header": false
+    },
+    {
+     "type": "bullet",
+     "text": "Lugar de entrega del suministro:",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "para",
+     "text": "Los servicios se prestarán en la infraestructura del contratista, con puntos de conexión según se especifica en los escenarios de conectividad definidos en las especificaciones técnicas.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Ejecución",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "para",
+     "text": "Se requiere el suministro de servicios necesarios para la operación del Centro Regional Copernicus LAC Panamá, e involucra los siguientes componentes:",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Servicio de Administración de Infraestructura\nGestión operativa de los componentes tecnológicos, incluyendo funciones relacionadas con el entorno KaaS y DBaaS (en fase operativa), monitoreo, trazabilidad, accesos, soporte y documentación técnica.",
+     "indent": 2,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "DBaaS (Database as a Service)\nProvisión de una solución administrada de base de datos PostgreSQL con alta disponibilidad, respaldo, mantenimiento, escalabilidad y soporte técnico continuo.",
+     "indent": 2,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "IaaS (Infraestructura como Servicio)\nInfraestructura virtualizada que incluye el suministro de máquinas virtuales, almacenamiento, balanceadores y red, así como la provisión de un servicio Kubernetes gestionado (KaaS) para orquestación de contenedores.",
+     "indent": 2,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Servicio de Conectividad",
+     "indent": 2,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Descarga de datos Sentinel desde Europa mediante conexión dedicada vía RedCLARA o Internet dedicado (mínimo 3 Gbps).",
+     "indent": 3,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Acceso del usuario final a la plataforma mediante IP pública o salida a Internet (mínimo 1 Gbps si se usa RedCLARA).",
+     "indent": 3,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Anexos",
+     "indent": 1,
+     "marker": "1."
+    }
+   ],
+   "id": "s8-5-17",
+   "chars": 5403,
+   "figures": 0,
+   "tables": 2
+  },
+  {
+   "level": 1,
+   "num": "9",
+   "title": "ANEXO I: ESPECIFICACIONES TÉCNICAS DETALLADAS",
+   "blocks": [
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Recursos",
+       "Cant",
+       "vCPU",
+       "RAM (GB",
+       "Block Storage SSD (GB)",
+       "OS",
+       "Comentarios"
+      ],
+      [
+       "Kubernetes Managed Service HA (up to 500 nodes*)",
+       "1",
+       "-",
+       "-",
+       "-",
+       "-",
+       "Debe ser un servicio administrado; debe estar en configuración de Alta Disponibilidad (HA)"
+      ],
+      [
+       "General Purpose VM (4CPU, 16GB)",
+       "10",
+       "40",
+       "160",
+       "5,000",
+       "Linux",
+       "Estos son recursos para los componentes principales de la plataforma"
+      ],
+      [
+       "General Purpose VM (8CPU, 32GB)",
+       "15",
+       "120",
+       "480",
+       "7,500",
+       "Linux",
+       "Estos son recursos para los componentes principales de la plataforma"
+      ],
+      [
+       "Dedicated Loadbalancer HA (at least 1Gb/sec)",
+       "1",
+       "-",
+       "-",
+       "-",
+       "-",
+       "Debe ser un servicio administrado; debe estar en configuración de Alta Disponibilidad (HA)"
+      ],
+      [
+       "DB PostgreSQL - HA",
+       "2",
+       "16",
+       "64",
+       "800",
+       "-",
+       "Debe ser un servicio de base de datos administrado; debe estar en configuración de Alta Disponibilidad (HA)"
+      ],
+      [
+       "Block Storage SSD (PVC)",
+       "1",
+       "-",
+       "-",
+       "25000",
+       "-",
+       "Debe ser un servicio de almacenamiento en bloques gestionado"
+      ],
+      [
+       "General Purpose VM (8CPU, 32GB)",
+       "8",
+       "64",
+       "256",
+       "800",
+       "Linux",
+       "Estos son para satisfacer las necesidades de procesamiento"
+      ],
+      [
+       "General Purpose VM (16CPU, 64GB)",
+       "8",
+       "128",
+       "512",
+       "800",
+       "Linux",
+       "Estos son para satisfacer las necesidades de procesamiento"
+      ],
+      [
+       "General Purpose VM (32CPU, 128GB)",
+       "4",
+       "128",
+       "512",
+       "400",
+       "Linux",
+       "Estos son para satisfacer las necesidades de procesamiento"
+      ],
+      [
+       "Recursos Totales",
+       "50",
+       "496",
+       "1984",
+       "40300",
+       "",
+       ""
+      ]
+     ],
+     "header": true
+    },
+    {
+     "type": "para",
+     "text": "*Aquí los nodos se refieren a VMs.",
+     "indent": 0
+    }
+   ],
+   "id": "s9",
+   "chars": 34,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 1,
+   "num": "10",
+   "title": "CAPÍTULO IV",
+   "blocks": [],
+   "id": "s10",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "10.1",
+   "title": "MODELOS, FORMULARIOS E INSTRUCTIVOS",
+   "blocks": [],
+   "id": "s10-1",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "11",
+   "title": "FORMULARIO N°1",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "DESGLOSE DEL PRECIO",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Panamá, ___ de _________ de 20___",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Autoridad Nacional para la Innovación Gubernamental (AIG).",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Señor Adolfo Fábrega",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Administrador",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "En referencia al acto público No. ________________, para EL “SERVICIO EN LA NUBE, UTILIZANDO INFRAESTRUCTURA COMO SERVICIO (IAAS), SERVICIOS ADMINISTRADOS Y CONECTIVIDAD PARA EL PROYECTO CENTRO REGIONAL COPERNICUS LAC EN PANAMÁ”, se desglosa el precio propuesto de la siguiente manera:",
+     "indent": 0
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "[Bien/Servicio/Actividad]",
+       "Detalle [Conforme a la naturaleza del contrato]",
+       "Cantidad [Cuando aplique]",
+       "Unidad de Medida [Cuando aplique]",
+       "P.Unitario",
+       "Total"
+      ],
+      [
+       "1.",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "2.",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "3.",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ],
+      [
+       "",
+       "",
+       "",
+       "",
+       "ITBMS [Cuando aplique]",
+       "B/."
+      ]
+     ],
+     "header": false
+    },
+    {
+     "type": "para",
+     "text": "[Indicar si aplica exoneración de impuestos]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "[Señalar cualquier condición que aplique a la descripción, del bien, servicio, actividad. Por ejemplo, en materia de suministro la indicación de marca, fabricante y país de origen]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "En fe de lo anterior, se firma este documento en la ciudad de , hoy , de ____________ de 20_______.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "_______________________",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Nombre del Representante Legal/Apoderado",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Cédula o Pasaporte No._________",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "(Nombre del Proponente)",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Firma __________________________",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Observaciones particulares:",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "(1) El documento deberá mostrar el nombre, número de documento de identificación personal (cédula o pasaporte) y firma autógrafa del representante legal/Apoderado del Proponente.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "(2) Si el proponente es un Consorcio o Asociación Accidental, debe indicarse en el espacio del nombre del proponente y la propuesta debe ser firmada por el representante legal o apoderado de la empresa líder del consorcio o asociación accidental.",
+     "indent": 0
+    }
+   ],
+   "id": "s11",
+   "chars": 1351,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 1,
+   "num": "12",
+   "title": "FORMULARIO N° 2",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "CERTIFICACIÓN/REFERENCIA BANCARIA",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "[Lugar y fecha]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "[Representante Legal de la Entidad Licitante]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "E. S. D.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Ref.: [Acto Público N°______________/Objeto del acto público]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Señor [Representante Legal de la Entidad Licitante]:",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "De acuerdo a la solicitud de la persona natural/empresa ___________________________ (nombre de la empresa y generales de la empresa, a solicitud del Sr. /Sra. _______________________, portador de la cédula de identidad número (__________) hacemos constar que ha sido nuestro cliente desde (fecha).",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "La empresa ______________________________ mantiene una cuenta.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "______________________________",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Nombre",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Cargo",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Nombre del Banco o institución crediticia",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Teléfono y correo electrónico de contacto [En caso de que no se encuentre en el membrete]",
+     "indent": 0
+    }
+   ],
+   "id": "s12",
+   "chars": 744,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "12.0.1",
+   "title": "Observaciones particulares:",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "(1) EL PROPONENTE AUTORIZA A LAS ENTIDADES BANCARIAS QUE HAYAN FACILITADO REFERENCIAS, PARA QUE FACILITEN A LA ENTIDAD LICITANTE Y/O COMISIÓN, CUALQUIER ACLARACIÓN, EN RELACIÓN AL ALCANCE Y COMPROMISO DE LAS REFERENCIAS SUMINISTRADAS.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "(2) TODAS LAS REFERENCIAS DEBERÁN ESTAR FIRMADAS POR PERSONAS DEBIDAMENTE AUTORIZADAS POR EL BANCO PARA EMITIR ESTAS CERTIFICACIONES O REFERENCIAS. NO SE REQUIERE QUE LA FIRMA DE LA CARTA SEA AUTENTICADA ANTE NOTARIO SI LA CARTA ES ORIGINAL EMITIDA POR UN BANCO LOCAL. LAS CARTAS EMITIDAS EN EL EXTRANJERO DEBERÁN CUMPLIR CON EL TRÁMITE DE LEGALIZACIONES CONTENIDO EN EL PLIEGO DE CARGOS.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "(3) PARA LOS EFECTOS PRÁCTICOS DE LA INFORMACIÓN FINANCIERA, EL DÓLAR AMERICANO (US $), TIENE EL MISMO VALOR QUE EL BALBOA (B/.) LAS CERTIFICACIONES O REFERENCIAS BANCARIAS INTERNACIONALES DEBEN VENIR EN DÓLARES AMERICANOS.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "(4) LA CARTA DEBE HABER SIDO EXPEDIDA DENTRO DE LOS __________ ( ) MESES PREVIOS A LA PRESENTACIÓN DE LA PROPUESTA CONFORME LO INDIQUEN LAS CONDICIONES ESPECIALES DEL PLIEGO DE CARGOS",
+     "indent": 0
+    }
+   ],
+   "id": "s12-0-1",
+   "chars": 1028,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "13",
+   "title": "FORMULARIO N° 3",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "CERTIFICACIÓN/REFERENCIA COMERCIAL",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "[Lugar y fecha]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "[Representante Legal de la Entidad Licitante]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "E. S. D.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Ref.: [Acto Público N°______________/Objeto del acto público]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Señor [Representante Legal de la Entidad Licitante]:",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "La empresa [Nombre de que emite la referencia comercial] ha mantenido relaciones comerciales con la persona natural/empresa [Nombre de la persona natural o empresa] desde:",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "[Fecha de comienzo de la relación – indicación del mes y el año] hasta: [El presente o fecha anterior]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Durante el tiempo de la relación realizo los siguientes trabajos/desarrollo los siguientes proyectos:",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "[Enumerar los trabajos, proyectos, obras, servicios ejecutados durante este tiempo]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Los [trabajos, proyectos, servicios] realizados alcanzan la suma de B/.____________________.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "En consecuencia, consideramos que [persona natural o empresa] está plenamente capacitada para ejecutar el objeto del acto público N°___________________________________.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "______________________________",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Nombre",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Cargo",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Nombre de la empresa",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Teléfono y correo electrónico de contacto [En caso de que no se encuentre en el membrete]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "OBSERVACIONES PARTICULARES:",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "(1) EL PROPONENTE AUTORIZARÁ A QUIENES HAYAN FACILITADO REFERENCIAS, PARA QUE LA ENTIDAD LICITANTE Y/O COMISIÓN, SOLICITE CUALQUIER ACLARACIÓN, RELACIONADA CON EL TEXTO DE LA CARTA.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "(2) TODAS LAS REFERENCIAS DEBERÁN ESTAR FIRMADAS POR PERSONAS DEBIDAMENTE AUTORIZADAS POR LA EMPRESA PARA EMITIR ESTAS CERTIFICACIONES O REFERENCIAS. NO SE REQUIERE QUE LA FIRMA DE LA CARTA SEA AUTENTICADA ANTE NOTARIO SI LA CARTA ES ORIGINAL EMITIDA POR UNA EMPRESA REGISTRADA Y CON DOMICILIO EN PANAMÁ. LAS CARTAS EMITIDAS EN EL EXTRANJERO DEBERÁN CUMPLIR CON EL TRÁMITE DE LEGALIZACIONES CONTENIDO EN EL PLIEGO DE CARGOS.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "(3) LA CARTA DEBE HABER SIDO EXPEDIDA DENTRO DE LOS __________ ( ) MESES PREVIOS A LA PRESENTACIÓN DE LA PROPUESTA CONFORME LO INDIQUEN LAS CONDICIONES ESPECIALES DEL PLIEGO DE CARGOS.",
+     "indent": 0
+    }
+   ],
+   "id": "s13",
+   "chars": 1898,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 1,
+   "num": "14",
+   "title": "FORMULARIO N° 4",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "MODELO DE DECLARACIÓN JURADA DE MEDIDAS DE RETORSIÓN",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "(Lugar y fecha)",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "[Representante legal de la Entidad Licitante]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "E. S. D.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Señor [Representante legal de la Entidad Licitante]:",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "En cumplimiento de lo establecido en el artículo 12 de la Ley No 48 de 26 de octubre del 2016, el suscrito _______________________, varón / mujer (nacionalidad), mayor de edad, (profesión), (estado civil), con cédula de identidad personal No________________, vecino de esta ciudad, actuando en mi condición de Representante Legal de la empresa",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "_________________________________, sociedad debidamente constituida conforme a las leyes de la República de Panamá, debidamente inscrita en el Registro Público de Panamá a Folio____________, con domicilio en _____________________, Teléfono:______________; declaro lo siguiente:",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "1. Que no soy persona natural de un Estado al que se le aplican medidas de retorsión o una persona jurídica incorporada, domiciliada, controlada, organizada, constituida, administrada o con domicilio principal en un Estado al que se aplican medidas de retorsión conforme a la Ley No 48 de 26 de octubre de 2016",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "2. Que no mantengo beneficiarios finales, directa o indirectamente cuya nacionalidad sea de un país al que se le aplican medidas de retorsión o una persona jurídica incorporada, domiciliada, controlada, organizada, constituida, administrada o con domicilio principal en un Estado al que se aplican medidas de retorsión conforme a la Ley N° 48 de 2016.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "3. Que al presentarme como proponente no actúo en representación de una persona natural de un Estado al que se aplican las medidas de retorsión o de una persona jurídica incorporada, domiciliada, controlada, organizada, constituida, administrada o con domicilio principal en un Estado al que se le aplican medidas de retorsión conforme a la Ley No 48 de 26 de octubre de 2016.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "4. Que en la ejecución del procedimiento de selección de contratista de que se trate y de las obligaciones dimanantes de ésta, el valor de sueldos, bienes, servicios, obras públicas, arrendamientos, valores, títulos o fondos a proveer por parte de la persona natural o jurídica, de Derecho Público o de otra índole, correspondiente o cualquier combinación de estos, proveniente de Estados a los cuales se le aplican medidas de retorsión conforme a la Ley No 48 de 26 de octubre de 2016, no superará el diez (10%) del valor total del acto público o contratación pública de que se trate, o el diez por ciento (10%) del valor anual de dicho acto público o contratación pública, si ésta es de naturaleza renovable o recurrente, en cada periodo para el cual sea renovado o extendido.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Dada en la ciudad de _____________, a los __ días del mes de ______ de 20________.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "________________________",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Nombre del Representante Legal/Apoderado del Proponente",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Cédula o Pasaporte No._________",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "(Nombre del Proponente)",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "OBSERVACIONES PARTICULARES:.",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "El documento deberá mostrar el nombre, número de documento de identificación personal (cédula o pasaporte) y firma autógrafa del representante legal/Apoderado del Proponente.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Si el proponente es un Consorcio o Asociación Accidental, debe indicarse en el espacio del nombre del proponente y la propuesta debe ser firmado por el representante legal o apoderado de la empresa líder del consorcio o asociación accidental.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Los proponentes deberán verificar en las listas de países que discriminan contra la República de Panamá, si existe alguna medida concreta contra algún país, relacionada con limitaciones en materia de contratación pública.",
+     "indent": 1,
+     "marker": "1."
+    }
+   ],
+   "id": "s14",
+   "chars": 3487,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.1",
+   "title": "PACTO DE INTEGRIDAD",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Entre los suscritos a saber; _______________________, de nacionalidad panameña, portador (a) de la cédula de identidad personal No. _________________, en su calidad de Representante Legal de ___________, quien en adelante se denominará LA ENTIDAD, por una parte y por la otra,______________________________________, con cédula de identidad personal o pasaporte No.________________, actuando en nombre y representación de la empresa ______________________, persona jurídica o natural legalmente constituida con número de registro/ Aviso de Operación o registro comercial No. _________/_____________, con domicilio en _______________, quien en adelante se denominará EL CONTRATISTA, y quienes en conjunto y para los efectos del presente documento se denominarán LAS PARTES, hemos convenido en celebrar el presente PACTO DE INTEGRIDAD, el cual formará parte integral del pliego de cargos, términos de referencia o condiciones del procedimiento de selección de contratista, procedimiento especial o procedimiento excepcional de contratación N°_______________________ que será anexado al Contrato, Orden de Compra o Convenio celebrado entre LAS PARTES, cuyo objeto es ______________________, sujeto a las siguientes clausulas:",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "PRIMERA: Declaran LAS PARTES que quedan obligadas a apoyar las acciones que lleve a cabo el Estado panameño y la Dirección General de Contrataciones Públicas como ente administrador del Sistema Electrónico de Contrataciones Públicas “PanamaCompra”, para fortalecer la transparencia y la rendición de cuentas de la administración pública.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "SEGUNDA: LAS PARTES se comprometen a no ofrecer y no dar dádivas, sobornos o cualquier forma de beneficio, retribuciones o prebenda a servidores públicos que laboren en la entidad licitante y/o contratante, de forma directa o a través de sus dependientes, contratistas o terceros.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "TERCERA: LAS PARTES se comprometen a no efectuar acuerdos o realizar actos o conductas que tengan por objeto la colusión, confabulación, componenda o complicidad con evidente o aparente mala fe, tanto en el respectivo procedimiento de selección de contratista, procedimiento especial o procedimiento excepcional de contratación, de ser el caso, así como durante la ejecución del contrato o convenio celebrado entre las partes",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "CUARTA: LAS PARTES se comprometen a revelar la información que sobre el procedimiento de selección de contratista, procedimiento especial o procedimiento excepcional de contratación N°_____________________________ y/o el Contrato, Orden de Compra o Convenio celebrado entre éstas, soliciten las autoridades competentes de la República de Panamá, en materia de persecución de los delitos y/o fiscalización, regulación y control de los movimientos de los fondos y bienes públicos, así como el examen, intervención, vencimiento y juzgamiento de las cuentas relativas a los mismos.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "QUINTA: LAS PARTES se comprometen a comunicar a sus empleados, contratistas, subcontratistas y asesores el contenido del presente compromiso anticorrupción, explicar su importancia y las consecuencias de su incumplimiento por su parte y la de éstos.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "SEXTA: Declaran LAS PARTES que conocen las consecuencias derivadas del incumplimiento del presente PACTO DE INTEGRIDAD.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "SÉPTIMA: EL CONTRATISTA acepta que, en caso de incumplimiento comprobado del presente Pacto de Integridad, por su parte, sus empleados, representantes, asesores o de cualquier otra persona, que actué en su nombre o representación, no podrá ser tomado en cuenta para la adjudicación en el procedimiento de selección de contratista, y tampoco podrá ser formalizado el contrato o convenio respectivo.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Si producto de las correspondientes investigaciones administrativas, se comprobase el incumplimiento de este Pacto, durante la etapa de ejecución del contrato o convenio, será causal para la resolución administrativa de éste, sin perjuicios de las demás causales que se tengan por convenientes pactar en el contrato.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Cuando se trate de los contratos de Convenio Marco, será causal para la desactivación total del proveedor y todos sus productos y servicios ofertados a través de la Tienda Virtual, sin perjuicio de la responsabilidad civil y penal derivada de esos hechos.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "En los casos de desactivación total de la Tienda Virtual, EL CONTRATISTA deberá cumplir con las obligaciones emanadas de las órdenes de compra aprobadas previo a la desactivación, salvo que la Ley establezca un procedimiento distinto.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "OCTAVA: Acuerdan LAS PARTES, que en caso de subcontratación, los subcontratistas aceptan y se obligan al cumplimiento del presente PACTO DE INTEGRIDAD.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Para constancia de lo anterior se firma el presente documento a los ___ ( ) días del mes de______ de 20__.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-1",
+   "chars": 4667,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.2",
+   "title": "POR LA ENTIDAD, POR EL PROPONENTE / CONTRATISTA,",
+   "blocks": [],
+   "id": "s14-2",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "14.2.1",
+   "title": "__________________________ ____________________________",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "[Nombre del Representante Legal] [Nombre del Representante Legal]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "[Cargo] [Cédula/Ruc]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Fundamento de Derecho: Artículo 15 del Texto Único de la Ley 22 de 2006, ordenado por la Ley 153 de 2020; Artículo 24 del Decreto Ejecutivo No. 439 de 2020.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "CARTA DE ADHESIÓN A PRINCIPIOS DE SOSTENIBILIDAD",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "PARA PROVEEDORES DEL ESTADO",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Yo, ___________________, en calidad de representante legal de __________________, con ruc: __________________________________ en el desempeño de mi actividad profesional, asumo el compromiso de cumplir cabalmente con los Principios de Sostenibilidad para Proveedores del Estado, los cuales son asumidos mediante esta carta de adhesión, como un compromiso personal y empresarial por mi persona y todos nuestros colaboradores, teniendo la convicción de conducirnos, en nuestra actuación profesional y de trabajo conforme a estos principios, reconociendo además, que forman parte integrante del pliego de cargos y serán de obligatorio cumplimiento durante todas las etapas de la contratación.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Declaro como Proveedor y/o Contratista del Estado panameño que, conozco, comprendo y me adhiero a los Principios de Sostenibilidad para Proveedores del Estado.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Reconozco que Los Principios de Sostenibilidad para Proveedores del Estado constituyen no solo una forma de llevar a cabo de manera correcta nuestras actividades comerciales, sino que constituyen un medio para mejorar las condiciones de vida y de trabajo de las personas a lo largo de la cadena de suministro, contribuyendo a alcanzar los Objetivos de Desarrollo Sostenible (ODS).",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "___________________________________________________________",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "LÍNEA PARA FIRMA DEL REPRESENTANTE LEGAL O PERSONA DELEGADA:",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "NOMBRE: [NOMBRE LEGIBLE DEL REPRESENTANTE LEGAL O PERSONA DELEGADA]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "CÉDULA: [NÚMERO DE CÉDULA DEL REPRESENTANTE LEGAL O PERSONA DELEGADA]",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "FECHA: [FECHA EN QUE SE FIRMA EL PRESENTE DOCUMENTO]",
+     "indent": 0
+    },
+    {
+     "type": "figure",
+     "src": "img-004.png",
+     "w": 1890,
+     "h": 344
+    }
+   ],
+   "id": "s14-2-1",
+   "chars": 1851,
+   "figures": 1,
+   "tables": 0
+  },
+  {
+   "level": 3,
+   "num": "14.2.2",
+   "title": "BORRADOR DE CONTRATO No. X-2025",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Entre los suscritos a saber: ADOLFO FÁBREGA, varón, panameño, mayor de edad, portador de la cédula de identidad personal No. 8-767-2187, en su condición de Administrador General de la AUTORIDAD NACIONAL PARA LA INNOVACIÓN GUBERNAMENTAL, quien en lo sucesivo se denominará LA AIG, debidamente facultado para este acto en virtud de lo establecido en la Ley 65 de 30 de octubre de 2009, por una parte, y por la otra, la empresa",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": ", en adelante EL CONTRATISTA, y que en conjunto se denominarán LAS PARTES, por este medio suscriben el presente Contrato para la prestación de los “SERVICIO EN LA NUBE, UTILIZANDO INFRAESTRUCTURA COMO SERVICIO (IAAS), SERVICIOS ADMINISTRADOS Y CONECTIVIDAD PARA EL PROYECTO CENTRO REGIONAL COPERNICUS LAC EN PANAMÁ” , con fundamento en la Licitación, adjudicada a EL CONTRATISTA, mediante la Resolución No. XXXXXX, sujeto a los siguientes términos y condiciones:",
+     "indent": 0
+    }
+   ],
+   "id": "s14-2-2",
+   "chars": 886,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.3",
+   "title": "PRIMERA: OBJETO DEL CONTRATO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "EL CONTRATISTA se obliga con LA AIG, mediante el presente Contrato, a brindar el suministro de “SERVICIO EN LA NUBE, UTILIZANDO INFRAESTRUCTURA COMO SERVICIO (IAAS), SERVICIOS ADMINISTRADOS Y CONECTIVIDAD PARA EL PROYECTO CENTRO REGIONAL COPERNICUS LAC EN PANAMÁ”.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-3",
+   "chars": 264,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.4",
+   "title": "SEGUNDA: DOCUMENTOS INTEGRANTES DEL CONTRATO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Convienen LAS PARTES que forman parte integral de este Contrato, además del presente documento y sus Anexos, el contenido del Pliego de Cargos y sus anexos: Condiciones Especiales, Especificaciones Técnicas confeccionadas para la presente contratación y la Propuesta de EL CONTRATISTA.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "En caso de contradicción o discrepancias entre los documentos que integran el presente Contrato, el orden de prelación es el siguiente:",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "El Pliego de Cargos y sus Anexos",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Las Especificaciones Técnicas",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "El Contrato",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "La Propuesta de EL CONTRATISTA.",
+     "indent": 1,
+     "marker": "1."
+    }
+   ],
+   "id": "s14-4",
+   "chars": 523,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.5",
+   "title": "TERCERA: OBLIGACIONES DE LA AIG",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "LA AIG se obliga a lo siguiente:",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Dar seguimiento al cumplimiento de las condiciones del presente CONTRATO durante toda la vigencia de este.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Notificar por escrito, sobre cualquier incumplimiento de las obligaciones pactadas.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Coordinar con EL CONTRATISTA la realización de pruebas de aceptación de los diferentes componentes del proyecto.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Designar un coordinador o enlace técnico de las actividades requeridas quien servirá como enlace y comunicación con el Gerente de Proyectos asignado por EL CONTRATISTA.",
+     "indent": 1,
+     "marker": "1."
+    }
+   ],
+   "id": "s14-5",
+   "chars": 501,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.6",
+   "title": "CUARTA: OBLIGACIONES DE EL CONTRATISTA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Además de las obligaciones contenidas en el Texto Único de la Ley 22 de 2006, EL CONTRATISTA se compromete a:",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Entregar la totalidad de los servicios objeto de este contrato bajo las especificaciones definidas en el mismo.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Garantizar el nivel de calidad de los servicios a ser contratados por la AIG, conforme al Pliego de Cargos y su Propuesta.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Asumir el pago de las cuentas a sus proveedores, en su totalidad.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Ser legalmente responsable por haber ocultado, al contratar, inhabilidades, incompatibilidades o prohibiciones o por haber suministrado información falsa, con relación al presente Contrato y su propuesta.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Responder exclusivamente por las obligaciones o reclamaciones que surjan de las relaciones contractuales adquiridas dentro del periodo de vigencia contractual, incluyendo las de naturaleza administrativa, civil, comercial, laboral o cualquier otra que implique algún tipo de responsabilidad en materia de obligaciones.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Garantizar la suscripción de un Acuerdo de Responsabilidad y Confidencialidad entre la empresa y cada uno del personal que sea asignado a la prestación de los servicios contratados por la AIG, al amparo de presente Contrato.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Garantizar que los servicios cumplan con el horario establecido por la AIG.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Mantener comunicación directa con la AIG para el seguimiento adecuado de la prestación de los servicios.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Cumplir con lo dispuesto en las Especificaciones Técnicas que son parte del pliego de Cargos.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "para",
+     "text": "QUINTA: PLAZO PARA LA PRESTACION DEL SERVICIO.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "El plazo máximo previsto para la ejecución de la totalidad de los servicios es de doce (12) meses, contados a partir de la publicación de la orden de proceder a través del portal electrónico “Panamá Compra”.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-6",
+   "chars": 1678,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.7",
+   "title": "SEXTA: MONTO DEL CONTRATO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "LA AIG pagará a EL CONTRATISTA, por la ejecución del presente contrato, la suma total de xxxxxxxxxx BALBOAS CON xx/100 (B/.xxxxxx) de los cuales la suma de XXXXXXXXXXXXX BALBOAS CON XX/100 (B/.XXXXXX) corresponden al subtotal, y la suma de XXXXXXXXXXXX BALBOAS CON XX/100 (B/.XXXX) en concepto de Impuesto de Transferencia de Bienes Corporales Muebles y la Prestación de Servicios (I.T.B.M.S.), desembolsables por la prestación del “SERVICIO EN LA NUBE, UTILIZANDO INFRAESTRUCTURA COMO SERVICIO (IAAS), SERVICIOS ADMINISTRADOS Y CONECTIVIDAD PARA EL PROYECTO CENTRO REGIONAL COPERNICUS LAC EN PANAMÁ”, con cargo a la cuenta financiera XXXXXXXXX, de la vigencia fiscal del 2025.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "La retención en la fuente del I.T.B.M.S. será del 50% del total del monto contractual y LA AIG lo efectuará a través de Tesorería de LA AIG, al momento del pago o acreditamiento del precio, ya sea parcial o total; al momento de la puesta en disposición de los Fondos o al vencimiento de los plazos contractuales.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-7",
+   "chars": 989,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.8",
+   "title": "SÉPTIMA: FORMA DE PAGO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Convienen LAS PARTES que la forma de pago será contra la presentación de la cuenta debidamente firmada y avalada mediante acta de aceptación final.:",
+     "indent": 0
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "Etapas o Entregables",
+       "Fecha",
+       "% de pago"
+      ],
+      [
+       "Implementación inicial: Activación del servicio de IaaS Configuración de conectividad Pruebas de conectividad y rendimiento Entrega de documentación técnica Recepción inicial de conocimientos (handover técnico) Acta de aceptación de la etapa inicial EL CONTRATISTA, debe presentar un informe con la siguiente información: Entrega de documentación técnica correspondiente de la configuración inicial del servicio, pruebas de conectividad. Primer informe de avance detallando el estado de implementación, cumplimiento de SLA inicial y reporte de conectividad.",
+       "15 días hábiles después de la orden de proceder (año 2025)",
+       "50%"
+      ],
+      [
+       "Meses de operación y administración conforme. EL CONTRATISTA, debe presentar un informe con la siguiente información: Informe acumulado de cumplimiento de SLA, reportes de conectividad, incidentes, cambios y seguridad correspondientes a los primeros siete (7) meses. Certificación técnica del estado del servicio.",
+       "Mes 7",
+       "8.34%"
+      ],
+      [
+       "Mes de operación y administración conforme. EL CONTRATISTA, debe presentar un informe con la siguiente información: Informe mensual de SLA, conectividad, incidentes, configuraciones y seguridad correspondiente al mes de servicio.",
+       "Mes 8",
+       "8.34%"
+      ],
+      [
+       "Mes de operación y administración conforme. EL CONTRATISTA, debe presentar un informe con la siguiente información: Informe mensual de SLA, conectividad, incidentes, configuraciones y seguridad correspondiente al mes de servicio.",
+       "Mes 9",
+       "8.33%"
+      ],
+      [
+       "Mes de operación y administración conforme. EL CONTRATISTA, debe presentar un informe con la siguiente información: Informe mensual de SLA, conectividad, incidentes, configuraciones y seguridad correspondiente al mes de servicio.",
+       "Mes 10",
+       "8.33%"
+      ],
+      [
+       "Mes de operación y administración conforme. EL CONTRATISTA, debe presentar un informe con la siguiente información: Informe mensual de SLA, conectividad, incidentes, configuraciones y seguridad correspondiente al mes de servicio.",
+       "Mes 11",
+       "8.33%"
+      ],
+      [
+       "Mes de operación y administración conforme. EL CONTRATISTA, debe presentar un informe con la siguiente información: Informe mensual de SLA, conectividad, incidentes, configuraciones y seguridad correspondiente al mes de servicio.",
+       "Mes 12",
+       "8.33%"
+      ],
+      [
+       "Total",
+       "12 meses",
+       "100%"
+      ]
+     ],
+     "header": true
+    },
+    {
+     "type": "para",
+     "text": "La AIG, en cumplimiento del artículo 1 del Decreto Ejecutivo N°463 de 14 de octubre de 2015, efectuará la retención del cincuenta por ciento (50%) del ITBMS incluido en la factura o documento equivalente, de todo contribuyente de este impuesto.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "El CONTRATISTA tendrá derecho al reconocimiento del pago de intereses moratorios en caso de que LA AIG, por razones no imputables al CONTRATISTA, realice los pagos en fecha posterior a la acordada, con base a lo preceptuado en el artículo 1072-A del Código Fiscal.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Todos los pagos se realizarán dentro de los sesenta (60) días calendarios contados a partir de la presentación de la gestión de cobro por parte de EL CONTRATISTA.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "LA AIG se compromete a reservar los montos correspondientes para la siguiente vigencia fiscal del año 2026.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "OCTAVA: CESIÓN DE CONTRATO Y/O CRÉDITOS.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "EL CONTRATISTA podrá ceder los derechos que nazcan del presente Contrato, previo cumplimiento de los requisitos, autorizaciones y/o formalidades respectivas establecidas por la Ley, el reglamento, el contrato, o por las condiciones consignadas en el pliego de cargos que haya servido de base al procedimiento de selección de contratista. Sin embargo, en todos los casos, será preciso que el cesionario reúna las condiciones y preste la garantía exigida al CONTRATISTA, y que la Autoridad Nacional para la Innovación Gubernamental y el garante consientan en la cesión, haciéndolo constar así en el expediente respectivo.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "De acuerdo con el artículo 96 del Texto Único de la Ley 22 de 2006, ordenador por la Ley 153 de 2020, el cesionario deberá contar con la capacidad técnica y financiera para mantener la prestación de los servicios objeto del presente Contrato, en los mismos términos que el cedente.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "En cuanto a los créditos que se generen de las Ordenes de Compras emitidas por las entidades del Estado a EL CONTRATISTA podrán cederse en la forma que establezca la reglamentación dictada por el Ministerio de Economía y Finanzas, para tales efectos, los instructivos y formularios respectivos pueden accederse a través del sitio web https://www.mef.gob.pa/transparencia/9-7-formularios/",
+     "indent": 0
+    }
+   ],
+   "id": "s14-8",
+   "chars": 2252,
+   "figures": 0,
+   "tables": 1
+  },
+  {
+   "level": 2,
+   "num": "14.9",
+   "title": "NOVENA: MODIFICACIONES O ADENDAS AL CONTRATO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Las cláusulas pactadas dentro del contrato podrán ser modificadas a través de Adendas, de conformidad con el Texto Único de la Ley 22 ordenado por la Ley 153 de 2020, vigente al momento de la convocatoria del acto público, las cuales estarán sujetas al refrendo de la Contraloría General de la República y a las aprobaciones de los entes que conocieron el contrato principal de acuerdo con la cuantía.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-9",
+   "chars": 401,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.10",
+   "title": "DÉCIMA: DERECHOS DE INSPECCIÓN Y PRUEBAS",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "EL CONTRATISTA permitirá en todo momento a la AIG inspeccionar que la prestación del servicio se esté realizando conforme a los niveles de calidad, condiciones especiales y especificaciones técnicas de este contrato.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "DÉCIMA PRIMERA: SUBCONTRATISTAS.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "EL CONTRATISTA podrá concertar con terceros, la ejecución de aspectos relacionados con el servicio objeto del contrato.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-10",
+   "chars": 367,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.11",
+   "title": "DÉCIMA SEGUNDA: CAUSALES DE RESOLUCIÓN ADMINISTRATIVA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Serán causales de resolución administrativa del presente Contrato las que se detallan a continuación:",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "El incumplimiento de las cláusulas pactadas.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "La muerte del contratista, en los casos en que debe producir la extinción del contrato conforme a las reglas del Código Civil, si no se ha previsto que puede continuar con los sucesores de EL CONTRATISTA, cuando sea una persona natural.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "La declaratoria judicial de liquidación de EL CONTRATISTA.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "La incapacidad física permanente de EL CONTRATISTA, certificado por médico idóneo, que le imposibilite la realización del servicio o la obra, si fuera persona natural.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "La disolución de EL CONTRATISTA, cuando se trate de persona jurídica, o de alguna de las sociedades que integran el consorcio o asociación accidental, salvo que los demás miembros del consorcio o asociación puedan cumplir el contrato",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Cualquier cambio en la composición accionaria de la sociedad contratista, concesionaria o inversionista que no sea debidamente notificado a LA AIG o que impida conocer en todo momento quien es la persona natural que es finalmente beneficiaria de tales acciones, tomando en consideración que esta persona sea directa o indirectamente el beneficiario final de, por lo menos, el diez por ciento (10%) del capital accionario emitido y en circulación.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "La falsedad de información o documentos provistos por EL CONTRATISTA.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Violación de las disposiciones establecidas en la cláusula de ética, gobernanza y anticorrupción del presente Contrato",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Incumplir el Pacto de Integridad suscrito con la AIG.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Si los bienes de EL CONTRATISTA resultasen embargados o si éste transfiere el contrato sin el consentimiento por escrito de LA AIG y el garante.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "La interposición de demandas judiciales o de medidas cautelares contra EL CONTRATISTA si con estas peligrase, a juicio de LA AIG, la ejecución o cumplimiento del contrato.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Por causas de fuerza mayor o caso fortuito de conformidad con lo establecido en el Código Civil.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "La negligencia o impericia de EL CONTRATISTA en la prestación del servicio.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "La violación de las disposiciones establecidas en la cláusula de ética, gobernanza y anticorrupción establecida en el contrato.",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Incumplir con el Pacto de Integridad suscrito con la Entidad Contratante",
+     "indent": 1,
+     "marker": "1."
+    },
+    {
+     "type": "para",
+     "text": "Las causales de resolución administrativa del contrato contempladas en el Texto Único de la Ley 22 del 27 de junio de 2006, ordenado por la Ley 153 de 2020, que regula la Contratación Pública, vigente al momento de la convocatoria del acto público, se entienden incorporadas por ministerio de la Ley, aun cuando no se hubiesen incluido expresamente en este Contrato,",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Declara LA AIG y así lo acepta EL CONTRATISTA, que en caso en que decida resolver el presente contrato, por cualquiera de las causas señaladas, imputables a EL CONTRATISTA, ésta no tendrá derecho a recibir ningún tipo de indemnización.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-11",
+   "chars": 2811,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.12",
+   "title": "DÉCIMA TERCERA: TERMINACIÓN UNILATERAL DEL CONTRATO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Sin perjuicio de la resolución administrativa del contrato, la AIG podrá dar por finalizado el contrato antes de cumplida la fecha de vencimiento acordada, por decisión unilateral, previa notificación anticipada de un (1) mes, cuando circunstancias de interés público debidamente comprobadas lo requieran, en cuyo caso EL CONTRATISTA, deberá ser indemnizado por razón de los perjuicios causados con motivo de la terminación unilateral por la AIG, según lo establecido en el artículo 92 del Texto Único de la Ley 22 de 27 de junio de 2006, ordenado por la Ley 153 de 2020.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-12",
+   "chars": 571,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.13",
+   "title": "DÉCIMA CUARTA: VIGENCIA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "La vigencia del presente Contrato será de doce (12) meses, computados a partir de que se refrende el presente Contrato y se notifique la Orden de Proceder, más dos (2) meses adicionales, para su liquidación.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Copia del Contrato debidamente refrendado, será entregado al Contratista, para los efectos legales correspondientes.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-13",
+   "chars": 323,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.14",
+   "title": "DÉCIMA QUINTA: LIQUIDACIÓN",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "LAS PARTES convienen en un término de dos (2) meses, una vez vencida la vigencia de este contrato, para su liquidación, conforme lo dispone el Texto Único de la Ley 22 de 2006 ordenado por la Ley 153 de 2020 en su artículo 106.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-14",
+   "chars": 227,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.15",
+   "title": "DÉCIMA SEXTA. PRINCIPIO DE CONSERVACION DEL CONTRATO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "En caso de que alguna de las disposiciones o cláusulas del presente contrato, fueren declaradas nulas, las demás cláusulas permanecerán vigentes y válidas, para efectos de la continuación de la ejecución del contrato.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "DÉCIMA SÉPTIMA: RESERVA Y CONFIDENCIALIDAD DE LA INFORMACIÓN.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "EL CONTRATISTA reconoce que toda la información que se genere de la ejecución del presente Contrato pertenece al ESTADO, por tanto, hasta dos (2) años contados después del vencimiento del presente Contrato, mantendrá la misma en reserva por corresponderle a LA AIG privativamente el derecho a su divulgación, salvo solicitud de autoridad competente.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "EL CONTRATISTA, se obliga a mantener bajo absoluta confidencialidad y reserva toda la información relacionada con el presente Contrato, para lo cual deberá tomar todas las precauciones necesarias y apropiadas para la guarda de la confidencialidad y comunicará a todos sus empleados, que puedan tener acceso a dicha información y documentos, que la misma es de carácter estrictamente confidencial y reservado y que, por lo tanto, no puede ser divulgada a terceros, ni usada para ningún propósito.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Las obligaciones al tenor de este Contrato no se aplicarán a ninguna información confidencial que:",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "Esté en posesión del CONTRATISTA, con antelación a su recibo por LA AIG.",
+     "indent": 2,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Sea o llegue a ser de conocimiento público por motivo distinto al incumplimiento de EL CONTRATISTA.",
+     "indent": 2,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Sea desarrollada independientemente por EL CONTRATISTA.",
+     "indent": 2,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Sea revelada por EL CONTRATISTA para satisfacer un requisito o demanda de un tribunal de derecho con jurisdicción y competencia u organismo gubernamental o regulador.",
+     "indent": 2,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Sea revelada a un tercero, de conformidad con la autorización escrita de LA AIG.",
+     "indent": 2,
+     "marker": "1."
+    },
+    {
+     "type": "bullet",
+     "text": "Sea recibida de un tercero, sin restricciones similares y sin violación de este Contrato.",
+     "indent": 2,
+     "marker": "1."
+    }
+   ],
+   "id": "s14-15",
+   "chars": 1781,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.16",
+   "title": "DÉCIMA OCTAVA: NOTIFICACION Y COMUNICACIÓN ENTRE LAS PARTES",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Las notificaciones o comunicaciones que deban efectuarse entre LAS PARTES, como consecuencia del presente Contrato, se harán por escrito, en idioma español y serán entregadas personalmente a la otra parte o por medio de correo electrónico.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "A estos efectos, LAS PARTES señalan las siguientes direcciones:",
+     "indent": 0
+    }
+   ],
+   "id": "s14-16",
+   "chars": 302,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.17",
+   "title": "AUTORIDAD NACIONAL PARA LA INNOVACIÓN GUBERNAMENTAL (AIG)",
+   "blocks": [],
+   "id": "s14-17",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.18",
+   "title": "ADOLFO FÁBREGA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Transístmica, Edifico NYSO, Piso 2.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Teléfono: (507) 520-7400.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-18",
+   "chars": 60,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.19",
+   "title": "XXXXXXX",
+   "blocks": [],
+   "id": "s14-19",
+   "chars": 0,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.20",
+   "title": "DÉCIMA NOVENA: RECLAMACIÓN DIPLOMÁTICA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "EL CONTRATISTA, de resultar aplicable, renuncia a intentar reclamación diplomática en lo concerniente a los deberes y derechos derivados del presente Contrato, salvo en caso de denegación de justicia, quedando entendido que no existe denegación de justicia cuando EL CONTRATISTA, sin haber hecho uso de ellos, ha tenido expeditos los recursos y medios de acción que puedan emplearse para la defensa de sus derechos, conforme a lo dispuesto en el artículo 99 del Texto Único de la Ley 22 de 27 de junio de 2006, que regula la contratación pública ordenado por la Ley 153 de 8 de mayo de 2020.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-20",
+   "chars": 591,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.21",
+   "title": "VIGÉSIMA: SANCIONES POR INCUMPLIMIENTO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Sin perjuicio de lo establecido en los artículos 104 y 133, las entidades contratantes podrán aplicar una multa al Contratista, según lo establecido en el artículo 141 del Texto Único de la Ley 22 de 2006, ordenada por la Ley 153 de 2020, lo cual dependerá del monto de la respectiva Orden de Compra.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-21",
+   "chars": 300,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.22",
+   "title": "VIGÉSIMA PRIMERA: FUERZA MAYOR O CASO FORTUITO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Se excluye de responsabilidad la falta de prestación del servicio debido a casos fortuito y/o fuerza mayor según define el Código Civil de la República de Panamá",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Se considera Fuerza Mayor, conforme al artículo 34D del Código Civil, acontecimientos imprevistos fuera del control de El Contratista que ejecuta el suministro, producidos por hechos del hombre, a los cuales no hay sido posible resistir.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Se considera Caso Fortuito conforme al artículo 34D del Código Civil, acontecimientos de la naturaliza que no hayan podido ser previstos, tales como un naufragio, terremotos y otros de igual o parecida índole.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-22",
+   "chars": 607,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.23",
+   "title": "VIGÉSIMA SEGUNDA: ÉTICA/ GOBERNANZA/ ANTICORRUPCIÓN",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "El Contratista garantiza, se compromete y declara que ni él ni a través de interpuesta persona ha incurrido ni incurrirá, directa o indirectamente, en ninguna de las siguientes conductas:",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "1. Pagar, dar, entregar, recibir, prometer, o acordar una dádiva, donación, coima, soborno, regalos, aportes o comisiones ilegales, bienes u otros objetos de valor, bajo cualquier modalidad.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "2. No haber pagado directa o indirectamente sumas o cantidades ilícitas, como premios o incentivos, en moneda local o extranjera en la República de Panamá o en cualquier otro lugar en que dicha conducta se relacione con el contrato en violación de las leyes anticorrupción de la República de Panamá o de cualquiera otra jurisdicción en el extranjero, a servidores públicos, partidos políticos o sus directivos, candidatos políticos o a terceros que puedan influir en la ejecución o supervisión del contrato.",
+     "indent": 1
+    },
+    {
+     "type": "para",
+     "text": "En el caso de que EL CONTRATISTA incurra en cualquiera de las conductas establecidas en esta cláusula constituirá una infracción al artículo 15, numeral 19 del Texto Único de la Ley de Contrataciones Públicas de la República de Panamá, artículo 188 del Decreto Ejecutivo Reglamentario No. 439 de 10 de septiembre de 2020; y/o a la “Convención Contra la Corrupción de las Naciones Unidas y/o la “Convención Interamericana Contra la Corrupción”, dando lugar a la resolución administrativa del contrato y a la inhabilitación del contratista por un período de cinco años.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-23",
+   "chars": 1451,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.24",
+   "title": "VIGÉSIMA TERCERA: SOSTENIBILIDAD",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Desde el inicio y hasta que se concluyan las obras el contratista se compromete a gestionar sus actividades de acuerdo con:",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Todos los principios, valores y compromisos expresados en El Pacto de Integridad, el Código de Ética y Los Principios de Sostenibilidad y en particular se compromete a:",
+     "indent": 0
+    },
+    {
+     "type": "bullet",
+     "text": "No utilizar ni apoyar el uso de ninguna forma de trabajo infantil, esclavitud, servidumbre, trabajo forzoso obligatorio o trata de personas o cualquier otra forma de explotación;",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Garantizar la igualdad de oportunidades, la libertad de asociación y la promoción del desarrollo de cada individuo;",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Oponerse al uso del castigo corporal, coerción mental o física o abuso verbal;",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Cumplir con las leyes aplicables y el código de trabajo sobre horas de trabajo y salarios, garantizando que los salarios sean suficientes para satisfacer las necesidades básicas del personal;",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Establecer y mantener procedimientos adecuados para evaluar y seleccionar proveedores y subcontratistas basados en sus compromisos con los derechos sociales, humanos y laborales y la responsabilidad ambiental;",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "No tolerar la corrupción de ninguna manera o forma en ninguna jurisdicción, incluso si tales actividades son permitidas, toleradas o no procesables;",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Evaluar y reducir el impacto ambiental de sus propios productos y servicios a lo largo de todo su ciclo de vida;",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Utilizar los recursos materiales de forma responsable, a fin de lograr un crecimiento sostenible que respete el medio ambiente y los derechos de las generaciones futuras;",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "Implementar modelos de gestión similares dentro de su propia cadena de suministro.",
+     "indent": 1
+    },
+    {
+     "type": "bullet",
+     "text": "El Contratista reconoce que la AIG tiene el derecho, en cualquier momento, de verificar, el cumplimiento por parte de este de las obligaciones asumidas en este documento.",
+     "indent": 1
+    }
+   ],
+   "id": "s14-24",
+   "chars": 1744,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.25",
+   "title": "VIGESIMA CUARTA: TIMBRES FISCALES",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Este Contrato está exento de los timbres fiscales, de acuerdo con lo establecido en el artículo 36 de la Ley 6 de 2 de febrero de 2005, que modifica el numeral 28 del artículo 973 del Código Fiscal.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-25",
+   "chars": 198,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.26",
+   "title": "VIGÉSIMA QUINTA: LEGISLACIÓN APLICABLE",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Este Contrato se hace con fundamento en el Texto Único de la Ley 22 de 27 de junio de 2006, que regula la contratación pública ordenado por la Ley 153 de 8 de mayo de 2020, y reglamentado por el Decreto Ejecutivo N.o 439 de 10 de septiembre de 2020, debidamente modificado por el Decreto Ejecutivo N.° 34 de 24 de agosto de 2022.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Las controversias relativas a la ejecución, desarrollo, terminación o liquidación del Contrato que no puedan ser resueltas directamente por LAS PARTES, serán resueltas por los Tribunales panameños, conforme a la legislación de la República de Panamá.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-26",
+   "chars": 579,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.27",
+   "title": "VIGÉSIMA SEXTA: FIANZA DE CUMPLIMIENTO",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "La AIG declara que EL CONTRATISTA ha presentado la Fianza de cumplimiento No. xxxxxx emitida por xxxxxxxxxxx, a favor de LA AIG/CONTRALORIA GENERAL DE LA REPUBLICA, por el monto total de XXXXXX (B/.XXXXXX) que equivalen al diez por ciento (10%) del valor del Contrato, para garantizar el fiel cumplimiento del objeto mismo.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Esta fianza estará vigente durante catorce (14) meses, que incluyen dos (2) meses adicionales al término de la para la liquidación correspondiente.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Después de transcurrido dicho término, la garantía deberá cubrir un (1) año adicional, para responder por vicios redhibitorios.",
+     "indent": 0
+    }
+   ],
+   "id": "s14-27",
+   "chars": 597,
+   "figures": 0,
+   "tables": 0
+  },
+  {
+   "level": 2,
+   "num": "14.28",
+   "title": "VIGÉSIMA SÉPTIMA: MULTAS POR RETRASO EN LA ENTREGA",
+   "blocks": [
+    {
+     "type": "para",
+     "text": "Las solicitudes de prórrogas que se presenten después de la fecha de vencimiento del plazo para la entrega del suministro o servicio o para la ejecución de la obra, serán objeto de multas. La multa que se impondrá será del cuatro por ciento (4%) dividido entre treinta por cada día calendario de atraso del valor equivalente a la porción dejada de entregar o ejecutar por EL CONTRATISTA. El valor de la multa no será en ningún caso superior al veinte por ciento (20%) del valor del contrato y deberá ingresar al Tesoro Nacional.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Sin perjuicio de lo establecido en el párrafo anterior, y en el artículo 104 del Texto Único de la Ley 22 de 2006, ordenado por la Ley 153 de 2020, las entidades contratantes podrán aplicar una multa a los contratistas que hayan incumplido el contrato, la cual será entre el 1% y el 15% del monto total del contrato, según lo preceptuado en la Cláusula Vigésima “Sanciones por Incumplimiento”, del presente Contrato, conforme lo establecido en el Texto Único de la Ley 22 de 2006 ordenado por la Ley 153 de 2020.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "VIGESIMA OCTAVA: PERFECCIONAMIENTO DEL CONTRATO.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "El perfeccionamiento del presente Contrato estará sujeto al refrendo de la Contraloría General de la República.",
+     "indent": 0
+    },
+    {
+     "type": "para",
+     "text": "Para constancia se firma este Contrato en la ciudad de Panamá a los______________ (___) días del mes de _______________ de dos mil veinticinco (2025).",
+     "indent": 0
+    },
+    {
+     "type": "table",
+     "rows": [
+      [
+       "POR LA AIG",
+       "",
+       "POR EL CONTRATISTA"
+      ],
+      [
+       "",
+       "",
+       ""
+      ],
+      [
+       "ADOLFO FÁBREGA",
+       "",
+       ""
+      ],
+      [
+       "Administrator General",
+       "",
+       "Representante Legal"
+      ],
+      [
+       "REFRENDO: ________________________________________ CONTRALORÍA GENERAL DE LA REPÚBLICA Fecha de Refrendo: ______________",
+       "",
+       ""
+      ]
+     ],
+     "header": true
+    }
+   ],
+   "id": "s14-28",
+   "chars": 1349,
+   "figures": 0,
+   "tables": 1
+  }
+ ]
+}

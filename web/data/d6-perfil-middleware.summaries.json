@@ -1,0 +1,39 @@
+{
+  "doc": {
+    "short": "Análisis de brechas entre el alcance ya contratado al proveedor de infraestructura (IaaS/KaaS/DBaaS) y el perfil de Administrador de Middleware que pide ESA, con la definición del rol y la recomendación de tratarlo como puesto complementario.",
+    "long": "Documento breve pero decisivo para entender el encaje del puesto. Compara función por función lo que ya cubre el contrato de infraestructura con lo que ESA espera del responsable del Middleware, y clasifica cada competencia como cubierta, parcial o no cubierta. La conclusión es que el rol no se solapa con el proveedor: donde el contrato opera a nivel de infraestructura, el Administrador de Middleware opera a nivel de aplicación y runtime. Incluye la definición formal del rol —objetivo, alcance general, cuatro competencias técnicas núcleo y las competencias operativas y de proceso— con sus exclusiones explícitas en cada bloque, y cierra con hallazgos, conclusión y recomendación. El texto viene en inglés y se repite íntegro en español.",
+    "tags": ["Gap Analysis", "Rol", "KaaS", "DBaaS", "Alcance", "ESA"]
+  },
+  "sections": {
+    "s1": {
+      "short": "Comparación entre el alcance contratado y el perfil que pide ESA: varias funciones ya están cubiertas por el contrato de infraestructura, otras no.",
+      "tags": ["Comparación"]
+    },
+    "s1-1": {
+      "short": "Tabla de once áreas —ciclo de vida del clúster, workloads, storage, ingress, seguridad, observabilidad, DBaaS, accesos, S3, dominios Copernicus e incidentes— con su cobertura: cubierta, parcial o no cubierta.",
+      "tags": ["Tabla", "Cobertura"]
+    },
+
+    "s2": {
+      "short": "Definición formal del perfil de Administrador de Middleware de la plataforma Copernicus.",
+      "tags": ["Perfil"]
+    },
+    "s2-1": { "short": "Objetivo del rol: operar, configurar lógicamente, supervisar y dar soporte de segundo nivel al Middleware sobre Kubernetes administrado y DBaaS de terceros. No administra infraestructura." },
+    "s2-2": { "short": "Alcance general en seis puntos: operar a nivel de aplicación, configurar componentes lógicos sobre Kubernetes, diagnosticar incidentes, velar por KaaS/DBaaS/almacenamiento, coordinar con proveedor y ESA, y documentar." },
+    "s2-3": { "short": "Las cuatro competencias técnicas núcleo, cada una con su lista de exclusiones." },
+    "s2-3-1": { "short": "Operación sobre Kubernetes a nivel de aplicación: Helm y manifiestos, rollouts y rollbacks, Deployments, StatefulSets, Jobs, CronJobs, ConfigMaps y Secrets. Excluye upgrades del clúster, ETCD, parcheo del SO y runtime base.", "tags": ["Helm", "Workloads"] },
+    "s2-3-2": { "short": "Configuración lógica sobre KaaS: StorageClasses del proveedor, PV y PVC, Ingress del Middleware, TLS de aplicación, namespaces, RBAC, cuotas y políticas de red. Sin administrar el servicio.", "tags": ["RBAC", "Ingress"] },
+    "s2-3-3": { "short": "Operación y supervisión de DBaaS: disponibilidad, conectividad, desempeño básico, verificación de respaldos y pruebas de restauración. Excluye administrar el motor, parchear, configurar HA y ejecutar respaldos.", "tags": ["DBaaS"] },
+    "s2-3-4": { "short": "Operación de almacenamiento de objetos S3: validación de accesos, buckets y políticas, monitoreo básico y coordinación con el proveedor.", "tags": ["S3"] },
+    "s2-4": { "short": "Competencias operativas y de proceso: observabilidad, gestión de incidentes y de cambios, seguridad operativa, documentación (runbooks, SOPs, checklists) y coordinación con proveedores, ESA y usuarios internos." },
+    "s2-4-1": { "short": "El mismo perfil íntegro en español: objetivo, alcance, las cuatro competencias técnicas con sus exclusiones y las competencias operativas.", "tags": ["Español"] },
+
+    "s3": {
+      "short": "Análisis de brechas entre lo contratado y lo solicitado, para evitar duplicidad de roles y fijar responsabilidades.",
+      "tags": ["Brechas"]
+    },
+    "s3-1": { "short": "Tres hallazgos: buena parte ya está cubierta por el contrato; algunas funciones solo parcialmente, donde el contrato llega al nivel de infraestructura y ESA espera nivel de aplicación; y quedan sin cubrir los dominios funcionales del Middleware, el almacenamiento S3, la gestión avanzada de incidentes y de cambios y la optimización del rendimiento." },
+    "s3-2": { "short": "Conclusión: el rol que pide ESA es distinto del alcance contratado; hay solape operativo parcial, pero las responsabilidades de capa de aplicación no están cubiertas por el contrato vigente." },
+    "s3-3": { "short": "Recomendación: definir formalmente el Administrador de Middleware como rol complementario centrado en operación, diagnóstico funcional y coordinación con ESA y el proveedor." }
+  }
+}
