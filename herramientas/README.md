@@ -60,6 +60,10 @@ cuando lo toques en producción.
 El análisis de perfil de ESA marca estas áreas como **no cubiertas** por el contrato del
 proveedor. Aquí no hay red debajo.
 
+> **Orden de estudio:** el recorrido de este bloque no sigue la numeración de los archivos,
+> sino la precedencia entre ellos. Está en
+> [00-orden-estudio-p2.md](00-orden-estudio-p2.md) — empieza ahí.
+
 | Archivo | Herramienta | Nivel |
 |---|---|---|
 | [05-stac-pgstac-stac-fastapi.md](05-stac-pgstac-stac-fastapi.md) | STAC + PgSTAC + stac-fastapi | E |
