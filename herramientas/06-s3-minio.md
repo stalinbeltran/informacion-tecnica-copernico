@@ -424,3 +424,39 @@ lifecycle de S3, documentación de URLs prefirmadas.
 
 *(Nombres reales de buckets, políticas aplicadas, latencias medidas, incidentes de acceso y
 su causa.)*
+
+### 2026-09-11 — Laboratorio ejecutado (bloque 5 completo)
+
+Runbook producido: [`../runbooks/almacenamiento-objetos.md`](../runbooks/almacenamiento-objetos.md).
+Entorno: MinIO `RELEASE.2025-09-07` sobre WSL2 Ubuntu 24.04, binarios en `~/bin` sin root.
+Pasos 1–7 ejecutados; **8 de 10 sabotajes verificados**.
+
+**Hallazgos que este documento no decía:**
+
+1. **Los dos 403 de S3 se distinguen por el `<Code>` del cuerpo XML**, no por el status:
+   - URL alterada u objeto inexistente → `SignatureDoesNotMatch`
+   - URL vencida → `AccessDenied` + *Request has expired*
+
+   El árbol de diagnóstico del §8 gana un paso: leer el `<Code>` antes de tocar políticas.
+   ```bash
+   curl -s "$URL" | grep -oE '<Code>[^<]*</Code>|<Message>[^<]*</Message>'
+   ```
+
+2. **`mc share download` imprime dos líneas** — la URL cruda y la firmada. Capturarla con
+   `grep -o 'http[^ ]*'` produce una URL malformada y `curl` devuelve `HTTP 000` (nunca
+   contacta al servidor). Filtrar por `X-Amz-Signature`.
+
+3. **Una regla de transición no puede nombrar un tier inexistente** → `Invalid storage class`.
+   El tier se declara antes con `mc ilm tier add`. El §5 paso 4 del laboratorio omite este
+   requisito previo.
+
+4. **`mc ilm tier add` apuntando el MinIO contra sí mismo se cuelga sin timeout** (valida
+   contra su propio endpoint). Para probar la rotación caliente→frío hace falta un segundo
+   MinIO. Por eso quedan pendientes los dos últimos sabotajes.
+
+**Latencias de lectura parcial (loopback local — línea base del método, no del servicio):**
+16 KB → 1,80 ms · 256 KB → 1,78 ms · 1 MB → 2,22 ms · 512 MB completos → 0,25 s (≈2,1 GB/s).
+Contra los 100 ms contratados. Repetir contra el endpoint real por VPN.
+
+**Pendiente:** sabotaje de lifecycle que borra en vez de mover (requiere tier frío operativo)
+y avería 17, credencial rotada sin actualizar el Secret (requiere clúster).

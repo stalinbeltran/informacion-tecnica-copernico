@@ -53,7 +53,7 @@ en memorización sin causa.
 
 | # | Herramienta | Visión global | Laboratorio | Dominio |
 |---|---|---|---|---|
-| 1 | S3 / MinIO | ☑ 2026-08-07 | ☐ | ☐ |
+| 1 | S3 / MinIO | ☑ 2026-08-07 | ☑ 2026-09-11 | ☐ |
 | 2 | STAC + PgSTAC | ☑ 2026-08-07 | ☐ | ☐ |
 | 3 | Argo Workflows | ☐ | ☐ | ☐ |
 | 4 | Argo Events | ☐ | ☐ | ☐ |
