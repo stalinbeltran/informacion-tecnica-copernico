@@ -104,6 +104,10 @@ bash vuelca al cerrar), y la bitácora de aprendizaje **no tiene entrada del blo
 de vida**. La atribución al 11-sep es **inferencia** por coincidencia exacta con el JSON del
 runbook, no un hecho registrado.
 
+**Comprobado el 15-sep (tarde):** `grep ilm ~/.bash_history` devuelve **cero líneas** sobre 183. Stalin
+no ha tecleado nunca un comando `mc ilm`. Los únicos `ilm` con constancia los ejecutó Claude
+(`mc ilm rule export`, 15-sep). El Bloque B del Paso 7 es la **primera vez** que se practican.
+
 ---
 
 ### 2026-09-15 — Preparación del Paso 7 y trazabilidad
