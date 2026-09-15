@@ -607,5 +607,53 @@ URL para leerle la fecha.
    corto y deliberado (se pide, se usa, muere). **Un usuario que copia el enlace y lo abre
    diez minutos después recibe 403 — va a ser un ticket recurrente.**
 
-**Pendiente:** repetir el sabotaje de alteración de key con una URL vigente para ver
-`SignatureDoesNotMatch` en el laboratorio propio.
+**Pendiente resuelto el 2026-09-15** — ver la entrada siguiente.
+
+---
+
+## 2026-09-15 — S3/MinIO — Cierre del Paso 6: `SignatureDoesNotMatch` con URL vigente
+
+**Lo que faltaba:** el 11-sep el sabotaje de alteración se hizo sobre una URL ya caducada, así
+que el 403 no probaba nada sobre la firma. Hoy se repitió con una URL de 10 minutos y se
+añadió una comprobación final que el intento anterior no tenía.
+
+**Salida literal, con transcripción en `~/lab-s3/transcripciones/2026-09-15.log`:**
+
+| Petición | Resultado |
+|---|---|
+| URL original | `HTTP 200` |
+| Key alterada (`prueba.tif` → `mentira.tif`) | `SignatureDoesNotMatch` |
+| Firma alterada (un `0` antepuesto) | `SignatureDoesNotMatch` |
+| **URL original, otra vez, después de los dos ataques** | `HTTP 200` |
+
+**Por qué la cuarta línea es la importante.** Es la que convierte el experimento en prueba.
+Sin ella, un `SignatureDoesNotMatch` podría explicarse por caducidad sobrevenida a mitad del
+ejercicio. Al volver a dar 200 con la **misma** URL después de los dos rechazos, queda
+demostrado que el 403 vino de la manipulación y no del reloj. **Regla general de diagnóstico:
+todo experimento que provoca un fallo necesita una comprobación de control que confirme que la
+vía sana seguía sana.**
+
+**Dos superficies distintas, mismo código.** Alterar la **key** y alterar la **firma** dan el
+mismo `SignatureDoesNotMatch`. No son el mismo caso:
+
+- La firma **cubre la key**. Cambiar de objeto invalida la URL aunque el objeto exista y el
+  emisor tenga permiso sobre él. Una URL prefirmada autoriza **un objeto**, no un permiso.
+- Alterar la firma es el ataque ingenuo. Alterar la key es el realista: el usuario legítimo
+  que recibe un enlace y edita el nombre del fichero para "ver el de al lado".
+
+**Consecuencia operativa:** ante un ticket de 403 sobre URL prefirmada, el `<Code>` decide a
+quién se escala. `AccessDenied` + *Request has expired* es un usuario que tardó: se le emite
+otra. `SignatureDoesNotMatch` es una URL manipulada: no se reemite sin averiguar quién la
+editó y por qué.
+
+### Hallazgo del alumno — el primer 200 fue 403
+
+El primer intento dio `original: HTTP 403` con una URL recién emitida. Causa: un error de
+tecleo, `echo $uU` en vez de `echo "$U"`, señal de que la variable no se había poblado como
+se creía en esa shell. Al reemitir la URL y repetir, dio 200 limpio.
+
+**Lo que enseña, más allá del typo:** un 403 sobre una URL que *acabas de generar* no siempre
+es del servidor. **Antes de diagnosticar S3, hay que verificar que la URL que se envió es la
+que se creía enviar.** En producción esto es un ticket clásico: la URL se trunca, se le
+escapa un `&` en un correo, o el cliente la recorta. La comprobación previa es imprimir la
+URL y contar que lleva sus cinco parámetros `X-Amz-`.

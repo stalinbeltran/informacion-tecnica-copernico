@@ -49,7 +49,7 @@ Leyenda: **✅ ejecutado y verificado** · **⚠️ configurado pero nunca visto
 | 4b | **Reglas de ciclo de vida** | **⚠️** | Las 3 reglas existen en el servidor y están en el runbook, pero **ninguna se ha visto actuar** |
 | 4c | **Transición a tier frío** | **❌** | `mc ilm tier add` se colgó (MinIO contra sí mismo). Nunca completado |
 | 5 | Versionado y delete marker | ✅ | `historia.tif` con v1/v2/v3; recuperación por borrado de marker |
-| 6 | URLs prefirmadas | ✅ | `AccessDenied` / *Request has expired* obtenidos |
+| 6 | URLs prefirmadas | ✅ | `AccessDenied` / *Request has expired* obtenidos; sabotaje de firma cerrado el 15-sep |
 | 7 | Auditoría de accesos | ⚠️ | Procedimiento escrito en el runbook; no re-verificado |
 
 ### Sabotajes
@@ -60,7 +60,7 @@ Leyenda: **✅ ejecutado y verificado** · **⚠️ configurado pero nunca visto
 | Política sin `ListBucket` | ✅ |
 | URL firmada de objeto inexistente | ✅ |
 | URL firmada expirada | ✅ |
-| URL firmada **alterada y vigente** → `SignatureDoesNotMatch` | ❌ el intento usó una URL ya caducada |
+| URL firmada **alterada y vigente** → `SignatureDoesNotMatch` | ✅ 15-sep: key alterada y firma alterada, ambas `SignatureDoesNotMatch`, con control 200 posterior |
 | Lifecycle que borra en vez de mover | ❌ requiere tier frío |
 | Multipart abortado | ⚠️ sin confirmar |
 | Credencial rotada sin actualizar Secret | ❌ requiere clúster |
@@ -135,6 +135,24 @@ sabotajes). El laboratorio está preparado, no avanzado.
 |---|---|---|
 | `lab/frio` | Un **bucket** dentro del MinIO caliente | ❌ no usar — no es un tier real |
 | `frio/archivo` | Bucket en la **segunda instancia** (`:9002`) | ✅ el destino de la transición |
+
+### 2026-09-15 (tarde) — Cierre del sabotaje de firma del Paso 6
+
+**Ejecutado por Stalin, con transcripción en `~/lab-s3/transcripciones/2026-09-15.log`:**
+
+| # | Acción | Resultado |
+|---|---|---|
+| 1 | `mc share download --expire 10m` sobre `prueba.tif` | URL emitida, `X-Amz-Expires=600`, con `versionId` |
+| 2 | `curl` a la URL original (primer intento) | `HTTP 403` — variable mal poblada, no fallo del servidor |
+| 3 | Reemitir URL y `curl` | `HTTP 200` |
+| 4 | Key alterada `prueba.tif` → `mentira.tif` | `SignatureDoesNotMatch` |
+| 5 | Firma alterada (un `0` antepuesto) | `SignatureDoesNotMatch` |
+| 6 | **Control:** `curl` a la URL original otra vez | `HTTP 200` — el 403 no fue caducidad |
+
+Con esto el Paso 6 queda **cerrado con evidencia**. El concepto está en
+`bitacora-aprendizaje.md`, entrada del 15-sep.
+
+---
 
 **Corrección registrada:** la tabla de `mc ilm rule ls` muestra `DAYS TO EXPIRE: 0` para una
 regla que **no tiene** campo `Days` — imprime `0` para un campo ausente. Leerla como "expira
