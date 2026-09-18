@@ -272,3 +272,104 @@ penalización perceptible y sin `RestoreObject`. Contexto: es MinIO→MinIO sobr
 plataforma real el frío puede ser otro proveedor con latencia de restauración muy distinta;
 esto **no responde** la pregunta 3/4 de `preguntas-para-esa.md`, solo confirma que en MinIO
 warm-tier la lectura es transparente.
+
+**Verificación de liberación de espacio en el caliente — `mc du` NO sirve para esto:**
+
+Tras la transición, el objeto ocupa en el disco caliente **8 KB en vez de 5 MiB**. Solo queda
+`xl.meta` (579 bytes): la key, el ETag, el VersionID y el puntero al tier. El directorio con
+los bytes **desapareció**.
+
+Contraste en disco, misma instancia:
+
+| Objeto | Estado | Disco real | Contenido del directorio |
+|---|---|---|---|
+| `grande.tif` (512 MiB) | normal | **513 M** | `xl.meta` + directorio de bytes `0a1e19ef-…` |
+| `producto-viejo.tif` (5 MiB) | transicionado | **8 K** | **solo** `xl.meta` |
+
+Totales: caliente `~/lab-s3/data` = **518 M** · frío `~/lab-s3-frio/data` = **5,3 M**.
+
+**La trampa:** `mc du lab/productos` sigue diciendo `517MiB / 11 objects` — cuenta los 5 MiB
+que ya **no** están en ese disco. No es un bug: reporta el tamaño **lógico** (lo que el cliente
+vería al descargar), y en ese sentido es correcto.
+
+> **Regla operativa para el runbook:** `mc du` mide el dato que ve el usuario, no la ocupación
+> del disco. Para capacidad real del caliente: `du -sh` sobre el directorio de datos, o las
+> métricas del servidor. En una rotación anual sobre 2 PB, confundir ambas cifras lleva a creer
+> que no se ha liberado nada — o a dimensionar mal la compra de disco.
+
+**Tercera cosa que solo vive en el caliente:** `xl.meta`. Refuerza el punto del backup — no es
+solo "la metadata" en abstracto, es este fichero por objeto. Sin él, el objeto opaco del frío
+es irrecuperable.
+
+### 2026-09-16 — Bloque D: hallazgo, `--expire-days 0` está PROHIBIDO
+
+**El runbook estaba mal.** `mc ilm rule add ... --expire-days 0` falla:
+
+```
+mc: <ERROR> Unable to generate new lifecycle rules for the input:
+expiration days cannot be set to zero.
+```
+
+**La asimetría, que es el hallazgo real:**
+
+| Acción | `Days: 0` | Comportamiento |
+|---|---|---|
+| `--transition-days 0` | ✅ aceptado | Se creó la regla del Bloque C y transicionó |
+| `--expire-days 0` | ❌ **rechazado** | MinIO se niega a crear la regla |
+
+MinIO **no deja escribir una regla que borre el mismo día**. Un mínimo de 1 día es obligatorio.
+Archivar hoy sí; destruir hoy no. Es una barrera de seguridad deliberada del producto — el
+único punto del ciclo de vida donde MinIO protege al administrador de sí mismo.
+
+**Consecuencia operativa:** una regla de expiración **siempre** da al menos 24 h de margen
+entre que se escribe y que destruye. Ese día es la ventana real para detectar el error y
+retirar la regla. En el runbook: tras tocar cualquier regla de expiración, `mc ilm rule export`
+**el mismo día** — al día siguiente ya ha actuado.
+
+**Estado:** `producto-condenado.tif` subido a `landsat-8/2025/` (5 MiB, 2026-09-16 08:59:17).
+La regla asesina **no existe**. El sabotaje aún no se ha ejecutado.
+
+### 2026-09-16 — Bloque D: dos hallazgos sobre el RELOJ de la expiración
+
+Regla creada: `{"ID":"dalbkgrks34dq4krgq90","Filter":{"Prefix":"landsat-8/2025/"},"Expiration":{"Days":1}}`.
+Tras `mc admin service restart lab`: **no borró nada**. Los dos objetos siguen vivos, sin
+delete marker. No es un fallo — es el comportamiento correcto, por dos razones.
+
+**Hallazgo 1 — `touch` no engaña a MinIO. La antigüedad la fija el servidor.**
+
+| Fecha | Valor |
+|---|---|
+| mtime del fichero local (tras `touch -d "3 days ago"`) | `2026-09-13 10:47:58` |
+| Fecha que MinIO asigna al objeto | **`2026-09-16 10:48:09`** |
+
+MinIO **ignora** el mtime del fichero de origen y sella el objeto con la hora del `PUT`. El
+reloj del ciclo de vida es el del servidor, no el del cliente.
+
+> **Consecuencia:** no se puede acelerar una prueba de expiración falseando fechas desde el
+> cliente. Un objeto recién subido tiene 0 días de antigüedad, siempre. Para probar reglas de
+> expiración hay que esperar el reloj real o manipular el servidor.
+
+**Hallazgo 2 — `mc stat` ANUNCIA la ejecución futura. Es la herramienta de auditoría que faltaba.**
+
+```
+Expiration: 2026-09-17 19:00:00 EST (lifecycle-rule-id: dalbkgrks34dq4krgq90)
+```
+
+El objeto **sabe y declara** qué día morirá y **qué regla lo matará**. Esto es lo más
+operativamente útil del Paso 7:
+
+> **Procedimiento de verificación para el runbook:** tras escribir cualquier regla de
+> expiración, `mc stat` sobre un objeto afectado. Si aparece la línea `Expiration:`, la regla
+> **ya tiene sentencia dictada** — muestra la fecha y el ID de la regla culpable. Es la forma
+> de auditar el impacto **antes** de que se ejecute, sin esperar al barrido.
+> Y a la inversa: si se espera que una regla actúe y `mc stat` **no** muestra `Expiration:`,
+> la regla no está alcanzando a ese objeto (prefijo mal escrito, filtro equivocado).
+
+**Detalle del reloj:** sentencia a las `19:00:00`, no a las 10:48. MinIO **redondea al límite
+de día UTC** — 2026-09-17 00:00 UTC = 19:00 EST del día anterior. Por eso `Days: 1` no
+significa "24 h exactas desde el PUT", sino "al cruzar el siguiente límite de día". La ventana
+real puede ser de pocas horas, no de un día completo.
+
+**Estado:** `producto-condenado.tif` y `condenado2.tif` vivos, con sentencia para el
+**2026-09-17 19:00 EST**. La regla `dalbkgrks34dq4krgq90` sigue activa. El borrado y su
+recuperación por delete marker quedan **pendientes de verificar**.
