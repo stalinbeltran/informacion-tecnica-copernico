@@ -21,14 +21,78 @@ echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
 ```
 ⚠️ Son **dos** `>>`. Con uno solo (`>`) borrarías el archivo entero.
 
-Si MinIO está apagado:
+### Arrancar el laboratorio (son DOS instancias)
+
+El lab tiene dos MinIO: el **caliente** (`:9000`) y el **frío** (`:9002`, destino de las
+reglas de transición). **El frío va primero** — si arranca solo el caliente, las reglas de
+ciclo de vida apuntan a un tier muerto.
+
 ```bash
+export PATH="$HOME/bin:$PATH"
+
+# FRÍO primero
+MINIO_ROOT_USER=admin MINIO_ROOT_PASSWORD=frio12345 \
+  nohup minio server ~/lab-s3-frio/data --address :9002 --console-address :9003 \
+  > ~/lab-s3-frio/logs/minio.log 2>&1 &
+
+# CALIENTE después
 MINIO_ROOT_USER=admin MINIO_ROOT_PASSWORD=admin12345 \
   nohup minio server ~/lab-s3/data --address :9000 --console-address :9001 \
   > ~/lab-s3/logs/minio.log 2>&1 &
 ```
 
-Consola web: **http://localhost:9001** — usuario `admin`, contraseña `admin12345`.
+Comprobar que los dos están vivos:
+```bash
+curl -fsS http://127.0.0.1:9002/minio/health/live && echo "FRIO OK"
+curl -fsS http://127.0.0.1:9000/minio/health/live && echo "CALIENTE OK"
+```
+
+### Abrir la consola web desde el navegador de Windows
+
+| Instancia | Consola | Credenciales |
+|---|---|---|
+| Caliente | `:9001` | `admin` / `admin12345` |
+| Frío | `:9003` | `admin` / `frio12345` |
+
+⚠️ **Dos trampas, las dos comprobadas el 2026-09-29:**
+
+1. **`:9000` no es la consola, es la API S3.** Abrir `http://127.0.0.1:9000/minio/` en el
+   navegador no devuelve nada: esa ruta no existe. El único endpoint que responde ahí por
+   navegador es `/minio/health/live`. La consola es `:9001`.
+2. **`localhost` / `127.0.0.1` puede no llegar a WSL.** Si el reenvío de localhost no está
+   activo, hay que usar **la IP de WSL**, no loopback:
+
+```bash
+hostname -I | awk '{print $1}'      # p. ej. 172.28.215.149 → http://172.28.215.149:9001
+```
+
+Esa IP **cambia en cada reinicio de WSL**: consúltala, no la memorices. También aparece en
+el arranque del log (`WebUI: http://172.28.215.149:9001`):
+
+```bash
+grep WebUI ~/lab-s3/logs/minio.log | tail -1
+```
+
+Para dejar `localhost` funcionando de forma permanente, en Windows
+`C:\Users\<usuario>\.wslconfig`:
+```ini
+[wsl2]
+localhostForwarding=true
+```
+Requiere `wsl --shutdown`, que **tira las dos instancias de MinIO** — hay que rearrancarlas.
+
+### Diagnóstico: "no responde" con el servidor vivo
+
+Antes de tocar nada, separar *servidor caído* de *no llego al servidor*:
+
+```bash
+pgrep -af minio                              # ¿hay proceso?
+ss -ltnp | grep -E '9000|9001|9002|9003'     # ¿escucha el puerto?
+curl -sS -o /dev/null -w "%{http_code}\n" http://127.0.0.1:9001/   # ¿responde desde WSL?
+```
+
+Si `curl` desde WSL da **200** y el navegador de Windows no carga, MinIO está bien: el
+problema es el camino Windows→WSL (punto 2 de arriba), no el servicio.
 
 ---
 

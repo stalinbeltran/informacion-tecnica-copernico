@@ -18,7 +18,7 @@
 | Datos | `~/lab-s3/data` |
 | Log | `~/lab-s3/logs/minio.log` |
 | API S3 | `http://localhost:9000` |
-| Consola web | `http://localhost:9001` |
+| Consola web | `http://localhost:9001` (ver nota WSL abajo) |
 | Credenciales root | `admin` / `admin12345` (**solo laboratorio**) |
 
 Arranque:
@@ -31,6 +31,21 @@ mc alias set lab http://127.0.0.1:9000 admin admin12345
 ```
 
 Verificación de salud: `curl -fsS http://127.0.0.1:9000/minio/health/live`
+
+**Segunda instancia — el tier frío (`:9002`).** El laboratorio tiene dos MinIO. El frío es
+el destino de las reglas de transición y **debe arrancar antes** que el caliente:
+
+```bash
+MINIO_ROOT_USER=admin MINIO_ROOT_PASSWORD=frio12345 \
+  nohup minio server ~/lab-s3-frio/data --address :9002 --console-address :9003 \
+  > ~/lab-s3-frio/logs/minio.log 2>&1 &
+```
+
+**Acceso a la consola desde el navegador de Windows.** `:9000` es la API S3, no la consola
+—`http://127.0.0.1:9000/minio/` no existe—. La consola es `:9001` (caliente) y `:9003`
+(frío). Si `localhost` no llega a WSL, usar la IP de la distro, que cambia en cada
+reinicio: `hostname -I | awk '{print $1}'`, o `grep WebUI ~/lab-s3/logs/minio.log | tail -1`.
+Detalle y arreglo permanente (`.wslconfig`) en `chuletas/s3-minio-objetos.md` §0.
 
 ---
 

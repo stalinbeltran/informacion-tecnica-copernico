@@ -46,8 +46,8 @@ Leyenda: **✅ ejecutado y verificado** · **⚠️ configurado pero nunca visto
 | 2 | Prefijos, stat, upload | ✅ | Entrada en bitácora de aprendizaje |
 | 3 | Lecturas parciales y latencias | ✅ | Números anotados: 16 KB → 1,80 ms · 1 MB → 2,22 ms |
 | 4a | Políticas de acceso | ✅ | Usuarios `lector` y `analista`; políticas `solo-lectura-s2`, `lectura-s2`, `prueba-rota`, `solo-lectura-rota` |
-| 4b | **Reglas de ciclo de vida** | **⚠️** | Las 3 reglas existen en el servidor y están en el runbook, pero **ninguna se ha visto actuar** |
-| 4c | **Transición a tier frío** | **❌** | `mc ilm tier add` se colgó (MinIO contra sí mismo). Nunca completado |
+| 4b | **Reglas de ciclo de vida** | **✅** | 29-sep: la regla `dalbkgrks34dq4krgq90` expiró 2 objetos de `landsat-8/2025/`; delete markers verificados |
+| 4c | **Transición a tier frío** | **✅** | 15-sep: tier `FRIO` declarado y `producto-viejo.tif` transicionado; caliente pasó de 5 MiB a 8 KB |
 | 5 | Versionado y delete marker | ✅ | `historia.tif` con v1/v2/v3; recuperación por borrado de marker |
 | 6 | URLs prefirmadas | ✅ | `AccessDenied` / *Request has expired* obtenidos; sabotaje de firma cerrado el 15-sep |
 | 7 | Auditoría de accesos | ⚠️ | Procedimiento escrito en el runbook; no re-verificado |
@@ -61,7 +61,7 @@ Leyenda: **✅ ejecutado y verificado** · **⚠️ configurado pero nunca visto
 | URL firmada de objeto inexistente | ✅ |
 | URL firmada expirada | ✅ |
 | URL firmada **alterada y vigente** → `SignatureDoesNotMatch` | ✅ 15-sep: key alterada y firma alterada, ambas `SignatureDoesNotMatch`, con control 200 posterior |
-| Lifecycle que borra en vez de mover | ❌ requiere tier frío |
+| Lifecycle que borra en vez de mover | ⚠️ 29-sep: el borrado ocurrió y dejó delete marker; **falta la recuperación** |
 | Multipart abortado | ⚠️ sin confirmar |
 | Credencial rotada sin actualizar Secret | ❌ requiere clúster |
 
@@ -373,3 +373,67 @@ real puede ser de pocas horas, no de un día completo.
 **Estado:** `producto-condenado.tif` y `condenado2.tif` vivos, con sentencia para el
 **2026-09-17 19:00 EST**. La regla `dalbkgrks34dq4krgq90` sigue activa. El borrado y su
 recuperación por delete marker quedan **pendientes de verificar**.
+
+### 2026-09-29 — La regla expiró los objetos, y el acceso a la consola desde Windows
+
+**Estado al retomar:** ambas instancias arrancadas hoy (PID 516 frío 15:40:30, PID 536
+caliente 15:40:46). `mc admin info lab` daba `connection refused` **antes** de ese arranque;
+el servidor estaba genuinamente caído.
+
+**La regla `dalbkgrks34dq4krgq90` actuó.** `mc ls lab/productos/landsat-8/2025/` vacío, y
+`mc ls --versions`:
+
+```
+[2026-09-17 22:08:11 EST]     0B  v2 DEL  condenado2.tif
+[2026-09-16 10:48:09 EST] 5.0MiB  v1 PUT  condenado2.tif
+[2026-09-17 22:08:11 EST]     0B  v2 DEL  producto-condenado.tif
+[2026-09-16 08:59:17 EST] 5.0MiB  v1 PUT  producto-condenado.tif
+```
+
+`mc admin info` confirma: 13 objetos, 18 versiones, **2 delete markers**.
+
+**Confirmado:** en bucket versionado la expiración **pone lápida, no destruye**. Las v1 con
+sus 5 MiB siguen intactas. Esto es lo que hace recuperable el sabotaje "lifecycle que borra
+en vez de mover".
+
+**Hallazgo — el timestamp de un delete marker no es la hora del borrado.**
+
+Los delete markers llevan fecha **17-sep 22:08**, pero el proceso que los creó llevaba
+**5 minutos vivo** cuando se leyeron (arrancó el 29-sep 15:40). MinIO ejecutó el barrido
+pendiente **al arrancar** y selló los markers con la fecha en que los objetos vencieron, no
+con la de ejecución.
+
+> **Para el runbook:** `mc ls --versions` dice cuándo un objeto pasó a ser **elegible**, no
+> cuándo se destruyó. Si el servidor estuvo apagado, el barrido actúa al arrancar con fecha
+> retroactiva. Para auditar *cuándo se destruyó algo de verdad* hace falta el **audit log**
+> (`audit_webhook`, hoy `off`) — que es justo el pendiente anotado el 15-sep y lo que pedirá
+> el Producto 8. Este hallazgo es el argumento fuerte para activarlo.
+
+**Corrección a un apunte del 16-sep:** se anotó que `mc stat` sentenciaba para las 19:00 EST
+(límite de día UTC). No hay contradicción con el 22:08 del marker: ambas son fechas
+retroactivas de elegibilidad, no de ejecución. No se observó ningún desfase real.
+
+**Acceso a la consola web desde el navegador de Windows — dos causas de "no responde":**
+
+| Síntoma | Causa real |
+|---|---|
+| `http://127.0.0.1:9000/minio/` en blanco | `:9000` es la **API S3**, no la consola. Esa ruta no existe; solo responde `/minio/health/live` |
+| `http://127.0.0.1:9001` no carga | El loopback de Windows no llega a WSL. Desde WSL `curl :9001` daba **200** y `ss` mostraba el puerto escuchando en `*:9001` |
+
+Solución verificada: **`http://172.28.215.149:9001`** (IP de la distro, `hostname -I`). La IP
+cambia en cada reinicio de WSL. Arreglo permanente: `localhostForwarding=true` en
+`.wslconfig` + `wsl --shutdown` (tira las dos instancias de MinIO).
+
+Documentado en `chuletas/s3-minio-objetos.md` §0 (arranque de las dos instancias, tabla de
+consolas, y bloque de diagnóstico "no responde con el servidor vivo") y referenciado desde
+`runbooks/almacenamiento-objetos.md` §1.
+
+**Hueco cerrado:** ningún documento arrancaba las **dos** instancias — el runbook y la
+chuleta solo tenían el caliente, el lab del Paso 7 solo el frío. Ahora la chuleta tiene el
+arranque completo con el orden (frío antes que caliente) y por qué importa.
+
+**Pendiente del Bloque D:** la recuperación por borrado del delete marker
+(`--version-id 1d40a9eb-…` de `producto-condenado.tif`). Ojo: la regla
+`dalbkgrks34dq4krgq90` **sigue activa** y los objetos tienen 12 días — con `Days: 1`,
+cualquier versión restaurada es elegible de inmediato. Retirar la regla antes, o dejarla y
+observar la re-ejecución.
