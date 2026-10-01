@@ -48,9 +48,9 @@ Leyenda: **✅ ejecutado y verificado** · **⚠️ configurado pero nunca visto
 | 4a | Políticas de acceso | ✅ | Usuarios `lector` y `analista`; políticas `solo-lectura-s2`, `lectura-s2`, `prueba-rota`, `solo-lectura-rota` |
 | 4b | **Reglas de ciclo de vida** | **✅** | 29-sep: la regla `dalbkgrks34dq4krgq90` expiró 2 objetos de `landsat-8/2025/`; delete markers verificados |
 | 4c | **Transición a tier frío** | **✅** | 15-sep: tier `FRIO` declarado y `producto-viejo.tif` transicionado; caliente pasó de 5 MiB a 8 KB |
-| 5 | Versionado y delete marker | ✅ | `historia.tif` con v1/v2/v3; recuperación por borrado de marker |
+| 5 | Versionado y delete marker | ✅ | `historia.tif` con v1/v2/v3; recuperación por borrado de marker. 30-sep: repetido sobre objeto expirado por lifecycle |
 | 6 | URLs prefirmadas | ✅ | `AccessDenied` / *Request has expired* obtenidos; sabotaje de firma cerrado el 15-sep |
-| 7 | Auditoría de accesos | ⚠️ | Procedimiento escrito en el runbook; no re-verificado |
+| 7 | Auditoría de accesos | ✅ | 30-sep: `audit_webhook:lab` activo con receptor propio; 14 eventos capturados con hora, operación, objeto, IP y credencial |
 
 ### Sabotajes
 
@@ -61,7 +61,8 @@ Leyenda: **✅ ejecutado y verificado** · **⚠️ configurado pero nunca visto
 | URL firmada de objeto inexistente | ✅ |
 | URL firmada expirada | ✅ |
 | URL firmada **alterada y vigente** → `SignatureDoesNotMatch` | ✅ 15-sep: key alterada y firma alterada, ambas `SignatureDoesNotMatch`, con control 200 posterior |
-| Lifecycle que borra en vez de mover | ⚠️ 29-sep: el borrado ocurrió y dejó delete marker; **falta la recuperación** |
+| Lifecycle que borra en vez de mover | ✅ 30-sep: borrado por regla, delete marker y recuperación verificados |
+| Expiración en bucket **sin versionado** (`staging`) | ✅ 30-sep: `rm` no deja marker, objeto irrecuperable; regla armada para el 1-oct |
 | Multipart abortado | ⚠️ sin confirmar |
 | Credencial rotada sin actualizar Secret | ❌ requiere clúster |
 
@@ -437,3 +438,203 @@ arranque completo con el orden (frío antes que caliente) y por qué importa.
 `dalbkgrks34dq4krgq90` **sigue activa** y los objetos tienen 12 días — con `Days: 1`,
 cualquier versión restaurada es elegible de inmediato. Retirar la regla antes, o dejarla y
 observar la re-ejecución.
+
+### 2026-09-30 — Bloque D CERRADO: recuperación por borrado del delete marker ✅
+
+**Estado final verificado:**
+
+```
+mc ls lab/productos/landsat-8/2025/
+[2026-09-16 08:59:17 EST] 5.0MiB STANDARD producto-condenado.tif    ← resucitado
+mc admin info lab → 13 Objects, 17 Versions, 1 Delete Marker
+```
+
+De 18 versiones / 2 markers a **17 versiones / 1 marker**. El marker restante es el de
+`condenado2.tif`, dejado enterrado como control.
+
+**El ciclo completo del Bloque D, de punta a punta:**
+
+| Fase | Evidencia |
+|---|---|
+| Regla creada, sentencia anunciada | `mc stat` mostró fecha + ID de la regla culpable |
+| Expiración ejecutada | 2 delete markers, datos intactos en v1 |
+| Recuperación **fallida** con regla activa | El objeto volvió y murió otra vez en 30 s |
+| Regla retirada | Desaparece del `ilm rule export` |
+| **Recuperación efectiva** | `producto-condenado.tif` visible, 5 MiB |
+| Control sin recuperar | `condenado2.tif` sigue con su lápida |
+
+**Hallazgo 1 — retirar la regla ANTES de recuperar es parte del procedimiento, no una
+precaución.**
+
+Reconstruido del `.bash_history` (timestamps Unix):
+
+| ts | comando |
+|---|---|
+| 1790691317 | `mc rm --version-id 1d40a9eb-…` (regla **aún activa**) → recupera |
+| — | el barrido vuelve a matarlo → nace `ba9768df-…` el 29-sep 09:15 |
+| 1790794423 | `mc ilm rule rm --id dalbkgrks34dq4krgq90` → retira la regla |
+| 1790794610 | `mc rm --version-id ba9768df-…` → **recupera de verdad** |
+
+Con la regla activa y el objeto ya vencido (13 días de antigüedad, `Days: 1`), lo restaurado
+es elegible **al instante**. El objeto vuelve y desaparece sin que se le vea, y el síntoma
+—"sigue sin aparecer"— es idéntico a que el comando hubiera fallado.
+
+**Hallazgo 2 — el barrido es mucho más agresivo de lo supuesto: 30 segundos.**
+
+Entre el `rm` que recuperó y el `ls` que lo vio muerto pasaron **30 s** (`1790794610` →
+`1790794640`). No es un barrido horario ni diario: con el servidor vivo, re-ejecuta en
+menos de un minuto. Corrige la suposición del 29-sep de que el barrido actuaba
+principalmente al arrancar.
+
+**Hallazgo 3 — la salida de `mc rm` NO es la prueba; los contadores sí.**
+
+El comando se ejecutó dos veces (`1790794610` y `1790794808`). La primera funcionó; la
+segunda falló porque el ID ya no existía, y ese error se interpretó como el resultado de la
+operación.
+
+> **Regla operativa:** verificar toda operación sobre versiones con
+> `mc admin info lab | tail -3` (Objects / Versions / Delete Markers), nunca con el mensaje
+> del `rm`. Un `rm --version-id` repetido **siempre** falla la segunda vez — y ese fallo
+> significa que la primera funcionó.
+
+Simetría con el 29-sep, que es lo que hace útil la regla: entonces el comando **pareció
+funcionar y no funcionó**; hoy **pareció fallar y sí funcionó**. En ambos casos el mensaje
+de `mc` engañaba y solo el estado del servidor decidía.
+
+**Corrección a un apunte de esta misma sesión:** se afirmó que `.bash_history` no guardaba
+horas. **Sí las guarda**, como líneas `#<epoch>` intercaladas; un `grep` de los comandos las
+filtraba. Gracias a ellas se pudo medir el intervalo de 30 s del Hallazgo 2.
+
+**Trazabilidad:** el alias `lab-rec` no se ha vuelto a usar desde el 15-sep (única
+transcripción en `~/lab-s3/transcripciones/`). La reconstrucción se hizo con
+`.bash_history` + timestamps, que resultó suficiente. El `audit_webhook` sigue `off`.
+
+### 2026-09-30 (tarde) — Sabotaje en `staging`: el mismo borrado, sin red
+
+Contraste deliberado con el Bloque D. Mismo comando, mismo tipo de regla, bucket distinto.
+
+**La diferencia de partida:**
+
+```
+mc version info lab/staging     → lab/staging is un-versioned
+mc version info lab/productos   → lab/productos versioning is enabled
+```
+
+**Montaje:** `sacrificio/sin-red.tif` (5 MiB) + regla `dault0rks34cs5gqteag`
+(`Expiration: Days 1`, prefijo `sacrificio/`). Sentencia para **2026-10-01 19:00 EST**.
+
+**El testigo — borrado manual, hoy:** `testigo.tif` subido y borrado con `mc rm`
+(`#1790795611` → `#1790795624`). Resultado:
+
+| Comprobación | Resultado |
+|---|---|
+| `mc ls --versions sacrificio/` | **no aparece**, ni una línea |
+| `mc stat testigo.tif` | `Object does not exist` |
+| `mc admin info` → Delete Markers | **1** (el mismo de antes; no subió) |
+
+En `productos` el mismo `rm` **subía** el contador de markers. Aquí no hay lápida: el objeto
+se evapora. Mismo comando, resultado opuesto.
+
+**Hallazgo 1 — `mc stat` NO distingue un borrado reversible de uno definitivo.**
+
+```
+staging   → Expiration: 2026-10-01 19:00:00 EST (lifecycle-rule-id: dault0rks34cs5gqteag)
+productos → Expiration: 2026-09-17 19:00:00 EST (lifecycle-rule-id: dalbkgrks34dq4krgq90)
+```
+
+Formato idéntico. Una era recuperable y la otra no, y **la sentencia no lo insinúa**.
+
+> **Regla operativa:** lo que decide la reversibilidad no es la regla, ni `mc stat`, ni el
+> comando de borrado: es el **versionado del bucket**, que no aparece en ninguna de esas tres
+> señales. Antes de tocar cualquier regla de expiración → `mc version info <bucket>`.
+> Si dice `un-versioned`, **no hay red**.
+
+**Hallazgo 2 — `null` como version-id es el delator.**
+
+Corrige lo que se supuso antes de probarlo: en un bucket sin versionado `mc ls --versions`
+**sí** lista el objeto, no calla. Pero con `null` en lugar de UUID:
+
+```
+[2026-09-30 14:09:07 EST] 5.0MiB STANDARD null v1 PUT sacrificio/sin-red.tif
+```
+
+`null` significa "sin versionado". No hay nada debajo que restaurar. Es la señal más rápida
+para saber si estás con red o sin ella.
+
+**Hallazgo 3 — los contadores de `admin info` también lo cuentan.** `14 Objects / 17
+Versions`: en `productos` las versiones superan a los objetos porque hay historia; en
+`staging` cada objeto aporta 1 y 1. Sin versionado no hay historia que contar.
+
+**Pendiente:** verificar el 1-oct tras las 19:00 EST que `sin-red.tif` desaparece **sin dejar
+marker ni versión anterior**. Eso cierra el sabotaje.
+
+### 2026-09-30 (noche) — `audit_webhook` ACTIVADO ✅ (pendiente desde el 15-sep)
+
+**Estado:** receptor Python en `:8080` (PID 4064), target `audit_webhook:lab` configurado,
+**14 eventos capturados**. Log en `~/lab-s3/audit/audit.jsonl`.
+
+**Hallazgo 1 — no es un fichero de log, es un webhook.** El nombre es literal: MinIO hace
+**POST HTTP de cada evento** a un endpoint. Sin un receptor escuchando, activarlo no produce
+nada. Por eso el pendiente llevaba 15 días sin resolverse: no es un `enable=on`.
+
+Receptor mínimo escrito en `~/lab-s3/audit-receptor.py` (15 líneas, `http.server`, vuelca
+cada POST a `audit.jsonl`).
+
+**Hallazgo 2 — se configura como *target*, con sufijo.** `audit_webhook:lab`, no
+`audit_webhook`. El bloque base sigue diciendo `enable=off` y **es correcto** — son dos
+entradas distintas. Mirar solo el base hace creer que no se aplicó:
+
+```
+audit_webhook enable=off endpoint= ...                          ← base, sigue off
+audit_webhook:lab endpoint=http://127.0.0.1:8080 ...            ← el target real
+```
+
+**Hallazgo 3 — requiere `mc admin service restart lab`.** La config se acepta al instante
+pero no se carga hasta el reinicio.
+
+**Lo que el evento contiene, y que ninguna otra fuente daba:**
+
+```
+2026-09-30T19:40:12.310692147Z  PutObject              staging  aud.txt  127.0.0.1
+2026-09-30T19:44:29.930708001Z  DeleteMultipleObjects  staging  aud.txt  127.0.0.1
+```
+
+Hora real al nanosegundo · operación · bucket · objeto · IP · `requestID` · y la credencial
+en `Authorization` (`Credential=admin/20260930/...`).
+
+> **El círculo se cierra:** `aud.txt` vivía en `staging`, **sin versionado** — su borrado no
+> dejó delete marker ni rastro alguno en el bucket (sabotaje del 30-sep tarde). Sin audit log
+> ese objeto no habría existido nunca para un auditor. Ahora consta que existió 4 m 17 s y
+> quién lo borró. Y frente al delete marker de `productos`, que solo daba fecha de
+> *elegibilidad* y ningún autor (hallazgo del 30-sep mañana), aquí hay hora de **ejecución**.
+> Es el único mecanismo que responde *cuándo* y *quién*. Producto 8.
+
+**Hallazgo 4 — la auditoría se audita a sí misma.** Entre los eventos aparecen `SetConfigKV`
+y `ServiceV2`: el propio acto de activar el audit log y reiniciar quedó registrado. Un
+administrador no puede tocar el registro sin dejar constancia.
+
+**Punto ciego, y es inherente:** eso solo se cumple con el receptor **ya escuchando**. Un
+`mc admin config reset` con el receptor caído no deja nada. Mandar los logs a un proceso
+local no es auditoría real — en la plataforma el destino debe ser un colector remoto,
+persistente y fuera del control del administrador auditado.
+
+**Fragilidad del montaje de laboratorio:** el receptor es un `nohup` que **muere al reiniciar
+WSL**. Hay que rearrancarlo con las dos instancias de MinIO.
+
+**Lectura del log sin `jq`** (no está instalado):
+
+```bash
+python3 -c "
+import json
+for l in open('/home/stalin/lab-s3/audit/audit.jsonl'):
+    try:
+        e=json.loads(l); a=e.get('api',{})
+        if 'Delete' in a.get('name','') or 'Put' in a.get('name',''):
+            print(e['time'], a['name'], a.get('bucket'), a.get('object'), e.get('remotehost'))
+    except: pass
+"
+```
+
+**Prueba pendiente que ata los tres días:** mañana 1-oct tras las 19:00 EST el lifecycle mata
+`sin-red.tif`. Con el audit log activo debe aparecer el evento con la **hora real del
+barrido** — el dato que el delete marker nunca dio. Requiere que el receptor siga vivo.

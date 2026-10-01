@@ -300,6 +300,26 @@ mc ilm rule ls lab/<bucket>                # reglas de ciclo de vida
 La auditoría se cierra **ejecutando §4** sobre cada usuario listado. Enumerar políticas no es
 auditar; auditar es demostrar que el denegado deniega.
 
+### 9.1 La otra mitad: quién HIZO qué (audit log)
+
+Lo anterior audita **permisos** —quién *puede*—. Para *quién hizo* hace falta el audit log,
+activado y verificado el 2026-09-30. Es el único mecanismo que responde **cuándo** y **quién**:
+
+| Fuente | ¿Cuándo se destruyó? | ¿Quién? |
+|---|---|---|
+| Delete marker (`mc ls --versions`) | ⛔ da la **elegibilidad**, no la ejecución | ⛔ no |
+| Bucket sin versionado (`staging`) | ⛔ no queda **ningún** rastro | ⛔ no |
+| **Audit log** | ✅ hora real al nanosegundo | ✅ IP + credencial |
+
+Montaje, lectura y trampas (es un **webhook**, no un fichero; se configura como *target* con
+sufijo; requiere reinicio) en `chuletas/s3-minio-ilm.md` §7.2.
+
+⚠️ **Para la plataforma real:** el receptor del laboratorio es local y efímero. La auditoría
+contractual exige un colector **remoto, persistente y fuera del control del administrador
+auditado** — si no, quien es auditado puede apagar el registro. El propio acto de activarlo o
+desactivarlo queda registrado (`SetConfigKV`, `ServiceV2`), pero **solo si el receptor ya
+estaba escuchando**. Insumo directo del **Producto 8**.
+
 ---
 
 ## 10. Árbol de diagnóstico — "la descarga da 403"
