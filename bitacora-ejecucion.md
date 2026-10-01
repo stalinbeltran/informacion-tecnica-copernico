@@ -57,6 +57,7 @@ Leyenda: **✅ ejecutado y verificado** · **⚠️ configurado pero nunca visto
 | Sabotaje | Estado |
 |---|---|
 | `Resource` bucket vs `bucket/*` | ✅ |
+| **Sabotaje a ciegas** — `Condition` alterada en política (lectura sin navegación) | ✅ 1-oct: diagnosticado vía audit log y reparado idéntico al original |
 | Política sin `ListBucket` | ✅ |
 | URL firmada de objeto inexistente | ✅ |
 | URL firmada expirada | ✅ |
@@ -638,3 +639,58 @@ for l in open('/home/stalin/lab-s3/audit/audit.jsonl'):
 **Prueba pendiente que ata los tres días:** mañana 1-oct tras las 19:00 EST el lifecycle mata
 `sin-red.tif`. Con el audit log activo debe aparecer el evento con la **hora real del
 barrido** — el dato que el delete marker nunca dio. Requiere que el receptor siga vivo.
+
+### 2026-10-01 — Sabotaje a ciegas: incidente diagnosticado y reparado ✅
+
+Ejercicio pedido por Stalin: Claude rompe **una** cosa sin decir cuál, Stalin diagnostica.
+Audit log encendido a propósito, para estrenarlo como herramienta de investigación.
+
+**El sabotaje:** una sola cadena en la `Condition` de la política `solo-lectura-s2`:
+
+```
+s3:prefix: ["sentinel-2/*"]   →   ["sentinel-2/2024/*"]
+```
+
+Elegido porque **no parece roto**: JSON válido, sintaxis AWS correcta, `mc` lo acepta sin
+queja, y `2024` es un prefijo plausible. Y porque rompía **la mitad** del acceso: el statement
+de `GetObject` quedó intacto, así que `lector` podía descargar con la ruta exacta pero no
+listar para descubrirla. De ahí el "algunas cosas le funcionan y otras no" del reporte.
+
+**Diagnóstico de Stalin (ruta correcta):** audit log → encontró la política modificada → la
+leyó → identificó el `2024` incompatible → lo quitó → verificó **actuando como el usuario**:
+
+```
+antes:   mc ls lector/productos/sentinel-2/  → ERROR Access Denied
+después: mc ls lector/productos/sentinel-2/  → 2025/ · S2A_demo/
+```
+
+**Verificado por Claude contra el respaldo del 11-sep: las políticas son IDÉNTICAS.** No solo
+funciona — quedó exactamente como estaba, sin efectos colaterales.
+
+**Hallazgo 1 — el patrón: permiso de lectura sin permiso de navegación.** `GetObject` y
+`ListBucket` son independientes. Un usuario puede tener acceso real a los datos y ver "Access
+Denied" al navegar, y jurar con razón que tiene permisos. No es un 403 limpio, y es el fallo
+de política más difícil de leer desde el síntoma.
+
+**Hallazgo 2 — el log crudo no se investiga a mano.** Stalin dijo "después de mucho buscar".
+Fueron **14 eventos de administración entre 203 líneas**; las otras 189 eran sus propias
+lecturas mientras diagnosticaba. Se escribió `~/lab-s3/audit-q.py` (`--admin` / `--write` /
+`--all --grep`), documentado en `chuletas/s3-minio-ilm.md` §7.3.
+
+**Hallazgo 3 — `statusCode` separa el intento del efecto.** El log reveló algo que no se había
+contado: **4 eventos con 400** antes del primer 200, peleando con la sintaxis del JSON.
+
+```
+13:27:49  AddCannedPolicy  400   ← rechazado: no se aplicó
+13:33:03  AddCannedPolicy  200   ← aceptado: aquí sí cambió el sistema
+```
+
+Un `400` es ruido. Solo los `200` cambiaron algo. Confundirlos lleva a culpar al cambio
+equivocado.
+
+**Hallazgo 4 — el audit log NO guarda el valor anterior.** Dice qué cambió y cuándo, no cómo
+era antes. La verificación "quedó idéntica al original" solo fue posible por el respaldo que
+Claude tomó antes de sabotear (`~/.lab-backup/`). Procedimiento de respaldo en §7.4 de la
+chuleta: **sin respaldo no hay comparación posible**, y el audit log no lo suple.
+
+**Método confirmado:** del rastro al estado, no del síntoma a la conjetura.

@@ -405,6 +405,101 @@ ya estaba escuchando: un `config reset` con el receptor caído no deja nada.
 
 ---
 
+## 7.3 Investigar en el audit log — `audit-q.py`
+
+El log crudo es ilegible a mano: una línea JSON gigante por evento, y el 90 % son lecturas.
+En el incidente del 2026-10-01 fueron **14 eventos útiles de 203**. El script
+`~/lab-s3/audit-q.py` hace ese filtrado.
+
+```bash
+python3 ~/lab-s3/audit-q.py --admin                      # cambios de CONFIGURACIÓN ← empezar aquí
+python3 ~/lab-s3/audit-q.py --write                      # escrituras y borrados de objetos
+python3 ~/lab-s3/audit-q.py --all --grep solo-lectura-s2 # todo lo que mencione un nombre
+```
+
+Salida: hora UTC · operación · bucket/objeto · IP · **statusCode**.
+
+**`--admin` es el filtro que resuelve los incidentes de acceso**, porque aísla las
+operaciones que cambian estado: `AddCannedPolicy`, `SetPolicy`, `AddUser`, `RemoveUser`,
+`SetConfigKV`, `SetBucketLifecycle`, `AddTier`, `ServiceV2`…
+
+**La columna `OK` (statusCode) separa intento de efecto:**
+
+```
+2026-10-01 13:27:49   AddCannedPolicy   400   ← rechazado: NO se aplicó
+2026-10-01 13:33:03   AddCannedPolicy   200   ← aceptado: aquí sí cambió algo
+```
+
+Un `400` es ruido —alguien peleando con la sintaxis—. Solo los `200` cambiaron el sistema.
+Confundirlos lleva a culpar al cambio equivocado.
+
+> **Procedimiento ante "a un usuario le falla el acceso y ayer funcionaba":**
+> 1. `audit-q.py --admin` → ¿hay un `AddCannedPolicy`/`SetPolicy` con **200** reciente?
+> 2. Identificar la política y leerla: `mc admin policy info lab <nombre>`
+> 3. Comparar con el respaldo. **Sin respaldo no hay comparación posible** (§7.4)
+> 4. Corregir, y verificar actuando **como el usuario**: `mc ls lector/productos/...`
+
+---
+
+## 7.4 ⚠️ Respaldar la configuración ANTES de tocarla
+
+El audit log dice **qué** se cambió y **cuándo**, pero **no guarda el valor anterior**. Sin
+un respaldo no hay forma de saber cómo debía ser una política.
+
+```bash
+D=~/.lab-backup && mkdir -p $D
+mc ilm rule export lab/productos > $D/ilm-productos.json
+mc admin policy list lab         > $D/policies.txt
+for p in solo-lectura-s2 lectura-s2 prueba-rota solo-lectura-rota; do
+  echo "--- $p ---" >> $D/policy-dumps.txt
+  mc admin policy info lab $p    >> $D/policy-dumps.txt
+done
+mc admin user list lab > $D/users.txt
+mc ilm tier ls lab     > $D/tiers.txt
+```
+
+Verificar que una reparación quedó **idéntica** al original, no solo "funcionando":
+
+```bash
+mc admin policy info lab solo-lectura-s2       # comparar contra policy-dumps.txt
+```
+
+---
+
+## 7.5 Incidente resuelto 2026-10-01 — permiso de lectura sin navegación
+
+**Síntoma reportado:** «`lector` no puede trabajar con Sentinel-2, ayer funcionaba. Algunas
+cosas le funcionan y otras no.»
+
+**Causa:** una sola cadena alterada en la `Condition` de `solo-lectura-s2`:
+
+```
+s3:prefix: ["sentinel-2/*"]   →   ["sentinel-2/2024/*"]
+```
+
+**Por qué fue difícil de ver:**
+
+| | |
+|---|---|
+| JSON válido, sintaxis AWS correcta | `mc` la aceptó sin una queja; ningún validador la detecta |
+| `2024` es un prefijo **plausible** | parece una decisión deliberada, no un error |
+| Rompía **la mitad** del acceso | `GetObject` intacto: podía **descargar** con la ruta exacta, pero no **listar** para descubrirla |
+
+> **El patrón a reconocer: permiso de lectura sin permiso de navegación.** `GetObject` y
+> `ListBucket` son independientes. Un usuario puede tener acceso real a los datos y aun así
+> ver "Access Denied" al navegar — y jurar, con razón, que tiene permisos. No es un 403 limpio.
+
+**Diagnóstico que funcionó:** audit log → política modificada → leerla → comparar → corregir.
+**Del rastro al estado, no del síntoma a la conjetura.**
+
+**Verificación final** — actuando como el usuario, no como admin:
+
+```bash
+mc ls lector/productos/sentinel-2/     # antes: Access Denied · después: lista 2025/ y S2A_demo/
+```
+
+---
+
 ## 8. Pendiente de verificar
 
 - [x] Ver una regla de transición **actuar** — 15-sep
