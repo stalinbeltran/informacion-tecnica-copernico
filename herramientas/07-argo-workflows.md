@@ -3,6 +3,7 @@
 **Nivel exigido:** O — lo haces solo, bajo presión, sin guía
 **Prioridad:** 2 — alto y **desatendido**: el contrato del proveedor no lo cubre
 **Competencia de la matriz:** 13 (junto con [08-argo-events.md](08-argo-events.md))
+**Confirmación ESA:** 🟢 **Confirmada** — D2 §7.7 (14 menciones) · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

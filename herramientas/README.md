@@ -11,6 +11,12 @@ administra el proveedor de infraestructura (plano de control de Kubernetes, moto
 PostgreSQL, servicio S3, balanceador, red del clúster) aparecen únicamente como frontera o
 vocabulario, nunca como materia de estudio operativo.
 
+**Confirmación de herramientas:** antes de invertir horas en una herramienta, comprueba en
+[22-confirmacion-esa-herramientas.md](22-confirmacion-esa-herramientas.md) si ESA la nombra
+en D1/D2/D3 o si es una elección de laboratorio. Cada ficha lo indica en su cabecera con
+🟢 / 🟡 / 🔴. **18 confirmadas · 1 con reservas · 2 no confirmadas** (S3/MinIO e
+Ingress/cert-manager).
+
 ---
 
 ## Cómo usar esta carpeta

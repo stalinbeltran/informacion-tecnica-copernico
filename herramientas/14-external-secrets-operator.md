@@ -3,6 +3,7 @@
 **Nivel exigido:** O — lo haces solo, bajo presión, sin guía
 **Prioridad:** 3 — lo tocas al operar workspaces y despliegues
 **Competencia de la matriz:** 12
+**Confirmación ESA:** 🟢 **Confirmada** — D2 §3.6.2 y §3.5.3 (4 menciones) · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

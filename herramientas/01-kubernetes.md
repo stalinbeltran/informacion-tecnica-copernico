@@ -3,6 +3,7 @@
 **Nivel exigido:** E (workloads y configuración) · O (almacenamiento y red de aplicación)
 **Prioridad:** 1 — núcleo diario
 **Competencias de la matriz:** 5, 6, 7, 8
+**Confirmación ESA:** 🟢 **Confirmada** — D2 §7.4 (52 menciones) · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

@@ -3,6 +3,7 @@
 **Nivel exigido:** O — lo haces solo, bajo presión, sin guía
 **Prioridad:** 3 — base de todo lo que se despliega
 **Competencia de la matriz:** 4
+**Confirmación ESA:** 🟢 **Confirmada** — D2 §7.3; podman citado en §3.3.4 · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

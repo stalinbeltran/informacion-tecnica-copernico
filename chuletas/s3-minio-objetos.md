@@ -414,3 +414,133 @@ comodidad del cliente; el servidor solo tiene keys largas.
 
 *Practicado y verificado el 2026-09-11. Bitácora completa en
 [bitacora-aprendizaje.md](../bitacora-aprendizaje.md).*
+
+---
+
+## 9. Basura multipart — lo que ninguna herramienta te muestra
+
+Verificado el 2026-10-07 contra `mc RELEASE.2025-08-13T08-35-41Z` + MinIO del lab.
+
+### 9.1 Una subida cortada deja las partes en disco, fuera del bucket
+
+Las partes **no** viven en el bucket: viven en `.minio.sys/multipart/<hash-bucket+key>/<uploadID>/`.
+Por eso `mc du` del bucket y `du -sh` del directorio del bucket **coinciden** y no revelan nada.
+
+```
+mc du lab/productos            → 522MiB  11 objects
+du -sh ~/lab-s3/data/productos → 523M            ← coinciden, parece limpio
+du -sh ~/lab-s3/data/.minio.sys/multipart → 833M ← la basura está AQUÍ
+```
+
+**833 MB de basura frente a 522 MiB de datos legítimos.** Buscar la basura en la diferencia
+entre `mc du` y `du` del bucket es un error: hay que preguntar por el tercer directorio.
+
+### 9.2 `mc ls --incomplete` miente por partida doble
+
+```
+$ mc ls --incomplete --recursive lab/productos
+[2026-10-07 08:59:54 EST]     0B sentinel-2/2025/grande.tif
+```
+
+- **Dice `0B`.** Son 833 MB. El tamaño que muestra es el del *objeto* (inexistente), no el de
+  las partes.
+- **Dice una línea.** Eran **dos** uploads huérfanos distintos (481 M + 353 M). Agrupa por
+  key, no por uploadID.
+- Sin `--recursive` y consultando el prefijo exacto, **no muestra nada en absoluto**.
+
+El único indicio del segundo upload está en `--json`, y es indirecto:
+
+```bash
+mc --json ls --incomplete --recursive lab/productos
+# → {"size":0, "versionOrdinal":2, ...}   ← "2" = hay dos uploads
+```
+
+**No hay forma con `mc` de ver el tamaño real ni los uploadIDs.** Hay que ir al disco:
+
+```bash
+du -sh ~/lab-s3/data/.minio.sys/multipart/*/*     # tamaño por uploadID
+find ~/lab-s3/data/.minio.sys/multipart -type f | wc -l
+```
+
+### 9.3 ⚠️ `mc rm --incomplete` NO funciona sobre uploads huérfanos
+
+```bash
+mc rm --incomplete --recursive --force lab/productos/sentinel-2/   # sin error, sin efecto
+mc rm --incomplete --force lab/productos/sentinel-2/2025/grande.tif
+# mc: <ERROR> ... Object does not exist
+```
+
+833 M antes, 833 M después. El audit log explica por qué: `mc` emite
+`ListMultipartUploads` → `HeadObject` → **404** → se rinde. **Nunca emite
+`AbortMultipartUpload`.** Comprueba la existencia del *objeto* antes de borrar las *partes*, y
+el objeto nunca existió — de eso se trata.
+
+> La forma recursiva **falla en silencio**: ni error, ni mensaje, exit 0. Dar por limpio lo
+> que no se limpió es el fallo peligroso.
+
+### 9.4 ⚠️ `AbortIncompleteMultipartUpload` no se puede configurar con este `mc`
+
+No hay flag. `mc ilm rule add --help` ofrece 9 flags de ciclo de vida, **ninguno** de
+multipart:
+
+```
+mc ilm rule add --abort-incomplete-multipart-days 1 ...
+# mc: <ERROR> Invalid command usage, flag provided but not defined
+```
+
+Por `mc ilm rule import` con JSON crudo, resultados verificados uno a uno:
+
+| JSON importado | Resultado |
+|---|---|
+| `AbortIncompleteMultipartUpload` sola | ❌ `XML ... did not validate against our published schema` |
+| …con `Filter:{}` vacío | ❌ mismo rechazo |
+| …junto a `Expiration` en la misma regla | ⚠️ **"imported successfully"… y descarta el abort** |
+| `Expiration` sola (control) | ✅ |
+
+El tercer caso es el peligroso. Dice éxito y el servidor guarda la regla **sin** la acción:
+
+```json
+// enviado:  {"ID":"ab3","Expiration":{"Days":400},"AbortIncompleteMultipartUpload":{"DaysAfterInitiation":1}}
+// guardado: {"ID":"ab3","Expiration":{"Days":400}}      ← el abort desapareció, sin aviso
+```
+
+**Consecuencia operativa:** en este lab la basura multipart **no tiene purga automática ni
+manual** con las herramientas instaladas. Queda ocupando disco indefinidamente.
+
+### 9.5 Lo que sí hay que hacer en la plataforma real
+
+1. **Monitorizar** `.minio.sys/multipart` por tamaño, no confiar en `mc du` ni en
+   `mc ls --incomplete`.
+2. Configurar la regla por una vía que no sea `mc`: `aws s3api put-bucket-lifecycle-configuration`
+   o `boto3` (**ninguno instalado en el lab** — pendiente).
+3. **Verificar siempre el export tras configurarla.** "Imported successfully" no prueba que
+   la acción se guardara (§9.4).
+
+### 9.6 Reproducir el corte: Ctrl-C no sirve, el `499` es la firma
+
+1200 MB se suben en **335 ms** sobre loopback — el Ctrl-C no llega a tiempo. Para forzarlo:
+
+```bash
+mc cp grande.tif lab/productos/sentinel-2/2025/g2.tif &
+MCPID=$!; sleep 1; kill -9 $MCPID
+```
+
+En el audit log el corte se identifica por el **`statusCode 499`** (*client closed request*)
+en el último `PutObjectPart`; los anteriores son `200`. No aparece `AbortMultipartUpload`
+porque **`mc` no aborta al recibir la señal**.
+
+```
+13:59:54.946  PutObjectPart  200
+13:59:55.006  PutObjectPart  499   ← aquí se cortó
+```
+
+Buscar eventos multipart en el log (el `--grep` de `audit-q.py` filtra por objeto, **no** por
+nombre de API, así que `--grep Multipart` no los encuentra):
+
+```bash
+grep -o '"name":"[^"]*"' ~/lab-s3/audit/audit.jsonl | sort | uniq -c | sort -rn   # inventario
+grep Multipart ~/lab-s3/audit/audit.jsonl | wc -l
+```
+
+> **Regla general de investigación de logs:** antes de filtrar, listar qué valores existen en
+> el campo por el que vas a filtrar. El inventario de nombres de API es el paso cero.

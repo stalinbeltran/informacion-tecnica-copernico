@@ -3,6 +3,7 @@
 **Nivel exigido:** C→O — empieza conceptual, pasa a operativo cuando lo toques en producción
 **Prioridad:** 3 — lo tocas al operar workspaces
 **Competencia de la matriz:** 11
+**Confirmación ESA:** 🟢 **Confirmada** — D2 §7.9 (19 menciones) · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

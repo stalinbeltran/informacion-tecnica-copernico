@@ -3,6 +3,7 @@
 **Nivel exigido:** O — lo haces solo, bajo presión, sin guía
 **Prioridad:** 2 — alto y **desatendido**
 **Competencia de la matriz:** 20
+**Confirmación ESA:** 🟢 **Confirmada** — D2 §3.5 y D3 §6 (45 menciones) · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

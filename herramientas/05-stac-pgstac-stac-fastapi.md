@@ -3,6 +3,7 @@
 **Nivel exigido:** E — lo diseñas, lo optimizas y lo enseñas
 **Prioridad:** 2 — alto y **desatendido**: el contrato del proveedor no lo cubre
 **Competencia de la matriz:** 16
+**Confirmación ESA:** 🟢 **Confirmada** — D2 Fig. 13 "STAC FastAPI Interface"; PgSTAC ×5 · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

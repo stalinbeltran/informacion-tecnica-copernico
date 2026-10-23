@@ -3,6 +3,7 @@
 **Nivel exigido:** E — lo diseñas, lo optimizas y lo enseñas
 **Prioridad:** 2 — **brecha declarada**: el análisis ESA marca esta área como *no cubierta*
 **Competencia de la matriz:** 18
+**Confirmación ESA:** 🔴 **NO confirmada** — ESA solo dice *"S3-compatible object storage"*, nunca MinIO. **MinIO es mi elección de laboratorio.** `mc admin` y `mc ilm tier` pueden no existir en producción → ver S3-00 · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

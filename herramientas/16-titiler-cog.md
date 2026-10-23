@@ -3,6 +3,7 @@
 **Nivel exigido:** O — lo haces solo, bajo presión, sin guía
 **Prioridad:** 3 — lo tocas al operar la visualización
 **Competencia de la matriz:** 19
+**Confirmación ESA:** 🟢 **Confirmada** — D2 §7.13 (19 menciones) · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

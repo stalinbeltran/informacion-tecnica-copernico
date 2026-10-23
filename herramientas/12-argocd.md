@@ -3,6 +3,7 @@
 **Nivel exigido:** O — lo haces solo, bajo presión, sin guía
 **Prioridad:** 3 — lo tocas al operar workspaces y despliegues
 **Competencia de la matriz:** 10
+**Confirmación ESA:** 🟡 **Confirmada con reservas** — **una sola mención** en 83 páginas (D2 §3.6.2) frente a 47 de GitLab. Cabe que el GitOps real lo hagan los pipelines de GitLab → preguntar antes de profundizar · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

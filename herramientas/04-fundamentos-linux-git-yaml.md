@@ -3,6 +3,7 @@
 **Nivel exigido:** O (Linux, Git) · E (YAML y manifiestos)
 **Prioridad:** 1 — es el suelo sobre el que se apoya todo lo demás
 **Competencias de la matriz:** 1, 2, 3
+**Confirmación ESA:** 🟢 **Confirmada** — transversal, no es un producto contratable · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

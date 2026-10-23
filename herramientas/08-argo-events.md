@@ -3,6 +3,7 @@
 **Nivel exigido:** O — lo haces solo, bajo presión, sin guía
 **Prioridad:** 2 — alto y **desatendido**
 **Competencia de la matriz:** 13 (junto con [07-argo-workflows.md](07-argo-workflows.md))
+**Confirmación ESA:** 🟢 **Confirmada** — D2 §3.3 (5 menciones) · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

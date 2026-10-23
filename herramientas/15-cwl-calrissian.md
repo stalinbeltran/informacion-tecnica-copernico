@@ -3,6 +3,7 @@
 **Nivel exigido:** O — lo haces solo, bajo presión, sin guía
 **Prioridad:** 3 — lo tocas al operar procesamiento e ingesta
 **Competencia de la matriz:** 15
+**Confirmación ESA:** 🟢 **Confirmada** — D2 §6.2 y §7.2 (CWL ×69, Calrissian ×7) · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

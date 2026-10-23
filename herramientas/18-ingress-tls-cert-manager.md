@@ -3,6 +3,7 @@
 **Nivel exigido:** O — lo haces solo, bajo presión, sin guía
 **Prioridad:** 3 — lo tocas al exponer y proteger servicios
 **Competencia de la matriz:** 8
+**Confirmación ESA:** 🔴 **NO confirmada** — ESA solo dice *"load balancers"* (§9) y *"TLS 1.2 or later"* (§8.3). **Ni NGINX ni cert-manager se nombran.** Las anotaciones `nginx.ingress.kubernetes.io/*` y las CRDs de cert-manager pueden no aplicar → priorizar `Ingress` y `NetworkPolicy` estándar · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

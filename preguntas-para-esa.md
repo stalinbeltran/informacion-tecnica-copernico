@@ -17,8 +17,8 @@ Cuando una se responda, anotar la respuesta **y la fecha** en su fila; no borrar
 
 | Destinatario | Abiertas |
 |---|---|
-| [Proveedor de infraestructura](#proveedor-de-infraestructura) | 8 |
-| [ESA / Terradue](#esa--terradue) | 7 |
+| [Proveedor de infraestructura](#proveedor-de-infraestructura) | 12 |
+| [ESA / Terradue](#esa--terradue) | 8 |
 
 ---
 
@@ -31,9 +31,16 @@ Cuando una se responda, anotar la respuesta **y la fecha** en su fila; no borrar
 > entrega el servicio (capacidad, disponibilidad, latencias); la administración lógica
 > (buckets, políticas, ciclo de vida, retención, auditoría) no tiene dueño en el contrato y
 > el perfil ESA la asigna al Administrador de Middleware.
+>
+> **Ninguno de los tres documentos (D1 v1.4, D2 v1.3, D3 v1.3) nombra una implementación
+> concreta de object storage.** Hablan siempre de *"S3-compatible object storage"* y
+> *"Managed object storage"*. Toda la práctica de laboratorio se ha hecho sobre **MinIO**
+> `RELEASE.2025-09-07`, que es un **sustituto elegido por mí**, no el producto del Centro.
+> Qué parte de lo practicado es trasladable depende de la respuesta a **S3-00**.
 
 | # | Pregunta | Prio | Estado | Por qué importa |
 |---|---|---|---|---|
+| **S3-00** | **¿Qué implementación de object storage S3 se desplegará (MinIO, Ceph RGW, otra) y en qué versión?** Y con independencia del producto: ¿qué subconjunto de la API S3 se garantiza contractualmente — versionado, reglas de ciclo de vida, Object Lock, multipart upload, logs de acceso? | **A** | 🔴 | **Pregunta raíz del bloque: condiciona la respuesta a S3-02 … S3-08.** La documentación ESA solo exige *"S3-compatible"*, así que el producto es decisión del proveedor. Determina qué parte del laboratorio sobre MinIO es trasladable y qué parte hay que reaprender (ver nota 5) |
 | **S3-01** | ¿Qué acceso tendré a la API de S3, por qué vía (VPN o interfaz web) y con qué permisos exactos? | **A** | 🔴 | Sin acceso administrativo no puedo gestionar políticas ni auditar. Es el primer bloqueo posible |
 | **S3-02** | ¿Qué mecanismo de gestión de identidades y políticas ofrece el servicio? ¿Es compatible con políticas estilo IAM (`Version`/`Statement`/`Effect`/`Action`/`Resource`) o tiene su propio modelo? | **A** | 🔴 | Determina si lo practicado en MinIO es trasladable tal cual o hay que reaprender el modelo |
 | **S3-03** | ¿Soporta versionado, Object Lock y reglas de ciclo de vida? ¿Con qué limitaciones? | **A** | 🔴 | El versionado es la red de seguridad ante un lifecycle mal escrito. Sin él, la rotación anual es irreversible |
@@ -42,6 +49,19 @@ Cuando una se responda, anotar la respuesta **y la fecha** en su fila; no borrar
 | **S3-06** | ¿Hay logs de acceso a objetos? ¿Con qué retención y en qué formato? | **B** | 🔴 | Sin logs no puedo responder "¿quién accedió a este producto?" — y la auditoría de accesos está a mi nombre |
 | **S3-07** | ¿Cómo se miden y reportan las latencias comprometidas de **100 ms lectura / 200 ms escritura**? | **B** | 🔴 | Van al informe mensual. Necesito saber si mido yo o si el proveedor entrega la métrica |
 | **S3-08** | ¿Qué tamaño de parte usa el servicio en multipart upload, y es configurable? | **C** | 🔴 | Determina si un ETag es reproducible para verificar integridad (ver nota 2) |
+
+### Red de aplicación y TLS — **herramienta no confirmada**
+
+> **Contexto:** ningún documento (D1/D2/D3) nombra un controlador de Ingress ni un gestor de
+> certificados. D2 §9 solo dice *"the platform employs load balancers"* y §8.3 exige
+> *"TLS 1.2 or later"*. Toda la práctica se ha hecho sobre **Ingress NGINX + cert-manager**,
+> elegidos por mí. Ver [herramientas/22-confirmacion-esa-herramientas.md](herramientas/22-confirmacion-esa-herramientas.md).
+
+| # | Pregunta | Prio | Estado | Por qué importa |
+|---|---|---|---|---|
+| **NET-01** | **¿Qué controlador de Ingress se despliega (NGINX, Traefik, otro) o el tráfico entra por un balanceador gestionado del proveedor?** | **A** | 🔴 | Las anotaciones `nginx.ingress.kubernetes.io/*` son **intransferibles** a otro controlador. Determina si lo practicado aplica |
+| **NET-02** | ¿Dónde termina el TLS: en el balanceador del proveedor o dentro del clúster? ¿Existe cert-manager, o los certificados los provee y rota el proveedor? | **A** | 🔴 | Si termina fuera, cert-manager y sus CRDs (`ClusterIssuer`, `Certificate`) no están en mi plano. Cambia quién renueva y a quién se escala un certificado vencido |
+| **NET-03** | ¿Está habilitado el soporte de `NetworkPolicy` en el CNI del clúster? | **B** | 🔴 | Una `NetworkPolicy` en un CNI que no la implementa **se acepta y no hace nada**: falsa sensación de aislamiento |
 
 ---
 
@@ -55,6 +75,7 @@ Cuando una se responda, anotar la respuesta **y la fecha** en su fila; no borrar
 | **MW-02** | ¿Qué servicio implementa el endpoint de URLs firmadas, qué token acepta y cuánto dura la firma? | **A** | 🔴 | D3 §6 muestra `X-Amz-Expires=120` (2 min). Necesito saber si es configurable y quién lo opera |
 | **MW-03** | ¿Qué esquema de buckets y prefijos usa el Middleware? ¿Uno por colección, uno por workflow, uno por workspace? | **A** | 🔴 | Las políticas se escriben por prefijo. Sin el esquema no puedo diseñar el modelo de acceso |
 | **MW-04** | ¿Quién limpia los objetos huérfanos cuando un item se elimina del catálogo? | **B** | 🔴 | Consistencia catálogo↔almacenamiento. Items que apuntan a objetos borrados y objetos sin item. Alimenta el Producto 7 (optimización) |
+| **MW-08** | **¿El despliegue del Middleware se hace con ArgoCD o con los pipelines de GitLab?** ArgoCD aparece **una sola vez** en las 83 páginas de D2 (§3.6.2, y solo para workspaces de usuario), frente a 47 menciones de GitLab, que tiene sección propia en §7.5 | **A** | 🔴 | Decide **cuánto ArgoCD estudiar**. Si el GitOps real son pipelines de GitLab, profundizar en ArgoCD es tiempo mal invertido. Hoy está en Prioridad 3 a la espera de esta respuesta |
 
 ### Integridad y media types — **salidas del laboratorio 2026-09-11**
 
@@ -128,6 +149,25 @@ Esto produce el caso **inverso** al de la nota 3, y es peor porque es silencioso
 
 Un workflow de ingesta con el `--attr` mal escrito produce COGs legítimos que el catálogo no
 anuncia como cloud-optimized. No hay error que alertar — solo desempeño degradado.
+
+### Nota 5 — Qué parte del laboratorio depende de MinIO (S3-00)
+
+El laboratorio se hizo sobre MinIO porque es el único endpoint S3 real que corre en WSL2 sin
+root y sin coste: un binario en `~/bin`. Pero no todo lo practicado es API S3 estándar, y la
+frontera importa para saber qué sobrevive a un cambio de proveedor:
+
+| Practicado | Portabilidad | Observación |
+|---|---|---|
+| Buckets, prefijos, `put`/`get`/`cp`, ETag, media types | **Alta** — API S3 estándar | Igual en cualquier implementación |
+| Versionado, delete marker, recuperación por versión | **Alta** — si el servicio lo soporta | De ahí S3-03 |
+| URLs prefirmadas y su expiración | **Alta** — `X-Amz-*` es estándar | De ahí MW-02 |
+| Políticas de acceso | **Media** — MinIO usa JSON estilo IAM, otros no | De ahí S3-02 |
+| `mc admin` (usuarios, políticas, info del servidor) | **Baja** — específico de MinIO | Sin equivalente garantizado |
+| `mc ilm tier add/check` (tier frío) | **Baja** — específico de MinIO, y **ya bloqueó una prueba** | Ver nota 1 y S3-04 |
+
+**Consecuencia para los runbooks:** redactarlos sobre `aws s3api` / SDK y JSON de política
+estilo AWS siempre que sea posible, y **marcar explícitamente** lo que sea específico de
+MinIO. Así el runbook sobrevive aunque producción no sea MinIO.
 
 ---
 

@@ -58,13 +58,14 @@ Leyenda: **✅ ejecutado y verificado** · **⚠️ configurado pero nunca visto
 |---|---|
 | `Resource` bucket vs `bucket/*` | ✅ |
 | **Sabotaje a ciegas** — `Condition` alterada en política (lectura sin navegación) | ✅ 1-oct: diagnosticado vía audit log y reparado idéntico al original |
+| **Sabotaje a ciegas nº 2** — sobre multipart/ILM | ❌ pendiente (Bloque D del Paso 8) |
 | Política sin `ListBucket` | ✅ |
 | URL firmada de objeto inexistente | ✅ |
 | URL firmada expirada | ✅ |
 | URL firmada **alterada y vigente** → `SignatureDoesNotMatch` | ✅ 15-sep: key alterada y firma alterada, ambas `SignatureDoesNotMatch`, con control 200 posterior |
 | Lifecycle que borra en vez de mover | ✅ 30-sep: borrado por regla, delete marker y recuperación verificados |
 | Expiración en bucket **sin versionado** (`staging`) | ✅ 30-sep: `rm` no deja marker, objeto irrecuperable; regla armada para el 1-oct |
-| Multipart abortado | ⚠️ sin confirmar |
+| Multipart abortado | ✅ 7-oct: partes huérfanas confirmadas (833 MB); `mc rm --incomplete` no borra y `AbortIncompleteMultipartUpload` no es configurable con este `mc` |
 | Credencial rotada sin actualizar Secret | ❌ requiere clúster |
 
 ---
@@ -694,3 +695,94 @@ Claude tomó antes de sabotear (`~/.lab-backup/`). Procedimiento de respaldo en 
 chuleta: **sin respaldo no hay comparación posible**, y el audit log no lo suple.
 
 **Método confirmado:** del rastro al estado, no del síntoma a la conjetura.
+
+### 2026-10-07 — Paso 8: basura multipart. Tres herramientas que fallan ✅
+
+Ejercicio del Paso 8 (`labs/s3-paso8-multipart-y-sabotaje-ciego-2.md`), Bloques A–C. El
+Bloque D (sabotaje a ciegas nº 2) **queda pendiente**. Stalin ejecutó la subida; la medición y
+las pruebas de configuración se hicieron por `wsl.exe` desde la sesión de Claude.
+
+**Corrección de método al empezar:** Claude pedía a Stalin pegar salidas del lab pudiendo
+ejecutarlas él mismo por `wsl.exe -- bash -lc '...'` (distro `Ubuntu-24.04`). Anotado en
+memoria. Pedirle salidas solo cuando haga falta su criterio.
+
+**Dato de partida que invalidó el guion:** con 1200 MB, `mc` completa la subida en **335 ms**
+sobre loopback. El Ctrl-C del guion no llega a tiempo. De 4 intentos, 2 se completaron y 2 se
+cortaron.
+
+**Hipótesis inicial de Stalin — "aborta y descarta las partes" — refutada.** Las partes
+quedaron. Lo que falló fue la búsqueda: `mc ls --incomplete` sin `--recursive` no las muestra.
+
+**Hallazgo 1 — la basura vive fuera del bucket, y por eso es invisible.**
+
+```
+mc du lab/productos            → 522MiB  11 objects
+du -sh ~/lab-s3/data/productos → 523M            ← COINCIDEN
+du -sh .minio.sys/multipart    → 833M  (106 ficheros)
+```
+
+**833 MB de basura contra 522 MiB de datos reales.** El guion decía "la diferencia entre
+`mc du` y `du` son las partes" — era falso: coinciden. La basura está en un tercer directorio
+que ninguna de las dos mediciones mira.
+
+**Hallazgo 2 — `mc ls --incomplete` miente dos veces.** Reporta `0B` (son 833 MB: muestra el
+tamaño del objeto inexistente) y **una** línea para **dos** uploads huérfanos de 481 M y
+353 M (agrupa por key, no por uploadID). El único rastro del segundo está en
+`--json`: `"versionOrdinal": 2`. Con `mc` no hay forma de ver tamaño real ni uploadIDs.
+
+**Hallazgo 3 — `mc rm --incomplete` no borra, y falla en silencio.** 833 M antes, 833 M
+después; la forma recursiva no da error ni mensaje. El audit log lo explica:
+
+```
+ListMultipartUploads  200
+HeadObject  sentinel-2/2025/grande.tif  404   ← se rinde aquí
+```
+
+Nunca emite `AbortMultipartUpload`. Comprueba si existe el **objeto** antes de borrar las
+**partes**, y el objeto nunca existió — de eso se trata. Es un fallo de lógica del cliente.
+
+**Hallazgo 4 — `AbortIncompleteMultipartUpload` no es configurable con este `mc`, y mi guion
+inventó el flag.** `--abort-incomplete-multipart-days` **no existe** (9 flags de ILM, ninguno
+de multipart). Por `ilm rule import`, cuatro variantes probadas:
+
+| JSON | Resultado |
+|---|---|
+| abort sola | ❌ rechazo de esquema XML |
+| abort + `Filter:{}` | ❌ mismo rechazo |
+| abort + `Expiration` | ⚠️ **"imported successfully" y descarta el abort** |
+| `Expiration` sola (control) | ✅ |
+
+> **El tercer caso es el peligroso y es el hallazgo de la sesión:** dice éxito, y el export
+> muestra la regla guardada **sin** la acción. Un administrador que configure la purga y no
+> verifique el export creerá tener protección que no tiene. Hermano del `400` vs `200` del
+> 1-oct: ahí el log distinguía intento de efecto; aquí **el propio comando dice 200 y el
+> efecto es parcial**. El mensaje de éxito no es evidencia.
+
+**Estado final: los 833 MB siguen en disco.** Sin purga automática ni manual posible con lo
+instalado (`aws` y `boto3` ausentes). No es un fracaso del ejercicio: es el resultado.
+
+**Hallazgo 5 — el `499` es la firma del corte en el audit log.** 78 eventos `200` y el último
+`PutObjectPart` en **`499`** (*client closed request*). No hay `Abort` porque `mc` no aborta
+al recibir la señal. Para forzar un corte de verdad: `kill -9`, no Ctrl-C.
+
+**Hallazgo 6 — método: antes de filtrar un log, listar qué valores existen en el campo.** El
+`--grep` de `audit-q.py` filtra por objeto, no por nombre de API, así que `--grep Multipart`
+no devolvía nada aunque había **79 eventos**. Claude dio ese comando sin verificar sobre qué
+campo buscaba y mandó a Stalin a una conclusión falsa ("no sale abort"). El paso cero es
+`grep -o '"name":"[^"]*"' audit.jsonl | sort | uniq -c`.
+
+**Hallazgo 7 — `ILMTransition` se disparó solo.** La regla a tier `FRIO` del 15-sep sigue
+activa: cada objeto completado transicionó ~300 ms después. No estaba previsto en el guion y
+explica que el bucket pueda parecer vacío tras subir.
+
+**Respaldo e integridad:** respaldo en `~/.lab-backup/2026-10-07/` antes de tocar. Las pruebas
+de import se hicieron sobre `staging`, no sobre `productos`. `staging` restaurado y verificado
+idéntico al respaldo; `productos` conserva sus 4 reglas originales. El import de ILM es
+**atómico**: un rechazo no corrompe la configuración existente.
+
+**Pendientes que deja la sesión:**
+- Bloque D: sabotaje a ciegas nº 2, sin ejecutar.
+- Purgar los 833 MB: requiere `aws-cli` o `boto3` en el lab. **Instalarlo es prerrequisito**
+  para cerrar el ítem de purga.
+- Verificar si MinIO purga las partes de uploads **completados** (106 ficheros para 2 uploads
+  huérfanos sugiere restos de los completados, o barrido diferido).

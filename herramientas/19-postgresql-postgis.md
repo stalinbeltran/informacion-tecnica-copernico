@@ -3,6 +3,7 @@
 **Nivel exigido:** O — lo haces solo, bajo presión, sin guía
 **Prioridad:** 3 — soporte del catálogo y del registry
 **Competencia de la matriz:** 17
+**Confirmación ESA:** 🟢 **Confirmada** — D2 §7.14 (PostgreSQL ×22, PostGIS ×2) · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

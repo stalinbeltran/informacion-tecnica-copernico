@@ -3,6 +3,7 @@
 **Nivel exigido:** E — lo diseñas, lo optimizas y lo enseñas
 **Prioridad:** 1 — núcleo diario
 **Competencia de la matriz:** 22
+**Confirmación ESA:** 🟢 **Confirmada** — D2 §7.10 y §7.11 · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

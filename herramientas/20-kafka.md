@@ -3,6 +3,7 @@
 **Nivel exigido:** C→O — conceptual, con una capa operativa mínima
 **Prioridad:** 4 — contexto para dialogar y escalar, con una excepción operativa
 **Competencia de la matriz:** 14
+**Confirmación ESA:** 🟢 **Confirmada** — D2 §7.8 (10 menciones) · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 

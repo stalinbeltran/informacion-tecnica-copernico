@@ -3,6 +3,7 @@
 **Nivel exigido:** C — puedo explicarlo y decidir a quién escalar
 **Prioridad:** 4 — contexto para dialogar y escalar
 **Competencia relacionada:** 15 (a través de [15-cwl-calrissian.md](15-cwl-calrissian.md))
+**Confirmación ESA:** 🟢 **Confirmada** — D2 §7.12 (ZOO ×13, OGC API ×15) · [tabla completa](22-confirmacion-esa-herramientas.md)
 
 ---
 
